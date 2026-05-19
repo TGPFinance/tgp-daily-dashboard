@@ -13,13 +13,16 @@
   .tab.active { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; }
   .section { margin-bottom: 30px; }
   .section h2 { font-size: 14px; font-weight: 600; margin: 0 0 12px; padding-left: 8px; border-left: 3px solid #6366f1; }
+  .section h3 { font-size: 13px; font-weight: 500; color: #9ca3af; margin: 24px 0 12px; text-transform: uppercase; letter-spacing: 0.5px; }
   .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .card { background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 16px; }
-  .value { font-size: 22px; font-weight: 600; margin-bottom: 4px; color: #fff; }
-  .label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
+  .label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .value { font-size: 22px; font-weight: 600; color: #fff; }
+  .yoy { font-size: 11px; color: #6b7280; margin-top: 6px; }
   .panel { display: none; }
   .panel.active { display: block; }
-  @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) { .cards, .cards-4 { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
@@ -31,67 +34,112 @@
   <button class="tab active" onclick="showTab(0)">Amazon</button>
   <button class="tab" onclick="showTab(1)">Shopify, Meta, Google, Klaviyo</button>
 </div>
+
 <div class="panel active" id="panel-0">
   <div class="section">
-    <h2>Amazon Seller Central (US)</h2>
+    <h2>Amazon Seller Central (US) — May 18, 2026</h2>
     <div class="cards">
-      <div class="card"><div class="value">$8,788.63</div><div class="label">Ordered Revenue</div></div>
-      <div class="card"><div class="value">337</div><div class="label">Units Ordered</div></div>
-      <div class="card"><div class="value">—</div><div class="label">Sessions</div></div>
-      <div class="card"><div class="value">—</div><div class="label">Conversion Rate</div></div>
-      <div class="card"><div class="value">—</div><div class="label">Page Views</div></div>
+      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$8,788.63</div><div class="yoy">vs $1,592.00 (PY) <span style="color:#22c55e">+452.0% YoY</span></div></div>
+      <div class="card"><div class="label">Units Ordered</div><div class="value">6,874</div></div>
+      <div class="card"><div class="label">Sessions</div><div class="value">337</div><div class="yoy">vs 12.31 (PY) <span style="color:#22c55e">+2637.6% YoY</span></div></div>
+      <div class="card"><div class="label">Conversion Rate</div><div class="value">196.00%</div></div>
+      <div class="card"><div class="label">Page Views</div><div class="value">—</div></div>
+    </div>
+
+    <h3>Trailing 30 days</h3>
+    <div class="cards-4">
+      <div class="card"><div class="label">30d Revenue</div><div class="value">$204,077.72</div></div>
+      <div class="card"><div class="label">30d Units</div><div class="value">7,688</div></div>
+      <div class="card"><div class="label">30d Sessions</div><div class="value">49,514</div></div>
+      <div class="card"><div class="label">Daily Avg Revenue</div><div class="value">$6,803</div></div>
     </div>
   </div>
+
   <div class="section">
     <h2>Amazon Ads (Sponsored Products)</h2>
     <div class="cards">
-      <div class="card"><div class="value">$1,767.90</div><div class="label">Ad Spend</div></div>
-      <div class="card"><div class="value">$3,174.35</div><div class="label">Ad Sales</div></div>
-      <div class="card"><div class="value">1.80×</div><div class="label">ROAS</div></div>
-      <div class="card"><div class="value">55.69%</div><div class="label">ACOS</div></div>
-      <div class="card"><div class="value">855</div><div class="label">Clicks</div></div>
+      <div class="card"><div class="label">Ad Spend</div><div class="value">—</div></div>
+      <div class="card"><div class="label">Ad Sales</div><div class="value">—</div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">—</div></div>
+      <div class="card"><div class="label">ACOS</div><div class="value">—</div></div>
+      <div class="card"><div class="label">Clicks</div><div class="value">—</div></div>
+    </div>
+
+    <h3>Trailing 30 days</h3>
+    <div class="cards-4">
+      <div class="card"><div class="label">30d Ad Spend</div><div class="value">$47,996.75</div></div>
+      <div class="card"><div class="label">30d Ad Sales</div><div class="value">$84,122.62</div></div>
+      <div class="card"><div class="label">30d ROAS</div><div class="value">1.69×</div></div>
+      <div class="card"><div class="label">30d ACOS</div><div class="value">59.27%</div></div>
     </div>
   </div>
 </div>
+
 <div class="panel" id="panel-1">
   <div class="section">
-    <h2>Shopify</h2>
-    <div class="cards">
-      <div class="card"><div class="value">$1,879.75</div><div class="label">Gross Sales</div></div>
-      <div class="card"><div class="value">40</div><div class="label">Orders</div></div>
-      <div class="card"><div class="value">$1,440.67</div><div class="label">Net Sales</div></div>
-      <div class="card"><div class="value">$36.02</div><div class="label">AOV</div></div>
+    <h2>Shopify — May 18, 2026</h2>
+    <div class="cards-4">
+      <div class="card"><div class="label">Gross Sales</div><div class="value">$1,879.75</div><div class="yoy">vs $1,440.67 (PY) <span style="color:#22c55e">+30.5% YoY</span></div></div>
+      <div class="card"><div class="label">Orders</div><div class="value">2,027</div><div class="yoy">vs 1,510 (PY) <span style="color:#22c55e">+34.2% YoY</span></div></div>
+      <div class="card"><div class="label">Net Sales</div><div class="value">$40.00</div><div class="yoy">vs $36.02 (PY) <span style="color:#22c55e">+11.1% YoY</span></div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$51.00</div></div>
+    </div>
+    <h3>Trailing 30 days</h3>
+    <div class="cards-4">
+      <div class="card"><div class="label">30d Gross Sales</div><div class="value">$73,933.40</div></div>
+      <div class="card"><div class="label">30d Orders</div><div class="value">1,447</div></div>
+      <div class="card"><div class="label">30d Net Sales</div><div class="value">$50,223.42</div></div>
+      <div class="card"><div class="label">30d AOV</div><div class="value">$35.05</div></div>
     </div>
   </div>
+
   <div class="section">
     <h2>Meta Ads</h2>
     <div class="cards">
-      <div class="card"><div class="value">$117.29</div><div class="label">Spend</div></div>
-      <div class="card"><div class="value">—</div><div class="label">Purchase Value</div></div>
-      <div class="card"><div class="value">—</div><div class="label">ROAS</div></div>
-      <div class="card"><div class="value">$1.17</div><div class="label">CPC</div></div>
-      <div class="card"><div class="value">4.30%</div><div class="label">CTR</div></div>
+      <div class="card"><div class="label">Spend</div><div class="value">$117.29</div><div class="yoy">vs $4,000.00 (PY) <span style="color:#ef4444">-97.1% YoY</span></div></div>
+      <div class="card"><div class="label">Purchase Value</div><div class="value">$912.10</div><div class="yoy">vs $2,327.00 (PY) <span style="color:#ef4444">-60.8% YoY</span></div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">—</div></div>
+      <div class="card"><div class="label">CPC</div><div class="value">$0.21</div></div>
+      <div class="card"><div class="label">CTR</div><div class="value">100.00%</div></div>
+    </div>
+    <h3>Trailing 30 days</h3>
+    <div class="cards-4">
+      <div class="card"><div class="label">30d Spend</div><div class="value">$14,319.24</div></div>
+      <div class="card"><div class="label">30d Purchase Value</div><div class="value">$3,915.14</div></div>
+      <div class="card"><div class="label">30d ROAS</div><div class="value">0.27×</div></div>
+      <div class="card"><div class="label"></div><div class="value">—</div></div>
     </div>
   </div>
+
   <div class="section">
     <h2>Google Ads</h2>
     <div class="cards">
-      <div class="card"><div class="value">$321.48</div><div class="label">Spend</div></div>
-      <div class="card"><div class="value">$792.19</div><div class="label">Conversion Value</div></div>
-      <div class="card"><div class="value">2.46×</div><div class="label">ROAS</div></div>
-      <div class="card"><div class="value">$0.70</div><div class="label">CPC</div></div>
-      <div class="card"><div class="value">1.55%</div><div class="label">CTR</div></div>
+      <div class="card"><div class="label">Spend</div><div class="value">$321.48</div><div class="yoy">vs $582.00 (PY) <span style="color:#ef4444">-44.8% YoY</span></div></div>
+      <div class="card"><div class="label">Conversion Value</div><div class="value">$766.79</div><div class="yoy">vs $29,504.00 (PY) <span style="color:#ef4444">-97.4% YoY</span></div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">792.19×</div></div>
+      <div class="card"><div class="label">CPC</div><div class="value">$1.57</div></div>
+      <div class="card"><div class="label">CTR</div><div class="value">457.00%</div></div>
+    </div>
+    <h3>Trailing 30 days</h3>
+    <div class="cards-4">
+      <div class="card"><div class="label">30d Spend</div><div class="value">$12,005.73</div></div>
+      <div class="card"><div class="label">30d Conv. Value</div><div class="value">$22,149.40</div></div>
+      <div class="card"><div class="label">30d ROAS</div><div class="value">1.84×</div></div>
+      <div class="card"><div class="label"></div><div class="value">—</div></div>
     </div>
   </div>
+
   <div class="section">
     <h2>Klaviyo</h2>
-    <div class="cards">
-      <div class="card"><div class="value">326</div><div class="label">Recipients</div></div>
-      <div class="card"><div class="value">67.41%</div><div class="label">Open Rate</div></div>
-      <div class="card"><div class="value">5.30%</div><div class="label">Click Rate</div></div>
+    <div class="cards-4">
+      <div class="card"><div class="label">Recipients</div><div class="value">326</div></div>
+      <div class="card"><div class="label">Open Rate</div><div class="value">67.41%</div></div>
+      <div class="card"><div class="label">Click Rate</div><div class="value">5.30%</div></div>
+      <div class="card"><div class="label"></div><div class="value">—</div></div>
     </div>
   </div>
 </div>
+
 <script>
 function showTab(i) {
   document.querySelectorAll('.tab').forEach((t, idx) => t.classList.toggle('active', idx === i));
