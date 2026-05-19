@@ -59,7 +59,7 @@ amazon_seller = sm_fetch(
 amazon_ads = sm_fetch(
     "AA", ACCOUNTS["amazon_ads"],
     "cost,attributedSales14d,roas,acos,clicks",
-    report_type="SponsoredProducts"
+    report_type="SponsoredProduct"
 )
 meta = sm_fetch(
     "FA", ACCOUNTS["meta"],
@@ -71,12 +71,13 @@ google_ads = sm_fetch(
 )
 klaviyo = sm_fetch(
     "KLAV", ACCOUNTS["klaviyo"],
-    "revenue,num_recipients,open_rate,click_rate,conversion_rate"
+    "klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate,shopify_placed_order_value,shopify_conversion_rate",
+    report_type="MetricExportCampaign"
 )
 shopify = sm_fetch(
     "SHP", ACCOUNTS["shopify"],
     "gross_sales,sm_order_count,net_sales,avg_total_sales",
-    report_type="Sales"
+    report_type="Order"
 )
 
 print(f"  Amazon Seller: {amazon_seller}")
@@ -118,11 +119,11 @@ GOOGLE ADS:
 - CTR: {google_ads.get('ctr', 'n/a')}
 
 KLAVIYO:
-- Revenue: {klaviyo.get('revenue', 'n/a')}
-- Recipients: {klaviyo.get('num_recipients', 'n/a')}
-- Open Rate: {klaviyo.get('open_rate', 'n/a')}
-- Click Rate: {klaviyo.get('click_rate', 'n/a')}
-- Conversion Rate: {klaviyo.get('conversion_rate', 'n/a')}
+- Recipients: {klaviyo.get('klaviyo_total_recipients', 'n/a')}
+- Open Rate: {klaviyo.get('klaviyo_open_rate', 'n/a')}
+- Click Rate: {klaviyo.get('klaviyo_click_rate', 'n/a')}
+- Order Value: {klaviyo.get('shopify_placed_order_value', 'n/a')}
+- Conversion Rate: {klaviyo.get('shopify_conversion_rate', 'n/a')}
 
 SHOPIFY:
 - Gross Sales: {shopify.get('gross_sales', 'n/a')}
