@@ -91,7 +91,7 @@
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
         }
 
@@ -104,14 +104,14 @@
         }
 
         .metric-card:hover {
-            border-color: #58a6ff;
+            border-color: #484f58;
         }
 
         .metric-value {
             font-size: 28px;
-            font-weight: 700;
+            font-weight: 600;
             color: #ffffff;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .metric-value.na {
@@ -139,12 +139,16 @@
         }
 
         @media (max-width: 768px) {
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
+            body {
+                padding: 16px;
             }
 
             .header h1 {
                 font-size: 22px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .metric-value {
@@ -314,7 +318,7 @@
                 </div>
                 <div class="metric-card">
                     <div class="metric-value na">—</div>
-                    <div class="metric-label">Placed Order Rate</div>
+                    <div class="metric-label">Conversion Rate</div>
                 </div>
             </div>
         </div>
