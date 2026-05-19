@@ -15,36 +15,34 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
             min-height: 100vh;
-            color: #e4e4e7;
+            color: #e0e0e0;
+            padding: 20px;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 30px 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
+            padding: 30px 0 40px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
-        .date {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            font-weight: 500;
+        header .date {
+            font-size: 1rem;
+            color: #8b8b9e;
+            font-weight: 400;
         }
 
         .tabs {
@@ -56,34 +54,34 @@
         }
 
         .tab-btn {
-            padding: 14px 28px;
             background: transparent;
             border: none;
-            color: #94a3b8;
+            color: #8b8b9e;
             font-size: 1rem;
-            font-weight: 500;
+            padding: 15px 25px;
             cursor: pointer;
             transition: all 0.3s ease;
             border-bottom: 3px solid transparent;
             margin-bottom: -1px;
+            font-weight: 500;
         }
 
         .tab-btn:hover {
-            color: #e4e4e7;
+            color: #c0c0d0;
         }
 
         .tab-btn.active {
-            color: #a78bfa;
-            border-bottom-color: #a78bfa;
+            color: #6c63ff;
+            border-bottom-color: #6c63ff;
         }
 
         .tab-content {
             display: none;
-            animation: fadeIn 0.4s ease;
         }
 
         .tab-content.active {
             display: block;
+            animation: fadeIn 0.3s ease;
         }
 
         @keyframes fadeIn {
@@ -96,71 +94,89 @@
         }
 
         .section-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: #e4e4e7;
+            color: #ffffff;
             margin-bottom: 20px;
             padding-left: 15px;
-            border-left: 4px solid #a78bfa;
+            border-left: 4px solid #6c63ff;
         }
-
-        .section-title.shopify { border-left-color: #34d399; }
-        .section-title.meta { border-left-color: #60a5fa; }
-        .section-title.google { border-left-color: #fbbf24; }
-        .section-title.klaviyo { border-left-color: #f472b6; }
-        .section-title.amazon { border-left-color: #fb923c; }
-        .section-title.amazon-ads { border-left-color: #f97316; }
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
 
         .metric-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             padding: 24px;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
         }
 
         .metric-card:hover {
             transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(108, 99, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
 
         .metric-value {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: #f4f4f5;
+            color: #ffffff;
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
         }
 
         .metric-value.na {
-            color: #6b7280;
+            color: #5a5a6e;
             font-size: 1.5rem;
         }
 
         .metric-label {
             font-size: 0.85rem;
-            color: #94a3b8;
-            font-weight: 500;
+            color: #8b8b9e;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            font-weight: 500;
         }
 
         .subsection {
             margin-bottom: 35px;
         }
 
-        .subsection:last-child {
-            margin-bottom: 0;
+        .subsection-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #a0a0b8;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        .subsection-title::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #6c63ff;
+            border-radius: 50%;
+        }
+
+        .platform-icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+
+        .shopify-color { background: #96bf48; }
+        .meta-color { background: #1877f2; }
+        .google-color { background: #ea4335; }
+        .klaviyo-color { background: #25c2a0; }
+        .amazon-color { background: #ff9900; }
     </style>
 </head>
 <body>
@@ -177,55 +193,53 @@
 
         <div id="amazon" class="tab-content active">
             <div class="section">
-                <div class="subsection">
-                    <h2 class="section-title amazon">Amazon Seller Central (US)</h2>
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Ordered Revenue</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Units Ordered</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Sessions</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Conversion Rate</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Page Views</div>
-                        </div>
+                <h2 class="section-title">Amazon Seller Central (US)</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Ordered Revenue</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Units Ordered</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Sessions</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Conversion Rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Page Views</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="subsection">
-                    <h2 class="section-title amazon-ads">Amazon Ads (Sponsored Products - US)</h2>
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Ad Spend</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Ad Sales</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">ROAS</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">ACOS</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Clicks</div>
-                        </div>
+            <div class="section">
+                <h2 class="section-title">Amazon Ads (Sponsored Products - US)</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Ad Spend</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Ad Sales</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">ROAS</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">ACOS</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Clicks</div>
                     </div>
                 </div>
             </div>
@@ -233,107 +247,105 @@
 
         <div id="other" class="tab-content">
             <div class="section">
-                <div class="subsection">
-                    <h2 class="section-title shopify">Shopify</h2>
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Gross Sales</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Orders</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Sessions</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Conversion Rate</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">AOV</div>
-                        </div>
+                <h2 class="section-title"><span class="platform-icon shopify-color"></span>Shopify</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Gross Sales</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Orders</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Sessions</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Conversion Rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">AOV</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="subsection">
-                    <h2 class="section-title meta">Meta Ads</h2>
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Spend</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Purchase Value</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">ROAS</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">CPC</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">CTR</div>
-                        </div>
+            <div class="section">
+                <h2 class="section-title"><span class="platform-icon meta-color"></span>Meta Ads</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Spend</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Purchase Value</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">ROAS</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">CPC</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">CTR</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="subsection">
-                    <h2 class="section-title google">Google Ads</h2>
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Spend</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Conversion Value</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">ROAS</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">CPC</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">CTR</div>
-                        </div>
+            <div class="section">
+                <h2 class="section-title"><span class="platform-icon google-color"></span>Google Ads</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Spend</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Conversion Value</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">ROAS</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">CPC</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">CTR</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="subsection">
-                    <h2 class="section-title klaviyo">Klaviyo</h2>
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Revenue</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Recipients</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Open Rate</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Click Rate</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-value na">n/a</div>
-                            <div class="metric-label">Placed Order Rate</div>
-                        </div>
+            <div class="section">
+                <h2 class="section-title"><span class="platform-icon klaviyo-color"></span>Klaviyo</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Revenue</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Recipients</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Open Rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Click Rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value na">n/a</div>
+                        <div class="metric-label">Placed Order Rate</div>
                     </div>
                 </div>
             </div>
@@ -342,10 +354,10 @@
 
     <script>
         function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(content => {
+            document.querySelectorAll('.tab-content').forEach(function(content) {
                 content.classList.remove('active');
             });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
                 btn.classList.remove('active');
             });
             document.getElementById(tabId).classList.add('active');
