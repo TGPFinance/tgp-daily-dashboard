@@ -4,9 +4,8 @@ import json
 import requests
 from datetime import date, timedelta
 
-# ── Config ────────────────────────────────────────────────────────────────────
-ANTHROPIC_API_KEY     = os.environ["ANTHROPIC_API_KEY"]
-SUPERMETRICS_API_KEY  = os.environ["SUPERMETRICS_API_KEY"]
+ANTHROPIC_API_KEY    = os.environ["ANTHROPIC_API_KEY"]
+SUPERMETRICS_API_KEY = os.environ["SUPERMETRICS_API_KEY"]
 
 TODAY        = date.today()
 YESTERDAY    = TODAY - timedelta(days=1)
@@ -24,8 +23,7 @@ ACCOUNTS = {
     "shopify":       "gid://shopify/Shop/5489557622",
 }
 
-# ── Supermetrics fetch helper ─────────────────────────────────────────────────
-def sm_fetch(ds_id, account_id, fields, settings=None):
+def sm_fetch(ds_id, account_id, fields, report_type=None):
     params = {
         "api_key":         SUPERMETRICS_API_KEY,
         "ds_id":           ds_id,
@@ -35,32 +33,32 @@ def sm_fetch(ds_id, account_id, fields, settings=None):
         "end_date":        DATE_STR,
         "fields":          fields,
     }
-    if settings:
-        params["settings"] = json.dumps(settings)
+    if report_type:
+        params["settings"] = json.dumps({"report_type": report_type})
     try:
         r = requests.get(SM_BASE, params=params, timeout=30)
         r.raise_for_status()
         data = r.json()
         rows = data.get("data", [])
-        headers = data.get("meta", {}).get("query", {}).get("fields", fields.split(","))
+        field_list = fields.split(",")
         if rows:
-            return dict(zip(headers, rows[0]))
+            return dict(zip(field_list, rows[0]))
         return {}
     except Exception as e:
         print(f"  Warning: {ds_id} fetch failed — {e}")
         return {}
 
-# ── Fetch all sources ─────────────────────────────────────────────────────────
 print(f"Fetching data for {DISPLAY_DATE}...")
 
 amazon_seller = sm_fetch(
     "ASELL", ACCOUNTS["amazon_seller"],
-    "ordered_revenue,units_ordered,sessions,conversion_rate,page_views"
+    "ordered_product_sales,units_ordered,sessions,unit_session_percentage,page_views",
+    report_type="sales_and_traffic_by_date"
 )
 amazon_ads = sm_fetch(
     "AA", ACCOUNTS["amazon_ads"],
-    "cost,attributed_sales_14d,roas,acos,clicks,impressions",
-    settings={"report_type": "SP"}
+    "cost,attributedSales14d,roas,acos,clicks",
+    report_type="SponsoredProduct"
 )
 meta = sm_fetch(
     "FA", ACCOUNTS["meta"],
@@ -76,25 +74,30 @@ klaviyo = sm_fetch(
 )
 shopify = sm_fetch(
     "SHP", ACCOUNTS["shopify"],
-    "gross_sales,orders,sessions,conversion_rate,average_order_value"
+    "gross_sales,sm_order_count,net_sales,avg_total_sales",
+    report_type="Order"
 )
 
-print("Data fetched. Generating dashboard...")
+print(f"  Amazon Seller: {amazon_seller}")
+print(f"  Amazon Ads:    {amazon_ads}")
+print(f"  Meta:          {meta}")
+print(f"  Google Ads:    {google_ads}")
+print(f"  Klaviyo:       {klaviyo}")
+print(f"  Shopify:       {shopify}")
 
-# ── Build prompt ──────────────────────────────────────────────────────────────
 data_summary = f"""
 DATE: {DISPLAY_DATE}
 
 AMAZON SELLER CENTRAL (US):
-- Ordered Revenue: {amazon_seller.get('ordered_revenue', 'n/a')}
+- Ordered Revenue: {amazon_seller.get('ordered_product_sales', 'n/a')}
 - Units Ordered: {amazon_seller.get('units_ordered', 'n/a')}
 - Sessions: {amazon_seller.get('sessions', 'n/a')}
-- Conversion Rate: {amazon_seller.get('conversion_rate', 'n/a')}
+- Conversion Rate: {amazon_seller.get('unit_session_percentage', 'n/a')}
 - Page Views: {amazon_seller.get('page_views', 'n/a')}
 
-AMAZON ADS (Sponsored Products - US):
+AMAZON ADS (Sponsored Products):
 - Ad Spend: {amazon_ads.get('cost', 'n/a')}
-- Ad Sales: {amazon_ads.get('attributed_sales_14d', 'n/a')}
+- Ad Sales: {amazon_ads.get('attributedSales14d', 'n/a')}
 - ROAS: {amazon_ads.get('roas', 'n/a')}
 - ACOS: {amazon_ads.get('acos', 'n/a')}
 - Clicks: {amazon_ads.get('clicks', 'n/a')}
@@ -122,10 +125,9 @@ KLAVIYO:
 
 SHOPIFY:
 - Gross Sales: {shopify.get('gross_sales', 'n/a')}
-- Orders: {shopify.get('orders', 'n/a')}
-- Sessions: {shopify.get('sessions', 'n/a')}
-- Conversion Rate: {shopify.get('conversion_rate', 'n/a')}
-- AOV: {shopify.get('average_order_value', 'n/a')}
+- Orders: {shopify.get('sm_order_count', 'n/a')}
+- Net Sales: {shopify.get('net_sales', 'n/a')}
+- AOV: {shopify.get('avg_total_sales', 'n/a')}
 """
 
 DASHBOARD_PROMPT = f"""
@@ -141,15 +143,14 @@ Generate a complete, self-contained HTML dashboard that:
 - Second tab: Shopify, Meta Ads, Google Ads, and Klaviyo each as their own labeled section with metric cards
 - Dark theme, professional analytics dashboard style
 - Clean metric cards with value large and label small
+- If a value is 'n/a', show it as '—' on the dashboard
 - Fully self-contained with inline CSS and JS for tab switching
 - No external dependencies
 
 Return ONLY raw HTML. No markdown, no code fences, no explanation.
 """
 
-# ── Call Claude ───────────────────────────────────────────────────────────────
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
 message = client.messages.create(
     model="claude-opus-4-5",
     max_tokens=4096,
