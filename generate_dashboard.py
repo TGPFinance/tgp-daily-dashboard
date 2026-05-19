@@ -41,7 +41,7 @@ def sm_fetch(ds_id, account_id, fields, report_type=None):
         data = r.json()
         rows = data.get("data", [])
         field_list = fields.split(",")
-      if len(rows) >= 2:
+        if len(rows) >= 2:
             return dict(zip(field_list, rows[1]))
         return {}
     except Exception as e:
