@@ -1,6 +1,5 @@
 import anthropic
 import os
-import json
 import requests
 from datetime import date, timedelta
 
@@ -23,7 +22,7 @@ ACCOUNTS = {
     "shopify":       "gid://shopify/Shop/5489557622",
 }
 
-def sm_fetch(ds_id, account_id, fields, report_type=None, timeout=60):
+def sm_fetch(ds_id, account_id, fields, extra_params=None, timeout=60):
     params = {
         "api_key":         SUPERMETRICS_API_KEY,
         "ds_id":           ds_id,
@@ -33,8 +32,8 @@ def sm_fetch(ds_id, account_id, fields, report_type=None, timeout=60):
         "end_date":        DATE_STR,
         "fields":          fields,
     }
-    if report_type:
-        params["settings"] = json.dumps({"report_type": report_type})
+    if extra_params:
+        params.update(extra_params)
     try:
         r = requests.get(SM_BASE, params=params, timeout=timeout)
         r.raise_for_status()
@@ -53,13 +52,13 @@ print(f"Fetching data for {DISPLAY_DATE}...")
 amazon_seller = sm_fetch(
     "ASELL", ACCOUNTS["amazon_seller"],
     "ordered_product_sales,units_ordered,sessions,unit_session_percentage,page_views",
-    report_type="sales_and_traffic_by_date",
+    extra_params={"report_type": "sales_and_traffic_by_date"},
     timeout=120
 )
 amazon_ads = sm_fetch(
     "AA", ACCOUNTS["amazon_ads"],
     "cost,attributedSales14d,roas,acos,clicks",
-    report_type="SponsoredProduct"
+    extra_params={"report_type": "SponsoredProduct"}
 )
 meta = sm_fetch(
     "FA", ACCOUNTS["meta"],
@@ -72,12 +71,12 @@ google_ads = sm_fetch(
 klaviyo = sm_fetch(
     "KLAV", ACCOUNTS["klaviyo"],
     "klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate,shopify_placed_order_value,shopify_conversion_rate",
-    report_type="MetricExportCampaign"
+    extra_params={"report_type": "MetricExportCampaign"}
 )
 shopify = sm_fetch(
     "SHP", ACCOUNTS["shopify"],
     "gross_sales,sm_order_count,net_sales,avg_total_sales",
-    report_type="Order"
+    extra_params={"report_type": "Order"}
 )
 
 print(f"  Amazon Seller: {amazon_seller}")
