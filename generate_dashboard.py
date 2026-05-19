@@ -1,4 +1,5 @@
 import os
+import json
 import requests
 from datetime import date, timedelta
 
@@ -8,13 +9,13 @@ TODAY        = date.today()
 YESTERDAY    = TODAY - timedelta(days=1)
 DATE_STR     = YESTERDAY.strftime("%Y-%m-%d")
 DISPLAY_DATE = YESTERDAY.strftime("%B %d, %Y")
-
 PY_DATE_STR  = (YESTERDAY - timedelta(days=365)).strftime("%Y-%m-%d")
 PY_DISPLAY   = (YESTERDAY - timedelta(days=365)).strftime("%Y")
 
-T30_START = (YESTERDAY - timedelta(days=29)).strftime("%Y-%m-%d")
-T30_END   = DATE_STR
-T30_LABEL = f"{(YESTERDAY - timedelta(days=29)).strftime('%b %d')} – {YESTERDAY.strftime('%b %d, %Y')}"
+T30_START_DT = YESTERDAY - timedelta(days=29)
+T30_START    = T30_START_DT.strftime("%Y-%m-%d")
+T30_END      = DATE_STR
+T30_LABEL    = f"{T30_START_DT.strftime('%b %d')} – {YESTERDAY.strftime('%b %d, %Y')}"
 
 SM_BASE = "https://api.supermetrics.com/enterprise/v2/query/data/json"
 
@@ -28,120 +29,103 @@ ACCOUNTS = {
 }
 
 def sm_fetch(ds_id, account_id, fields, start_date=DATE_STR, end_date=DATE_STR, extra_params=None, timeout=180):
-    params = {
-        "api_key":         SUPERMETRICS_API_KEY,
-        "ds_id":           ds_id,
-        "ds_accounts":     account_id,
-        "date_range_type": "custom",
-        "start_date":      start_date,
-        "end_date":        end_date,
-        "fields":          fields,
-    }
-    if extra_params:
-        params.update(extra_params)
+    params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
+              "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
+    if extra_params: params.update(extra_params)
     try:
         r = requests.get(SM_BASE, params=params, timeout=timeout)
         r.raise_for_status()
-        data = r.json()
-        rows = data.get("data", [])
-        field_list = fields.split(",")
-        if len(rows) >= 2:
-            return dict(zip(field_list, rows[1]))
-        return {}
+        rows = r.json().get("data", [])
+        fl = fields.split(",")
+        return dict(zip(fl, rows[1])) if len(rows) >= 2 else {}
     except Exception as e:
         print(f"  Warning: {ds_id} fetch failed — {e}")
         return {}
 
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180):
+    params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
+              "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
+    if extra_params: params.update(extra_params)
+    try:
+        r = requests.get(SM_BASE, params=params, timeout=timeout)
+        r.raise_for_status()
+        rows = r.json().get("data", [])
+        fl = fields.split(",")
+        return [dict(zip(fl, row)) for row in rows[1:]] if len(rows) >= 2 else []
+    except Exception as e:
+        print(f"  Warning: {ds_id} daily fetch failed — {e}")
+        return []
+
 print(f"Fetching data for {DISPLAY_DATE}...")
 
-# --- Daily metrics ---
 amazon_seller = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
     "ordered_product_sales,units_ordered,sessions,unit_session_percentage,page_views",
     extra_params={"report_type": "sales_and_traffic_by_date"})
-
 amazon_ads = sm_fetch("AA", ACCOUNTS["amazon_ads"],
     "cost,attributedSales14d,roas,acos,clicks",
     extra_params={"report_type": "SponsoredProduct"})
-
-meta = sm_fetch("FA", ACCOUNTS["meta"],
-    "spend,purchase_value,roas,clicks,impressions,cpc,ctr")
-
-google_ads = sm_fetch("AW", ACCOUNTS["google_ads"],
-    "cost,conversions_value,roas,clicks,impressions,cpc,ctr")
-
-klaviyo = sm_fetch("KLAV", ACCOUNTS["klaviyo"],
+meta = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas,clicks,impressions,cpc,ctr")
+google_ads = sm_fetch("AW", ACCOUNTS["google_ads"], "cost,conversions_value,roas,clicks,impressions,cpc,ctr")
+klaviyo_email = sm_fetch("KLAV", ACCOUNTS["klaviyo"],
     "klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
     extra_params={"report_type": "MetricExportDaily"})
-
+klaviyo_attr = sm_fetch("KLAV", ACCOUNTS["klaviyo"],
+    "shopify_placed_order,shopify_placed_order_value",
+    extra_params={"report_type": "MetricExportAttributedCampaignDaily"})
 shopify = sm_fetch("SHP", ACCOUNTS["shopify"],
     "gross_sales,sm_order_count,net_sales,avg_total_sales",
     extra_params={"report_type": "Order"})
 
-# --- Prior year same-day (sales only) ---
 print(f"Fetching prior year data for {PY_DATE_STR}...")
+amazon_seller_py = sm_fetch("ASELL", ACCOUNTS["amazon_seller"], "ordered_product_sales,units_ordered",
+    start_date=PY_DATE_STR, end_date=PY_DATE_STR, extra_params={"report_type": "sales_and_traffic_by_date"})
+shopify_py = sm_fetch("SHP", ACCOUNTS["shopify"], "gross_sales,sm_order_count",
+    start_date=PY_DATE_STR, end_date=PY_DATE_STR, extra_params={"report_type": "Order"})
 
-amazon_seller_py = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
-    "ordered_product_sales,units_ordered",
-    start_date=PY_DATE_STR, end_date=PY_DATE_STR,
-    extra_params={"report_type": "sales_and_traffic_by_date"})
-
-shopify_py = sm_fetch("SHP", ACCOUNTS["shopify"],
-    "gross_sales,sm_order_count",
-    start_date=PY_DATE_STR, end_date=PY_DATE_STR,
-    extra_params={"report_type": "Order"})
-
-# --- Trailing 30 days ---
-print(f"Fetching trailing 30-day data ({T30_START} → {T30_END})...")
-
+print(f"Fetching 30-day totals & daily series ({T30_START} → {T30_END})...")
 amazon_seller_30d = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
     "ordered_product_sales,units_ordered,sessions,unit_session_percentage",
-    start_date=T30_START, end_date=T30_END,
-    extra_params={"report_type": "sales_and_traffic_by_date"})
-
-amazon_ads_30d = sm_fetch("AA", ACCOUNTS["amazon_ads"],
-    "cost,attributedSales14d,roas,acos",
-    start_date=T30_START, end_date=T30_END,
-    extra_params={"report_type": "SponsoredProduct"})
-
-shopify_30d = sm_fetch("SHP", ACCOUNTS["shopify"],
-    "gross_sales,sm_order_count,net_sales,avg_total_sales",
-    start_date=T30_START, end_date=T30_END,
-    extra_params={"report_type": "Order"})
-
-meta_30d = sm_fetch("FA", ACCOUNTS["meta"],
-    "spend,purchase_value,roas",
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
+amazon_ads_30d = sm_fetch("AA", ACCOUNTS["amazon_ads"], "cost,attributedSales14d,roas,acos",
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "SponsoredProduct"})
+shopify_30d = sm_fetch("SHP", ACCOUNTS["shopify"], "gross_sales,sm_order_count,net_sales,avg_total_sales",
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
+meta_30d = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas",
+    start_date=T30_START, end_date=T30_END)
+google_ads_30d = sm_fetch("AW", ACCOUNTS["google_ads"], "cost,conversions_value,roas",
     start_date=T30_START, end_date=T30_END)
 
-google_ads_30d = sm_fetch("AW", ACCOUNTS["google_ads"],
-    "cost,conversions_value,roas",
-    start_date=T30_START, end_date=T30_END)
+# Daily series for charts
+amazon_daily = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "date,ordered_product_sales",
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
+shopify_daily = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "date,gross_sales",
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
 
-print(f"  Amazon Seller: {amazon_seller} | PY: {amazon_seller_py} | 30d: {amazon_seller_30d}")
-print(f"  Amazon Ads:    {amazon_ads} | 30d: {amazon_ads_30d}")
-print(f"  Meta:          {meta} | 30d: {meta_30d}")
-print(f"  Google Ads:    {google_ads} | 30d: {google_ads_30d}")
-print(f"  Klaviyo:       {klaviyo}")
-print(f"  Shopify:       {shopify} | PY: {shopify_py} | 30d: {shopify_30d}")
+print(f"  Amazon Seller: {amazon_seller}")
+print(f"  Amazon Ads:    {amazon_ads}")
+print(f"  Klaviyo email: {klaviyo_email}")
+print(f"  Klaviyo attr:  {klaviyo_attr}")
+print(f"  Shopify:       {shopify}")
+print(f"  Amazon daily:  {len(amazon_daily)} rows")
+print(f"  Shopify daily: {len(shopify_daily)} rows")
 
-# --- Formatters ---
+# Formatters
 def fmt_money(v, big=False):
-    if v is None or v == '' or v == 0: return "—"
+    if v in (None, '', 0): return "—"
     try:
         n = float(v)
-        if big and n >= 1000: return f"${n/1000:,.1f}K"
-        return f"${n:,.2f}"
+        return f"${n/1000:,.1f}K" if big and n >= 1000 else f"${n:,.2f}"
     except: return "—"
 
 def fmt_num(v, big=False):
-    if v is None or v == '' or v == 0: return "—"
+    if v in (None, '', 0): return "—"
     try:
         n = float(v)
-        if big and n >= 1000: return f"{n/1000:,.1f}K"
-        return f"{n:,.0f}" if n >= 1 else f"{n:g}"
+        return f"{n/1000:,.1f}K" if big and n >= 1000 else (f"{n:,.0f}" if n >= 1 else f"{n:g}")
     except: return str(v)
 
 def fmt_pct(v):
-    if v is None or v == '': return "—"
+    if v in (None, ''): return "—"
     try:
         n = float(v)
         if n == 0: return "—"
@@ -150,14 +134,14 @@ def fmt_pct(v):
     except: return "—"
 
 def fmt_roas(v):
-    if v is None or v == '' or v == 0: return "—"
+    if v in (None, '', 0): return "—"
     try: return f"{float(v):,.2f}×"
     except: return "—"
 
-def yoy_badge(current, prior, fmt=fmt_money):
-    if current in (None, '', 0) or prior in (None, '', 0): return ""
+def yoy_badge(cur, prior, fmt=fmt_money):
+    if cur in (None, '', 0) or prior in (None, '', 0): return ""
     try:
-        c, p = float(current), float(prior)
+        c, p = float(cur), float(prior)
         if p == 0: return ""
         pct = ((c - p) / p) * 100
         color = "#22c55e" if pct >= 0 else "#ef4444"
@@ -166,27 +150,68 @@ def yoy_badge(current, prior, fmt=fmt_money):
     except: return ""
 
 def daily_avg(v, fmt=fmt_money):
-    if v is None or v == '' or v == 0: return ""
+    if v in (None, '', 0): return ""
     try: return f'<div class="sub">~{fmt(float(v)/30)} / day avg</div>'
     except: return ""
 
 def card(value, label, sub=""):
     return f'<div class="card"><div class="label">{label}</div><div class="value">{value}</div>{sub}</div>'
 
-# Compute Shopify AOV from 30d if avg_total_sales is missing
-def shopify_30d_aov():
-    gs = shopify_30d.get('gross_sales')
-    oc = shopify_30d.get('sm_order_count')
-    if gs and oc:
-        try: return f"${float(gs)/float(oc):,.2f}"
-        except: return "—"
-    return "—"
+def rolling_avg(values, window=7):
+    result = []
+    for i in range(len(values)):
+        s = max(0, i - window + 1)
+        sl = [v for v in values[s:i+1] if v is not None]
+        result.append(round(sum(sl) / len(sl), 2) if sl else 0)
+    return result
+
+# Prepare chart data
+def chart_data(daily_rows, value_key):
+    labels = [r.get('date', '') for r in daily_rows]
+    values = []
+    for r in daily_rows:
+        try: values.append(float(r.get(value_key, 0)))
+        except: values.append(0)
+    return labels, values, rolling_avg(values, 7)
+
+amazon_labels, amazon_values, amazon_avg = chart_data(amazon_daily, 'ordered_product_sales')
+shopify_labels, shopify_values, shopify_avg = chart_data(shopify_daily, 'gross_sales')
+
+def chart_block(canvas_id, title, labels, values, avg):
+    if not labels:
+        return ""
+    return f"""
+    <div class="chart-card">
+      <div class="chart-title">{title}</div>
+      <canvas id="{canvas_id}" height="80"></canvas>
+      <script>
+        new Chart(document.getElementById('{canvas_id}'), {{
+          type: 'bar',
+          data: {{
+            labels: {json.dumps(labels)},
+            datasets: [
+              {{ label: 'Daily revenue', data: {json.dumps(values)}, backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 }},
+              {{ label: '7-day avg', type: 'line', data: {json.dumps(avg)}, borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }}
+            ]
+          }},
+          options: {{
+            responsive: true,
+            plugins: {{ legend: {{ labels: {{ color: '#9ca3af', boxWidth: 12 }} }} }},
+            scales: {{
+              x: {{ ticks: {{ color: '#6b7280', maxTicksLimit: 8 }}, grid: {{ display: false }} }},
+              y: {{ ticks: {{ color: '#6b7280', callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v) }}, grid: {{ color: '#1f2937' }}, beginAtZero: true }}
+            }}
+          }}
+        }});
+      </script>
+    </div>"""
 
 html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>The Good Patch — Performance Report</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
   body {{ background: #0a0f1c; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 40px; }}
   .header {{ text-align: center; margin-bottom: 30px; }}
@@ -208,6 +233,8 @@ html = f"""<!DOCTYPE html>
   .panel {{ display: none; }}
   .panel.active {{ display: block; }}
   .divider {{ border: 0; border-top: 1px solid #1f2937; margin: 30px 0; }}
+  .chart-card {{ background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 20px; margin-top: 16px; }}
+  .chart-title {{ font-size: 13px; font-weight: 500; color: #d1d5db; margin-bottom: 12px; }}
   @media (max-width: 900px) {{ .cards, .cards-4 {{ grid-template-columns: repeat(2, 1fr); }} }}
 </style>
 </head>
@@ -232,7 +259,6 @@ html = f"""<!DOCTYPE html>
       {card(fmt_num(amazon_seller.get('page_views')), 'Page Views')}
     </div>
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Sponsored Products · La Mend (US)</h2><span class="badge">{DISPLAY_DATE}</span></div>
     <div class="cards">
@@ -243,9 +269,7 @@ html = f"""<!DOCTYPE html>
       {card(fmt_num(amazon_ads.get('clicks')), 'Clicks')}
     </div>
   </div>
-
   <hr class="divider">
-
   <div class="section">
     <div class="section-title"><h2>Seller Central — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards">
@@ -255,8 +279,8 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(amazon_seller_30d.get('unit_session_percentage')), 'Conversion Rate', '<div class="sub">30-day avg</div>')}
       {card(fmt_money(float(amazon_seller_30d.get('ordered_product_sales',0))/30) if amazon_seller_30d.get('ordered_product_sales') else '—', 'Daily Avg Revenue', '<div class="sub">revenue ÷ 30</div>')}
     </div>
+    {chart_block('amazonChart', 'Daily ordered revenue (USD)', amazon_labels, amazon_values, amazon_avg)}
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Sponsored Products — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards-4">
@@ -278,7 +302,6 @@ html = f"""<!DOCTYPE html>
       {card(fmt_money(shopify.get('avg_total_sales')), 'AOV')}
     </div>
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Meta Ads</h2><span class="badge">{DISPLAY_DATE}</span></div>
     <div class="cards">
@@ -289,7 +312,6 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(meta.get('ctr')), 'CTR')}
     </div>
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Google Ads</h2><span class="badge">{DISPLAY_DATE}</span></div>
     <div class="cards">
@@ -300,50 +322,46 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(google_ads.get('ctr')), 'CTR')}
     </div>
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Klaviyo</h2><span class="badge">{DISPLAY_DATE}</span></div>
-    <div class="cards-4">
-      {card(fmt_num(klaviyo.get('klaviyo_total_recipients')), 'Recipients')}
-      {card(fmt_pct(klaviyo.get('klaviyo_open_rate')), 'Open Rate')}
-      {card(fmt_pct(klaviyo.get('klaviyo_click_rate')), 'Click Rate')}
-      {card('—', '')}
+    <div class="cards">
+      {card(fmt_money(klaviyo_attr.get('shopify_placed_order_value')), 'Attributed Revenue')}
+      {card(fmt_num(klaviyo_attr.get('shopify_placed_order')), 'Attributed Orders')}
+      {card(fmt_num(klaviyo_email.get('klaviyo_total_recipients')), 'Recipients')}
+      {card(fmt_pct(klaviyo_email.get('klaviyo_open_rate')), 'Open Rate')}
+      {card(fmt_pct(klaviyo_email.get('klaviyo_click_rate')), 'Click Rate')}
     </div>
   </div>
-
   <hr class="divider">
-
   <div class="section">
     <div class="section-title"><h2>Shopify — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards-4">
       {card(fmt_money(shopify_30d.get('gross_sales'), big=True), 'Gross Sales', '<div class="sub">30-day total</div>')}
       {card(fmt_num(shopify_30d.get('sm_order_count'), big=True), 'Orders', daily_avg(shopify_30d.get('sm_order_count'), fmt_num))}
       {card(fmt_money(shopify_30d.get('net_sales'), big=True), 'Net Sales', '<div class="sub">30-day total</div>')}
-      {card(shopify_30d_aov(), 'AOV', '<div class="sub">30-day avg</div>')}
+      {card(fmt_money(shopify_30d.get('avg_total_sales')), 'AOV', '<div class="sub">30-day avg</div>')}
     </div>
+    {chart_block('shopifyChart', 'Daily gross sales (USD)', shopify_labels, shopify_values, shopify_avg)}
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Meta Ads — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards-4">
       {card(fmt_money(meta_30d.get('spend'), big=True), 'Spend', '<div class="sub">30-day total</div>')}
       {card(fmt_money(meta_30d.get('purchase_value'), big=True), 'Purchase Value', '<div class="sub">30-day total</div>')}
       {card(fmt_roas(meta_30d.get('roas')), 'ROAS', '<div class="sub">30-day avg</div>')}
-      {card(fmt_money(meta_30d.get('spend',0)/30) if meta_30d.get('spend') else '—', 'Daily Avg Spend', '<div class="sub">spend ÷ 30</div>')}
+      {card(fmt_money(float(meta_30d.get('spend',0))/30) if meta_30d.get('spend') else '—', 'Daily Avg Spend', '<div class="sub">spend ÷ 30</div>')}
     </div>
   </div>
-
   <div class="section">
     <div class="section-title"><h2>Google Ads — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards-4">
       {card(fmt_money(google_ads_30d.get('cost'), big=True), 'Spend', '<div class="sub">30-day total</div>')}
       {card(fmt_money(google_ads_30d.get('conversions_value'), big=True), 'Conversion Value', '<div class="sub">30-day total</div>')}
       {card(fmt_roas(google_ads_30d.get('roas')), 'ROAS', '<div class="sub">30-day avg</div>')}
-      {card(fmt_money(google_ads_30d.get('cost',0)/30) if google_ads_30d.get('cost') else '—', 'Daily Avg Spend', '<div class="sub">spend ÷ 30</div>')}
+      {card(fmt_money(float(google_ads_30d.get('cost',0))/30) if google_ads_30d.get('cost') else '—', 'Daily Avg Spend', '<div class="sub">spend ÷ 30</div>')}
     </div>
   </div>
 </div>
-
 <script>
 function showTab(i) {{
   document.querySelectorAll('.tab').forEach((t, idx) => t.classList.toggle('active', idx === i));
