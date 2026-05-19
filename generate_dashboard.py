@@ -23,7 +23,7 @@ ACCOUNTS = {
     "shopify":       "gid://shopify/Shop/5489557622",
 }
 
-def sm_fetch(ds_id, account_id, fields, report_type=None):
+def sm_fetch(ds_id, account_id, fields, report_type=None, timeout=60):
     params = {
         "api_key":         SUPERMETRICS_API_KEY,
         "ds_id":           ds_id,
@@ -36,7 +36,7 @@ def sm_fetch(ds_id, account_id, fields, report_type=None):
     if report_type:
         params["settings"] = json.dumps({"report_type": report_type})
     try:
-        r = requests.get(SM_BASE, params=params, timeout=30)
+        r = requests.get(SM_BASE, params=params, timeout=timeout)
         r.raise_for_status()
         data = r.json()
         rows = data.get("data", [])
@@ -53,12 +53,13 @@ print(f"Fetching data for {DISPLAY_DATE}...")
 amazon_seller = sm_fetch(
     "ASELL", ACCOUNTS["amazon_seller"],
     "ordered_product_sales,units_ordered,sessions,unit_session_percentage,page_views",
-    report_type="sales_and_traffic_by_date"
+    report_type="sales_and_traffic_by_date",
+    timeout=120
 )
 amazon_ads = sm_fetch(
     "AA", ACCOUNTS["amazon_ads"],
     "cost,attributedSales14d,roas,acos,clicks",
-    report_type="SponsoredProduct"
+    report_type="SponsoredProducts"
 )
 meta = sm_fetch(
     "FA", ACCOUNTS["meta"],
@@ -70,12 +71,12 @@ google_ads = sm_fetch(
 )
 klaviyo = sm_fetch(
     "KLAV", ACCOUNTS["klaviyo"],
-    "revenue,recipients,open_rate,click_rate,placed_order_rate"
+    "revenue,num_recipients,open_rate,click_rate,conversion_rate"
 )
 shopify = sm_fetch(
     "SHP", ACCOUNTS["shopify"],
     "gross_sales,sm_order_count,net_sales,avg_total_sales",
-    report_type="Order"
+    report_type="Sales"
 )
 
 print(f"  Amazon Seller: {amazon_seller}")
@@ -118,10 +119,10 @@ GOOGLE ADS:
 
 KLAVIYO:
 - Revenue: {klaviyo.get('revenue', 'n/a')}
-- Recipients: {klaviyo.get('recipients', 'n/a')}
+- Recipients: {klaviyo.get('num_recipients', 'n/a')}
 - Open Rate: {klaviyo.get('open_rate', 'n/a')}
 - Click Rate: {klaviyo.get('click_rate', 'n/a')}
-- Placed Order Rate: {klaviyo.get('placed_order_rate', 'n/a')}
+- Conversion Rate: {klaviyo.get('conversion_rate', 'n/a')}
 
 SHOPIFY:
 - Gross Sales: {shopify.get('gross_sales', 'n/a')}
