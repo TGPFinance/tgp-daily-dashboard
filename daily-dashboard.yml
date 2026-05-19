@@ -22,9 +22,10 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic
 
-      - name: Generate dashboard
+   - name: Generate dashboard
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SUPERMETRICS_API_KEY: ${{ secrets.SUPERMETRICS_API_KEY }}
         run: python generate_dashboard.py
 
       - name: Commit and push
