@@ -2,6 +2,7 @@ import os
 import json
 import requests
 from datetime import date, timedelta
+from concurrent.futures import ThreadPoolExecutor
 
 SUPERMETRICS_API_KEY = os.environ["SUPERMETRICS_API_KEY"]
 
@@ -74,56 +75,96 @@ def to_float(v):
     try: return float(v)
     except: return 0
 
-print(f"Fetching data for {DISPLAY_DATE}...")
+print(f"Launching parallel fetches for {DISPLAY_DATE}...")
 
-amazon_seller = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
-    "ordered_product_sales,units_ordered,sessions,unit_session_percentage,page_views",
-    extra_params={"report_type": "sales_and_traffic_by_date"})
-amazon_ads = sm_fetch("AA", ACCOUNTS["amazon_ads"],
-    "cost,attributedSales14d,roas,acos,clicks",
-    extra_params={"report_type": "SponsoredProduct"}, timeout=300)
-meta = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas,clicks,impressions,cpc,ctr")
-google_ads = sm_fetch("AW", ACCOUNTS["google_ads"], "cost,conversions_value,roas,clicks,impressions,cpc,ctr")
-klaviyo_email = sm_fetch("KLAV", ACCOUNTS["klaviyo"],
-    "klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
-    extra_params={"report_type": "MetricExportDaily"})
-klaviyo_attr = sm_fetch("KLAV", ACCOUNTS["klaviyo"],
-    "shopify_placed_order,shopify_placed_order_value",
-    extra_params={"report_type": "MetricExportAttributedCampaignDaily"})
-shopify = sm_fetch("SHP", ACCOUNTS["shopify"],
-    "gross_sales,sm_order_count,net_sales,avg_total_sales",
-    extra_params={"report_type": "Order"})
+def _run():
+    with ThreadPoolExecutor(max_workers=12) as ex:
+        futures = {
+            'amazon_seller': ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
+                "ordered_product_sales,units_ordered",
+                extra_params={"report_type": "sales_and_traffic_by_date"}),
+            'amazon_ads': ex.submit(sm_fetch, "AA", ACCOUNTS["amazon_ads"],
+                "cost,attributedSales14d,roas,acos,clicks",
+                extra_params={"report_type": "SponsoredProduct"}, timeout=300),
+            'meta': ex.submit(sm_fetch, "FA", ACCOUNTS["meta"],
+                "spend,purchase_value,roas,clicks,impressions,cpc,ctr"),
+            'google_ads': ex.submit(sm_fetch, "AW", ACCOUNTS["google_ads"],
+                "cost,conversions_value,roas,clicks,impressions,cpc,ctr"),
+            'klaviyo_email': ex.submit(sm_fetch, "KLAV", ACCOUNTS["klaviyo"],
+                "klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
+                extra_params={"report_type": "MetricExportDaily"}),
+            'klaviyo_attr': ex.submit(sm_fetch, "KLAV", ACCOUNTS["klaviyo"],
+                "shopify_placed_order,shopify_placed_order_value",
+                extra_params={"report_type": "MetricExportAttributedCampaignDaily"}),
+            'shopify': ex.submit(sm_fetch, "SHP", ACCOUNTS["shopify"],
+                "gross_sales,sm_order_count,net_sales,avg_total_sales",
+                extra_params={"report_type": "Order"}),
+            'amazon_seller_py': ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
+                "ordered_product_sales,units_ordered",
+                start_date=PY_DATE_STR, end_date=PY_DATE_STR,
+                extra_params={"report_type": "sales_and_traffic_by_date"}),
+            'shopify_py': ex.submit(sm_fetch, "SHP", ACCOUNTS["shopify"],
+                "net_sales,sm_order_count",
+                start_date=PY_DATE_STR, end_date=PY_DATE_STR,
+                extra_params={"report_type": "Order"}),
+            'amazon_seller_30d': ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
+                "ordered_product_sales,units_ordered,sessions,unit_session_percentage",
+                start_date=T30_START, end_date=T30_END,
+                extra_params={"report_type": "sales_and_traffic_by_date"}),
+            'amazon_ads_30d': ex.submit(sm_fetch, "AA", ACCOUNTS["amazon_ads"],
+                "cost,attributedSales14d,roas,acos",
+                start_date=T30_START, end_date=T30_END,
+                extra_params={"report_type": "SponsoredProduct"}, timeout=300),
+            'shopify_30d': ex.submit(sm_fetch, "SHP", ACCOUNTS["shopify"],
+                "gross_sales,sm_order_count,net_sales,avg_total_sales",
+                start_date=T30_START, end_date=T30_END,
+                extra_params={"report_type": "Order"}),
+            'meta_30d': ex.submit(sm_fetch, "FA", ACCOUNTS["meta"],
+                "spend,purchase_value,roas",
+                start_date=T30_START, end_date=T30_END),
+            'google_ads_30d': ex.submit(sm_fetch, "AW", ACCOUNTS["google_ads"],
+                "cost,conversions_value,roas",
+                start_date=T30_START, end_date=T30_END),
+            'amazon_daily': ex.submit(sm_fetch_rows, "ASELL", ACCOUNTS["amazon_seller"],
+                "date,ordered_product_sales,sessions,unit_session_percentage",
+                T30_START, T30_END,
+                extra_params={"report_type": "sales_and_traffic_by_date"}),
+            'shopify_daily': ex.submit(sm_fetch_rows, "SHP", ACCOUNTS["shopify"],
+                "date,net_sales", T30_START, T30_END,
+                extra_params={"report_type": "Order"}),
+            'amazon_products': ex.submit(sm_fetch_rows, "ASELL", ACCOUNTS["amazon_seller"],
+                "title,ordered_product_sales,units_ordered",
+                T30_START, T30_END,
+                extra_params={"report_type": "sales_and_traffic_by_asin"}),
+        }
+        return {k: v.result() for k, v in futures.items()}
 
-print(f"Fetching prior year data...")
-amazon_seller_py = sm_fetch("ASELL", ACCOUNTS["amazon_seller"], "ordered_product_sales,units_ordered",
-    start_date=PY_DATE_STR, end_date=PY_DATE_STR, extra_params={"report_type": "sales_and_traffic_by_date"})
-shopify_py = sm_fetch("SHP", ACCOUNTS["shopify"], "gross_sales,sm_order_count",
-    start_date=PY_DATE_STR, end_date=PY_DATE_STR, extra_params={"report_type": "Order"})
+results = _run()
 
-print(f"Fetching 30-day data...")
-amazon_seller_30d = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
-    "ordered_product_sales,units_ordered,sessions,unit_session_percentage",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
-amazon_ads_30d = sm_fetch("AA", ACCOUNTS["amazon_ads"], "cost,attributedSales14d,roas,acos",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "SponsoredProduct"}, timeout=300)
-shopify_30d = sm_fetch("SHP", ACCOUNTS["shopify"], "gross_sales,sm_order_count,net_sales,avg_total_sales",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
-meta_30d = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas",
-    start_date=T30_START, end_date=T30_END)
-google_ads_30d = sm_fetch("AW", ACCOUNTS["google_ads"], "cost,conversions_value,roas",
-    start_date=T30_START, end_date=T30_END)
+amazon_seller     = results['amazon_seller']
+amazon_ads        = results['amazon_ads']
+meta              = results['meta']
+google_ads        = results['google_ads']
+klaviyo_email     = results['klaviyo_email']
+klaviyo_attr      = results['klaviyo_attr']
+shopify           = results['shopify']
+amazon_seller_py  = results['amazon_seller_py']
+shopify_py        = results['shopify_py']
+amazon_seller_30d = results['amazon_seller_30d']
+amazon_ads_30d    = results['amazon_ads_30d']
+shopify_30d       = results['shopify_30d']
+meta_30d          = results['meta_30d']
+google_ads_30d    = results['google_ads_30d']
+amazon_daily      = results['amazon_daily']
 
-print(f"Fetching daily series & top products...")
-amazon_daily = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
-    "date,ordered_product_sales,sessions,unit_session_percentage",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
-shopify_daily = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "date,net_sales",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
-shopify_daily = [r for r in shopify_daily if to_float(r.get('net_sales')) > 0]
-amazon_products = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
-    "title,ordered_product_sales,units_ordered",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_asin"})
-amazon_products = sorted(amazon_products, key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
+# Shopify daily: filter $0 days, sort by date, drop most recent (partial day)
+_shopify_daily_raw = sorted(
+    [r for r in results['shopify_daily'] if to_float(r.get('net_sales')) > 0],
+    key=lambda r: r.get('date', '')
+)
+shopify_daily = _shopify_daily_raw[:-1] if len(_shopify_daily_raw) > 1 else _shopify_daily_raw
+
+amazon_products = sorted(results['amazon_products'], key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
 
 print(f"  Amazon Seller: {amazon_seller}")
 print(f"  Amazon Ads:    {amazon_ads}")
@@ -193,12 +234,26 @@ def col(rows, key):
         except: out.append(0)
     return out
 
-amazon_dates = [r.get('date', '') for r in amazon_daily]
-amazon_rev   = col(amazon_daily, 'ordered_product_sales')
-amazon_sess  = col(amazon_daily, 'sessions')
-amazon_cvr   = [v*100 if 0 < v < 1 else v for v in col(amazon_daily, 'unit_session_percentage')]
+amazon_dates  = [r.get('date', '') for r in amazon_daily]
+amazon_rev    = col(amazon_daily, 'ordered_product_sales')
+amazon_sess   = col(amazon_daily, 'sessions')
+amazon_cvr    = [v*100 if 0 < v < 1 else v for v in col(amazon_daily, 'unit_session_percentage')]
 shopify_dates = [r.get('date', '') for r in shopify_daily]
 shopify_rev   = col(shopify_daily, 'net_sales')
+
+# Amazon $/Unit
+amazon_dollar_per_unit = "—"
+if amazon_seller.get('ordered_product_sales') and amazon_seller.get('units_ordered'):
+    try:
+        amazon_dollar_per_unit = fmt_money(float(amazon_seller['ordered_product_sales']) / float(amazon_seller['units_ordered']))
+    except: pass
+
+# Shopify refunds & discounts (gross - net)
+shopify_refunds = "—"
+if shopify.get('gross_sales') and shopify.get('net_sales'):
+    try:
+        shopify_refunds = fmt_money(float(shopify['gross_sales']) - float(shopify['net_sales']))
+    except: pass
 
 top_total = sum(to_float(p.get('ordered_product_sales')) for p in amazon_products) or 1
 def product_rows():
@@ -268,6 +323,7 @@ html = f"""<!DOCTYPE html>
   .badge {{ font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }}
   .cards {{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }}
   .cards-4 {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }}
+  .cards-3 {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }}
   .card {{ background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 16px; }}
   .label {{ font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }}
   .value {{ font-size: 24px; font-weight: 600; color: #fff; line-height: 1.2; }}
@@ -286,7 +342,7 @@ html = f"""<!DOCTYPE html>
   .prod-bar {{ width: 40%; }}
   .bar-wrap {{ width: 100%; background: #1f2937; height: 8px; border-radius: 4px; overflow: hidden; }}
   .bar-fill {{ background: #6366f1; height: 100%; border-radius: 4px; }}
-  @media (max-width: 900px) {{ .cards, .cards-4 {{ grid-template-columns: repeat(2, 1fr); }} }}
+  @media (max-width: 900px) {{ .cards, .cards-4, .cards-3 {{ grid-template-columns: repeat(2, 1fr); }} }}
 </style>
 </head>
 <body>
@@ -302,12 +358,10 @@ html = f"""<!DOCTYPE html>
 <div class="panel active" id="panel-0">
   <div class="section">
     <div class="section-title"><h2>Seller Central · Amazon.com (US)</h2><span class="badge">{DISPLAY_DATE}</span></div>
-    <div class="cards">
+    <div class="cards-3">
       {card(fmt_money(amazon_seller.get('ordered_product_sales')), 'Ordered Revenue', yoy_badge(amazon_seller.get('ordered_product_sales'), amazon_seller_py.get('ordered_product_sales'), fmt_money))}
       {card(fmt_num(amazon_seller.get('units_ordered')), 'Units Ordered', yoy_badge(amazon_seller.get('units_ordered'), amazon_seller_py.get('units_ordered'), fmt_num))}
-      {card(fmt_num(amazon_seller.get('sessions')), 'Sessions')}
-      {card(fmt_pct(amazon_seller.get('unit_session_percentage')), 'Conversion Rate')}
-      {card(fmt_num(amazon_seller.get('page_views')), 'Page Views')}
+      {card(amazon_dollar_per_unit, '$ / Unit')}
     </div>
   </div>
   <div class="section">
@@ -361,10 +415,10 @@ html = f"""<!DOCTYPE html>
   <div class="section">
     <div class="section-title"><h2>Shopify</h2><span class="badge">{DISPLAY_DATE}</span></div>
     <div class="cards-4">
-      {card(fmt_money(shopify.get('gross_sales')), 'Gross Sales', yoy_badge(shopify.get('gross_sales'), shopify_py.get('gross_sales'), fmt_money))}
+      {card(fmt_money(shopify.get('net_sales')), 'Net Sales', yoy_badge(shopify.get('net_sales'), shopify_py.get('net_sales'), fmt_money))}
       {card(fmt_num(shopify.get('sm_order_count')), 'Orders', yoy_badge(shopify.get('sm_order_count'), shopify_py.get('sm_order_count'), fmt_num))}
-      {card(fmt_money(shopify.get('net_sales')), 'Net Sales')}
       {card(fmt_money(shopify.get('avg_total_sales')), 'AOV')}
+      {card(shopify_refunds, 'Refunds & Discounts')}
     </div>
   </div>
   <div class="section">
@@ -401,10 +455,10 @@ html = f"""<!DOCTYPE html>
   <div class="section">
     <div class="section-title"><h2>Shopify — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards-4">
-      {card(fmt_money(shopify_30d.get('gross_sales'), big=True), 'Gross Sales', '<div class="sub">30-day total</div>')}
-      {card(fmt_num(shopify_30d.get('sm_order_count'), big=True), 'Orders', daily_avg(shopify_30d.get('sm_order_count'), fmt_num))}
       {card(fmt_money(shopify_30d.get('net_sales'), big=True), 'Net Sales', '<div class="sub">30-day total</div>')}
+      {card(fmt_num(shopify_30d.get('sm_order_count'), big=True), 'Orders', daily_avg(shopify_30d.get('sm_order_count'), fmt_num))}
       {card(fmt_money(shopify_30d.get('avg_total_sales')), 'AOV', '<div class="sub">30-day avg</div>')}
+      {card(fmt_money(float(shopify_30d.get('net_sales',0))/30) if shopify_30d.get('net_sales') else '—', 'Daily Avg Net Sales', '<div class="sub">net ÷ 30</div>')}
     </div>
     <div class="chart-card">
       <div class="chart-title">Daily net sales (USD)</div>
