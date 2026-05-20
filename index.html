@@ -8,15 +8,15 @@
   body { background: #0a0f1c; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 40px; }
   .header { text-align: center; margin-bottom: 30px; }
   .logo-wrap { display: inline-block; background: white; padding: 18px 28px; border-radius: 12px; margin-bottom: 14px; }
-  .logo-wrap img { height: 80px; width: auto; display: block; }
+  .logo-wrap img { height: 120px; width: auto; display: block; }
   .header .date { color: #9ca3af; font-size: 14px; margin-top: 8px; }
   .cache-notice { background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }
   .tabs { display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }
   .tab { padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; font-weight: 500; }
-  .tab.active { background: linear-gradient(135deg, #00b7bf, #008a91); color: white; }
+  .tab.active { background: linear-gradient(135deg, #2c4ea2, #1e3a7a); color: white; }
   .section { margin-bottom: 30px; }
   .section-title { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }
-  .section-title h2 { font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid #00b7bf; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }
+  .section-title h2 { font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid #2c4ea2; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }
   .channel-icon { width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: 0.85; }
   .badge { font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }
   .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
@@ -39,7 +39,7 @@
   .prod-num { text-align: right; font-variant-numeric: tabular-nums; }
   .prod-bar { width: 40%; }
   .bar-wrap { width: 100%; background: #1f2937; height: 8px; border-radius: 4px; overflow: hidden; }
-  .bar-fill { background: #00b7bf; height: 100%; border-radius: 4px; }
+  .bar-fill { background: #2c4ea2; height: 100%; border-radius: 4px; }
   @media (max-width: 900px) { .cards, .cards-4, .cards-3 { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
@@ -171,7 +171,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/klaviyo.svg" alt="" /><h2>Klaviyo</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/mail.svg" alt="" /><h2>Klaviyo</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards">
       <div class="card"><div class="label">Attributed Revenue</div><div class="value">$575.17</div></div>
       <div class="card"><div class="label">Attributed Orders</div><div class="value">22</div></div>
@@ -181,7 +181,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/klaviyo.svg" alt="" /><h2>Last 5 Email Campaigns</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/mail.svg" alt="" /><h2>Last 5 Email Campaigns</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <table class="products">
       <thead><tr>
         <th>Campaign</th>
@@ -282,7 +282,7 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('amazonRevChart'), {
       type: 'bar',
       data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19"], datasets: [
-        { label: 'Daily revenue', data: [7583.99, 7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7706.39, 8875.86, 8708.66, 7630.04], backgroundColor: 'rgba(0, 183, 191, 0.7)', borderRadius: 2 },
+        { label: 'Daily revenue', data: [7583.99, 7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7706.39, 8875.86, 8708.66, 7630.04], backgroundColor: 'rgba(44, 78, 162, 0.7)', borderRadius: 2 },
         { label: '7-day avg', type: 'line', data: [7583.99, 7562.16, 7706.46, 7528.32, 7361.03, 7076.48, 7020.12, 6898.28, 6732.67, 6560.95, 6455.2, 6422.97, 6545.18, 6624.27, 6680.97, 6755.26, 6755.06, 6839.98, 6906.71, 6944.96, 6972.78, 6957.87, 7096.43, 7194.64, 7201.02, 7126.29, 7259.08, 7465.57, 7706.29, 7671.87], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
       ]},
       options: { responsive: true, plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
@@ -306,7 +306,7 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('shopifyRevChart'), {
       type: 'bar',
       data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18"], datasets: [
-        { label: 'Daily net sales', data: [2500.93, 1356.45, 1429.4, 1703.35, 729.6, 1168.94, 1549.43, 2284.18, 2101.99, 1923.31, 1483.57, 1390.35, 1694.08, 2083.18, 1963.6, 1435.64, 2054.3, 1617.68, 1416.35, 2307.65, 1432.63, 2346.48, 1427.75, 1196.02, 1429.66, 2571.15, 992.34, 800.09, 1356.3], backgroundColor: 'rgba(0, 183, 191, 0.7)', borderRadius: 2 },
+        { label: 'Daily net sales', data: [2500.93, 1356.45, 1429.4, 1703.35, 729.6, 1168.94, 1549.43, 2284.18, 2101.99, 1923.31, 1483.57, 1390.35, 1694.08, 2083.18, 1963.6, 1435.64, 2054.3, 1617.68, 1416.35, 2307.65, 1432.63, 2346.48, 1427.75, 1196.02, 1429.66, 2571.15, 992.34, 800.09, 1356.3], backgroundColor: 'rgba(44, 78, 162, 0.7)', borderRadius: 2 },
         { label: '7-day avg', type: 'line', data: [2500.93, 1928.69, 1762.26, 1747.53, 1543.95, 1481.45, 1491.16, 1460.19, 1566.7, 1637.26, 1605.86, 1700.25, 1775.27, 1851.52, 1805.73, 1710.53, 1729.25, 1748.4, 1752.12, 1839.77, 1746.84, 1801.53, 1800.41, 1677.79, 1650.93, 1815.91, 1628.0, 1537.64, 1396.19], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
       ]},
       options: { responsive: true, plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
