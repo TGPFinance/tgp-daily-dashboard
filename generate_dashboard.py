@@ -28,11 +28,11 @@ BRAND_COLOR_DARK = "#008a91"
 LOGO_PATH = "TGP-Logo-White.png"
 
 ICONS = {
-    'amazon':  'https://cdn.simpleicons.org/amazon/ffffff',
-    'shopify': 'https://cdn.simpleicons.org/shopify/ffffff',
-    'meta':    'https://cdn.simpleicons.org/meta/ffffff',
-    'google':  'https://cdn.simpleicons.org/googleads/ffffff',
-    'klaviyo': 'https://cdn.simpleicons.org/klaviyo/ffffff',
+    'amazon':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg',
+    'shopify': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg',
+    'meta':    'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg',
+    'google':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleads.svg',
+    'klaviyo': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/klaviyo.svg',
 }
 
 ACCOUNTS = {
@@ -472,8 +472,8 @@ html = f"""<!DOCTYPE html>
 <style>
   body {{ background: #0a0f1c; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 40px; }}
   .header {{ text-align: center; margin-bottom: 30px; }}
-  .logo-wrap {{ display: inline-block; background: white; padding: 14px 22px; border-radius: 12px; margin-bottom: 14px; }}
-  .logo-wrap img {{ height: 56px; display: block; }}
+  .logo-wrap {{ display: inline-block; background: white; padding: 18px 28px; border-radius: 12px; margin-bottom: 14px; }}
+  .logo-wrap img {{ height: 80px; width: auto; display: block; }}
   .header .date {{ color: #9ca3af; font-size: 14px; margin-top: 8px; }}
   .cache-notice {{ background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }}
   .tabs {{ display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }}
@@ -482,7 +482,7 @@ html = f"""<!DOCTYPE html>
   .section {{ margin-bottom: 30px; }}
   .section-title {{ display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }}
   .section-title h2 {{ font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid {BRAND_COLOR}; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }}
-  .channel-icon {{ width: 18px; height: 18px; opacity: 0.85; }}
+  .channel-icon {{ width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: 0.85; }}
   .badge {{ font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }}
   .cards {{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }}
   .cards-4 {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }}
