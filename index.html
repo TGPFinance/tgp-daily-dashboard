@@ -9,6 +9,7 @@
   .header { text-align: center; margin-bottom: 30px; }
   .header h1 { font-size: 28px; font-weight: 600; margin: 0 0 6px; }
   .header .date { color: #9ca3af; font-size: 14px; }
+  .cache-notice { background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }
   .tabs { display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }
   .tab { padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; }
   .tab.active { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; }
@@ -45,6 +46,7 @@
   <h1>The Good Patch — Performance Report</h1>
   <div class="date">May 19, 2026</div>
 </div>
+
 <div class="tabs">
   <button class="tab active" onclick="showTab(0)">Amazon</button>
   <button class="tab" onclick="showTab(1)">Shopify, Meta, Google, Klaviyo</button>
@@ -56,7 +58,7 @@
     <div class="cards-3">
       <div class="card"><div class="label">Ordered Revenue</div><div class="value">$7,715.02</div><div class="sub">vs $6,874.24 (2025) <span style="color:#22c55e;font-weight:500">+12.2% YoY</span></div></div>
       <div class="card"><div class="label">Units Ordered</div><div class="value">279</div><div class="sub">vs 196 (2025) <span style="color:#22c55e;font-weight:500">+42.3% YoY</span></div></div>
-      <div class="card"><div class="label">AOV</div><div class="value">$27.65</div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$27.65</div><div class="sub">vs $35.07 (2025) <span style="color:#ef4444;font-weight:500">-21.2% YoY</span></div></div>
     </div>
   </div>
   <div class="section">
@@ -142,7 +144,7 @@
     <div class="cards-4">
       <div class="card"><div class="label">Net Sales</div><div class="value">$834.40</div><div class="sub">vs $1,510.30 (2025) <span style="color:#ef4444;font-weight:500">-44.8% YoY</span></div></div>
       <div class="card"><div class="label">Orders</div><div class="value">36</div><div class="sub">vs 51 (2025) <span style="color:#ef4444;font-weight:500">-29.4% YoY</span></div></div>
-      <div class="card"><div class="label">AOV</div><div class="value">$23.18</div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$23.18</div><div class="sub">vs $29.61 (2025) <span style="color:#ef4444;font-weight:500">-21.7% YoY</span></div></div>
       <div class="card"><div class="label">$ / Unit</div><div class="value">$8.78</div></div>
     </div>
   </div>
@@ -176,13 +178,28 @@
       <div class="card"><div class="label">Click Rate</div><div class="value">0.59%</div></div>
     </div>
   </div>
+  <div class="section">
+    <div class="section-title"><h2>Last 5 Email Campaigns</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <table class="products">
+      <thead><tr>
+        <th>Campaign</th>
+        <th class="prod-num">Sent</th>
+        <th class="prod-num">Recipients</th>
+        <th class="prod-num">Open</th>
+        <th class="prod-num">Click</th>
+        <th class="prod-num">Revenue</th>
+        <th class="prod-num">Orders</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
   <hr class="divider">
   <div class="section">
     <div class="section-title"><h2>Shopify — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards-4">
       <div class="card"><div class="label">Net Sales</div><div class="value">$48.9K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Orders</div><div class="value">1.4K</div><div class="sub">~48 / day avg</div></div>
-      <div class="card"><div class="label">AOV</div><div class="value">$34.64</div><div class="sub">30-day avg</div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$34.29</div><div class="sub">net ÷ orders</div></div>
       <div class="card"><div class="label">$ / Unit</div><div class="value">$12.77</div><div class="sub">net ÷ units</div></div>
     </div>
     <div class="chart-card">
