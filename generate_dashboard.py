@@ -23,8 +23,8 @@ SM_BASE = "https://api.supermetrics.com/enterprise/v2/query/data/json"
 CACHE_FILE = "data_cache.json"
 
 # Brand
-BRAND_COLOR = "#00b7bf"
-BRAND_COLOR_DARK = "#008a91"
+BRAND_COLOR = "#2c4ea2"
+BRAND_COLOR_DARK = "#1e3a7a"
 LOGO_PATH = "TGP-Logo-White.png"
 
 ICONS = {
@@ -32,7 +32,7 @@ ICONS = {
     'shopify': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg',
     'meta':    'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg',
     'google':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleads.svg',
-    'klaviyo': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/klaviyo.svg',
+    'klaviyo': 'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/mail.svg',
 }
 
 ACCOUNTS = {
@@ -428,7 +428,7 @@ def revenue_chart_js(canvas_id, labels, values, avg, label_name='Daily revenue')
     return f"""new Chart(document.getElementById('{canvas_id}'), {{
       type: 'bar',
       data: {{ labels: {json.dumps(labels)}, datasets: [
-        {{ label: '{label_name}', data: {json.dumps(values)}, backgroundColor: 'rgba(0, 183, 191, 0.7)', borderRadius: 2 }},
+        {{ label: '{label_name}', data: {json.dumps(values)}, backgroundColor: 'rgba(44, 78, 162, 0.7)', borderRadius: 2 }},
         {{ label: '7-day avg', type: 'line', data: {json.dumps(avg)}, borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }}
       ]}},
       options: {{ responsive: true, plugins: {{ legend: {{ labels: {{ color: '#9ca3af', boxWidth: 12 }} }} }},
@@ -473,7 +473,7 @@ html = f"""<!DOCTYPE html>
   body {{ background: #0a0f1c; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 40px; }}
   .header {{ text-align: center; margin-bottom: 30px; }}
   .logo-wrap {{ display: inline-block; background: white; padding: 18px 28px; border-radius: 12px; margin-bottom: 14px; }}
-  .logo-wrap img {{ height: 80px; width: auto; display: block; }}
+  .logo-wrap img {{ height: 120px; width: auto; display: block; }}
   .header .date {{ color: #9ca3af; font-size: 14px; margin-top: 8px; }}
   .cache-notice {{ background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }}
   .tabs {{ display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }}
