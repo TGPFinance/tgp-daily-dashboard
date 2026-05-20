@@ -53,7 +53,7 @@ def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=
         fl = fields.split(",")
         return [dict(zip(fl, row)) for row in rows[1:]] if len(rows) >= 2 else []
     except Exception as e:
-        print(f"  Warning: {ds_id} daily fetch failed — {e}")
+        print(f"  Warning: {ds_id} rows fetch failed — {e}")
         return []
 
 print(f"Fetching data for {DISPLAY_DATE}...")
@@ -76,13 +76,13 @@ shopify = sm_fetch("SHP", ACCOUNTS["shopify"],
     "gross_sales,sm_order_count,net_sales,avg_total_sales",
     extra_params={"report_type": "Order"})
 
-print(f"Fetching prior year data for {PY_DATE_STR}...")
+print(f"Fetching prior year data...")
 amazon_seller_py = sm_fetch("ASELL", ACCOUNTS["amazon_seller"], "ordered_product_sales,units_ordered",
     start_date=PY_DATE_STR, end_date=PY_DATE_STR, extra_params={"report_type": "sales_and_traffic_by_date"})
 shopify_py = sm_fetch("SHP", ACCOUNTS["shopify"], "gross_sales,sm_order_count",
     start_date=PY_DATE_STR, end_date=PY_DATE_STR, extra_params={"report_type": "Order"})
 
-print(f"Fetching 30-day totals & daily series ({T30_START} → {T30_END})...")
+print(f"Fetching 30-day data...")
 amazon_seller_30d = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
     "ordered_product_sales,units_ordered,sessions,unit_session_percentage",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
@@ -95,19 +95,25 @@ meta_30d = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas",
 google_ads_30d = sm_fetch("AW", ACCOUNTS["google_ads"], "cost,conversions_value,roas",
     start_date=T30_START, end_date=T30_END)
 
-# Daily series for charts
-amazon_daily = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "date,ordered_product_sales",
+print(f"Fetching daily series & top products...")
+amazon_daily = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
+    "date,ordered_product_sales,sessions,unit_session_percentage",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
 shopify_daily = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "date,gross_sales",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
+amazon_products = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
+    "title,ordered_product_sales,units_ordered",
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_asin"})
+
+# Sort and take top 5 products by revenue
+def to_float(v):
+    try: return float(v)
+    except: return 0
+amazon_products = sorted(amazon_products, key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
 
 print(f"  Amazon Seller: {amazon_seller}")
-print(f"  Amazon Ads:    {amazon_ads}")
-print(f"  Klaviyo email: {klaviyo_email}")
-print(f"  Klaviyo attr:  {klaviyo_attr}")
-print(f"  Shopify:       {shopify}")
 print(f"  Amazon daily:  {len(amazon_daily)} rows")
-print(f"  Shopify daily: {len(shopify_daily)} rows")
+print(f"  Top products:  {len(amazon_products)} rows")
 
 # Formatters
 def fmt_money(v, big=False):
@@ -158,53 +164,77 @@ def card(value, label, sub=""):
     return f'<div class="card"><div class="label">{label}</div><div class="value">{value}</div>{sub}</div>'
 
 def rolling_avg(values, window=7):
-    result = []
+    out = []
     for i in range(len(values)):
         s = max(0, i - window + 1)
         sl = [v for v in values[s:i+1] if v is not None]
-        result.append(round(sum(sl) / len(sl), 2) if sl else 0)
-    return result
+        out.append(round(sum(sl)/len(sl), 2) if sl else 0)
+    return out
 
-# Prepare chart data
-def chart_data(daily_rows, value_key):
-    labels = [r.get('date', '') for r in daily_rows]
-    values = []
-    for r in daily_rows:
-        try: values.append(float(r.get(value_key, 0)))
-        except: values.append(0)
-    return labels, values, rolling_avg(values, 7)
+# Chart data prep
+def col(rows, key):
+    out = []
+    for r in rows:
+        try: out.append(float(r.get(key, 0)))
+        except: out.append(0)
+    return out
 
-amazon_labels, amazon_values, amazon_avg = chart_data(amazon_daily, 'ordered_product_sales')
-shopify_labels, shopify_values, shopify_avg = chart_data(shopify_daily, 'gross_sales')
+amazon_dates = [r.get('date', '') for r in amazon_daily]
+amazon_rev   = col(amazon_daily, 'ordered_product_sales')
+amazon_sess  = col(amazon_daily, 'sessions')
+amazon_cvr   = [v*100 if 0 < v < 1 else v for v in col(amazon_daily, 'unit_session_percentage')]
+shopify_dates = [r.get('date', '') for r in shopify_daily]
+shopify_rev   = col(shopify_daily, 'gross_sales')
 
-def chart_block(canvas_id, title, labels, values, avg):
-    if not labels:
-        return ""
-    return f"""
-    <div class="chart-card">
-      <div class="chart-title">{title}</div>
-      <canvas id="{canvas_id}" height="80"></canvas>
-      <script>
-        new Chart(document.getElementById('{canvas_id}'), {{
-          type: 'bar',
-          data: {{
-            labels: {json.dumps(labels)},
-            datasets: [
-              {{ label: 'Daily revenue', data: {json.dumps(values)}, backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 }},
-              {{ label: '7-day avg', type: 'line', data: {json.dumps(avg)}, borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }}
-            ]
-          }},
-          options: {{
-            responsive: true,
-            plugins: {{ legend: {{ labels: {{ color: '#9ca3af', boxWidth: 12 }} }} }},
-            scales: {{
-              x: {{ ticks: {{ color: '#6b7280', maxTicksLimit: 8 }}, grid: {{ display: false }} }},
-              y: {{ ticks: {{ color: '#6b7280', callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v) }}, grid: {{ color: '#1f2937' }}, beginAtZero: true }}
-            }}
-          }}
-        }});
-      </script>
-    </div>"""
+# Top products
+top_total = sum(to_float(p.get('ordered_product_sales')) for p in amazon_products) or 1
+def product_rows():
+    out = ""
+    for p in amazon_products:
+        rev = to_float(p.get('ordered_product_sales'))
+        units = to_float(p.get('units_ordered'))
+        share = (rev / top_total) * 100
+        title = (p.get('title') or 'Unknown')[:60]
+        out += f"""
+        <tr>
+          <td class="prod-name">{title}</td>
+          <td class="prod-num">${rev:,.0f}</td>
+          <td class="prod-num">{units:,.0f}</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
+        </tr>"""
+    return out
+
+# Chart JS
+def revenue_chart_js(canvas_id, labels, values, avg):
+    return f"""new Chart(document.getElementById('{canvas_id}'), {{
+      type: 'bar',
+      data: {{ labels: {json.dumps(labels)}, datasets: [
+        {{ label: 'Daily revenue', data: {json.dumps(values)}, backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 }},
+        {{ label: '7-day avg', type: 'line', data: {json.dumps(avg)}, borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }}
+      ]}},
+      options: {{ responsive: true, plugins: {{ legend: {{ labels: {{ color: '#9ca3af', boxWidth: 12 }} }} }},
+        scales: {{ x: {{ ticks: {{ color: '#6b7280', maxTicksLimit: 8 }}, grid: {{ display: false }} }},
+                   y: {{ ticks: {{ color: '#6b7280', callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0) + 'K' : v) }}, grid: {{ color: '#1f2937' }}, beginAtZero: true }} }} }}
+    }});"""
+
+def sessions_cvr_chart_js(canvas_id, labels, sessions, cvr):
+    return f"""new Chart(document.getElementById('{canvas_id}'), {{
+      type: 'line',
+      data: {{ labels: {json.dumps(labels)}, datasets: [
+        {{ label: 'Sessions', data: {json.dumps(sessions)}, borderColor: '#ef4444', backgroundColor: 'transparent', yAxisID: 'y', pointRadius: 0, tension: 0.3, borderWidth: 2 }},
+        {{ label: 'CVR %', data: {json.dumps(cvr)}, borderColor: '#22c55e', borderDash: [4,4], backgroundColor: 'transparent', yAxisID: 'y1', pointRadius: 0, tension: 0.3, borderWidth: 2 }}
+      ]}},
+      options: {{ responsive: true, interaction: {{ mode: 'index', intersect: false }},
+        plugins: {{ legend: {{ labels: {{ color: '#9ca3af', boxWidth: 12 }} }} }},
+        scales: {{
+          x: {{ ticks: {{ color: '#6b7280', maxTicksLimit: 8 }}, grid: {{ display: false }} }},
+          y: {{ position: 'left', ticks: {{ color: '#ef4444' }}, grid: {{ color: '#1f2937' }}, beginAtZero: true }},
+          y1: {{ position: 'right', ticks: {{ color: '#22c55e', callback: v => v.toFixed(0) + '%' }}, grid: {{ display: false }}, beginAtZero: true }}
+        }} }} }}
+    );"""
+
+amazon_avg7   = rolling_avg(amazon_rev, 7)
+shopify_avg7  = rolling_avg(shopify_rev, 7)
 
 html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -235,6 +265,15 @@ html = f"""<!DOCTYPE html>
   .divider {{ border: 0; border-top: 1px solid #1f2937; margin: 30px 0; }}
   .chart-card {{ background: #111827; border: 1px solid #1f2937; border-radius: 10px; padding: 20px; margin-top: 16px; }}
   .chart-title {{ font-size: 13px; font-weight: 500; color: #d1d5db; margin-bottom: 12px; }}
+  table.products {{ width: 100%; border-collapse: collapse; background: #111827; border: 1px solid #1f2937; border-radius: 10px; overflow: hidden; }}
+  table.products th {{ text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; background: #0f172a; border-bottom: 1px solid #1f2937; font-weight: 500; }}
+  table.products td {{ padding: 12px 16px; border-bottom: 1px solid #1f2937; font-size: 13px; color: #e5e7eb; vertical-align: middle; }}
+  table.products tr:last-child td {{ border-bottom: 0; }}
+  .prod-name {{ max-width: 280px; }}
+  .prod-num {{ text-align: right; font-variant-numeric: tabular-nums; }}
+  .prod-bar {{ width: 40%; }}
+  .bar-wrap {{ width: 100%; background: #1f2937; height: 8px; border-radius: 4px; overflow: hidden; }}
+  .bar-fill {{ background: #6366f1; height: 100%; border-radius: 4px; }}
   @media (max-width: 900px) {{ .cards, .cards-4 {{ grid-template-columns: repeat(2, 1fr); }} }}
 </style>
 </head>
@@ -279,7 +318,21 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(amazon_seller_30d.get('unit_session_percentage')), 'Conversion Rate', '<div class="sub">30-day avg</div>')}
       {card(fmt_money(float(amazon_seller_30d.get('ordered_product_sales',0))/30) if amazon_seller_30d.get('ordered_product_sales') else '—', 'Daily Avg Revenue', '<div class="sub">revenue ÷ 30</div>')}
     </div>
-    {chart_block('amazonChart', 'Daily ordered revenue (USD)', amazon_labels, amazon_values, amazon_avg)}
+    <div class="chart-card">
+      <div class="chart-title">Daily ordered revenue (USD)</div>
+      <canvas id="amazonRevChart" height="80"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Sessions & conversion rate</div>
+      <canvas id="amazonSessChart" height="80"></canvas>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title"><h2>Top Products by Revenue</h2><span class="badge">{T30_LABEL} · US Marketplace</span></div>
+    <table class="products">
+      <thead><tr><th>Product</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
+      <tbody>{product_rows()}</tbody>
+    </table>
   </div>
   <div class="section">
     <div class="section-title"><h2>Sponsored Products — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
@@ -341,7 +394,10 @@ html = f"""<!DOCTYPE html>
       {card(fmt_money(shopify_30d.get('net_sales'), big=True), 'Net Sales', '<div class="sub">30-day total</div>')}
       {card(fmt_money(shopify_30d.get('avg_total_sales')), 'AOV', '<div class="sub">30-day avg</div>')}
     </div>
-    {chart_block('shopifyChart', 'Daily gross sales (USD)', shopify_labels, shopify_values, shopify_avg)}
+    <div class="chart-card">
+      <div class="chart-title">Daily gross sales (USD)</div>
+      <canvas id="shopifyRevChart" height="80"></canvas>
+    </div>
   </div>
   <div class="section">
     <div class="section-title"><h2>Meta Ads — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
@@ -367,6 +423,11 @@ function showTab(i) {{
   document.querySelectorAll('.tab').forEach((t, idx) => t.classList.toggle('active', idx === i));
   document.querySelectorAll('.panel').forEach((p, idx) => p.classList.toggle('active', idx === i));
 }}
+window.addEventListener('load', () => {{
+  {revenue_chart_js('amazonRevChart', amazon_dates, amazon_rev, amazon_avg7)}
+  {sessions_cvr_chart_js('amazonSessChart', amazon_dates, amazon_sess, amazon_cvr)}
+  {revenue_chart_js('shopifyRevChart', shopify_dates, shopify_rev, shopify_avg7)}
+}});
 </script>
 </body>
 </html>"""
