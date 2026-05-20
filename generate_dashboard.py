@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from pathlib import Path
 from datetime import date, timedelta
 from concurrent.futures import ThreadPoolExecutor
 
@@ -19,6 +20,7 @@ T30_END      = DATE_STR
 T30_LABEL    = f"{T30_START_DT.strftime('%b %d')} – {YESTERDAY.strftime('%b %d, %Y')}"
 
 SM_BASE = "https://api.supermetrics.com/enterprise/v2/query/data/json"
+CACHE_FILE = "data_cache.json"
 
 ACCOUNTS = {
     "amazon_seller": "ATVPDKIKX0DER",
@@ -29,6 +31,27 @@ ACCOUNTS = {
     "shopify":       "gid://shopify/Shop/5489557622",
 }
 
+# ── Cache ──────────────────────────────────────────────────────────────────────
+def load_cache():
+    try: return json.loads(Path(CACHE_FILE).read_text())
+    except: return {}
+
+def save_cache(c):
+    Path(CACHE_FILE).write_text(json.dumps(c, indent=2, default=str))
+
+cache = load_cache()
+cache_warnings = []
+
+def cached(key, result):
+    if result:
+        cache[key] = {"data": result, "date": DATE_STR}
+        return result
+    if key in cache:
+        cache_warnings.append(f"{key} (from {cache[key].get('date','?')})")
+        return cache[key]["data"]
+    return result
+
+# ── Fetch helpers ──────────────────────────────────────────────────────────────
 def sm_fetch(ds_id, account_id, fields, start_date=DATE_STR, end_date=DATE_STR, extra_params=None, timeout=180, retries=2):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
@@ -75,10 +98,14 @@ def to_float(v):
     try: return float(v)
     except: return 0
 
+# ── Fetch all data in parallel ─────────────────────────────────────────────────
 print(f"Launching parallel fetches for {DISPLAY_DATE}...")
 
+py_key_a = f"amazon_seller_py_{PY_DATE_STR}"
+py_key_s = f"shopify_py_{PY_DATE_STR}"
+
 def _run():
-    with ThreadPoolExecutor(max_workers=12) as ex:
+    with ThreadPoolExecutor(max_workers=14) as ex:
         futures = {
             'amazon_seller': ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
                 "ordered_product_sales,units_ordered",
@@ -98,14 +125,6 @@ def _run():
                 extra_params={"report_type": "MetricExportAttributedCampaignDaily"}),
             'shopify': ex.submit(sm_fetch, "SHP", ACCOUNTS["shopify"],
                 "gross_sales,sm_order_count,net_sales,avg_total_sales,net_quantity",
-                extra_params={"report_type": "Order"}),
-            'amazon_seller_py': ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
-                "ordered_product_sales,units_ordered",
-                start_date=PY_DATE_STR, end_date=PY_DATE_STR,
-                extra_params={"report_type": "sales_and_traffic_by_date"}),
-            'shopify_py': ex.submit(sm_fetch, "SHP", ACCOUNTS["shopify"],
-                "net_sales,sm_order_count",
-                start_date=PY_DATE_STR, end_date=PY_DATE_STR,
                 extra_params={"report_type": "Order"}),
             'amazon_seller_30d': ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
                 "ordered_product_sales,units_ordered,sessions",
@@ -136,33 +155,71 @@ def _run():
                 "title,ordered_product_sales,units_ordered",
                 T30_START, T30_END,
                 extra_params={"report_type": "sales_and_traffic_by_asin"}),
+            'klaviyo_campaigns': ex.submit(sm_fetch_rows, "KLAV", ACCOUNTS["klaviyo"],
+                "campaign_name,campaign_subject,campaign_send_date,klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
+                T30_START, T30_END,
+                extra_params={"report_type": "MetricExportCampaign"}),
+            'klaviyo_campaign_attr': ex.submit(sm_fetch_rows, "KLAV", ACCOUNTS["klaviyo"],
+                "campaign_name,shopify_placed_order,shopify_placed_order_value",
+                T30_START, T30_END,
+                extra_params={"report_type": "MetricExportAttributedCampaign"}),
         }
+        if py_key_a not in cache:
+            futures['amazon_seller_py'] = ex.submit(sm_fetch, "ASELL", ACCOUNTS["amazon_seller"],
+                "ordered_product_sales,units_ordered",
+                start_date=PY_DATE_STR, end_date=PY_DATE_STR,
+                extra_params={"report_type": "sales_and_traffic_by_date"})
+        if py_key_s not in cache:
+            futures['shopify_py'] = ex.submit(sm_fetch, "SHP", ACCOUNTS["shopify"],
+                "net_sales,sm_order_count,avg_total_sales",
+                start_date=PY_DATE_STR, end_date=PY_DATE_STR,
+                extra_params={"report_type": "Order"})
         return {k: v.result() for k, v in futures.items()}
 
 results = _run()
 
-amazon_seller     = results['amazon_seller']
-amazon_ads        = results['amazon_ads']
-meta              = results['meta']
-google_ads        = results['google_ads']
-klaviyo_email     = results['klaviyo_email']
-klaviyo_attr      = results['klaviyo_attr']
-shopify           = results['shopify']
-amazon_seller_py  = results['amazon_seller_py']
-shopify_py        = results['shopify_py']
-amazon_seller_30d = results['amazon_seller_30d']
-amazon_ads_30d    = results['amazon_ads_30d']
-shopify_30d       = results['shopify_30d']
-meta_30d          = results['meta_30d']
-google_ads_30d    = results['google_ads_30d']
-amazon_daily      = results['amazon_daily']
+amazon_seller     = cached('amazon_seller', results.get('amazon_seller', {}))
+amazon_ads        = cached('amazon_ads', results.get('amazon_ads', {}))
+meta              = cached('meta', results.get('meta', {}))
+google_ads        = cached('google_ads', results.get('google_ads', {}))
+klaviyo_email     = cached('klaviyo_email', results.get('klaviyo_email', {}))
+klaviyo_attr      = cached('klaviyo_attr', results.get('klaviyo_attr', {}))
+shopify           = cached('shopify', results.get('shopify', {}))
+amazon_seller_30d = cached('amazon_seller_30d', results.get('amazon_seller_30d', {}))
+amazon_ads_30d    = cached('amazon_ads_30d', results.get('amazon_ads_30d', {}))
+shopify_30d       = cached('shopify_30d', results.get('shopify_30d', {}))
+meta_30d          = cached('meta_30d', results.get('meta_30d', {}))
+google_ads_30d    = cached('google_ads_30d', results.get('google_ads_30d', {}))
+amazon_daily      = cached('amazon_daily', results.get('amazon_daily', []))
+
+amazon_seller_py = cached(py_key_a, results.get('amazon_seller_py', cache.get(py_key_a, {}).get('data', {})))
+shopify_py = cached(py_key_s, results.get('shopify_py', cache.get(py_key_s, {}).get('data', {})))
 
 _shopify_daily_raw = sorted(
-    [r for r in results['shopify_daily'] if to_float(r.get('net_sales')) > 0],
+    [r for r in cached('shopify_daily', results.get('shopify_daily', [])) if to_float(r.get('net_sales')) > 0],
     key=lambda r: r.get('date', '')
 )
 shopify_daily = _shopify_daily_raw[:-1] if len(_shopify_daily_raw) > 1 else _shopify_daily_raw
-amazon_products = sorted(results['amazon_products'], key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
+
+_products = results.get('amazon_products', [])
+if _products:
+    cache['amazon_products'] = {"data": _products, "date": DATE_STR}
+elif 'amazon_products' in cache:
+    cache_warnings.append(f"amazon_products (from {cache['amazon_products'].get('date','?')})")
+    _products = cache['amazon_products']['data']
+amazon_products = sorted(_products, key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
+
+# Klaviyo campaigns: merge email metrics with attribution
+_campaigns = cached('klaviyo_campaigns', results.get('klaviyo_campaigns', []))
+_campaign_attr = cached('klaviyo_campaign_attr', results.get('klaviyo_campaign_attr', []))
+attr_by_name = {c.get('campaign_name'): c for c in _campaign_attr}
+for c in _campaigns:
+    a = attr_by_name.get(c.get('campaign_name'), {})
+    c['shopify_placed_order'] = a.get('shopify_placed_order')
+    c['shopify_placed_order_value'] = a.get('shopify_placed_order_value')
+klaviyo_campaigns = sorted(_campaigns, key=lambda c: c.get('campaign_send_date', ''), reverse=True)[:5]
+
+save_cache(cache)
 
 print(f"  Amazon Seller: {amazon_seller}")
 print(f"  Amazon Ads:    {amazon_ads}")
@@ -170,7 +227,11 @@ print(f"  Shopify:       {shopify}")
 print(f"  Amazon daily:  {len(amazon_daily)} rows")
 print(f"  Top products:  {len(amazon_products)} rows")
 print(f"  Shopify daily: {len(shopify_daily)} rows")
+print(f"  Klaviyo campaigns: {len(klaviyo_campaigns)} rows")
+if cache_warnings:
+    print(f"  Cached fallbacks used: {cache_warnings}")
 
+# ── Formatters ─────────────────────────────────────────────────────────────────
 def fmt_money(v, big=False):
     if v in (None, '', 0): return "—"
     try:
@@ -246,14 +307,20 @@ amazon_cvr    = [v*100 if 0 < v < 1 else v for v in col(amazon_daily, 'unit_sess
 shopify_dates = [r.get('date', '') for r in shopify_daily]
 shopify_rev   = col(shopify_daily, 'net_sales')
 
-# Amazon AOV (revenue / units)
-amazon_aov = fmt_money(safe_div(amazon_seller.get('ordered_product_sales'), amazon_seller.get('units_ordered'))) if safe_div(amazon_seller.get('ordered_product_sales'), amazon_seller.get('units_ordered')) else "—"
+# Amazon AOV (current and prior year for YoY badge)
+amazon_aov_val    = safe_div(amazon_seller.get('ordered_product_sales'), amazon_seller.get('units_ordered'))
+amazon_aov_py_val = safe_div(amazon_seller_py.get('ordered_product_sales'), amazon_seller_py.get('units_ordered'))
+amazon_aov        = fmt_money(amazon_aov_val) if amazon_aov_val else "—"
 
-# Amazon 30-day CVR computed from units / sessions (avoids summed-percentage bug)
+# Shopify AOV computed from net_sales / orders
+shopify_aov_val     = safe_div(shopify.get('net_sales'), shopify.get('sm_order_count'))
+shopify_aov         = fmt_money(shopify_aov_val) if shopify_aov_val else "—"
+shopify_aov_py_val  = safe_div(shopify_py.get('net_sales'), shopify_py.get('sm_order_count'))
+shopify_aov_30d_val = safe_div(shopify_30d.get('net_sales'), shopify_30d.get('sm_order_count'))
+shopify_aov_30d     = fmt_money(shopify_aov_30d_val) if shopify_aov_30d_val else "—"
+
 _cvr30 = safe_div(amazon_seller_30d.get('units_ordered'), amazon_seller_30d.get('sessions'))
 amazon_cvr_30d = f"{_cvr30*100:,.2f}%" if _cvr30 else "—"
-
-# Shopify $/Unit
 shopify_per_unit = fmt_money(safe_div(shopify.get('net_sales'), shopify.get('net_quantity'))) if safe_div(shopify.get('net_sales'), shopify.get('net_quantity')) else "—"
 shopify_per_unit_30d = fmt_money(safe_div(shopify_30d.get('net_sales'), shopify_30d.get('net_quantity'))) if safe_div(shopify_30d.get('net_sales'), shopify_30d.get('net_quantity')) else "—"
 
@@ -271,6 +338,29 @@ def product_rows():
           <td class="prod-num">${rev:,.0f}</td>
           <td class="prod-num">{units:,.0f}</td>
           <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
+        </tr>"""
+    return out
+
+def campaign_rows():
+    out = ""
+    for c in klaviyo_campaigns:
+        name = (c.get('campaign_name') or 'Unnamed')[:40]
+        subject = (c.get('campaign_subject') or '—')[:50]
+        send_date = c.get('campaign_send_date', '—')
+        recipients = fmt_num(c.get('klaviyo_total_recipients'))
+        open_rate = fmt_pct(c.get('klaviyo_open_rate'))
+        click_rate = fmt_pct(c.get('klaviyo_click_rate'))
+        rev = fmt_money(c.get('shopify_placed_order_value'))
+        orders = fmt_num(c.get('shopify_placed_order'))
+        out += f"""
+        <tr>
+          <td><div class="prod-name">{name}</div><div class="sub">{subject}</div></td>
+          <td class="prod-num">{send_date}</td>
+          <td class="prod-num">{recipients}</td>
+          <td class="prod-num">{open_rate}</td>
+          <td class="prod-num">{click_rate}</td>
+          <td class="prod-num">{rev}</td>
+          <td class="prod-num">{orders}</td>
         </tr>"""
     return out
 
@@ -305,6 +395,10 @@ def sessions_cvr_chart_js(canvas_id, labels, sessions, cvr):
 amazon_avg7  = rolling_avg(amazon_rev, 7)
 shopify_avg7 = rolling_avg(shopify_rev, 7)
 
+cache_notice = ""
+if cache_warnings:
+    cache_notice = f'<div class="cache-notice">⚠ Some metrics using cached data (API fetch failed): {", ".join(cache_warnings)}</div>'
+
 html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -316,6 +410,7 @@ html = f"""<!DOCTYPE html>
   .header {{ text-align: center; margin-bottom: 30px; }}
   .header h1 {{ font-size: 28px; font-weight: 600; margin: 0 0 6px; }}
   .header .date {{ color: #9ca3af; font-size: 14px; }}
+  .cache-notice {{ background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }}
   .tabs {{ display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }}
   .tab {{ padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; }}
   .tab.active {{ background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; }}
@@ -352,6 +447,7 @@ html = f"""<!DOCTYPE html>
   <h1>The Good Patch — Performance Report</h1>
   <div class="date">{DISPLAY_DATE}</div>
 </div>
+{cache_notice}
 <div class="tabs">
   <button class="tab active" onclick="showTab(0)">Amazon</button>
   <button class="tab" onclick="showTab(1)">Shopify, Meta, Google, Klaviyo</button>
@@ -363,7 +459,7 @@ html = f"""<!DOCTYPE html>
     <div class="cards-3">
       {card(fmt_money(amazon_seller.get('ordered_product_sales')), 'Ordered Revenue', yoy_badge(amazon_seller.get('ordered_product_sales'), amazon_seller_py.get('ordered_product_sales'), fmt_money))}
       {card(fmt_num(amazon_seller.get('units_ordered')), 'Units Ordered', yoy_badge(amazon_seller.get('units_ordered'), amazon_seller_py.get('units_ordered'), fmt_num))}
-      {card(amazon_aov, 'AOV')}
+      {card(amazon_aov, 'AOV', yoy_badge(amazon_aov_val, amazon_aov_py_val, fmt_money))}
     </div>
   </div>
   <div class="section">
@@ -419,7 +515,7 @@ html = f"""<!DOCTYPE html>
     <div class="cards-4">
       {card(fmt_money(shopify.get('net_sales')), 'Net Sales', yoy_badge(shopify.get('net_sales'), shopify_py.get('net_sales'), fmt_money))}
       {card(fmt_num(shopify.get('sm_order_count')), 'Orders', yoy_badge(shopify.get('sm_order_count'), shopify_py.get('sm_order_count'), fmt_num))}
-      {card(fmt_money(shopify.get('avg_total_sales')), 'AOV')}
+      {card(shopify_aov, 'AOV', yoy_badge(shopify_aov_val, shopify_aov_py_val, fmt_money))}
       {card(shopify_per_unit, '$ / Unit')}
     </div>
   </div>
@@ -453,13 +549,28 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(klaviyo_email.get('klaviyo_click_rate')), 'Click Rate')}
     </div>
   </div>
+  <div class="section">
+    <div class="section-title"><h2>Last 5 Email Campaigns</h2><span class="badge">{T30_LABEL}</span></div>
+    <table class="products">
+      <thead><tr>
+        <th>Campaign</th>
+        <th class="prod-num">Sent</th>
+        <th class="prod-num">Recipients</th>
+        <th class="prod-num">Open</th>
+        <th class="prod-num">Click</th>
+        <th class="prod-num">Revenue</th>
+        <th class="prod-num">Orders</th>
+      </tr></thead>
+      <tbody>{campaign_rows()}</tbody>
+    </table>
+  </div>
   <hr class="divider">
   <div class="section">
     <div class="section-title"><h2>Shopify — 30-Day Overview</h2><span class="badge">{T30_LABEL}</span></div>
     <div class="cards-4">
       {card(fmt_money(shopify_30d.get('net_sales'), big=True), 'Net Sales', '<div class="sub">30-day total</div>')}
       {card(fmt_num(shopify_30d.get('sm_order_count'), big=True), 'Orders', daily_avg(shopify_30d.get('sm_order_count'), fmt_num))}
-      {card(fmt_money(shopify_30d.get('avg_total_sales')), 'AOV', '<div class="sub">30-day avg</div>')}
+      {card(shopify_aov_30d, 'AOV', '<div class="sub">net ÷ orders</div>')}
       {card(shopify_per_unit_30d, '$ / Unit', '<div class="sub">net ÷ units</div>')}
     </div>
     <div class="chart-card">
