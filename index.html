@@ -7,15 +7,17 @@
 <style>
   body { background: #0a0f1c; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; padding: 40px; }
   .header { text-align: center; margin-bottom: 30px; }
-  .header h1 { font-size: 28px; font-weight: 600; margin: 0 0 6px; }
-  .header .date { color: #9ca3af; font-size: 14px; }
+  .logo-wrap { display: inline-block; background: white; padding: 14px 22px; border-radius: 12px; margin-bottom: 14px; }
+  .logo-wrap img { height: 56px; display: block; }
+  .header .date { color: #9ca3af; font-size: 14px; margin-top: 8px; }
   .cache-notice { background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }
   .tabs { display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }
-  .tab { padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; }
-  .tab.active { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; }
+  .tab { padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; font-weight: 500; }
+  .tab.active { background: linear-gradient(135deg, #00b7bf, #008a91); color: white; }
   .section { margin-bottom: 30px; }
   .section-title { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }
-  .section-title h2 { font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid #6366f1; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }
+  .section-title h2 { font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid #00b7bf; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }
+  .channel-icon { width: 18px; height: 18px; opacity: 0.85; }
   .badge { font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }
   .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
   .cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
@@ -37,14 +39,14 @@
   .prod-num { text-align: right; font-variant-numeric: tabular-nums; }
   .prod-bar { width: 40%; }
   .bar-wrap { width: 100%; background: #1f2937; height: 8px; border-radius: 4px; overflow: hidden; }
-  .bar-fill { background: #6366f1; height: 100%; border-radius: 4px; }
+  .bar-fill { background: #00b7bf; height: 100%; border-radius: 4px; }
   @media (max-width: 900px) { .cards, .cards-4, .cards-3 { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
 <div class="header">
-  <h1>The Good Patch — Performance Report</h1>
-  <div class="date">May 19, 2026</div>
+  <div class="logo-wrap"><img src="TGP-Logo-White.png" alt="The Good Patch" /></div>
+  <div class="date">Performance Report · May 19, 2026</div>
 </div>
 
 <div class="tabs">
@@ -54,7 +56,7 @@
 
 <div class="panel active" id="panel-0">
   <div class="section">
-    <div class="section-title"><h2>Seller Central · Amazon.com (US)</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/amazon/ffffff" alt="" /><h2>Seller Central · Amazon.com (US)</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards-3">
       <div class="card"><div class="label">Ordered Revenue</div><div class="value">$7,630.04</div><div class="sub">vs $6,874.24 (2025) <span style="color:#22c55e;font-weight:500">+11.0% YoY</span></div></div>
       <div class="card"><div class="label">Units Ordered</div><div class="value">277</div><div class="sub">vs 196 (2025) <span style="color:#22c55e;font-weight:500">+41.3% YoY</span></div></div>
@@ -62,7 +64,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Sponsored Products · La Mend (US)</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/amazon/ffffff" alt="" /><h2>Sponsored Products · La Mend (US)</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards">
       <div class="card"><div class="label">Ad Spend</div><div class="value">$1,682.47</div></div>
       <div class="card"><div class="label">Ad Sales</div><div class="value">$2,164.43</div></div>
@@ -73,7 +75,7 @@
   </div>
   <hr class="divider">
   <div class="section">
-    <div class="section-title"><h2>Seller Central — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/amazon/ffffff" alt="" /><h2>Seller Central — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards">
       <div class="card"><div class="label">Ordered Revenue</div><div class="value">$212.9K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Units Ordered</div><div class="value">8.0K</div><div class="sub">~268 / day avg</div></div>
@@ -91,7 +93,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Top Products by Revenue</h2><span class="badge">Apr 20 – May 19, 2026 · US Marketplace</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/amazon/ffffff" alt="" /><h2>Top Products by Revenue</h2><span class="badge">Apr 20 – May 19, 2026 · US Marketplace</span></div>
     <table class="products">
       <thead><tr><th>Product</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
       <tbody>
@@ -128,28 +130,28 @@
     </table>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Sponsored Products — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/amazon/ffffff" alt="" /><h2>Sponsored Products — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards-4">
       <div class="card"><div class="label">Ad Spend</div><div class="value">$48.1K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Ad Sales</div><div class="value">$83.8K</div><div class="sub">30-day total</div></div>
-      <div class="card"><div class="label">ROAS</div><div class="value">1.68×</div><div class="sub">30-day avg</div></div>
-      <div class="card"><div class="label">ACOS</div><div class="value">59.67%</div><div class="sub">30-day avg</div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">1.74×</div><div class="sub">sales ÷ cost</div></div>
+      <div class="card"><div class="label">ACOS</div><div class="value">57.37%</div><div class="sub">cost ÷ sales</div></div>
     </div>
   </div>
 </div>
 
 <div class="panel" id="panel-1">
   <div class="section">
-    <div class="section-title"><h2>Shopify</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/shopify/ffffff" alt="" /><h2>Shopify</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards-4">
-      <div class="card"><div class="label">Net Sales</div><div class="value">$834.40</div><div class="sub">vs $1,510.30 (2025) <span style="color:#ef4444;font-weight:500">-44.8% YoY</span></div></div>
-      <div class="card"><div class="label">Orders</div><div class="value">36</div><div class="sub">vs 51 (2025) <span style="color:#ef4444;font-weight:500">-29.4% YoY</span></div></div>
-      <div class="card"><div class="label">AOV</div><div class="value">$23.18</div><div class="sub">vs $29.61 (2025) <span style="color:#ef4444;font-weight:500">-21.7% YoY</span></div></div>
-      <div class="card"><div class="label">$ / Unit</div><div class="value">$8.78</div></div>
+      <div class="card"><div class="label">Net Sales</div><div class="value">$870.42</div><div class="sub">vs $1,045.95 (2025) <span style="color:#ef4444;font-weight:500">-16.8% YoY</span></div></div>
+      <div class="card"><div class="label">Orders</div><div class="value">32</div><div class="sub">vs 37 (2025) <span style="color:#ef4444;font-weight:500">-13.5% YoY</span></div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$27.20</div><div class="sub">vs $28.27 (2025) <span style="color:#ef4444;font-weight:500">-3.8% YoY</span></div></div>
+      <div class="card"><div class="label">$ / Unit</div><div class="value">$9.26</div></div>
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Meta Ads</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/meta/ffffff" alt="" /><h2>Meta Ads</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards">
       <div class="card"><div class="label">Spend</div><div class="value">$194.10</div></div>
       <div class="card"><div class="label">Purchase Value</div><div class="value">$12.00</div></div>
@@ -159,7 +161,7 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Google Ads</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/googleads/ffffff" alt="" /><h2>Google Ads</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards">
       <div class="card"><div class="label">Spend</div><div class="value">$278.72</div></div>
       <div class="card"><div class="label">Conversion Value</div><div class="value">$582.12</div></div>
@@ -169,17 +171,17 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Klaviyo</h2><span class="badge">May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/klaviyo/ffffff" alt="" /><h2>Klaviyo</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards">
-      <div class="card"><div class="label">Attributed Revenue</div><div class="value">$916.71</div></div>
-      <div class="card"><div class="label">Attributed Orders</div><div class="value">32</div></div>
-      <div class="card"><div class="label">Recipients</div><div class="value">44,189</div></div>
-      <div class="card"><div class="label">Open Rate</div><div class="value">35.71%</div></div>
+      <div class="card"><div class="label">Attributed Revenue</div><div class="value">$575.17</div></div>
+      <div class="card"><div class="label">Attributed Orders</div><div class="value">22</div></div>
+      <div class="card"><div class="label">Recipients</div><div class="value">44,051</div></div>
+      <div class="card"><div class="label">Open Rate</div><div class="value">32.77%</div></div>
       <div class="card"><div class="label">Click Rate</div><div class="value">0.59%</div></div>
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Last 5 Email Campaigns</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/klaviyo/ffffff" alt="" /><h2>Last 5 Email Campaigns</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <table class="products">
       <thead><tr>
         <th>Campaign</th>
@@ -240,12 +242,12 @@
   </div>
   <hr class="divider">
   <div class="section">
-    <div class="section-title"><h2>Shopify — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/shopify/ffffff" alt="" /><h2>Shopify — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards-4">
-      <div class="card"><div class="label">Net Sales</div><div class="value">$48.9K</div><div class="sub">30-day total</div></div>
-      <div class="card"><div class="label">Orders</div><div class="value">1.4K</div><div class="sub">~48 / day avg</div></div>
-      <div class="card"><div class="label">AOV</div><div class="value">$34.29</div><div class="sub">net ÷ orders</div></div>
-      <div class="card"><div class="label">$ / Unit</div><div class="value">$12.77</div><div class="sub">net ÷ units</div></div>
+      <div class="card"><div class="label">Net Sales</div><div class="value">$48.6K</div><div class="sub">30-day total</div></div>
+      <div class="card"><div class="label">Orders</div><div class="value">1.4K</div><div class="sub">~47 / day avg</div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$34.43</div><div class="sub">net ÷ orders</div></div>
+      <div class="card"><div class="label">$ / Unit</div><div class="value">$12.78</div><div class="sub">net ÷ units</div></div>
     </div>
     <div class="chart-card">
       <div class="chart-title">Daily net sales (USD)</div>
@@ -253,20 +255,20 @@
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Meta Ads — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/meta/ffffff" alt="" /><h2>Meta Ads — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards-4">
       <div class="card"><div class="label">Spend</div><div class="value">$13.8K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Purchase Value</div><div class="value">$3.7K</div><div class="sub">30-day total</div></div>
-      <div class="card"><div class="label">ROAS</div><div class="value">0.27×</div><div class="sub">30-day avg</div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">0.27×</div><div class="sub">PV ÷ spend</div></div>
       <div class="card"><div class="label">Daily Avg Spend</div><div class="value">$458.59</div><div class="sub">spend ÷ 30</div></div>
     </div>
   </div>
   <div class="section">
-    <div class="section-title"><h2>Google Ads — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
+    <div class="section-title"><img class="channel-icon" src="https://cdn.simpleicons.org/googleads/ffffff" alt="" /><h2>Google Ads — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards-4">
       <div class="card"><div class="label">Spend</div><div class="value">$11.8K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Conversion Value</div><div class="value">$22.0K</div><div class="sub">30-day total</div></div>
-      <div class="card"><div class="label">ROAS</div><div class="value">1.86×</div><div class="sub">30-day avg</div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">1.86×</div><div class="sub">value ÷ cost</div></div>
       <div class="card"><div class="label">Daily Avg Spend</div><div class="value">$394.19</div><div class="sub">spend ÷ 30</div></div>
     </div>
   </div>
@@ -280,7 +282,7 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('amazonRevChart'), {
       type: 'bar',
       data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19"], datasets: [
-        { label: 'Daily revenue', data: [7583.99, 7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7706.39, 8875.86, 8708.66, 7630.04], backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 },
+        { label: 'Daily revenue', data: [7583.99, 7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7706.39, 8875.86, 8708.66, 7630.04], backgroundColor: 'rgba(0, 183, 191, 0.7)', borderRadius: 2 },
         { label: '7-day avg', type: 'line', data: [7583.99, 7562.16, 7706.46, 7528.32, 7361.03, 7076.48, 7020.12, 6898.28, 6732.67, 6560.95, 6455.2, 6422.97, 6545.18, 6624.27, 6680.97, 6755.26, 6755.06, 6839.98, 6906.71, 6944.96, 6972.78, 6957.87, 7096.43, 7194.64, 7201.02, 7126.29, 7259.08, 7465.57, 7706.29, 7671.87], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
       ]},
       options: { responsive: true, plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
@@ -303,9 +305,9 @@ window.addEventListener('load', () => {
     );
   new Chart(document.getElementById('shopifyRevChart'), {
       type: 'bar',
-      data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19"], datasets: [
-        { label: 'Daily net sales', data: [2500.93, 1356.45, 1429.4, 1703.35, 729.6, 1168.94, 1549.43, 2284.18, 2101.99, 1923.31, 1483.57, 1390.35, 1694.08, 2083.18, 1963.6, 1435.64, 2054.3, 1617.68, 1416.35, 2307.65, 1432.63, 2346.48, 1427.75, 1196.02, 1429.66, 2571.15, 992.34, 800.09, 1356.3, 870.42], backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 },
-        { label: '7-day avg', type: 'line', data: [2500.93, 1928.69, 1762.26, 1747.53, 1543.95, 1481.45, 1491.16, 1460.19, 1566.7, 1637.26, 1605.86, 1700.25, 1775.27, 1851.52, 1805.73, 1710.53, 1729.25, 1748.4, 1752.12, 1839.77, 1746.84, 1801.53, 1800.41, 1677.79, 1650.93, 1815.91, 1628.0, 1537.64, 1396.19, 1316.57], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
+      data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18"], datasets: [
+        { label: 'Daily net sales', data: [2500.93, 1356.45, 1429.4, 1703.35, 729.6, 1168.94, 1549.43, 2284.18, 2101.99, 1923.31, 1483.57, 1390.35, 1694.08, 2083.18, 1963.6, 1435.64, 2054.3, 1617.68, 1416.35, 2307.65, 1432.63, 2346.48, 1427.75, 1196.02, 1429.66, 2571.15, 992.34, 800.09, 1356.3], backgroundColor: 'rgba(0, 183, 191, 0.7)', borderRadius: 2 },
+        { label: '7-day avg', type: 'line', data: [2500.93, 1928.69, 1762.26, 1747.53, 1543.95, 1481.45, 1491.16, 1460.19, 1566.7, 1637.26, 1605.86, 1700.25, 1775.27, 1851.52, 1805.73, 1710.53, 1729.25, 1748.4, 1752.12, 1839.77, 1746.84, 1801.53, 1800.41, 1677.79, 1650.93, 1815.91, 1628.0, 1537.64, 1396.19], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
       ]},
       options: { responsive: true, plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
         scales: { x: { ticks: { color: '#6b7280', maxTicksLimit: 8 }, grid: { display: false } },

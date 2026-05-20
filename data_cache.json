@@ -2166,5 +2166,2737 @@
       }
     ],
     "date": "2026-05-19"
+  },
+  "daily": {
+    "amazon_seller": {
+      "2026-04-20": {
+        "ordered_product_sales": 7583.99,
+        "units_ordered": 287,
+        "sessions": 2088,
+        "unit_session_percentage": 13.75,
+        "page_views": 2653
+      },
+      "2026-04-21": {
+        "ordered_product_sales": 7540.34,
+        "units_ordered": 295,
+        "sessions": 1870,
+        "unit_session_percentage": 15.78,
+        "page_views": 2410
+      },
+      "2026-04-22": {
+        "ordered_product_sales": 7995.05,
+        "units_ordered": 289,
+        "sessions": 1880,
+        "unit_session_percentage": 15.37,
+        "page_views": 2361
+      },
+      "2026-04-23": {
+        "ordered_product_sales": 6993.91,
+        "units_ordered": 266,
+        "sessions": 1895,
+        "unit_session_percentage": 14.04,
+        "page_views": 2375
+      },
+      "2026-04-24": {
+        "ordered_product_sales": 6691.87,
+        "units_ordered": 260,
+        "sessions": 1785,
+        "unit_session_percentage": 14.57,
+        "page_views": 2276
+      },
+      "2026-04-25": {
+        "ordered_product_sales": 5653.69,
+        "units_ordered": 218,
+        "sessions": 1501,
+        "unit_session_percentage": 14.52,
+        "page_views": 1927
+      },
+      "2026-04-26": {
+        "ordered_product_sales": 6682.02,
+        "units_ordered": 260,
+        "sessions": 1652,
+        "unit_session_percentage": 15.74,
+        "page_views": 2087
+      },
+      "2026-04-27": {
+        "ordered_product_sales": 6731.08,
+        "units_ordered": 254,
+        "sessions": 1433,
+        "unit_session_percentage": 17.73,
+        "page_views": 1834
+      },
+      "2026-04-28": {
+        "ordered_product_sales": 6381.05,
+        "units_ordered": 246,
+        "sessions": 1492,
+        "unit_session_percentage": 16.49,
+        "page_views": 1913
+      },
+      "2026-04-29": {
+        "ordered_product_sales": 6793.05,
+        "units_ordered": 255,
+        "sessions": 1469,
+        "unit_session_percentage": 17.36,
+        "page_views": 1836
+      },
+      "2026-04-30": {
+        "ordered_product_sales": 6253.62,
+        "units_ordered": 229,
+        "sessions": 1490,
+        "unit_session_percentage": 15.37,
+        "page_views": 1896
+      },
+      "2026-05-01": {
+        "ordered_product_sales": 6466.25,
+        "units_ordered": 245,
+        "sessions": 1338,
+        "unit_session_percentage": 18.31,
+        "page_views": 1710
+      },
+      "2026-05-02": {
+        "ordered_product_sales": 6509.16,
+        "units_ordered": 246,
+        "sessions": 1424,
+        "unit_session_percentage": 17.28,
+        "page_views": 1782
+      },
+      "2026-05-03": {
+        "ordered_product_sales": 7235.68,
+        "units_ordered": 277,
+        "sessions": 1645,
+        "unit_session_percentage": 16.84,
+        "page_views": 2052
+      },
+      "2026-05-04": {
+        "ordered_product_sales": 7127.99,
+        "units_ordered": 269,
+        "sessions": 1562,
+        "unit_session_percentage": 17.22,
+        "page_views": 1997
+      },
+      "2026-05-05": {
+        "ordered_product_sales": 6901.04,
+        "units_ordered": 257,
+        "sessions": 1667,
+        "unit_session_percentage": 15.42,
+        "page_views": 2078
+      },
+      "2026-05-06": {
+        "ordered_product_sales": 6791.67,
+        "units_ordered": 273,
+        "sessions": 1670,
+        "unit_session_percentage": 16.35,
+        "page_views": 2074
+      },
+      "2026-05-07": {
+        "ordered_product_sales": 6848.04,
+        "units_ordered": 265,
+        "sessions": 1673,
+        "unit_session_percentage": 15.84,
+        "page_views": 2110
+      },
+      "2026-05-08": {
+        "ordered_product_sales": 6933.4,
+        "units_ordered": 259,
+        "sessions": 1576,
+        "unit_session_percentage": 16.43,
+        "page_views": 1967
+      },
+      "2026-05-09": {
+        "ordered_product_sales": 6776.88,
+        "units_ordered": 257,
+        "sessions": 1674,
+        "unit_session_percentage": 15.35,
+        "page_views": 2088
+      },
+      "2026-05-10": {
+        "ordered_product_sales": 7430.42,
+        "units_ordered": 275,
+        "sessions": 1758,
+        "unit_session_percentage": 15.64,
+        "page_views": 2280
+      },
+      "2026-05-11": {
+        "ordered_product_sales": 7023.62,
+        "units_ordered": 266,
+        "sessions": 1878,
+        "unit_session_percentage": 14.16,
+        "page_views": 2348
+      },
+      "2026-05-12": {
+        "ordered_product_sales": 7870.96,
+        "units_ordered": 297,
+        "sessions": 1821,
+        "unit_session_percentage": 16.31,
+        "page_views": 2342
+      },
+      "2026-05-13": {
+        "ordered_product_sales": 7479.13,
+        "units_ordered": 278,
+        "sessions": 1826,
+        "unit_session_percentage": 15.22,
+        "page_views": 2271
+      },
+      "2026-05-14": {
+        "ordered_product_sales": 6892.73,
+        "units_ordered": 265,
+        "sessions": 1663,
+        "unit_session_percentage": 15.94,
+        "page_views": 2106
+      },
+      "2026-05-15": {
+        "ordered_product_sales": 6410.3,
+        "units_ordered": 239,
+        "sessions": 1708,
+        "unit_session_percentage": 13.99,
+        "page_views": 2156
+      },
+      "2026-05-16": {
+        "ordered_product_sales": 7706.39,
+        "units_ordered": 284,
+        "sessions": 1952,
+        "unit_session_percentage": 14.55,
+        "page_views": 2512
+      },
+      "2026-05-17": {
+        "ordered_product_sales": 8875.86,
+        "units_ordered": 317,
+        "sessions": 2144,
+        "unit_session_percentage": 14.79,
+        "page_views": 2726
+      },
+      "2026-05-18": {
+        "ordered_product_sales": 8708.66,
+        "units_ordered": 334,
+        "sessions": 1971,
+        "unit_session_percentage": 16.95,
+        "page_views": 2461
+      },
+      "2026-05-19": {
+        "ordered_product_sales": 7630.04,
+        "units_ordered": 277,
+        "sessions": 1935,
+        "unit_session_percentage": 14.32,
+        "page_views": 2438
+      }
+    },
+    "amazon_ads": {
+      "2026-04-20": {
+        "cost": 1937.53,
+        "attributedSales14d": 4301.09,
+        "clicks": 873,
+        "impressions": 112914
+      },
+      "2026-04-21": {
+        "cost": 2051.25,
+        "attributedSales14d": 2967.84,
+        "clicks": 826,
+        "impressions": 123106
+      },
+      "2026-04-22": {
+        "cost": 2076.96,
+        "attributedSales14d": 2787.09,
+        "clicks": 851,
+        "impressions": 113064
+      },
+      "2026-04-23": {
+        "cost": 2157.67,
+        "attributedSales14d": 3567.08,
+        "clicks": 870,
+        "impressions": 113020
+      },
+      "2026-04-24": {
+        "cost": 2181.46,
+        "attributedSales14d": 2379.49,
+        "clicks": 776,
+        "impressions": 98069
+      },
+      "2026-04-25": {
+        "cost": 1258.72,
+        "attributedSales14d": 1892.81,
+        "clicks": 475,
+        "impressions": 52466
+      },
+      "2026-04-26": {
+        "cost": 1043.91,
+        "attributedSales14d": 2731.41,
+        "clicks": 481,
+        "impressions": 46900
+      },
+      "2026-04-27": {
+        "cost": 883.56,
+        "attributedSales14d": 2048.69,
+        "clicks": 432,
+        "impressions": 43068
+      },
+      "2026-04-28": {
+        "cost": 963.45,
+        "attributedSales14d": 2127.7,
+        "clicks": 449,
+        "impressions": 49041
+      },
+      "2026-04-29": {
+        "cost": 1153.76,
+        "attributedSales14d": 2316.34,
+        "clicks": 489,
+        "impressions": 53012
+      },
+      "2026-04-30": {
+        "cost": 1100.47,
+        "attributedSales14d": 2031.65,
+        "clicks": 464,
+        "impressions": 60149
+      },
+      "2026-05-01": {
+        "cost": 954.74,
+        "attributedSales14d": 2748.97,
+        "clicks": 439,
+        "impressions": 48611
+      },
+      "2026-05-02": {
+        "cost": 1006.61,
+        "attributedSales14d": 2498.56,
+        "clicks": 503,
+        "impressions": 49800
+      },
+      "2026-05-03": {
+        "cost": 1077.37,
+        "attributedSales14d": 2663.31,
+        "clicks": 527,
+        "impressions": 58042
+      },
+      "2026-05-04": {
+        "cost": 1400.66,
+        "attributedSales14d": 3024.14,
+        "clicks": 653,
+        "impressions": 77848
+      },
+      "2026-05-05": {
+        "cost": 1697.86,
+        "attributedSales14d": 3040.08,
+        "clicks": 732,
+        "impressions": 98724
+      },
+      "2026-05-06": {
+        "cost": 1703.14,
+        "attributedSales14d": 2706.34,
+        "clicks": 659,
+        "impressions": 97019
+      },
+      "2026-05-07": {
+        "cost": 1777.23,
+        "attributedSales14d": 3437.9,
+        "clicks": 689,
+        "impressions": 98544
+      },
+      "2026-05-08": {
+        "cost": 1495.68,
+        "attributedSales14d": 3044.02,
+        "clicks": 617,
+        "impressions": 79917
+      },
+      "2026-05-09": {
+        "cost": 1574.39,
+        "attributedSales14d": 2170.81,
+        "clicks": 659,
+        "impressions": 92131
+      },
+      "2026-05-10": {
+        "cost": 1851.58,
+        "attributedSales14d": 3051.59,
+        "clicks": 716,
+        "impressions": 106523
+      },
+      "2026-05-11": {
+        "cost": 2007.58,
+        "attributedSales14d": 3248.57,
+        "clicks": 805,
+        "impressions": 108669
+      },
+      "2026-05-12": {
+        "cost": 1983.49,
+        "attributedSales14d": 3463.06,
+        "clicks": 796,
+        "impressions": 127447
+      },
+      "2026-05-13": {
+        "cost": 1630.74,
+        "attributedSales14d": 3247.81,
+        "clicks": 774,
+        "impressions": 105940
+      },
+      "2026-05-14": {
+        "cost": 1607.62,
+        "attributedSales14d": 2620.63,
+        "clicks": 743,
+        "impressions": 95213
+      },
+      "2026-05-15": {
+        "cost": 1682.82,
+        "attributedSales14d": 2801.64,
+        "clicks": 758,
+        "impressions": 100483
+      },
+      "2026-05-16": {
+        "cost": 2079.73,
+        "attributedSales14d": 3050.18,
+        "clicks": 853,
+        "impressions": 104613
+      },
+      "2026-05-17": {
+        "cost": 2262.99,
+        "attributedSales14d": 2373.5,
+        "clicks": 930,
+        "impressions": 118855
+      },
+      "2026-05-18": {
+        "cost": 1773.32,
+        "attributedSales14d": 3258.33,
+        "clicks": 858,
+        "impressions": 103186
+      },
+      "2026-05-19": {
+        "cost": 1682.47,
+        "attributedSales14d": 2164.43,
+        "clicks": 805,
+        "impressions": 99692
+      }
+    },
+    "shopify": {
+      "2026-04-20": {
+        "gross_sales": 2888.33,
+        "sm_order_count": 52,
+        "net_sales": 2500.93,
+        "net_quantity": 165
+      },
+      "2026-04-21": {
+        "gross_sales": 2563.65,
+        "sm_order_count": 53,
+        "net_sales": 1356.45,
+        "net_quantity": 169
+      },
+      "2026-04-22": {
+        "gross_sales": 2478.15,
+        "sm_order_count": 44,
+        "net_sales": 1429.4,
+        "net_quantity": 187
+      },
+      "2026-04-23": {
+        "gross_sales": 1810.85,
+        "sm_order_count": 39,
+        "net_sales": 1703.35,
+        "net_quantity": 88
+      },
+      "2026-04-24": {
+        "gross_sales": 1081.3,
+        "sm_order_count": 25,
+        "net_sales": 729.6,
+        "net_quantity": 51
+      },
+      "2026-04-25": {
+        "gross_sales": 1346.25,
+        "sm_order_count": 30,
+        "net_sales": 1168.94,
+        "net_quantity": 58
+      },
+      "2026-04-26": {
+        "gross_sales": 1778.3,
+        "sm_order_count": 35,
+        "net_sales": 1549.43,
+        "net_quantity": 82
+      },
+      "2026-04-27": {
+        "gross_sales": 3321.1,
+        "sm_order_count": 50,
+        "net_sales": 2284.18,
+        "net_quantity": 140
+      },
+      "2026-04-28": {
+        "gross_sales": 2645.55,
+        "sm_order_count": 54,
+        "net_sales": 2101.99,
+        "net_quantity": 111
+      },
+      "2026-04-29": {
+        "gross_sales": 2563.6,
+        "sm_order_count": 31,
+        "net_sales": 1923.31,
+        "net_quantity": 90
+      },
+      "2026-04-30": {
+        "gross_sales": 1779.75,
+        "sm_order_count": 35,
+        "net_sales": 1483.57,
+        "net_quantity": 67
+      },
+      "2026-05-01": {
+        "gross_sales": 1662.8,
+        "sm_order_count": 31,
+        "net_sales": 1390.35,
+        "net_quantity": 69
+      },
+      "2026-05-02": {
+        "gross_sales": 2019.3,
+        "sm_order_count": 35,
+        "net_sales": 1694.08,
+        "net_quantity": 80
+      },
+      "2026-05-03": {
+        "gross_sales": 2339.8,
+        "sm_order_count": 50,
+        "net_sales": 2083.18,
+        "net_quantity": 106
+      },
+      "2026-05-04": {
+        "gross_sales": 2470.45,
+        "sm_order_count": 37,
+        "net_sales": 1963.6,
+        "net_quantity": 101
+      },
+      "2026-05-05": {
+        "gross_sales": 1738,
+        "sm_order_count": 34,
+        "net_sales": 1435.64,
+        "net_quantity": 79
+      },
+      "2026-05-06": {
+        "gross_sales": 2643.4,
+        "sm_order_count": 43,
+        "net_sales": 2054.3,
+        "net_quantity": 116
+      },
+      "2026-05-07": {
+        "gross_sales": 1949.1,
+        "sm_order_count": 34,
+        "net_sales": 1617.68,
+        "net_quantity": 87
+      },
+      "2026-05-08": {
+        "gross_sales": 1780.9,
+        "sm_order_count": 33,
+        "net_sales": 1416.35,
+        "net_quantity": 97
+      },
+      "2026-05-09": {
+        "gross_sales": 2757.55,
+        "sm_order_count": 41,
+        "net_sales": 2307.65,
+        "net_quantity": 105
+      },
+      "2026-05-10": {
+        "gross_sales": 1777.9,
+        "sm_order_count": 29,
+        "net_sales": 1432.63,
+        "net_quantity": 66
+      },
+      "2026-05-11": {
+        "gross_sales": 2981.25,
+        "sm_order_count": 40,
+        "net_sales": 2346.48,
+        "net_quantity": 102
+      },
+      "2026-05-12": {
+        "gross_sales": 9786.15,
+        "sm_order_count": 259,
+        "net_sales": 1427.75,
+        "net_quantity": 811
+      },
+      "2026-05-13": {
+        "gross_sales": 2370.55,
+        "sm_order_count": 60,
+        "net_sales": 1196.02,
+        "net_quantity": 140
+      },
+      "2026-05-14": {
+        "gross_sales": 2777.82,
+        "sm_order_count": 61,
+        "net_sales": 1429.66,
+        "net_quantity": 160
+      },
+      "2026-05-15": {
+        "gross_sales": 3329.8,
+        "sm_order_count": 63,
+        "net_sales": 2571.15,
+        "net_quantity": 166
+      },
+      "2026-05-16": {
+        "gross_sales": 1185.95,
+        "sm_order_count": 22,
+        "net_sales": 992.34,
+        "net_quantity": 61
+      },
+      "2026-05-17": {
+        "gross_sales": 1005,
+        "sm_order_count": 20,
+        "net_sales": 800.09,
+        "net_quantity": 53
+      },
+      "2026-05-18": {
+        "gross_sales": 1782.75,
+        "sm_order_count": 40,
+        "net_sales": 1356.3,
+        "net_quantity": 102
+      },
+      "2026-05-19": {
+        "gross_sales": 1552.7,
+        "sm_order_count": 32,
+        "net_sales": 870.42,
+        "net_quantity": 94
+      },
+      "2026-05-20": {
+        "gross_sales": 520.2,
+        "sm_order_count": 14,
+        "net_sales": 284.9,
+        "net_quantity": 26
+      }
+    },
+    "meta": {
+      "2026-04-20": {
+        "spend": 560.89,
+        "purchase_value": 415.02,
+        "clicks": 134,
+        "impressions": 13130
+      },
+      "2026-04-21": {
+        "spend": 422.18,
+        "purchase_value": 55.3,
+        "clicks": 89,
+        "impressions": 14413
+      },
+      "2026-04-22": {
+        "spend": 761.08,
+        "purchase_value": 171.4,
+        "clicks": 163,
+        "impressions": 17005
+      },
+      "2026-04-23": {
+        "spend": 603.42,
+        "purchase_value": 297.22,
+        "clicks": 134,
+        "impressions": 9952
+      },
+      "2026-04-24": {
+        "spend": 589.28,
+        "purchase_value": 195.62,
+        "clicks": 97,
+        "impressions": 4252
+      },
+      "2026-04-25": {
+        "spend": 741.51,
+        "purchase_value": 61.8,
+        "clicks": 104,
+        "impressions": 3211
+      },
+      "2026-04-26": {
+        "spend": 1056.89,
+        "purchase_value": 207.81,
+        "clicks": 138,
+        "impressions": 5651
+      },
+      "2026-04-27": {
+        "spend": 741.72,
+        "purchase_value": 246.94,
+        "clicks": 109,
+        "impressions": 4390
+      },
+      "2026-04-28": {
+        "spend": 426.17,
+        "purchase_value": 174.13,
+        "clicks": 83,
+        "impressions": 2921
+      },
+      "2026-04-29": {
+        "spend": 466.33,
+        "purchase_value": 88.8,
+        "clicks": 72,
+        "impressions": 3141
+      },
+      "2026-04-30": {
+        "spend": 490.1,
+        "purchase_value": 74,
+        "clicks": 92,
+        "impressions": 3244
+      },
+      "2026-05-01": {
+        "spend": 564.05,
+        "purchase_value": "",
+        "clicks": 66,
+        "impressions": 4106
+      },
+      "2026-05-02": {
+        "spend": 423.94,
+        "purchase_value": 79.5,
+        "clicks": 79,
+        "impressions": 3146
+      },
+      "2026-05-03": {
+        "spend": 590.39,
+        "purchase_value": 196.44,
+        "clicks": 87,
+        "impressions": 4177
+      },
+      "2026-05-04": {
+        "spend": 525.24,
+        "purchase_value": 99.19,
+        "clicks": 94,
+        "impressions": 4247
+      },
+      "2026-05-05": {
+        "spend": 445.78,
+        "purchase_value": "",
+        "clicks": 77,
+        "impressions": 3630
+      },
+      "2026-05-06": {
+        "spend": 519.39,
+        "purchase_value": 124.4,
+        "clicks": 110,
+        "impressions": 4062
+      },
+      "2026-05-07": {
+        "spend": 523.22,
+        "purchase_value": 139.92,
+        "clicks": 81,
+        "impressions": 4435
+      },
+      "2026-05-08": {
+        "spend": 377.89,
+        "purchase_value": 95.37,
+        "clicks": 93,
+        "impressions": 3720
+      },
+      "2026-05-09": {
+        "spend": 212.01,
+        "purchase_value": 40.41,
+        "clicks": 58,
+        "impressions": 2382
+      },
+      "2026-05-10": {
+        "spend": 337.08,
+        "purchase_value": 423.57,
+        "clicks": 67,
+        "impressions": 3286
+      },
+      "2026-05-11": {
+        "spend": 282.93,
+        "purchase_value": 71.7,
+        "clicks": 51,
+        "impressions": 2786
+      },
+      "2026-05-12": {
+        "spend": 358.31,
+        "purchase_value": "",
+        "clicks": 60,
+        "impressions": 3394
+      },
+      "2026-05-13": {
+        "spend": 447.44,
+        "purchase_value": 161.52,
+        "clicks": 66,
+        "impressions": 3268
+      },
+      "2026-05-14": {
+        "spend": 354.17,
+        "purchase_value": 187.89,
+        "clicks": 221,
+        "impressions": 7213
+      },
+      "2026-05-15": {
+        "spend": 250.82,
+        "purchase_value": 100.29,
+        "clicks": 387,
+        "impressions": 10432
+      },
+      "2026-05-16": {
+        "spend": 151.29,
+        "purchase_value": "",
+        "clicks": 217,
+        "impressions": 6587
+      },
+      "2026-05-17": {
+        "spend": 222.79,
+        "purchase_value": 12.9,
+        "clicks": 309,
+        "impressions": 7488
+      },
+      "2026-05-18": {
+        "spend": 117.29,
+        "purchase_value": "",
+        "clicks": 100,
+        "impressions": 2327
+      },
+      "2026-05-19": {
+        "spend": 194.1,
+        "purchase_value": 12,
+        "clicks": 23,
+        "impressions": 3155
+      }
+    },
+    "google_ads": {
+      "2026-04-20": {
+        "cost": 311.858,
+        "conversions_value": 622.96,
+        "clicks": 285,
+        "impressions": 27640
+      },
+      "2026-04-21": {
+        "cost": 349.6618,
+        "conversions_value": 428.91,
+        "clicks": 261,
+        "impressions": 21474
+      },
+      "2026-04-22": {
+        "cost": 627.0208,
+        "conversions_value": 1113.43,
+        "clicks": 365,
+        "impressions": 27174
+      },
+      "2026-04-23": {
+        "cost": 355.6921,
+        "conversions_value": 494.28,
+        "clicks": 209,
+        "impressions": 17566
+      },
+      "2026-04-24": {
+        "cost": 356.4885,
+        "conversions_value": 339.54,
+        "clicks": 201,
+        "impressions": 9470
+      },
+      "2026-04-25": {
+        "cost": 309.7562,
+        "conversions_value": 575.13,
+        "clicks": 219,
+        "impressions": 15401
+      },
+      "2026-04-26": {
+        "cost": 495.3592,
+        "conversions_value": 776.68,
+        "clicks": 305,
+        "impressions": 15464
+      },
+      "2026-04-27": {
+        "cost": 267.2722,
+        "conversions_value": 410.12,
+        "clicks": 146,
+        "impressions": 10369
+      },
+      "2026-04-28": {
+        "cost": 429.5096,
+        "conversions_value": 897.67,
+        "clicks": 293,
+        "impressions": 21557
+      },
+      "2026-04-29": {
+        "cost": 300.5015,
+        "conversions_value": 746.97,
+        "clicks": 200,
+        "impressions": 14330
+      },
+      "2026-04-30": {
+        "cost": 313.6826,
+        "conversions_value": 1094.9,
+        "clicks": 212,
+        "impressions": 18285
+      },
+      "2026-05-01": {
+        "cost": 436.9741,
+        "conversions_value": 1094.74,
+        "clicks": 714,
+        "impressions": 33883
+      },
+      "2026-05-02": {
+        "cost": 456.0729,
+        "conversions_value": 445.17,
+        "clicks": 401,
+        "impressions": 28994
+      },
+      "2026-05-03": {
+        "cost": 446.4472,
+        "conversions_value": 1055.09,
+        "clicks": 214,
+        "impressions": 19101
+      },
+      "2026-05-04": {
+        "cost": 430.48,
+        "conversions_value": 529.43,
+        "clicks": 272,
+        "impressions": 26441
+      },
+      "2026-05-05": {
+        "cost": 397.345,
+        "conversions_value": 785.58,
+        "clicks": 220,
+        "impressions": 20406
+      },
+      "2026-05-06": {
+        "cost": 438.2213,
+        "conversions_value": 697.69,
+        "clicks": 267,
+        "impressions": 23651
+      },
+      "2026-05-07": {
+        "cost": 476.9631,
+        "conversions_value": 1463.32,
+        "clicks": 302,
+        "impressions": 27913
+      },
+      "2026-05-08": {
+        "cost": 322.4766,
+        "conversions_value": 219.23,
+        "clicks": 220,
+        "impressions": 19735
+      },
+      "2026-05-09": {
+        "cost": 366.6241,
+        "conversions_value": 2448.52,
+        "clicks": 330,
+        "impressions": 25381
+      },
+      "2026-05-10": {
+        "cost": 364.3917,
+        "conversions_value": 409.2,
+        "clicks": 215,
+        "impressions": 17971
+      },
+      "2026-05-11": {
+        "cost": 449.7898,
+        "conversions_value": 703.67,
+        "clicks": 269,
+        "impressions": 31132
+      },
+      "2026-05-12": {
+        "cost": 361.4242,
+        "conversions_value": 525.06,
+        "clicks": 227,
+        "impressions": 24353
+      },
+      "2026-05-13": {
+        "cost": 556.7804,
+        "conversions_value": 98.74,
+        "clicks": 313,
+        "impressions": 29772
+      },
+      "2026-05-14": {
+        "cost": 426.2378,
+        "conversions_value": 464.4,
+        "clicks": 242,
+        "impressions": 28896
+      },
+      "2026-05-15": {
+        "cost": 406.4342,
+        "conversions_value": 1073.58,
+        "clicks": 217,
+        "impressions": 53072
+      },
+      "2026-05-16": {
+        "cost": 389.0696,
+        "conversions_value": 618.4,
+        "clicks": 319,
+        "impressions": 71864
+      },
+      "2026-05-17": {
+        "cost": 382.9627,
+        "conversions_value": 455.51,
+        "clicks": 283,
+        "impressions": 40491
+      },
+      "2026-05-18": {
+        "cost": 321.4799,
+        "conversions_value": 792.19,
+        "clicks": 457,
+        "impressions": 29504
+      },
+      "2026-05-19": {
+        "cost": 278.7204,
+        "conversions_value": 582.12,
+        "clicks": 366,
+        "impressions": 31624
+      }
+    },
+    "klaviyo_email": {
+      "2026-04-19": {
+        "klaviyo_total_recipients": 165,
+        "klaviyo_received_email": 160,
+        "klaviyo_opened_email_unique": 823,
+        "klaviyo_clicked_email_unique": 12
+      },
+      "2026-04-20": {
+        "klaviyo_total_recipients": 719,
+        "klaviyo_received_email": 708,
+        "klaviyo_opened_email_unique": 1386,
+        "klaviyo_clicked_email_unique": 14
+      },
+      "2026-04-21": {
+        "klaviyo_total_recipients": 409,
+        "klaviyo_received_email": 407,
+        "klaviyo_opened_email_unique": 1088,
+        "klaviyo_clicked_email_unique": 4
+      },
+      "2026-04-22": {
+        "klaviyo_total_recipients": 49675,
+        "klaviyo_received_email": 49624,
+        "klaviyo_opened_email_unique": 26483,
+        "klaviyo_clicked_email_unique": 225
+      },
+      "2026-04-23": {
+        "klaviyo_total_recipients": 366,
+        "klaviyo_received_email": 359,
+        "klaviyo_opened_email_unique": 8044,
+        "klaviyo_clicked_email_unique": 20
+      },
+      "2026-04-24": {
+        "klaviyo_total_recipients": 536,
+        "klaviyo_received_email": 530,
+        "klaviyo_opened_email_unique": 2415,
+        "klaviyo_clicked_email_unique": 6
+      },
+      "2026-04-25": {
+        "klaviyo_total_recipients": 713,
+        "klaviyo_received_email": 702,
+        "klaviyo_opened_email_unique": 1465,
+        "klaviyo_clicked_email_unique": 10
+      },
+      "2026-04-26": {
+        "klaviyo_total_recipients": 426,
+        "klaviyo_received_email": 417,
+        "klaviyo_opened_email_unique": 1335,
+        "klaviyo_clicked_email_unique": 9
+      },
+      "2026-04-27": {
+        "klaviyo_total_recipients": 437,
+        "klaviyo_received_email": 427,
+        "klaviyo_opened_email_unique": 1177,
+        "klaviyo_clicked_email_unique": 5
+      },
+      "2026-04-28": {
+        "klaviyo_total_recipients": 411,
+        "klaviyo_received_email": 406,
+        "klaviyo_opened_email_unique": 983,
+        "klaviyo_clicked_email_unique": 14
+      },
+      "2026-04-29": {
+        "klaviyo_total_recipients": 371,
+        "klaviyo_received_email": 368,
+        "klaviyo_opened_email_unique": 869,
+        "klaviyo_clicked_email_unique": 6
+      },
+      "2026-04-30": {
+        "klaviyo_total_recipients": 362,
+        "klaviyo_received_email": 359,
+        "klaviyo_opened_email_unique": 852,
+        "klaviyo_clicked_email_unique": 6
+      },
+      "2026-05-01": {
+        "klaviyo_total_recipients": 380,
+        "klaviyo_received_email": 377,
+        "klaviyo_opened_email_unique": 952,
+        "klaviyo_clicked_email_unique": 10
+      },
+      "2026-05-02": {
+        "klaviyo_total_recipients": 469,
+        "klaviyo_received_email": 464,
+        "klaviyo_opened_email_unique": 1037,
+        "klaviyo_clicked_email_unique": 7
+      },
+      "2026-05-03": {
+        "klaviyo_total_recipients": 49877,
+        "klaviyo_received_email": 49782,
+        "klaviyo_opened_email_unique": 26786,
+        "klaviyo_clicked_email_unique": 196
+      },
+      "2026-05-04": {
+        "klaviyo_total_recipients": 487,
+        "klaviyo_received_email": 479,
+        "klaviyo_opened_email_unique": 5898,
+        "klaviyo_clicked_email_unique": 14
+      },
+      "2026-05-05": {
+        "klaviyo_total_recipients": 419,
+        "klaviyo_received_email": 411,
+        "klaviyo_opened_email_unique": 2437,
+        "klaviyo_clicked_email_unique": 5
+      },
+      "2026-05-06": {
+        "klaviyo_total_recipients": 1643,
+        "klaviyo_received_email": 1631,
+        "klaviyo_opened_email_unique": 2994,
+        "klaviyo_clicked_email_unique": 15
+      },
+      "2026-05-07": {
+        "klaviyo_total_recipients": 4341,
+        "klaviyo_received_email": 4328,
+        "klaviyo_opened_email_unique": 4963,
+        "klaviyo_clicked_email_unique": 14
+      },
+      "2026-05-08": {
+        "klaviyo_total_recipients": 41067,
+        "klaviyo_received_email": 41015,
+        "klaviyo_opened_email_unique": 24771,
+        "klaviyo_clicked_email_unique": 208
+      },
+      "2026-05-09": {
+        "klaviyo_total_recipients": 470,
+        "klaviyo_received_email": 467,
+        "klaviyo_opened_email_unique": 9219,
+        "klaviyo_clicked_email_unique": 20
+      },
+      "2026-05-10": {
+        "klaviyo_total_recipients": 51480,
+        "klaviyo_received_email": 51324,
+        "klaviyo_opened_email_unique": 28531,
+        "klaviyo_clicked_email_unique": 302
+      },
+      "2026-05-11": {
+        "klaviyo_total_recipients": 531,
+        "klaviyo_received_email": 527,
+        "klaviyo_opened_email_unique": 9239,
+        "klaviyo_clicked_email_unique": 32
+      },
+      "2026-05-12": {
+        "klaviyo_total_recipients": 4228,
+        "klaviyo_received_email": 4218,
+        "klaviyo_opened_email_unique": 4487,
+        "klaviyo_clicked_email_unique": 20
+      },
+      "2026-05-13": {
+        "klaviyo_total_recipients": 47559,
+        "klaviyo_received_email": 47490,
+        "klaviyo_opened_email_unique": 27897,
+        "klaviyo_clicked_email_unique": 241
+      },
+      "2026-05-14": {
+        "klaviyo_total_recipients": 438,
+        "klaviyo_received_email": 431,
+        "klaviyo_opened_email_unique": 4543,
+        "klaviyo_clicked_email_unique": 12
+      },
+      "2026-05-15": {
+        "klaviyo_total_recipients": 288,
+        "klaviyo_received_email": 284,
+        "klaviyo_opened_email_unique": 1962,
+        "klaviyo_clicked_email_unique": 11
+      },
+      "2026-05-16": {
+        "klaviyo_total_recipients": 298,
+        "klaviyo_received_email": 294,
+        "klaviyo_opened_email_unique": 1210,
+        "klaviyo_clicked_email_unique": 3
+      },
+      "2026-05-17": {
+        "klaviyo_total_recipients": 48444,
+        "klaviyo_received_email": 48344,
+        "klaviyo_opened_email_unique": 27431,
+        "klaviyo_clicked_email_unique": 211
+      },
+      "2026-05-18": {
+        "klaviyo_total_recipients": 298,
+        "klaviyo_received_email": 293,
+        "klaviyo_opened_email_unique": 6336,
+        "klaviyo_clicked_email_unique": 9
+      },
+      "2026-05-19": {
+        "klaviyo_total_recipients": 44051,
+        "klaviyo_received_email": 44016,
+        "klaviyo_opened_email_unique": 14425,
+        "klaviyo_clicked_email_unique": 261
+      }
+    },
+    "klaviyo_attr": {
+      "2026-04-19": {
+        "shopify_placed_order": 27,
+        "shopify_placed_order_value": 950.68
+      },
+      "2026-04-20": {
+        "shopify_placed_order": 68,
+        "shopify_placed_order_value": 2766.84
+      },
+      "2026-04-21": {
+        "shopify_placed_order": 37,
+        "shopify_placed_order_value": 1597.19
+      },
+      "2026-04-22": {
+        "shopify_placed_order": 45,
+        "shopify_placed_order_value": 1493.99
+      },
+      "2026-04-23": {
+        "shopify_placed_order": 36,
+        "shopify_placed_order_value": 1518.72
+      },
+      "2026-04-24": {
+        "shopify_placed_order": 27,
+        "shopify_placed_order_value": 991.73
+      },
+      "2026-04-25": {
+        "shopify_placed_order": 29,
+        "shopify_placed_order_value": 1192.43
+      },
+      "2026-04-26": {
+        "shopify_placed_order": 44,
+        "shopify_placed_order_value": 2423.09
+      },
+      "2026-04-27": {
+        "shopify_placed_order": 48,
+        "shopify_placed_order_value": 1841.93
+      },
+      "2026-04-28": {
+        "shopify_placed_order": 53,
+        "shopify_placed_order_value": 2834.96
+      },
+      "2026-04-29": {
+        "shopify_placed_order": 29,
+        "shopify_placed_order_value": 1691.51
+      },
+      "2026-04-30": {
+        "shopify_placed_order": 33,
+        "shopify_placed_order_value": 1494.86
+      },
+      "2026-05-01": {
+        "shopify_placed_order": 27,
+        "shopify_placed_order_value": 1389.74
+      },
+      "2026-05-02": {
+        "shopify_placed_order": 46,
+        "shopify_placed_order_value": 2192.32
+      },
+      "2026-05-03": {
+        "shopify_placed_order": 47,
+        "shopify_placed_order_value": 2029.29
+      },
+      "2026-05-04": {
+        "shopify_placed_order": 40,
+        "shopify_placed_order_value": 2479.94
+      },
+      "2026-05-05": {
+        "shopify_placed_order": 30,
+        "shopify_placed_order_value": 1492.48
+      },
+      "2026-05-06": {
+        "shopify_placed_order": 41,
+        "shopify_placed_order_value": 2054.71
+      },
+      "2026-05-07": {
+        "shopify_placed_order": 38,
+        "shopify_placed_order_value": 1869.21
+      },
+      "2026-05-08": {
+        "shopify_placed_order": 30,
+        "shopify_placed_order_value": 1504.26
+      },
+      "2026-05-09": {
+        "shopify_placed_order": 43,
+        "shopify_placed_order_value": 2511.57
+      },
+      "2026-05-10": {
+        "shopify_placed_order": 31,
+        "shopify_placed_order_value": 2026.34
+      },
+      "2026-05-11": {
+        "shopify_placed_order": 169,
+        "shopify_placed_order_value": 1577.3
+      },
+      "2026-05-12": {
+        "shopify_placed_order": 136,
+        "shopify_placed_order_value": 1420.21
+      },
+      "2026-05-13": {
+        "shopify_placed_order": 61,
+        "shopify_placed_order_value": 1772.35
+      },
+      "2026-05-14": {
+        "shopify_placed_order": 62,
+        "shopify_placed_order_value": 1889.27
+      },
+      "2026-05-15": {
+        "shopify_placed_order": 48,
+        "shopify_placed_order_value": 2051.15
+      },
+      "2026-05-16": {
+        "shopify_placed_order": 16,
+        "shopify_placed_order_value": 780.26
+      },
+      "2026-05-17": {
+        "shopify_placed_order": 32,
+        "shopify_placed_order_value": 1166.36
+      },
+      "2026-05-18": {
+        "shopify_placed_order": 36,
+        "shopify_placed_order_value": 1389.68
+      },
+      "2026-05-19": {
+        "shopify_placed_order": 22,
+        "shopify_placed_order_value": 575.17
+      }
+    }
+  },
+  "campaigns": {
+    "email": [
+      {
+        "campaign_name": "05/10: Mother's Day | 15% Off",
+        "campaign_subject": "Cheers to the Moms...",
+        "campaign_send_date": "2026-05-11",
+        "klaviyo_total_recipients": 51145,
+        "klaviyo_open_rate": 0.691911,
+        "klaviyo_click_rate": 0.006177
+      },
+      {
+        "campaign_name": "05/13: Eye Patch Feature",
+        "campaign_subject": "The 15-minute Under-Eye Reset",
+        "campaign_send_date": "2026-05-13",
+        "klaviyo_total_recipients": 50906,
+        "klaviyo_open_rate": 0.645159,
+        "klaviyo_click_rate": 0.00482
+      },
+      {
+        "campaign_name": "05/03: Mother's Day Gift Guide",
+        "campaign_subject": "Gifts For The Moms In Your Life (yourself included)",
+        "campaign_send_date": "2026-05-03",
+        "klaviyo_total_recipients": 49506,
+        "klaviyo_open_rate": 0.631807,
+        "klaviyo_click_rate": 0.004371
+      },
+      {
+        "campaign_name": "04/22: Earth Day",
+        "campaign_subject": "Happy Earth Day from The Good Patch",
+        "campaign_send_date": "2026-04-23",
+        "klaviyo_total_recipients": 49351,
+        "klaviyo_open_rate": 0.800726,
+        "klaviyo_click_rate": 0.004827
+      },
+      {
+        "campaign_name": "05/17: 5-Star Reviews",
+        "campaign_subject": "10,000+ Five-Star Reviews",
+        "campaign_send_date": "2026-05-17",
+        "klaviyo_total_recipients": 46661,
+        "klaviyo_open_rate": 0.676523,
+        "klaviyo_click_rate": 0.004424
+      },
+      {
+        "campaign_name": "05/19: Sale Teaser",
+        "campaign_subject": "\ud83d\udce3 Something BIG is Coming",
+        "campaign_send_date": "2026-05-19",
+        "klaviyo_total_recipients": 43897,
+        "klaviyo_open_rate": 0.310626,
+        "klaviyo_click_rate": 0.005905
+      },
+      {
+        "campaign_name": "05/08: Energy | 15% off",
+        "campaign_subject": "Feel Like Yourself Again",
+        "campaign_send_date": "2026-05-09",
+        "klaviyo_total_recipients": 40682,
+        "klaviyo_open_rate": 0.811302,
+        "klaviyo_click_rate": 0.005513
+      },
+      {
+        "campaign_name": "05/07: Target run?",
+        "campaign_subject": "Target run?",
+        "campaign_send_date": "2026-05-07",
+        "klaviyo_total_recipients": 5261,
+        "klaviyo_open_rate": 0.763775,
+        "klaviyo_click_rate": 0.002288
+      },
+      {
+        "campaign_name": "05/17: 5-Star Reviews (non-purchasers 15% off)",
+        "campaign_subject": "10,000+ Five-Star Reviews",
+        "campaign_send_date": "2026-05-17",
+        "klaviyo_total_recipients": 1485,
+        "klaviyo_open_rate": 0.017532,
+        "klaviyo_click_rate": 0.002023
+      },
+      {
+        "campaign_name": "PM | Sunset Flow Email #2",
+        "campaign_subject": "still want email-exclusive perks?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 1133,
+        "klaviyo_open_rate": 0.01167,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "T1 - Restart your wellness routine",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, running low on your faves?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 1082,
+        "klaviyo_open_rate": 0.318773,
+        "klaviyo_click_rate": 0.004647
+      },
+      {
+        "campaign_name": "PM | Sunset Flow Email #1",
+        "campaign_subject": "Keep the good vibes coming",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 973,
+        "klaviyo_open_rate": 0.026069,
+        "klaviyo_click_rate": 0.001043
+      },
+      {
+        "campaign_name": "PM | Post Purchase Email #3",
+        "campaign_subject": "Let\u2019s stick together?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 778,
+        "klaviyo_open_rate": 0.266753,
+        "klaviyo_click_rate": 0.003866
+      },
+      {
+        "campaign_name": "PM | Post Purchase Email #1",
+        "campaign_subject": "Good things on the way!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 769,
+        "klaviyo_open_rate": 0.344333,
+        "klaviyo_click_rate": 0.032999
+      },
+      {
+        "campaign_name": "Welcome Email #1",
+        "campaign_subject": "Welcome to The Good Patch",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 651,
+        "klaviyo_open_rate": 0.480377,
+        "klaviyo_click_rate": 0.056515
+      },
+      {
+        "campaign_name": "PM | Post Purchase Email #2",
+        "campaign_subject": "We're always looking to improve",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 647,
+        "klaviyo_open_rate": 0.332298,
+        "klaviyo_click_rate": 0.006211
+      },
+      {
+        "campaign_name": "Welcome Email #4",
+        "campaign_subject": "Last chance to save 15%",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 634,
+        "klaviyo_open_rate": 0.442857,
+        "klaviyo_click_rate": 0.014286
+      },
+      {
+        "campaign_name": "PM | Abandoned Cart Email #1",
+        "campaign_subject": "Your cart is waiting!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 627,
+        "klaviyo_open_rate": 0.539326,
+        "klaviyo_click_rate": 0.030498
+      },
+      {
+        "campaign_name": "PM | Abandoned Cart Email #2",
+        "campaign_subject": "15% Off Your Cart [Limited Time]",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 601,
+        "klaviyo_open_rate": 0.525,
+        "klaviyo_click_rate": 0.03
+      },
+      {
+        "campaign_name": "Welcome Email #2",
+        "campaign_subject": "3 friends. 1 shared belief. \u2728",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 594,
+        "klaviyo_open_rate": 0.422297,
+        "klaviyo_click_rate": 0.011824
+      },
+      {
+        "campaign_name": "Welcome Email #3",
+        "campaign_subject": "9000+ rave reviews and counting",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 593,
+        "klaviyo_open_rate": 0.443316,
+        "klaviyo_click_rate": 0.01692
+      },
+      {
+        "campaign_name": "T2A - 20% off your restock",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, here\u2019s 20% off!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 546,
+        "klaviyo_open_rate": 0.303309,
+        "klaviyo_click_rate": 0.005515
+      },
+      {
+        "campaign_name": "T2B - no code - treat yourself",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, its called self-care",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 525,
+        "klaviyo_open_rate": 0.302103,
+        "klaviyo_click_rate": 0.003824
+      },
+      {
+        "campaign_name": "T3B - FOMO - occasions focus",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 502,
+        "klaviyo_open_rate": 0.299401,
+        "klaviyo_click_rate": 0.007984
+      },
+      {
+        "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, last chance for 20% off!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 493,
+        "klaviyo_open_rate": 0.297352,
+        "klaviyo_click_rate": 0.00611
+      },
+      {
+        "campaign_name": "PM | 60D Non Buyer Email #1",
+        "campaign_subject": "Make every day feel a little lighter",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 450,
+        "klaviyo_open_rate": 0.421525,
+        "klaviyo_click_rate": 0.006726
+      },
+      {
+        "campaign_name": "PM | Abandoned Checkout Email #1",
+        "campaign_subject": "Ready to feel your best?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 215,
+        "klaviyo_open_rate": 0.6,
+        "klaviyo_click_rate": 0.028571
+      },
+      {
+        "campaign_name": "PM | Abandoned Checkout Email #2",
+        "campaign_subject": "Looking for a sign?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 214,
+        "klaviyo_open_rate": 0.578199,
+        "klaviyo_click_rate": 0.033175
+      },
+      {
+        "campaign_name": "Welcome Email #1 [meta ads]",
+        "campaign_subject": "Welcome to The Good Patch",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 71,
+        "klaviyo_open_rate": 0.323944,
+        "klaviyo_click_rate": 0.014085
+      },
+      {
+        "campaign_name": "PM | Repeat Customer - Post Purchase Email #1",
+        "campaign_subject": "We appreciate you",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 63,
+        "klaviyo_open_rate": 0.571429,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "Welcome Email #2 [meta ads]",
+        "campaign_subject": "3 friends. 1 shared belief. \u2728",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 55,
+        "klaviyo_open_rate": 0.418182,
+        "klaviyo_click_rate": 0.018182
+      },
+      {
+        "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
+        "campaign_subject": "Ready to make your wellness effortless?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 53,
+        "klaviyo_open_rate": 0.603774,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "Welcome Email #3 [meta ads]",
+        "campaign_subject": "9000+ rave reviews and counting",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 53,
+        "klaviyo_open_rate": 0.301887,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "Welcome Email #4 [meta ads]",
+        "campaign_subject": "Last chance to save 30%",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 53,
+        "klaviyo_open_rate": 0.358491,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "T1 - Non-purchaser - 2 hrs post trigger",
+        "campaign_subject": "See something you like? \ud83d\udc40",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 22,
+        "klaviyo_open_rate": 0.636364,
+        "klaviyo_click_rate": 0.090909
+      },
+      {
+        "campaign_name": "T2 - Non-purchaser - 1 day post trigger",
+        "campaign_subject": "Still thinking about it?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 19,
+        "klaviyo_open_rate": 0.578947,
+        "klaviyo_click_rate": 0.052632
+      },
+      {
+        "campaign_name": "T3A - Non-purchaser - 4 days post trigger",
+        "campaign_subject": "Find your faves with 15% off!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 12,
+        "klaviyo_open_rate": 0.75,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "T1 - Previous purchaser - 2 hrs post trigger",
+        "campaign_subject": "Checking out the goods?  \ud83d\udc40",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 11,
+        "klaviyo_open_rate": 0.636364,
+        "klaviyo_click_rate": 0.090909
+      },
+      {
+        "campaign_name": "T2 - Previous purchaser - 1 day post trigger",
+        "campaign_subject": "What everyone\u2019s been saying \ud83d\udcac",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 10,
+        "klaviyo_open_rate": 0.6,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "T3B - Previous purchaser - 4 days post trigger",
+        "campaign_subject": "{{ first_name|default:'Hey there' }}, take 10% off for the next 72 hours",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 6,
+        "klaviyo_open_rate": 0.833333,
+        "klaviyo_click_rate": 0.166667
+      },
+      {
+        "campaign_name": "T3B - Non-purchaser - 4 days post trigger",
+        "campaign_subject": "Find your faves with 20% off!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 5,
+        "klaviyo_open_rate": 0.2,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "T3A - Previous purchaser - 4 days post trigger",
+        "campaign_subject": "{{ first_name|default:'Hey there' }}, feel good\u2014one patch at a time",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 3,
+        "klaviyo_open_rate": 0.666667,
+        "klaviyo_click_rate": 0.333333
+      },
+      {
+        "campaign_name": "04/13: Be Calm Promo",
+        "campaign_subject": "2 days left! FREE patches with your order",
+        "campaign_send_date": "2026-04-13",
+        "klaviyo_total_recipients": 1,
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/03: Ready to move into your feel-good era.",
+        "campaign_subject": "Ready to move into your feel-good era.",
+        "campaign_send_date": "2026-01-03",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/04: Skincare",
+        "campaign_subject": "New Year, New Glow.",
+        "campaign_send_date": "2026-01-04",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/06: New Year, Same You",
+        "campaign_subject": "New Year, Same You \u2014 just more rested.",
+        "campaign_send_date": "2026-01-06",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/08 - 5AM Routine",
+        "campaign_subject": "No, You Don\u2019t Need a 5AM Routine",
+        "campaign_send_date": "2026-01-09",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/10: Jan Goals",
+        "campaign_subject": "Gentle Goals for January",
+        "campaign_send_date": "2026-01-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/19: UGC Feature",
+        "campaign_subject": "How Our Community Is Doing January",
+        "campaign_send_date": "2026-01-19",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/22: Desire Spotlight",
+        "campaign_subject": "The Patch That Went Viral",
+        "campaign_send_date": "2026-01-22",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/28 - 2016",
+        "campaign_subject": "Look Your \"2016\" Again",
+        "campaign_send_date": "2026-01-30",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/28: B12 Awake Feature",
+        "campaign_subject": "Why We're Really Into B12 (with a rhyme!)",
+        "campaign_send_date": "2026-01-29",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/30 - Relax",
+        "campaign_subject": "How to relax (for real this time)",
+        "campaign_send_date": "2026-01-31",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/02 - Game Day",
+        "campaign_subject": "\ud83c\udfc8  Ready for Game Day Glory?",
+        "campaign_send_date": "2026-02-03",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/03 - Un-Wrinkle Feature",
+        "campaign_subject": "How to Un-Wrinkle (the easy way)",
+        "campaign_send_date": "2026-02-03",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/04 - Focus",
+        "campaign_subject": "What's your focus today?",
+        "campaign_send_date": "2026-02-04",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/06 - Olympics Edition",
+        "campaign_subject": "The Patch Guide: Olympics Edition",
+        "campaign_send_date": "2026-02-06",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/06: Thistle",
+        "campaign_subject": "Feel-good Meals, Delivered",
+        "campaign_send_date": "2026-02-07",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/07 - Galentine's Day",
+        "campaign_subject": "For Galentine's Day (and the plus ones that really stick)",
+        "campaign_send_date": "2026-02-07",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/08 - Target Retail",
+        "campaign_subject": "We're at Target (yes, that Target)",
+        "campaign_send_date": "2026-02-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/09 - Self Gifting",
+        "campaign_subject": "\ud83d\udc98 To me, from me",
+        "campaign_send_date": "2026-02-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/13 - President's Day",
+        "campaign_subject": "An extra day off looks good on you",
+        "campaign_send_date": "2026-02-13",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/14 - Valentine\u2019s Day text only",
+        "campaign_subject": "A little love, your way",
+        "campaign_send_date": "2026-02-14",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/15 - February Essentials",
+        "campaign_subject": "Our February Essentials",
+        "campaign_send_date": "2026-02-15",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/20 - Still Wintering",
+        "campaign_subject": "Still Wintering",
+        "campaign_send_date": "2026-02-20",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/22 - National Margarita Day",
+        "campaign_subject": "It's National Margarita Day",
+        "campaign_send_date": "2026-02-22",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/24 - winter energy",
+        "campaign_subject": "Your winter energy game plan",
+        "campaign_send_date": "2026-02-24",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/27 - survey (non-purchasers)",
+        "campaign_subject": "FREE patches for your thoughts \ud83d\udcdd",
+        "campaign_send_date": "2026-02-28",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/27 - survey (purchasers)",
+        "campaign_subject": "FREE patches for your thoughts \ud83d\udcdd",
+        "campaign_send_date": "2026-02-28",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "02/28 - Brighten Up",
+        "campaign_subject": "Brighten Up your mornings",
+        "campaign_send_date": "2026-02-28",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/03: Skincare",
+        "campaign_subject": "Clinically Proven Results",
+        "campaign_send_date": "2026-03-03",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/06: Spring Break Packing",
+        "campaign_subject": "Did Someone Say Spring Break?",
+        "campaign_send_date": "2026-03-06",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/07: Pre DLS",
+        "campaign_subject": "Not ready for Day Light Savings?",
+        "campaign_send_date": "2026-03-07",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/08 - intl. womens day",
+        "campaign_subject": "A note from our founder",
+        "campaign_send_date": "2026-03-08",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/09: Sleept Week #1",
+        "campaign_subject": "We'll meet you in the sheets",
+        "campaign_send_date": "2026-03-09",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/10: Target",
+        "campaign_subject": "PSA: are you headed to Target soon? \ud83d\udc40",
+        "campaign_send_date": "2026-03-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/11 - Sleep Week #3",
+        "campaign_subject": "Why Sleep Week Matters",
+        "campaign_send_date": "2026-03-11",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/12: Sleep Week #4",
+        "campaign_subject": "Real People. Real Sleep.",
+        "campaign_send_date": "2026-03-12",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/13: Sleep Week #5",
+        "campaign_subject": "Sleep, but make it uncomplicated",
+        "campaign_send_date": "2026-03-13",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/14: Sleep Week #6",
+        "campaign_subject": "Our Best Selling Sleep Bundle",
+        "campaign_send_date": "2026-03-14",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/15: Oscar's",
+        "campaign_subject": "And the Oscar goes to...",
+        "campaign_send_date": "2026-03-15",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/16: Find Rescue IRL",
+        "campaign_subject": "Shamrocked? Meet Rescue \u2618\ufe0f",
+        "campaign_send_date": "2026-03-16",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/18: March Madness",
+        "campaign_subject": "Your stress bracket starts now \ud83c\udfc0",
+        "campaign_send_date": "2026-03-18",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/19: De-Puff",
+        "campaign_subject": "Revive Your Undereyes",
+        "campaign_send_date": "2026-03-19",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/21: Find Your Perfect Patch",
+        "campaign_subject": "Meet Your (Patch) Match",
+        "campaign_send_date": "2026-03-21",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/23: Hemp Queen",
+        "campaign_subject": "Maximum Chill, Activated",
+        "campaign_send_date": "2026-03-23",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/25: Active",
+        "campaign_subject": "30% OFF Active, in honor of its birthday!",
+        "campaign_send_date": "2026-03-25",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/28: Duos",
+        "campaign_subject": "Double Up & Save.",
+        "campaign_send_date": "2026-03-28",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "03/31: Bachelorette Survival Guide",
+        "campaign_subject": "How to survive a bachelorette party (and still make brunch)",
+        "campaign_send_date": "2026-03-31",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/01: April Fools",
+        "campaign_subject": "No joke \u2014 free patch with every order",
+        "campaign_send_date": "2026-04-01",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/02: Spring Reset",
+        "campaign_subject": "Your spring wellness reset starts here",
+        "campaign_send_date": "2026-04-02",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/03: Festival Season",
+        "campaign_subject": "Festival season has a wellness plan now.",
+        "campaign_send_date": "2026-04-03",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/05: Spring Break",
+        "campaign_subject": "Pack light. Don't leave your wellness behind.",
+        "campaign_send_date": "2026-04-05",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/07: Rescue Feature",
+        "campaign_subject": "You overdid it. Rescue was made for exactly that.",
+        "campaign_send_date": "2026-04-07",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/08: Ulta Sale",
+        "campaign_subject": "Heads up \u2014 30% off at Ulta starts April 10",
+        "campaign_send_date": "2026-04-08",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/10: Ulta Sale II",
+        "campaign_subject": "30% off at Ulta \u2014 today only",
+        "campaign_send_date": "2026-04-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/11: Desire Feature",
+        "campaign_subject": "Your libido called. We picked up.",
+        "campaign_send_date": "2026-04-11",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/12: Sleep Collection",
+        "campaign_subject": "Get better sleep tonight",
+        "campaign_send_date": "2026-04-12",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/14: Under eye Patches",
+        "campaign_subject": "Your under eyes are telling on you. \ud83d\udc40",
+        "campaign_send_date": "2026-04-14",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "04/15: GWP Last Day + Tax Day | Promo",
+        "campaign_subject": "Last Call (!)",
+        "campaign_send_date": "2026-04-15",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/04: UGC Feature",
+        "campaign_subject": "You + The Good Patch = \ud83d\ude0d",
+        "campaign_send_date": "2025-10-04",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/08: Cycle Feature",
+        "campaign_subject": "Cramps? Mood swings? Meet Cycle.",
+        "campaign_send_date": "2025-10-08",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/13: B12 Feature",
+        "campaign_subject": "20 Ways to B12 \ud83d\ude80",
+        "campaign_send_date": "2025-10-13",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/16: Halloween Guide",
+        "campaign_subject": "The Mom's Guide to Halloween \ud83c\udf83",
+        "campaign_send_date": "2025-10-16",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/18: end of Summer",
+        "campaign_subject": "What happened to summer?",
+        "campaign_send_date": "2025-10-18",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/24: Subscribe feature",
+        "campaign_subject": "Cozy up to consistency",
+        "campaign_send_date": "2025-10-24",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "10/31: Fall Skincare",
+        "campaign_subject": "Fall skin, but make it fresh",
+        "campaign_send_date": "2025-10-31",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/03: MVPs",
+        "campaign_subject": "Meet our MVPs: The patches everyone's obsessed with \ud83d\udc9b",
+        "campaign_send_date": "2025-11-03",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/09: Mom feature",
+        "campaign_subject": "For the moms doing everything this Thanksgiving.",
+        "campaign_send_date": "2025-11-09",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/12: BFCM Early access",
+        "campaign_subject": "You're on the list: 30% off starts now!",
+        "campaign_send_date": "2025-11-12",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/16 - Holiday Sale, text only",
+        "campaign_subject": "Our holiday sale is here \u2014 30% off everything \ud83c\udf81",
+        "campaign_send_date": "2025-11-16",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/22: Undereye Patches Feature",
+        "campaign_subject": "De-Puff the Holidays Away",
+        "campaign_send_date": "2025-11-22",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/23: Hemp Queen",
+        "campaign_subject": "The Patch That Brings the Peace",
+        "campaign_send_date": "2025-11-23",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/27 - Thanksgiving, text only",
+        "campaign_subject": "Gratitude, gravy, and good vibes \ud83e\udd83",
+        "campaign_send_date": "2025-11-27",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/28 - Black Friday, text only",
+        "campaign_subject": "Last call for your free gift \ud83c\udf81",
+        "campaign_send_date": "2025-11-28",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/28: BFCM AM",
+        "campaign_subject": "30% off sitewide!",
+        "campaign_send_date": "2025-11-28",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/29: help you with your Stocking Stuffer Game",
+        "campaign_subject": "Consider the stockings stuffed",
+        "campaign_send_date": "2025-11-29",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "11/30: Sale feature",
+        "campaign_subject": "Going, going, gone",
+        "campaign_send_date": "2025-11-30",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/14: FSA Feature",
+        "campaign_subject": "Does your FSA expire this month?",
+        "campaign_send_date": "2025-12-14",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/15: Shipping",
+        "campaign_subject": "Last call",
+        "campaign_send_date": "2025-12-15",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/1: Playlist",
+        "campaign_subject": "The Patch Playlist (like your Spotify playlist, but better \ud83c\udfb6)",
+        "campaign_send_date": "2025-12-01",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/21: Winter Solstice - B12 Awake",
+        "campaign_subject": "The daylight might be short, but your day isn't",
+        "campaign_send_date": "2025-12-21",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/25 - Merry Everything",
+        "campaign_subject": "Merry everything (and then some) \ud83c\udf81",
+        "campaign_send_date": "2025-12-25",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/27: Stock Up",
+        "campaign_subject": "There's still time to stock up",
+        "campaign_send_date": "2025-12-27",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/2: BFCM Last Call",
+        "campaign_subject": "Last Call: 30% Off Ends Tomorrow \u2728",
+        "campaign_send_date": "2025-12-02",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/8: Dream Feature",
+        "campaign_subject": "Silent nights, finally",
+        "campaign_send_date": "2025-12-08",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "12/9: Brighten Up Feature",
+        "campaign_subject": "A smoother, brighter way to face the holidays",
+        "campaign_send_date": "2025-12-09",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "8/16: Weighted Vest/ Active",
+        "campaign_subject": "TikTok's wearing weighted vests. You just need a patch",
+        "campaign_send_date": "2025-08-16",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "8/19: Fan Faves",
+        "campaign_subject": "Meet the Patch Trio Everyone's Obsessed \ud83d\udc40",
+        "campaign_send_date": "2025-08-17",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "8/26: sale (text only)",
+        "campaign_subject": "Sale Happening Now \ud83d\udea8",
+        "campaign_send_date": "2025-08-26",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "8/29: End of Summer Sale",
+        "campaign_subject": "BEST SELLERS ON SALE",
+        "campaign_send_date": "2025-08-29",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "9/10: Clear Up Feature",
+        "campaign_subject": "Spots? Not on our watch \ud83d\udc40",
+        "campaign_send_date": "2025-09-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "9/17: Travel Hack",
+        "campaign_subject": "Travel Hack: Fall > Summer \u2708\ufe0f \ud83c\udf42",
+        "campaign_send_date": "2025-09-17",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "9/20: HSA/FSA",
+        "campaign_subject": "HSA/FSA",
+        "campaign_send_date": "2025-09-20",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "Clone 12/4: Gift Giving - White Elephant",
+        "campaign_subject": "Win the White Elephant",
+        "campaign_send_date": "2025-12-04",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      }
+    ],
+    "attr": [
+      {
+        "campaign_name": "Welcome Email #1",
+        "shopify_placed_order": 11,
+        "shopify_placed_order_value": 469.2
+      },
+      {
+        "campaign_name": "05/08: Energy | 15% off",
+        "shopify_placed_order": 9,
+        "shopify_placed_order_value": 519.72
+      },
+      {
+        "campaign_name": "04/22: Earth Day",
+        "shopify_placed_order": 6,
+        "shopify_placed_order_value": 365.48
+      },
+      {
+        "campaign_name": "05/10: Mother's Day | 15% Off",
+        "shopify_placed_order": 6,
+        "shopify_placed_order_value": 599.46
+      },
+      {
+        "campaign_name": "PM | Abandoned Cart Email #2",
+        "shopify_placed_order": 5,
+        "shopify_placed_order_value": 369.28
+      },
+      {
+        "campaign_name": "PM | Abandoned Cart Email #1",
+        "shopify_placed_order": 3,
+        "shopify_placed_order_value": 279.09
+      },
+      {
+        "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
+        "shopify_placed_order": 3,
+        "shopify_placed_order_value": 159
+      },
+      {
+        "campaign_name": "Welcome Email #4",
+        "shopify_placed_order": 3,
+        "shopify_placed_order_value": 282.39
+      },
+      {
+        "campaign_name": "05/03: Mother's Day Gift Guide",
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 135.97
+      },
+      {
+        "campaign_name": "05/13: Eye Patch Feature",
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 35
+      },
+      {
+        "campaign_name": "05/17: 5-Star Reviews",
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 92.09
+      },
+      {
+        "campaign_name": "05/19: Sale Teaser",
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 79.88
+      },
+      {
+        "campaign_name": "PM | Abandoned Checkout Email #1",
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 76.21
+      },
+      {
+        "campaign_name": "PM | Abandoned Checkout Email #2",
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 51.2
+      },
+      {
+        "campaign_name": "T1 - Restart your wellness routine",
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 18.13
+      },
+      {
+        "campaign_name": "T2A - 20% off your restock",
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 120.66
+      },
+      {
+        "campaign_name": "T3B - FOMO - occasions focus",
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 73.06
+      }
+    ],
+    "date": "2026-05-19"
+  },
+  "py_shopify_2025-05-19": {
+    "gross_sales": 1549.45,
+    "sm_order_count": 37,
+    "net_sales": 1045.95,
+    "net_quantity": 66
+  },
+  "top_products": {
+    "data": [
+      {
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (8 Total Patches)",
+        "ordered_product_sales": 21358.65,
+        "units_ordered": 1071
+      },
+      {
+        "title": "The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea Extract, Natural Plant Powered Wearable Wellness, Helps to Promote Energy (8 Total Patches)",
+        "ordered_product_sales": 16883.13,
+        "units_ordered": 845
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 13146.84,
+        "units_ordered": 658
+      },
+      {
+        "title": "The Good Patch Relax Patches, Supports Relaxation, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 12767.23,
+        "units_ordered": 640
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (8 Total Patches)",
+        "ordered_product_sales": 10554.72,
+        "units_ordered": 528
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 8776.68,
+        "units_ordered": 366
+      },
+      {
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
+        "ordered_product_sales": 7948.41,
+        "units_ordered": 159
+      },
+      {
+        "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
+        "ordered_product_sales": 7535.77,
+        "units_ordered": 153
+      },
+      {
+        "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (16 Total Patches)",
+        "ordered_product_sales": 7522.37,
+        "units_ordered": 218
+      },
+      {
+        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (8 Total Patches)",
+        "ordered_product_sales": 7002.2,
+        "units_ordered": 292
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 6348.73,
+        "units_ordered": 127
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 6241.96,
+        "units_ordered": 181
+      },
+      {
+        "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
+        "ordered_product_sales": 6076.96,
+        "units_ordered": 304
+      },
+      {
+        "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
+        "ordered_product_sales": 5794.22,
+        "units_ordered": 290
+      },
+      {
+        "title": "The Good Patch Most Loved Patches \u2013 Awake B12 for Energy, Dream for Sleep, Rescue for Recovery, Relax for Calm \u2013 Plant-Powered (16 Patches)",
+        "ordered_product_sales": 4113.6,
+        "units_ordered": 104
+      },
+      {
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 3624.58,
+        "units_ordered": 106
+      },
+      {
+        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
+        "ordered_product_sales": 3574.35,
+        "units_ordered": 65
+      },
+      {
+        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 3439.14,
+        "units_ordered": 86
+      },
+      {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
+        "ordered_product_sales": 3300,
+        "units_ordered": 110
+      },
+      {
+        "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 3299.34,
+        "units_ordered": 66
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (24 Total Patches)",
+        "ordered_product_sales": 3299.34,
+        "units_ordered": 66
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3258.37,
+        "units_ordered": 166
+      },
+      {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3196.8,
+        "units_ordered": 160
+      },
+      {
+        "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2854.96,
+        "units_ordered": 83
+      },
+      {
+        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
+        "ordered_product_sales": 2718.64,
+        "units_ordered": 136
+      },
+      {
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
+        "ordered_product_sales": 2493.92,
+        "units_ordered": 104
+      },
+      {
+        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
+        "ordered_product_sales": 2460,
+        "units_ordered": 50
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
+        "ordered_product_sales": 2457.54,
+        "units_ordered": 123
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 2449.3,
+        "units_ordered": 70
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2439.39,
+        "units_ordered": 61
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 2364.57,
+        "units_ordered": 43
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 2340,
+        "units_ordered": 79
+      },
+      {
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 1860,
+        "units_ordered": 62
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 1854.47,
+        "units_ordered": 53
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (36 Total Patches)",
+        "ordered_product_sales": 1799.64,
+        "units_ordered": 36
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 1499.7,
+        "units_ordered": 30
+      },
+      {
+        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
+        "ordered_product_sales": 1440,
+        "units_ordered": 49
+      },
+      {
+        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (8 Total Patches)",
+        "ordered_product_sales": 1426.62,
+        "units_ordered": 71
+      },
+      {
+        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
+        "ordered_product_sales": 1399.72,
+        "units_ordered": 28
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 1399.6,
+        "units_ordered": 40
+      },
+      {
+        "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (24 Total Patches)",
+        "ordered_product_sales": 1176.71,
+        "units_ordered": 29
+      },
+      {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 912,
+        "units_ordered": 19
+      },
+      {
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 879.78,
+        "units_ordered": 22
+      },
+      {
+        "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 799.8,
+        "units_ordered": 20
+      },
+      {
+        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (16 Total Patches)",
+        "ordered_product_sales": 720,
+        "units_ordered": 15
+      },
+      {
+        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (16 Total Patches)",
+        "ordered_product_sales": 624,
+        "units_ordered": 13
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 600,
+        "units_ordered": 10
+      },
+      {
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (24 Total Patches)",
+        "ordered_product_sales": 549.9,
+        "units_ordered": 10
+      },
+      {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
+        "ordered_product_sales": 540,
+        "units_ordered": 10
+      },
+      {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (24 Total Microdart Patches)",
+        "ordered_product_sales": 540,
+        "units_ordered": 6
+      },
+      {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 504,
+        "units_ordered": 7
+      },
+      {
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
+        "ordered_product_sales": 450,
+        "units_ordered": 5
+      },
+      {
+        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (24 Total Patches)",
+        "ordered_product_sales": 360,
+        "units_ordered": 5
+      },
+      {
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 300,
+        "units_ordered": 5
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (18 Total Patch Sets)",
+        "ordered_product_sales": 270,
+        "units_ordered": 3
+      },
+      {
+        "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (16 Total Patches)",
+        "ordered_product_sales": 34.99,
+        "units_ordered": 1
+      }
+    ],
+    "date": "2026-05-19"
+  },
+  "py_amazon_seller_2025-05-19": {
+    "ordered_product_sales": 6874.24,
+    "units_ordered": 196,
+    "sessions": 1592,
+    "unit_session_percentage": 12.31,
+    "page_views": 2051
   }
 }
