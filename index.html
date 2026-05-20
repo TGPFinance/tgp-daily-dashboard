@@ -63,9 +63,9 @@
     <div class="section-title"><h2>Sponsored Products · La Mend (US)</h2><span class="badge">May 19, 2026</span></div>
     <div class="cards">
       <div class="card"><div class="label">Ad Spend</div><div class="value">$1,682.47</div></div>
-      <div class="card"><div class="label">Ad Sales</div><div class="value">$2,144.45</div></div>
-      <div class="card"><div class="label">ROAS</div><div class="value">1.27×</div></div>
-      <div class="card"><div class="label">ACOS</div><div class="value">78.46%</div></div>
+      <div class="card"><div class="label">Ad Sales</div><div class="value">$2,164.43</div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">1.29×</div></div>
+      <div class="card"><div class="label">ACOS</div><div class="value">77.73%</div></div>
       <div class="card"><div class="label">Clicks</div><div class="value">805</div></div>
     </div>
   </div>
@@ -73,11 +73,11 @@
   <div class="section">
     <div class="section-title"><h2>Seller Central — 30-Day Overview</h2><span class="badge">Apr 20 – May 19, 2026</span></div>
     <div class="cards">
-      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$205.5K</div><div class="sub">30-day total</div></div>
+      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$205.3K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Units Ordered</div><div class="value">7.8K</div><div class="sub">~259 / day avg</div></div>
       <div class="card"><div class="label">Sessions</div><div class="value">49.5K</div><div class="sub">~1,650 / day avg</div></div>
-      <div class="card"><div class="label">Conversion Rate</div><div class="value">15.69%</div><div class="sub">units ÷ sessions</div></div>
-      <div class="card"><div class="label">Daily Avg Revenue</div><div class="value">$6,851.63</div><div class="sub">revenue ÷ 30</div></div>
+      <div class="card"><div class="label">Conversion Rate</div><div class="value">15.68%</div><div class="sub">units ÷ sessions</div></div>
+      <div class="card"><div class="label">Daily Avg Revenue</div><div class="value">$6,844.53</div><div class="sub">revenue ÷ 30</div></div>
     </div>
     <div class="chart-card">
       <div class="chart-title">Daily ordered revenue (USD)</div>
@@ -92,7 +92,37 @@
     <div class="section-title"><h2>Top Products by Revenue</h2><span class="badge">Apr 20 – May 19, 2026 · US Marketplace</span></div>
     <table class="products">
       <thead><tr><th>Product</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
-      <tbody></tbody>
+      <tbody>
+        <tr>
+          <td class="prod-name">The Good Patch Rescue Recovery Patch, Natural Patch with DHM</td>
+          <td class="prod-num">$21,359</td>
+          <td class="prod-num">1,071</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:28.6%"></div></div></td>
+        </tr>
+        <tr>
+          <td class="prod-name">The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea </td>
+          <td class="prod-num">$16,883</td>
+          <td class="prod-num">845</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:22.6%"></div></div></td>
+        </tr>
+        <tr>
+          <td class="prod-name">The Good Patch Dream Patch - Sleep Patches with Melatonin, H</td>
+          <td class="prod-num">$13,147</td>
+          <td class="prod-num">658</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:17.6%"></div></div></td>
+        </tr>
+        <tr>
+          <td class="prod-name">The Good Patch Relax Patches, Supports Relaxation, Natural P</td>
+          <td class="prod-num">$12,767</td>
+          <td class="prod-num">640</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:17.1%"></div></div></td>
+        </tr>
+        <tr>
+          <td class="prod-name">The Good Patch Slumber Sleep Patch Support, Melatonin Free, </td>
+          <td class="prod-num">$10,555</td>
+          <td class="prod-num">528</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:14.1%"></div></div></td>
+        </tr></tbody>
     </table>
   </div>
   <div class="section">
@@ -188,8 +218,8 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('amazonRevChart'), {
       type: 'bar',
       data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18"], datasets: [
-        { label: 'Daily revenue', data: [7583.99, 7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6809.67, 6848.04, 6933.4, 6776.88, 7450.4, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7761.36, 9043.83, 8708.66], backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 },
-        { label: '7-day avg', type: 'line', data: [7583.99, 7562.16, 7706.46, 7528.32, 7361.03, 7076.48, 7020.12, 6898.28, 6732.67, 6560.95, 6455.2, 6422.97, 6545.18, 6624.27, 6680.97, 6755.26, 6757.63, 6842.55, 6909.28, 6947.53, 6978.2, 6963.29, 7101.85, 7197.49, 7203.87, 7129.15, 7269.79, 7497.42, 7738.14], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
+        { label: 'Daily revenue', data: [7583.99, 7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7706.39, 8923.86, 8708.66], backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 },
+        { label: '7-day avg', type: 'line', data: [7583.99, 7562.16, 7706.46, 7528.32, 7361.03, 7076.48, 7020.12, 6898.28, 6732.67, 6560.95, 6455.2, 6422.97, 6545.18, 6624.27, 6680.97, 6755.26, 6755.06, 6839.98, 6906.71, 6944.96, 6972.78, 6957.87, 7096.43, 7194.64, 7201.02, 7126.29, 7259.08, 7472.43, 7713.15], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
       ]},
       options: { responsive: true, plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
         scales: { x: { ticks: { color: '#6b7280', maxTicksLimit: 8 }, grid: { display: false } },
@@ -199,7 +229,7 @@ window.addEventListener('load', () => {
       type: 'line',
       data: { labels: ["2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18"], datasets: [
         { label: 'Sessions', data: [2088.0, 1870.0, 1880.0, 1895.0, 1785.0, 1501.0, 1652.0, 1433.0, 1492.0, 1469.0, 1490.0, 1338.0, 1424.0, 1645.0, 1562.0, 1667.0, 1670.0, 1673.0, 1576.0, 1674.0, 1758.0, 1878.0, 1821.0, 1826.0, 1663.0, 1708.0, 1952.0, 2144.0, 1971.0], borderColor: '#ef4444', backgroundColor: 'transparent', yAxisID: 'y', pointRadius: 0, tension: 0.3, borderWidth: 2 },
-        { label: 'CVR %', data: [13.75, 15.78, 15.37, 14.04, 14.57, 14.52, 15.74, 17.73, 16.49, 17.36, 15.37, 18.31, 17.28, 16.84, 17.22, 15.42, 16.35, 15.84, 16.43, 15.35, 15.7, 14.16, 16.31, 15.22, 15.94, 13.99, 14.65, 14.97, 16.95], borderColor: '#22c55e', borderDash: [4,4], backgroundColor: 'transparent', yAxisID: 'y1', pointRadius: 0, tension: 0.3, borderWidth: 2 }
+        { label: 'CVR %', data: [13.75, 15.78, 15.37, 14.04, 14.57, 14.52, 15.74, 17.73, 16.49, 17.36, 15.37, 18.31, 17.28, 16.84, 17.22, 15.42, 16.35, 15.84, 16.43, 15.35, 15.64, 14.16, 16.31, 15.22, 15.94, 13.99, 14.55, 14.83, 16.95], borderColor: '#22c55e', borderDash: [4,4], backgroundColor: 'transparent', yAxisID: 'y1', pointRadius: 0, tension: 0.3, borderWidth: 2 }
       ]},
       options: { responsive: true, interaction: { mode: 'index', intersect: false },
         plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
