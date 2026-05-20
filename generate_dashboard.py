@@ -28,33 +28,51 @@ ACCOUNTS = {
     "shopify":       "gid://shopify/Shop/5489557622",
 }
 
-def sm_fetch(ds_id, account_id, fields, start_date=DATE_STR, end_date=DATE_STR, extra_params=None, timeout=180):
+def sm_fetch(ds_id, account_id, fields, start_date=DATE_STR, end_date=DATE_STR, extra_params=None, timeout=180, retries=2):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
-    try:
-        r = requests.get(SM_BASE, params=params, timeout=timeout)
-        r.raise_for_status()
-        rows = r.json().get("data", [])
-        fl = fields.split(",")
-        return dict(zip(fl, rows[1])) if len(rows) >= 2 else {}
-    except Exception as e:
-        print(f"  Warning: {ds_id} fetch failed — {e}")
-        return {}
+    for attempt in range(retries + 1):
+        try:
+            r = requests.get(SM_BASE, params=params, timeout=timeout)
+            r.raise_for_status()
+            rows = r.json().get("data", [])
+            fl = fields.split(",")
+            return dict(zip(fl, rows[1])) if len(rows) >= 2 else {}
+        except (requests.Timeout, requests.ConnectionError):
+            if attempt < retries:
+                print(f"  {ds_id} timed out (attempt {attempt+1}), retrying...")
+                continue
+            print(f"  Warning: {ds_id} fetch failed after retries")
+            return {}
+        except Exception as e:
+            print(f"  Warning: {ds_id} fetch failed — {e}")
+            return {}
 
-def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180):
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=2):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
-    try:
-        r = requests.get(SM_BASE, params=params, timeout=timeout)
-        r.raise_for_status()
-        rows = r.json().get("data", [])
-        fl = fields.split(",")
-        return [dict(zip(fl, row)) for row in rows[1:]] if len(rows) >= 2 else []
-    except Exception as e:
-        print(f"  Warning: {ds_id} rows fetch failed — {e}")
-        return []
+    for attempt in range(retries + 1):
+        try:
+            r = requests.get(SM_BASE, params=params, timeout=timeout)
+            r.raise_for_status()
+            rows = r.json().get("data", [])
+            fl = fields.split(",")
+            return [dict(zip(fl, row)) for row in rows[1:]] if len(rows) >= 2 else []
+        except (requests.Timeout, requests.ConnectionError):
+            if attempt < retries:
+                print(f"  {ds_id} timed out (attempt {attempt+1}), retrying...")
+                continue
+            print(f"  Warning: {ds_id} rows fetch failed after retries")
+            return []
+        except Exception as e:
+            print(f"  Warning: {ds_id} rows fetch failed — {e}")
+            return []
+
+def to_float(v):
+    try: return float(v)
+    except: return 0
 
 print(f"Fetching data for {DISPLAY_DATE}...")
 
@@ -63,7 +81,7 @@ amazon_seller = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
     extra_params={"report_type": "sales_and_traffic_by_date"})
 amazon_ads = sm_fetch("AA", ACCOUNTS["amazon_ads"],
     "cost,attributedSales14d,roas,acos,clicks",
-    extra_params={"report_type": "SponsoredProduct"})
+    extra_params={"report_type": "SponsoredProduct"}, timeout=300)
 meta = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas,clicks,impressions,cpc,ctr")
 google_ads = sm_fetch("AW", ACCOUNTS["google_ads"], "cost,conversions_value,roas,clicks,impressions,cpc,ctr")
 klaviyo_email = sm_fetch("KLAV", ACCOUNTS["klaviyo"],
@@ -87,7 +105,7 @@ amazon_seller_30d = sm_fetch("ASELL", ACCOUNTS["amazon_seller"],
     "ordered_product_sales,units_ordered,sessions,unit_session_percentage",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
 amazon_ads_30d = sm_fetch("AA", ACCOUNTS["amazon_ads"], "cost,attributedSales14d,roas,acos",
-    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "SponsoredProduct"})
+    start_date=T30_START, end_date=T30_END, extra_params={"report_type": "SponsoredProduct"}, timeout=300)
 shopify_30d = sm_fetch("SHP", ACCOUNTS["shopify"], "gross_sales,sm_order_count,net_sales,avg_total_sales",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
 meta_30d = sm_fetch("FA", ACCOUNTS["meta"], "spend,purchase_value,roas",
@@ -99,23 +117,20 @@ print(f"Fetching daily series & top products...")
 amazon_daily = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
     "date,ordered_product_sales,sessions,unit_session_percentage",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_date"})
-shopify_daily = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "date,gross_sales",
+shopify_daily = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "date,net_sales",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "Order"})
+shopify_daily = [r for r in shopify_daily if to_float(r.get('net_sales')) > 0]
 amazon_products = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
     "title,ordered_product_sales,units_ordered",
     start_date=T30_START, end_date=T30_END, extra_params={"report_type": "sales_and_traffic_by_asin"})
-
-# Sort and take top 5 products by revenue
-def to_float(v):
-    try: return float(v)
-    except: return 0
 amazon_products = sorted(amazon_products, key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
 
 print(f"  Amazon Seller: {amazon_seller}")
+print(f"  Amazon Ads:    {amazon_ads}")
 print(f"  Amazon daily:  {len(amazon_daily)} rows")
 print(f"  Top products:  {len(amazon_products)} rows")
+print(f"  Shopify daily: {len(shopify_daily)} rows")
 
-# Formatters
 def fmt_money(v, big=False):
     if v in (None, '', 0): return "—"
     try:
@@ -171,7 +186,6 @@ def rolling_avg(values, window=7):
         out.append(round(sum(sl)/len(sl), 2) if sl else 0)
     return out
 
-# Chart data prep
 def col(rows, key):
     out = []
     for r in rows:
@@ -184,9 +198,8 @@ amazon_rev   = col(amazon_daily, 'ordered_product_sales')
 amazon_sess  = col(amazon_daily, 'sessions')
 amazon_cvr   = [v*100 if 0 < v < 1 else v for v in col(amazon_daily, 'unit_session_percentage')]
 shopify_dates = [r.get('date', '') for r in shopify_daily]
-shopify_rev   = col(shopify_daily, 'gross_sales')
+shopify_rev   = col(shopify_daily, 'net_sales')
 
-# Top products
 top_total = sum(to_float(p.get('ordered_product_sales')) for p in amazon_products) or 1
 def product_rows():
     out = ""
@@ -204,12 +217,11 @@ def product_rows():
         </tr>"""
     return out
 
-# Chart JS
-def revenue_chart_js(canvas_id, labels, values, avg):
+def revenue_chart_js(canvas_id, labels, values, avg, label_name='Daily revenue'):
     return f"""new Chart(document.getElementById('{canvas_id}'), {{
       type: 'bar',
       data: {{ labels: {json.dumps(labels)}, datasets: [
-        {{ label: 'Daily revenue', data: {json.dumps(values)}, backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 }},
+        {{ label: '{label_name}', data: {json.dumps(values)}, backgroundColor: 'rgba(99,102,241,0.7)', borderRadius: 2 }},
         {{ label: '7-day avg', type: 'line', data: {json.dumps(avg)}, borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }}
       ]}},
       options: {{ responsive: true, plugins: {{ legend: {{ labels: {{ color: '#9ca3af', boxWidth: 12 }} }} }},
@@ -233,8 +245,8 @@ def sessions_cvr_chart_js(canvas_id, labels, sessions, cvr):
         }} }} }}
     );"""
 
-amazon_avg7   = rolling_avg(amazon_rev, 7)
-shopify_avg7  = rolling_avg(shopify_rev, 7)
+amazon_avg7  = rolling_avg(amazon_rev, 7)
+shopify_avg7 = rolling_avg(shopify_rev, 7)
 
 html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -395,7 +407,7 @@ html = f"""<!DOCTYPE html>
       {card(fmt_money(shopify_30d.get('avg_total_sales')), 'AOV', '<div class="sub">30-day avg</div>')}
     </div>
     <div class="chart-card">
-      <div class="chart-title">Daily gross sales (USD)</div>
+      <div class="chart-title">Daily net sales (USD)</div>
       <canvas id="shopifyRevChart" height="80"></canvas>
     </div>
   </div>
@@ -426,7 +438,7 @@ function showTab(i) {{
 window.addEventListener('load', () => {{
   {revenue_chart_js('amazonRevChart', amazon_dates, amazon_rev, amazon_avg7)}
   {sessions_cvr_chart_js('amazonSessChart', amazon_dates, amazon_sess, amazon_cvr)}
-  {revenue_chart_js('shopifyRevChart', shopify_dates, shopify_rev, shopify_avg7)}
+  {revenue_chart_js('shopifyRevChart', shopify_dates, shopify_rev, shopify_avg7, 'Daily net sales')}
 }});
 </script>
 </body>
