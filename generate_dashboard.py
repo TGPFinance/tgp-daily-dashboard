@@ -284,27 +284,39 @@ def ensure_cohort_data():
     cohort_start = cohort_start_dt.strftime("%Y-%m-%d")
 
     # Prior window: 12 months BEFORE the display window — used to identify returning customers
-    # who had a paid order pre-window and should be excluded from cohorts
-    prior_window_end_dt = cohort_start_dt - timedelta(days=1)
-    prior_window_start_dt = cohort_start_dt
-    for _ in range(12):
-        prior_window_start_dt = (prior_window_start_dt - timedelta(days=1)).replace(day=1)
-    prior_window_start = prior_window_start_dt.strftime("%Y-%m-%d")
-    prior_window_end = prior_window_end_dt.strftime("%Y-%m-%d")
+    # who had a paid order pre-window. Split into 2 × 6-month chunks because TGP has ~12K paying
+    # customers in any 12-month window, which exceeds the 10K Supermetrics row cap.
+    chunk_mid_dt = cohort_start_dt
+    for _ in range(6):
+        chunk_mid_dt = (chunk_mid_dt - timedelta(days=1)).replace(day=1)  # first day of month -6
+    prior_window_start_dt = chunk_mid_dt
+    for _ in range(6):
+        prior_window_start_dt = (prior_window_start_dt - timedelta(days=1)).replace(day=1)  # first day of month -12
 
-    # Q1: customer_ids who placed paid orders in the 12 months PRIOR to display window
-    # (these are pre-existing paying customers — exclude them from cohorts)
-    prior_paid = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
-                               "customer_id",
-                               prior_window_start, prior_window_end,
-                               extra_params={"report_type": "Order", "filters": "net_sales > 0"},
-                               timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    chunk1_start = prior_window_start_dt.strftime("%Y-%m-%d")
+    chunk1_end = (chunk_mid_dt - timedelta(days=1)).strftime("%Y-%m-%d")
+    chunk2_start = chunk_mid_dt.strftime("%Y-%m-%d")
+    chunk2_end = (cohort_start_dt - timedelta(days=1)).strftime("%Y-%m-%d")
 
-    # Q2: per-customer per-month paid order activity in display window
+    # Q1a + Q1b: customer_ids with paid orders in prior 12 months (chunked)
+    # Fetch net_sales as a field so we can filter in Python (query-level filter is unreliable on this endpoint)
+    prior_paid_1 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                 "customer_id,net_sales",
+                                 chunk1_start, chunk1_end,
+                                 extra_params={"report_type": "Order"},
+                                 timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    prior_paid_2 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                 "customer_id,net_sales",
+                                 chunk2_start, chunk2_end,
+                                 extra_params={"report_type": "Order"},
+                                 timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    prior_paid = (prior_paid_1 or []) + (prior_paid_2 or [])
+
+    # Q2: per-customer per-month order activity (paid + comp — filtered in Python)
     orders = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
-                           "customer_id,yearMonth,sm_order_count",
+                           "customer_id,yearMonth,sm_order_count,net_sales",
                            cohort_start, DATE_STR,
-                           extra_params={"report_type": "Order", "filters": "net_sales > 0"},
+                           extra_params={"report_type": "Order"},
                            timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
 
     if orders:
@@ -317,14 +329,31 @@ def ensure_campaigns():
         "campaign_name,campaign_subject,campaign_send_date,klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
         T30_START, T30_END,
         extra_params={"report_type": "MetricExportCampaign"}, timeout=300, timezone=DEFAULT_TZ)
+    # Include the flow dimension as a field so we can filter at Python level (query-level filter unreliable)
     attr = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
-        "campaign_name,shopify_placed_order,shopify_placed_order_value",
+        "campaign_name,campaign_is_part_of_flow,shopify_placed_order,shopify_placed_order_value",
         T30_START, T30_END,
-        extra_params={"report_type": "MetricExportAttributedCampaign",
-                      "filters": "campaign_is_part_of_flow == false"},
+        extra_params={"report_type": "MetricExportAttributedCampaign"},
         timeout=300, timezone=DEFAULT_TZ)
+
+    # Aggregate broadcast-only totals for the Email % card (30-day)
+    broadcast_orders = 0
+    broadcast_value = 0.0
+    if attr:
+        for row in attr:
+            is_flow = str(row.get('campaign_is_part_of_flow', '')).strip().lower() == 'true'
+            if is_flow:
+                continue
+            try:
+                broadcast_orders += int(float(row.get('shopify_placed_order', 0) or 0))
+                broadcast_value += float(row.get('shopify_placed_order_value', 0) or 0)
+            except (ValueError, TypeError):
+                pass
+
     if em:
-        cache['campaigns'] = {"email": em, "attr": attr, "date": DATE_STR}
+        cache['campaigns'] = {"email": em, "attr": attr, "date": DATE_STR,
+                              "broadcast_orders_30d": broadcast_orders,
+                              "broadcast_value_30d": broadcast_value}
     elif 'campaigns' in cache:
         cache_warnings.append(f"campaigns (from {cache['campaigns'].get('date','?')})")
 
@@ -525,7 +554,8 @@ for row in nr_30:
         new_rev_30 += rev; new_orders_30 += orders
 ncac_30 = safe_div(dtc_spend_30, new_orders_30)
 
-email_pct    = safe_div(klaviyo_attr.get('shopify_placed_order_value'), shopify_net)
+klaviyo_broadcast_value_30 = cache.get('campaigns', {}).get('broadcast_value_30d', 0)
+email_pct    = safe_div(klaviyo_broadcast_value_30, shop_net_30)
 new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
 
 # Customer Health: 90-day LTV, repeat purchase rate, LTV:CAC
@@ -566,22 +596,30 @@ COHORT_M_OFFSETS = 6         # M0..M5
 if cohort_orders_raw and cohort_window_start:
     window_start_ym = cohort_window_start[:7]  # "2025-12"
 
-    # Set of customer_ids who already had paid orders BEFORE our display window —
-    # these are returning customers, not new acquisitions, so exclude them from cohorts
+    # Set of customer_ids who already had PAID orders BEFORE our display window
+    # (filter applied in Python — query-level filter is unreliable on this endpoint)
     prior_paid_set = set()
     for row in cohort_prior_paid_raw:
         cid = row.get('customer_id')
-        if cid:
+        try:
+            ns = float(row.get('net_sales', 0) or 0)
+        except (ValueError, TypeError):
+            ns = 0
+        if cid and ns > 0:
             prior_paid_set.add(cid)
 
     # Parse Q2 orders and find each customer's first PAID order month in the display window
-    # Q2 is already filtered net_sales > 0, so ShopMy 100%-comp orders are absent
+    # Filter $0 rows (ShopMy comps) at Python level since query filter is unreliable
     first_paid_month = {}
     customer_paid_months = defaultdict(set)
     for row in cohort_orders_raw:
         cid = row.get('customer_id')
         ym_raw = row.get('yearMonth', '') or ''  # format "2025|12" or "2025-12"
-        if not cid or not ym_raw: continue
+        try:
+            ns = float(row.get('net_sales', 0) or 0)
+        except (ValueError, TypeError):
+            ns = 0
+        if not cid or not ym_raw or ns <= 0: continue
         ym = ym_raw.replace('|', '-')
         customer_paid_months[cid].add(ym)
         if cid not in first_paid_month or ym < first_paid_month[cid]:
