@@ -2378,6 +2378,13 @@
         "sessions": 1935,
         "unit_session_percentage": 14.32,
         "page_views": 2438
+      },
+      "2026-05-20": {
+        "ordered_product_sales": 8208.5,
+        "units_ordered": 302,
+        "sessions": 0,
+        "unit_session_percentage": 0,
+        "page_views": 0
       }
     },
     "amazon_ads": {
@@ -2930,6 +2937,12 @@
         "purchase_value": 12,
         "clicks": 23,
         "impressions": 3155
+      },
+      "2026-05-20": {
+        "spend": 448,
+        "purchase_value": 304.6,
+        "clicks": 131,
+        "impressions": 10102
       }
     },
     "google_ads": {
@@ -3112,6 +3125,12 @@
         "conversions_value": 582.12,
         "clicks": 366,
         "impressions": 31624
+      },
+      "2026-05-20": {
+        "cost": 201.0129,
+        "conversions_value": 103.72,
+        "clicks": 153,
+        "impressions": 13903
       }
     },
     "klaviyo_email": {
@@ -3296,10 +3315,16 @@
         "klaviyo_clicked_email_unique": 9
       },
       "2026-05-19": {
-        "klaviyo_total_recipients": 44051,
-        "klaviyo_received_email": 44016,
-        "klaviyo_opened_email_unique": 14425,
-        "klaviyo_clicked_email_unique": 261
+        "klaviyo_total_recipients": 135,
+        "klaviyo_received_email": 133,
+        "klaviyo_opened_email_unique": 17904,
+        "klaviyo_clicked_email_unique": 25
+      },
+      "2026-05-20": {
+        "klaviyo_total_recipients": 186,
+        "klaviyo_received_email": 183,
+        "klaviyo_opened_email_unique": 4245,
+        "klaviyo_clicked_email_unique": 20
       }
     },
     "klaviyo_attr": {
@@ -3424,8 +3449,12 @@
         "shopify_placed_order_value": 1389.68
       },
       "2026-05-19": {
-        "shopify_placed_order": 22,
-        "shopify_placed_order_value": 575.17
+        "shopify_placed_order": 17,
+        "shopify_placed_order_value": 504.81
+      },
+      "2026-05-20": {
+        "shopify_placed_order": 29,
+        "shopify_placed_order_value": 2363.37
       }
     }
   },
@@ -3436,23 +3465,23 @@
         "campaign_subject": "Cheers to the Moms...",
         "campaign_send_date": "2026-05-11",
         "klaviyo_total_recipients": 51145,
-        "klaviyo_open_rate": 0.691911,
+        "klaviyo_open_rate": 0.693225,
         "klaviyo_click_rate": 0.006177
       },
       {
         "campaign_name": "05/13: Eye Patch Feature",
         "campaign_subject": "The 15-minute Under-Eye Reset",
         "campaign_send_date": "2026-05-13",
-        "klaviyo_total_recipients": 50906,
-        "klaviyo_open_rate": 0.645159,
-        "klaviyo_click_rate": 0.00482
+        "klaviyo_total_recipients": 50907,
+        "klaviyo_open_rate": 0.647224,
+        "klaviyo_click_rate": 0.004859
       },
       {
         "campaign_name": "05/03: Mother's Day Gift Guide",
         "campaign_subject": "Gifts For The Moms In Your Life (yourself included)",
         "campaign_send_date": "2026-05-03",
         "klaviyo_total_recipients": 49506,
-        "klaviyo_open_rate": 0.631807,
+        "klaviyo_open_rate": 0.632293,
         "klaviyo_click_rate": 0.004371
       },
       {
@@ -3460,31 +3489,31 @@
         "campaign_subject": "Happy Earth Day from The Good Patch",
         "campaign_send_date": "2026-04-23",
         "klaviyo_total_recipients": 49351,
-        "klaviyo_open_rate": 0.800726,
+        "klaviyo_open_rate": 0.802166,
         "klaviyo_click_rate": 0.004827
       },
       {
         "campaign_name": "05/17: 5-Star Reviews",
         "campaign_subject": "10,000+ Five-Star Reviews",
         "campaign_send_date": "2026-05-17",
-        "klaviyo_total_recipients": 46661,
-        "klaviyo_open_rate": 0.676523,
+        "klaviyo_total_recipients": 46662,
+        "klaviyo_open_rate": 0.687002,
         "klaviyo_click_rate": 0.004424
       },
       {
         "campaign_name": "05/19: Sale Teaser",
         "campaign_subject": "\ud83d\udce3 Something BIG is Coming",
         "campaign_send_date": "2026-05-19",
-        "klaviyo_total_recipients": 43897,
-        "klaviyo_open_rate": 0.310626,
-        "klaviyo_click_rate": 0.005905
+        "klaviyo_total_recipients": 43901,
+        "klaviyo_open_rate": 0.721431,
+        "klaviyo_click_rate": 0.006725
       },
       {
         "campaign_name": "05/08: Energy | 15% off",
         "campaign_subject": "Feel Like Yourself Again",
         "campaign_send_date": "2026-05-09",
         "klaviyo_total_recipients": 40682,
-        "klaviyo_open_rate": 0.811302,
+        "klaviyo_open_rate": 0.81236,
         "klaviyo_click_rate": 0.005513
       },
       {
@@ -3492,7 +3521,7 @@
         "campaign_subject": "Target run?",
         "campaign_send_date": "2026-05-07",
         "klaviyo_total_recipients": 5261,
-        "klaviyo_open_rate": 0.763775,
+        "klaviyo_open_rate": 0.764728,
         "klaviyo_click_rate": 0.002288
       },
       {
@@ -3500,160 +3529,160 @@
         "campaign_subject": "10,000+ Five-Star Reviews",
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 1485,
-        "klaviyo_open_rate": 0.017532,
+        "klaviyo_open_rate": 0.018206,
         "klaviyo_click_rate": 0.002023
-      },
-      {
-        "campaign_name": "PM | Sunset Flow Email #2",
-        "campaign_subject": "still want email-exclusive perks?",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 1133,
-        "klaviyo_open_rate": 0.01167,
-        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "T1 - Restart your wellness routine",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, running low on your faves?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 1082,
-        "klaviyo_open_rate": 0.318773,
-        "klaviyo_click_rate": 0.004647
+        "klaviyo_total_recipients": 1085,
+        "klaviyo_open_rate": 0.307692,
+        "klaviyo_click_rate": 0.004634
+      },
+      {
+        "campaign_name": "PM | Sunset Flow Email #2",
+        "campaign_subject": "still want email-exclusive perks?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 939,
+        "klaviyo_open_rate": 0.012987,
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "PM | Sunset Flow Email #1",
         "campaign_subject": "Keep the good vibes coming",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 973,
-        "klaviyo_open_rate": 0.026069,
-        "klaviyo_click_rate": 0.001043
+        "klaviyo_total_recipients": 938,
+        "klaviyo_open_rate": 0.023784,
+        "klaviyo_click_rate": 0.001081
       },
       {
         "campaign_name": "PM | Post Purchase Email #3",
         "campaign_subject": "Let\u2019s stick together?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 778,
-        "klaviyo_open_rate": 0.266753,
-        "klaviyo_click_rate": 0.003866
+        "klaviyo_total_recipients": 772,
+        "klaviyo_open_rate": 0.254545,
+        "klaviyo_click_rate": 0.003896
       },
       {
         "campaign_name": "PM | Post Purchase Email #1",
         "campaign_subject": "Good things on the way!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 769,
-        "klaviyo_open_rate": 0.344333,
-        "klaviyo_click_rate": 0.032999
+        "klaviyo_total_recipients": 745,
+        "klaviyo_open_rate": 0.33678,
+        "klaviyo_click_rate": 0.028065
       },
       {
         "campaign_name": "Welcome Email #1",
         "campaign_subject": "Welcome to The Good Patch",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 651,
-        "klaviyo_open_rate": 0.480377,
-        "klaviyo_click_rate": 0.056515
-      },
-      {
-        "campaign_name": "PM | Post Purchase Email #2",
-        "campaign_subject": "We're always looking to improve",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 647,
-        "klaviyo_open_rate": 0.332298,
-        "klaviyo_click_rate": 0.006211
-      },
-      {
-        "campaign_name": "Welcome Email #4",
-        "campaign_subject": "Last chance to save 15%",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 634,
-        "klaviyo_open_rate": 0.442857,
-        "klaviyo_click_rate": 0.014286
+        "klaviyo_total_recipients": 645,
+        "klaviyo_open_rate": 0.486529,
+        "klaviyo_click_rate": 0.053883
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #1",
         "campaign_subject": "Your cart is waiting!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 627,
-        "klaviyo_open_rate": 0.539326,
-        "klaviyo_click_rate": 0.030498
+        "klaviyo_total_recipients": 633,
+        "klaviyo_open_rate": 0.54213,
+        "klaviyo_click_rate": 0.025437
+      },
+      {
+        "campaign_name": "Welcome Email #4",
+        "campaign_subject": "Last chance to save 15%",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 625,
+        "klaviyo_open_rate": 0.433172,
+        "klaviyo_click_rate": 0.012882
+      },
+      {
+        "campaign_name": "PM | Post Purchase Email #2",
+        "campaign_subject": "We're always looking to improve",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 624,
+        "klaviyo_open_rate": 0.341385,
+        "klaviyo_click_rate": 0.006441
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #2",
         "campaign_subject": "15% Off Your Cart [Limited Time]",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 601,
-        "klaviyo_open_rate": 0.525,
-        "klaviyo_click_rate": 0.03
+        "klaviyo_total_recipients": 608,
+        "klaviyo_open_rate": 0.522241,
+        "klaviyo_click_rate": 0.029654
       },
       {
         "campaign_name": "Welcome Email #2",
         "campaign_subject": "3 friends. 1 shared belief. \u2728",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 594,
-        "klaviyo_open_rate": 0.422297,
-        "klaviyo_click_rate": 0.011824
+        "klaviyo_total_recipients": 593,
+        "klaviyo_open_rate": 0.41286,
+        "klaviyo_click_rate": 0.011844
       },
       {
         "campaign_name": "Welcome Email #3",
         "campaign_subject": "9000+ rave reviews and counting",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 593,
-        "klaviyo_open_rate": 0.443316,
-        "klaviyo_click_rate": 0.01692
-      },
-      {
-        "campaign_name": "T2A - 20% off your restock",
-        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, here\u2019s 20% off!",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 546,
-        "klaviyo_open_rate": 0.303309,
-        "klaviyo_click_rate": 0.005515
+        "klaviyo_total_recipients": 584,
+        "klaviyo_open_rate": 0.438144,
+        "klaviyo_click_rate": 0.0189
       },
       {
         "campaign_name": "T2B - no code - treat yourself",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, its called self-care",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 525,
-        "klaviyo_open_rate": 0.302103,
-        "klaviyo_click_rate": 0.003824
+        "klaviyo_total_recipients": 528,
+        "klaviyo_open_rate": 0.290875,
+        "klaviyo_click_rate": 0.003802
       },
       {
-        "campaign_name": "T3B - FOMO - occasions focus",
-        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
+        "campaign_name": "T2A - 20% off your restock",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, here\u2019s 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 502,
-        "klaviyo_open_rate": 0.299401,
-        "klaviyo_click_rate": 0.007984
+        "klaviyo_total_recipients": 522,
+        "klaviyo_open_rate": 0.313462,
+        "klaviyo_click_rate": 0.005769
       },
       {
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, last chance for 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 493,
-        "klaviyo_open_rate": 0.297352,
-        "klaviyo_click_rate": 0.00611
+        "klaviyo_total_recipients": 504,
+        "klaviyo_open_rate": 0.290837,
+        "klaviyo_click_rate": 0.005976
+      },
+      {
+        "campaign_name": "T3B - FOMO - occasions focus",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 499,
+        "klaviyo_open_rate": 0.299197,
+        "klaviyo_click_rate": 0.006024
       },
       {
         "campaign_name": "PM | 60D Non Buyer Email #1",
         "campaign_subject": "Make every day feel a little lighter",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 450,
-        "klaviyo_open_rate": 0.421525,
-        "klaviyo_click_rate": 0.006726
-      },
-      {
-        "campaign_name": "PM | Abandoned Checkout Email #1",
-        "campaign_subject": "Ready to feel your best?",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 215,
-        "klaviyo_open_rate": 0.6,
-        "klaviyo_click_rate": 0.028571
+        "klaviyo_total_recipients": 456,
+        "klaviyo_open_rate": 0.40708,
+        "klaviyo_click_rate": 0.006637
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #2",
         "campaign_subject": "Looking for a sign?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 214,
-        "klaviyo_open_rate": 0.578199,
-        "klaviyo_click_rate": 0.033175
+        "klaviyo_total_recipients": 199,
+        "klaviyo_open_rate": 0.609137,
+        "klaviyo_click_rate": 0.035533
+      },
+      {
+        "campaign_name": "PM | Abandoned Checkout Email #1",
+        "campaign_subject": "Ready to feel your best?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 191,
+        "klaviyo_open_rate": 0.610811,
+        "klaviyo_click_rate": 0.032432
       },
       {
         "campaign_name": "Welcome Email #1 [meta ads]",
@@ -3675,24 +3704,16 @@
         "campaign_name": "Welcome Email #2 [meta ads]",
         "campaign_subject": "3 friends. 1 shared belief. \u2728",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 55,
-        "klaviyo_open_rate": 0.418182,
-        "klaviyo_click_rate": 0.018182
-      },
-      {
-        "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
-        "campaign_subject": "Ready to make your wellness effortless?",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 53,
-        "klaviyo_open_rate": 0.603774,
-        "klaviyo_click_rate": 0
+        "klaviyo_total_recipients": 56,
+        "klaviyo_open_rate": 0.428571,
+        "klaviyo_click_rate": 0.017857
       },
       {
         "campaign_name": "Welcome Email #3 [meta ads]",
         "campaign_subject": "9000+ rave reviews and counting",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 53,
-        "klaviyo_open_rate": 0.301887,
+        "klaviyo_total_recipients": 54,
+        "klaviyo_open_rate": 0.296296,
         "klaviyo_click_rate": 0
       },
       {
@@ -3704,12 +3725,20 @@
         "klaviyo_click_rate": 0
       },
       {
+        "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
+        "campaign_subject": "Ready to make your wellness effortless?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 52,
+        "klaviyo_open_rate": 0.615385,
+        "klaviyo_click_rate": 0
+      },
+      {
         "campaign_name": "T1 - Non-purchaser - 2 hrs post trigger",
         "campaign_subject": "See something you like? \ud83d\udc40",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 22,
-        "klaviyo_open_rate": 0.636364,
-        "klaviyo_click_rate": 0.090909
+        "klaviyo_total_recipients": 20,
+        "klaviyo_open_rate": 0.65,
+        "klaviyo_click_rate": 0.05
       },
       {
         "campaign_name": "T2 - Non-purchaser - 1 day post trigger",
@@ -3720,14 +3749,6 @@
         "klaviyo_click_rate": 0.052632
       },
       {
-        "campaign_name": "T3A - Non-purchaser - 4 days post trigger",
-        "campaign_subject": "Find your faves with 15% off!",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 12,
-        "klaviyo_open_rate": 0.75,
-        "klaviyo_click_rate": 0
-      },
-      {
         "campaign_name": "T1 - Previous purchaser - 2 hrs post trigger",
         "campaign_subject": "Checking out the goods?  \ud83d\udc40",
         "campaign_send_date": "",
@@ -3736,11 +3757,19 @@
         "klaviyo_click_rate": 0.090909
       },
       {
+        "campaign_name": "T3A - Non-purchaser - 4 days post trigger",
+        "campaign_subject": "Find your faves with 15% off!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 10,
+        "klaviyo_open_rate": 0.8,
+        "klaviyo_click_rate": 0
+      },
+      {
         "campaign_name": "T2 - Previous purchaser - 1 day post trigger",
         "campaign_subject": "What everyone\u2019s been saying \ud83d\udcac",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 10,
-        "klaviyo_open_rate": 0.6,
+        "klaviyo_total_recipients": 9,
+        "klaviyo_open_rate": 0.666667,
         "klaviyo_click_rate": 0
       },
       {
@@ -3748,7 +3777,7 @@
         "campaign_subject": "{{ first_name|default:'Hey there' }}, take 10% off for the next 72 hours",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 6,
-        "klaviyo_open_rate": 0.833333,
+        "klaviyo_open_rate": 0.666667,
         "klaviyo_click_rate": 0.166667
       },
       {
@@ -3763,17 +3792,9 @@
         "campaign_name": "T3A - Previous purchaser - 4 days post trigger",
         "campaign_subject": "{{ first_name|default:'Hey there' }}, feel good\u2014one patch at a time",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 3,
-        "klaviyo_open_rate": 0.666667,
-        "klaviyo_click_rate": 0.333333
-      },
-      {
-        "campaign_name": "04/13: Be Calm Promo",
-        "campaign_subject": "2 days left! FREE patches with your order",
-        "campaign_send_date": "2026-04-13",
-        "klaviyo_total_recipients": 1,
-        "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_total_recipients": 2,
+        "klaviyo_open_rate": 1,
+        "klaviyo_click_rate": 0.5
       },
       {
         "campaign_name": "01/03: Ready to move into your feel-good era.",
@@ -3811,6 +3832,14 @@
         "campaign_name": "01/10: Jan Goals",
         "campaign_subject": "Gentle Goals for January",
         "campaign_send_date": "2026-01-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "01/15: Subscribe Feature",
+        "campaign_subject": "Your wellness routine, on repeat.",
+        "campaign_send_date": "2026-01-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
         "klaviyo_click_rate": ""
@@ -4216,6 +4245,14 @@
         "klaviyo_click_rate": ""
       },
       {
+        "campaign_name": "04/13: Be Calm Promo",
+        "campaign_subject": "2 days left! FREE patches with your order",
+        "campaign_send_date": "2026-04-13",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
         "campaign_name": "04/14: Under eye Patches",
         "campaign_subject": "Your under eyes are telling on you. \ud83d\udc40",
         "campaign_send_date": "2026-04-14",
@@ -4376,6 +4413,14 @@
         "klaviyo_click_rate": ""
       },
       {
+        "campaign_name": "12/10: Bake Off Feature",
+        "campaign_subject": "The Great (Good) Patch Bake Off \ud83c\udf6a",
+        "campaign_send_date": "2025-12-10",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
+      },
+      {
         "campaign_name": "12/14: FSA Feature",
         "campaign_subject": "Does your FSA expire this month?",
         "campaign_send_date": "2025-12-14",
@@ -4488,14 +4533,6 @@
         "klaviyo_click_rate": ""
       },
       {
-        "campaign_name": "9/17: Travel Hack",
-        "campaign_subject": "Travel Hack: Fall > Summer \u2708\ufe0f \ud83c\udf42",
-        "campaign_send_date": "2025-09-17",
-        "klaviyo_total_recipients": "",
-        "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
-      },
-      {
         "campaign_name": "9/20: HSA/FSA",
         "campaign_subject": "HSA/FSA",
         "campaign_send_date": "2025-09-20",
@@ -4510,13 +4547,21 @@
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
         "klaviyo_click_rate": ""
+      },
+      {
+        "campaign_name": "Clone 12/6: Holiday Movies - Patch edition",
+        "campaign_subject": "Your Favorite Holiday Movies, Now With the Perfect Patch Pairing",
+        "campaign_send_date": "2025-12-06",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": ""
       }
     ],
     "attr": [
       {
         "campaign_name": "Welcome Email #1",
         "shopify_placed_order": 11,
-        "shopify_placed_order_value": 469.2
+        "shopify_placed_order_value": 425.23
       },
       {
         "campaign_name": "05/08: Energy | 15% off",
@@ -4549,11 +4594,6 @@
         "shopify_placed_order_value": 159
       },
       {
-        "campaign_name": "Welcome Email #4",
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 282.39
-      },
-      {
         "campaign_name": "05/03: Mother's Day Gift Guide",
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 135.97
@@ -4572,6 +4612,11 @@
         "campaign_name": "05/19: Sale Teaser",
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 79.88
+      },
+      {
+        "campaign_name": "Welcome Email #4",
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 255.33
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #1",
@@ -4599,7 +4644,7 @@
         "shopify_placed_order_value": 73.06
       }
     ],
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   },
   "py_shopify_2025-05-19": {
     "gross_sales": 1549.45,
@@ -4611,83 +4656,78 @@
     "data": [
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (8 Total Patches)",
-        "ordered_product_sales": 21358.65,
-        "units_ordered": 1071
+        "ordered_product_sales": 20739.24,
+        "units_ordered": 1040
       },
       {
         "title": "The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea Extract, Natural Plant Powered Wearable Wellness, Helps to Promote Energy (8 Total Patches)",
-        "ordered_product_sales": 16883.13,
-        "units_ordered": 845
+        "ordered_product_sales": 16003.98,
+        "units_ordered": 801
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 13146.84,
-        "units_ordered": 658
+        "ordered_product_sales": 12707.28,
+        "units_ordered": 636
       },
       {
         "title": "The Good Patch Relax Patches, Supports Relaxation, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12767.23,
-        "units_ordered": 640
+        "ordered_product_sales": 12467.52,
+        "units_ordered": 625
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 10554.72,
-        "units_ordered": 528
+        "ordered_product_sales": 9995,
+        "units_ordered": 500
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 8776.68,
-        "units_ordered": 366
+        "ordered_product_sales": 8440.96,
+        "units_ordered": 352
       },
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 7948.41,
-        "units_ordered": 159
-      },
-      {
-        "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
-        "ordered_product_sales": 7535.77,
-        "units_ordered": 153
+        "ordered_product_sales": 7598.48,
+        "units_ordered": 152
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (16 Total Patches)",
-        "ordered_product_sales": 7522.37,
-        "units_ordered": 218
+        "ordered_product_sales": 7361.48,
+        "units_ordered": 213
+      },
+      {
+        "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
+        "ordered_product_sales": 7185.84,
+        "units_ordered": 146
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 7002.2,
-        "units_ordered": 292
-      },
-      {
-        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 6348.73,
-        "units_ordered": 127
+        "ordered_product_sales": 6906.24,
+        "units_ordered": 288
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 6241.96,
-        "units_ordered": 181
+        "ordered_product_sales": 6171.98,
+        "units_ordered": 179
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 6098.78,
+        "units_ordered": 122
       },
       {
         "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
-        "ordered_product_sales": 6076.96,
-        "units_ordered": 304
+        "ordered_product_sales": 5577.21,
+        "units_ordered": 279
       },
       {
         "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
-        "ordered_product_sales": 5794.22,
-        "units_ordered": 290
+        "ordered_product_sales": 5574.42,
+        "units_ordered": 279
       },
       {
         "title": "The Good Patch Most Loved Patches \u2013 Awake B12 for Energy, Dream for Sleep, Rescue for Recovery, Relax for Calm \u2013 Plant-Powered (16 Patches)",
-        "ordered_product_sales": 4113.6,
-        "units_ordered": 104
-      },
-      {
-        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 3624.58,
-        "units_ordered": 106
+        "ordered_product_sales": 3873.6,
+        "units_ordered": 99
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
@@ -4695,34 +4735,39 @@
         "units_ordered": 65
       },
       {
-        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 3439.14,
-        "units_ordered": 86
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 3484.62,
+        "units_ordered": 102
       },
       {
-        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
-        "ordered_product_sales": 3300,
-        "units_ordered": 110
+        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 3399.15,
+        "units_ordered": 85
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 3299.34,
-        "units_ordered": 66
+        "ordered_product_sales": 3249.35,
+        "units_ordered": 65
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3299.34,
-        "units_ordered": 66
+        "ordered_product_sales": 3249.35,
+        "units_ordered": 65
       },
       {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3258.37,
-        "units_ordered": 166
+        "ordered_product_sales": 3198.4,
+        "units_ordered": 163
       },
       {
         "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3196.8,
-        "units_ordered": 160
+        "ordered_product_sales": 3156.84,
+        "units_ordered": 158
+      },
+      {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
+        "ordered_product_sales": 3150,
+        "units_ordered": 105
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
@@ -4731,8 +4776,8 @@
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
-        "ordered_product_sales": 2718.64,
-        "units_ordered": 136
+        "ordered_product_sales": 2658.67,
+        "units_ordered": 133
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
@@ -4740,24 +4785,9 @@
         "units_ordered": 104
       },
       {
-        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
-        "ordered_product_sales": 2460,
-        "units_ordered": 50
-      },
-      {
-        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
-        "ordered_product_sales": 2457.54,
-        "units_ordered": 123
-      },
-      {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 2449.3,
-        "units_ordered": 70
-      },
-      {
-        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2439.39,
-        "units_ordered": 61
+        "ordered_product_sales": 2379.32,
+        "units_ordered": 68
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
@@ -4765,14 +4795,24 @@
         "units_ordered": 43
       },
       {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 2340,
-        "units_ordered": 79
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2319.42,
+        "units_ordered": 58
       },
       {
-        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 1860,
-        "units_ordered": 62
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
+        "ordered_product_sales": 2317.68,
+        "units_ordered": 116
+      },
+      {
+        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
+        "ordered_product_sales": 2280,
+        "units_ordered": 47
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 2280,
+        "units_ordered": 77
       },
       {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (16 Total Patches)",
@@ -4785,39 +4825,39 @@
         "units_ordered": 36
       },
       {
-        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 1499.7,
-        "units_ordered": 30
-      },
-      {
-        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
-        "ordered_product_sales": 1440,
-        "units_ordered": 49
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 1680,
+        "units_ordered": 56
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (8 Total Patches)",
-        "ordered_product_sales": 1426.62,
-        "units_ordered": 71
+        "ordered_product_sales": 1402.62,
+        "units_ordered": 70
       },
       {
-        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
         "ordered_product_sales": 1399.72,
         "units_ordered": 28
       },
       {
+        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
+        "ordered_product_sales": 1332,
+        "units_ordered": 46
+      },
+      {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 1399.6,
-        "units_ordered": 40
+        "ordered_product_sales": 1329.62,
+        "units_ordered": 38
+      },
+      {
+        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
+        "ordered_product_sales": 1149.77,
+        "units_ordered": 23
       },
       {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 1176.71,
-        "units_ordered": 29
-      },
-      {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 912,
-        "units_ordered": 19
+        "ordered_product_sales": 1121.72,
+        "units_ordered": 28
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
@@ -4825,9 +4865,14 @@
         "units_ordered": 22
       },
       {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 864,
+        "units_ordered": 18
+      },
+      {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 799.8,
-        "units_ordered": 20
+        "ordered_product_sales": 759.81,
+        "units_ordered": 19
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (16 Total Patches)",
@@ -4836,18 +4881,18 @@
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (16 Total Patches)",
-        "ordered_product_sales": 624,
-        "units_ordered": 13
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
-        "ordered_product_sales": 600,
-        "units_ordered": 10
+        "ordered_product_sales": 576,
+        "units_ordered": 12
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (24 Total Patches)",
         "ordered_product_sales": 549.9,
         "units_ordered": 10
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 540,
+        "units_ordered": 9
       },
       {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
@@ -4860,14 +4905,14 @@
         "units_ordered": 6
       },
       {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 504,
-        "units_ordered": 7
-      },
-      {
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
         "ordered_product_sales": 450,
         "units_ordered": 5
+      },
+      {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 432,
+        "units_ordered": 6
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (24 Total Patches)",
@@ -4890,7 +4935,7 @@
         "units_ordered": 1
       }
     ],
-    "date": "2026-05-19"
+    "date": "2026-05-20"
   },
   "py_amazon_seller_2025-05-19": {
     "ordered_product_sales": 6874.24,
@@ -4898,5 +4943,18 @@
     "sessions": 1592,
     "unit_session_percentage": 12.31,
     "page_views": 2051
+  },
+  "py_shopify_2025-05-20": {
+    "gross_sales": 2365.7,
+    "sm_order_count": 43,
+    "net_sales": 1955.87,
+    "net_quantity": 132
+  },
+  "py_amazon_seller_2025-05-20": {
+    "ordered_product_sales": 5328.4,
+    "units_ordered": 159,
+    "sessions": 1624,
+    "unit_session_percentage": 9.79,
+    "page_views": 2088
   }
 }
