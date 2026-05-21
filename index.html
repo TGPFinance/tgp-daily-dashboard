@@ -23,6 +23,21 @@
   .section-title h2 { font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid #2c4ea2; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }
   .channel-icon { width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: 0.85; }
   .tgp-icon { height: 22px; width: auto; opacity: 0.95; }
+  .cohort-wrap { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; }
+  .cohort-tbl { width: 100%; border-collapse: separate; border-spacing: 3px; font-size: 11px; }
+  .cohort-tbl th { color: #9ca3af; font-weight: 500; padding: 4px 6px; text-transform: uppercase; letter-spacing: 0.6px; font-size: 9px; }
+  .cohort-tbl th.ch-label { text-align: left; }
+  .cohort-tbl th.ch-size { text-align: right; }
+  .cohort-tbl td.ch-label { color: #d1d5db; padding: 3px 6px; }
+  .cohort-tbl td.ch-size { color: #9ca3af; padding: 3px 6px; text-align: right; }
+  .cohort-tbl td.ck { color: white; text-align: center; padding: 6px; border-radius: 4px; font-weight: 500; }
+  .cohort-tbl td.ck.full { background: #2c4ea2; }
+  .cohort-tbl td.ck.null { background: rgba(255,255,255,0.03); color: #4b5563; font-weight: 400; }
+  .cohort-tbl tr.ch-avg-row td { font-style: italic; font-size: 10px; color: #6b7280; }
+  .cohort-tbl tr.ch-avg-row td.ck { font-style: normal; font-size: 10px; color: white; }
+  .cohort-tbl tr.ch-bench-row td { color: #facc15; font-size: 10px; font-weight: 500; }
+  .cohort-tbl td.ck.bench { background: rgba(255,255,255,0.04); border: 1px dashed rgba(250,204,21,0.4); color: #facc15; padding: 5px; font-size: 10px; }
+  .cohort-foot { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 10px; color: #6b7280; line-height: 1.5; }
   .badge { font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }
   .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
   .cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
@@ -147,7 +162,7 @@
 <div class="panel" id="panel-1">
   <div class="summary-block">
     <div class="section">
-      <div class="section-title"><img class="tgp-icon" src="TGP-Logo-White.png" alt="" /><h2>Performance Health</h2><span class="badge">30-day blended · Apr 21 – May 20, 2026</span></div>
+      <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/activity.svg" alt="" /><h2>Performance Health</h2><span class="badge">30-day blended · Apr 21 – May 20, 2026</span></div>
       <div class="cards-4">
         <div class="card"><div class="label">MER (Blended, 30d)</div><div class="value">3.55×</div><div class="sub">$261.6K rev / $73.8K spend</div><div class="sub" style="color:#22c55e">Target 3×+ · on track</div></div>
         <div class="card"><div class="label">nCAC (yesterday)</div><div class="value">$29.57</div><div class="sub">spend ÷ 22 new orders</div><div class="sub" style="color:#22c55e">50% of AOV · profitable on first</div></div>
@@ -156,14 +171,41 @@
       </div>
     </div>
     <div class="section">
-      <div class="section-title"><img class="tgp-icon" src="TGP-Logo-White.png" alt="" /><h2>Customer Health</h2><span class="badge">90-day rolling</span></div>
+      <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/users.svg" alt="" /><h2>Customer Health</h2><span class="badge">90-day rolling</span></div>
       <div class="cards-4">
-        <div class="card"><div class="label">LTV (90-day)</div><div class="value">$48.23</div><div class="sub">3,949 unique customers</div></div>
-        <div class="card"><div class="label">LTV : CAC</div><div class="value">1.47×</div><div class="sub">vs 30d nCAC of $32.72</div><div class="sub" style="color:#ef4444">Target 3×+ · below</div></div>
-        <div class="card"><div class="label">Repeat purchase rate</div><div class="value">15.17%</div><div class="sub">599 of 3,949 customers</div><div class="sub" style="color:#facc15">Target 25-30% · building</div></div>
+        <div class="card"><div class="label">LTV (90-day)</div><div class="value">$74.90</div><div class="sub">2,543 unique customers</div></div>
+        <div class="card"><div class="label">LTV : CAC</div><div class="value">2.29×</div><div class="sub">vs 30d nCAC of $32.72</div><div class="sub" style="color:#facc15">Target 3×+ · close</div></div>
+        <div class="card"><div class="label">Repeat purchase rate</div><div class="value">22.65%</div><div class="sub">576 of 2,543 customers</div><div class="sub" style="color:#22c55e">Target 25-30% · healthy</div></div>
         <div class="card"><div class="label">nCAC (30-day avg)</div><div class="value">$32.72</div><div class="sub">775 new / $25.4K DTC spend</div></div>
       </div>
     </div>
+    
+<div class="section">
+  <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/grid.svg" alt="" /><h2>Cohort Retention</h2><span class="badge">6 months · true first purchase</span></div>
+  <div class="cohort-wrap">
+    <table class="cohort-tbl">
+      <thead>
+        <tr>
+          <th class="ch-label">Cohort</th>
+          <th class="ch-size">Size</th>
+          <th>M0</th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="ch-label">Dec 2025</td><td class="ch-size">2,200</td><td class="ck full">100%</td><td class="ck" style="background:rgba(44,78,162,0.18)">2%</td><td class="ck" style="background:rgba(44,78,162,0.18)">2%</td><td class="ck" style="background:rgba(44,78,162,0.18)">1%</td><td class="ck" style="background:rgba(44,78,162,0.18)">1%</td><td class="ck" style="background:rgba(44,78,162,0.18)">0%</td></tr><tr><td class="ch-label">Jan 2026</td><td class="ch-size">1,283</td><td class="ck full">100%</td><td class="ck" style="background:rgba(44,78,162,0.18)">4%</td><td class="ck" style="background:rgba(44,78,162,0.18)">4%</td><td class="ck" style="background:rgba(44,78,162,0.18)">3%</td><td class="ck" style="background:rgba(44,78,162,0.18)">1%</td><td class="ck null">—</td></tr><tr><td class="ch-label">Feb 2026</td><td class="ch-size">1,013</td><td class="ck full">100%</td><td class="ck" style="background:rgba(44,78,162,0.18)">6%</td><td class="ck" style="background:rgba(44,78,162,0.18)">4%</td><td class="ck" style="background:rgba(44,78,162,0.18)">2%</td><td class="ck null">—</td><td class="ck null">—</td></tr><tr><td class="ch-label">Mar 2026</td><td class="ch-size">972</td><td class="ck full">100%</td><td class="ck" style="background:rgba(44,78,162,0.18)">5%</td><td class="ck" style="background:rgba(44,78,162,0.18)">2%</td><td class="ck null">—</td><td class="ck null">—</td><td class="ck null">—</td></tr><tr><td class="ch-label">Apr 2026</td><td class="ch-size">829</td><td class="ck full">100%</td><td class="ck" style="background:rgba(44,78,162,0.18)">3%</td><td class="ck null">—</td><td class="ck null">—</td><td class="ck null">—</td><td class="ck null">—</td></tr><tr><td class="ch-label">May 2026*</td><td class="ch-size">585</td><td class="ck full">100%</td><td class="ck null">—</td><td class="ck null">—</td><td class="ck null">—</td><td class="ck null">—</td><td class="ck null">—</td></tr>
+        <tr class="ch-avg-row">
+          <td class="ch-label" colspan="2">Your weighted avg</td>
+          <td class="ck full">100%</td><td class="ck" style="background:rgba(44,78,162,0.18)">4%</td><td class="ck" style="background:rgba(44,78,162,0.18)">3%</td><td class="ck" style="background:rgba(44,78,162,0.18)">2%</td><td class="ck" style="background:rgba(44,78,162,0.18)">1%</td><td class="ck" style="background:rgba(44,78,162,0.18)">0%</td>
+        </tr>
+        <tr class="ch-bench-row">
+          <td class="ch-label" colspan="2">Wellness DTC benchmark</td>
+          <td class="ck bench">100%</td><td class="ck bench">25-35%</td><td class="ck bench">15-22%</td><td class="ck bench">10-15%</td><td class="ck bench">7-12%</td><td class="ck bench">5-10%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="cohort-foot">*Partial month — incomplete data. Benchmarks based on Shopify/Klaviyo/Lifetimely wellness DTC reports (2024-25). Range = average-to-strong performance.</div>
+  </div>
+</div>
   </div>
   <div class="section-divider">
     <div class="line"></div>
@@ -182,7 +224,7 @@
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg" alt="" /><h2>Meta Ads</h2><span class="badge">May 20, 2026</span></div>
     <div class="cards">
-      <div class="card"><div class="label">Spend</div><div class="value">$448.90</div></div>
+      <div class="card"><div class="label">Spend</div><div class="value">$448.92</div></div>
       <div class="card"><div class="label">Purchase Value</div><div class="value">$304.60</div></div>
       <div class="card"><div class="label">ROAS</div><div class="value">0.68×</div></div>
       <div class="card"><div class="label">CPC</div><div class="value">$3.40</div></div>
@@ -360,9 +402,9 @@
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg" alt="" /><h2>Site Conversion (GA4)</h2><span class="badge">May 20, 2026</span></div>
     <div class="cards-4">
-      <div class="card"><div class="label">Sessions (yesterday)</div><div class="value">567</div><div class="sub">from Google Analytics</div></div>
+      <div class="card"><div class="label">Sessions (yesterday)</div><div class="value">568</div><div class="sub">from Google Analytics</div></div>
       <div class="card"><div class="label">Orders</div><div class="value">46</div><div class="sub">from Shopify</div></div>
-      <div class="card"><div class="label">Site CVR (yesterday)</div><div class="value">8.11%</div><div class="sub">orders ÷ sessions</div><div class="sub" style="color:#22c55e">Target 2-3% · strong</div></div>
+      <div class="card"><div class="label">Site CVR (yesterday)</div><div class="value">8.10%</div><div class="sub">orders ÷ sessions</div><div class="sub" style="color:#22c55e">Target 2-3% · strong</div></div>
       <div class="card"><div class="label">30-Day Site CVR</div><div class="value">7.03%</div><div class="sub">19.7K sessions total</div><div class="sub" style="color:#22c55e">Target 2-3% · strong</div></div>
     </div>
   </div>
