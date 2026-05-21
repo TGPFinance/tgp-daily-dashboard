@@ -241,13 +241,25 @@ def ensure_new_returning_split():
     if rows:
         cache['new_returning_yesterday'] = {"data": rows, "date": DATE_STR}
 
-def ensure_device_split():
-    rows = sm_fetch_rows("GAWA", ACCOUNTS["ga4"],
-                         "deviceCategory,sessions",
-                         DATE_STR, DATE_STR,
+def ensure_new_returning_30d():
+    rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                         "order_is_returning_customer,net_sales,sm_order_count",
+                         T30_START, T30_END,
+                         extra_params={"report_type": "Order"},
                          timeout=180, timezone=DEFAULT_TZ)
     if rows:
-        cache['device_split_yesterday'] = {"data": rows, "date": DATE_STR}
+        cache['new_returning_30d'] = {"data": rows, "date": DATE_STR}
+
+def ensure_customer_ltv():
+    """Pull 90-day customer-level revenue/orders for LTV and repeat purchase rate."""
+    ltv_start = (YESTERDAY - timedelta(days=89)).strftime("%Y-%m-%d")
+    rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                         "customer_id,net_sales,sm_order_count",
+                         ltv_start, DATE_STR,
+                         extra_params={"report_type": "Order"},
+                         timeout=300, timezone=DEFAULT_TZ)
+    if rows:
+        cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
 
 def ensure_campaigns():
     em = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
@@ -275,7 +287,8 @@ with ThreadPoolExecutor(max_workers=14) as ex:
     futs.append(ex.submit(ensure_top_shopify_variants))
     futs.append(ex.submit(ensure_top_states))
     futs.append(ex.submit(ensure_new_returning_split))
-    futs.append(ex.submit(ensure_device_split))
+    futs.append(ex.submit(ensure_new_returning_30d))
+    futs.append(ex.submit(ensure_customer_ltv))
     futs.append(ex.submit(ensure_campaigns))
     for f in futs:
         f.result()
@@ -431,20 +444,52 @@ for row in nr_data:
 total_ad_spend = to_float(meta.get('spend')) + to_float(google_ads.get('cost')) + to_float(amazon_ads.get('cost'))
 shopify_net = to_float(shopify.get('net_sales'))
 
-mer_val      = safe_div(shopify_net, total_ad_spend)
+# MER: 30-day trailing blended (Shopify + Amazon revenue / all ad spend)
+total_rev_30   = shop_net_30 + amzs_rev_30
+total_spend_30 = meta_spend_30 + g_spend_30 + amza_cost_30
+mer_val        = safe_div(total_rev_30, total_spend_30)
+
+# Daily nCAC (yesterday) - rough proxy: spend / new orders
 ncac_val     = safe_div(total_ad_spend, new_orders)
+
+# 30-day new vs returning split (for 30-day nCAC and LTV:CAC)
+nr_30 = cache.get('new_returning_30d', {}).get('data', [])
+new_orders_30 = 0; new_rev_30 = 0; returning_orders_30 = 0; returning_rev_30 = 0
+for row in nr_30:
+    flag = str(row.get('order_is_returning_customer', '')).strip().lower()
+    is_returning = flag in ('true', '1', 'yes', 't')
+    rev = to_float(row.get('net_sales', 0))
+    orders = to_float(row.get('sm_order_count', 0))
+    if is_returning:
+        returning_rev_30 += rev; returning_orders_30 += orders
+    else:
+        new_rev_30 += rev; new_orders_30 += orders
+ncac_30 = safe_div(total_spend_30, new_orders_30)
+
 email_pct    = safe_div(klaviyo_attr.get('shopify_placed_order_value'), shopify_net)
 new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
+
+# Customer Health: 90-day LTV, repeat purchase rate, LTV:CAC
+ltv_data = cache.get('customer_ltv', {}).get('data', [])
+ltv_customers = {}
+for row in ltv_data:
+    cid = row.get('customer_id')
+    if not cid: continue
+    if cid not in ltv_customers:
+        ltv_customers[cid] = {'rev': 0, 'orders': 0}
+    ltv_customers[cid]['rev'] += to_float(row.get('net_sales'))
+    ltv_customers[cid]['orders'] += to_float(row.get('sm_order_count'))
+unique_customers_90 = len(ltv_customers)
+total_rev_90 = sum(c['rev'] for c in ltv_customers.values())
+ltv_90 = safe_div(total_rev_90, unique_customers_90)
+repeat_customers = sum(1 for c in ltv_customers.values() if c['orders'] >= 2)
+rpr_90 = safe_div(repeat_customers, unique_customers_90)
+ltv_cac_ratio = safe_div(ltv_90, ncac_30) if (ltv_90 and ncac_30) else None
 
 # ── Top States ──
 states_data = cache.get('top_states', {}).get('data', [])
 top_states = [s for s in states_data if (s.get('order_shipping_province') or '').strip()]
-top_states = sorted(top_states, key=lambda r: to_float(r.get('net_sales')), reverse=True)[:10]
-
-# ── Device Split ──
-device_data = cache.get('device_split_yesterday', {}).get('data', [])
-device_total = sum(to_float(d.get('sessions', 0)) for d in device_data) or 1
-device_rows_sorted = sorted(device_data, key=lambda r: to_float(r.get('sessions')), reverse=True)
+top_states = sorted(top_states, key=lambda r: to_float(r.get('net_sales')), reverse=True)[:5]
 
 # ── Site CVR (GA4 sessions / Shopify orders) ──
 ga4_yesterday = day('ga4')
@@ -592,25 +637,59 @@ def state_rows():
         </tr>"""
     return out
 
-def device_cards():
-    if not device_rows_sorted:
-        return '<div class="card" style="grid-column:1/-1;text-align:center;color:#6b7280">No device data available yet</div>'
-    out = ""
-    for d in device_rows_sorted:
-        device = (d.get('deviceCategory') or 'unknown').title()
-        sessions = to_float(d.get('sessions'))
-        pct = (sessions / device_total) * 100
-        out += f"""
-        <div class="card">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
-            <span class="label" style="margin-bottom:0">{device}</span>
-            <span class="sub" style="margin-top:0">{pct:.1f}% of sessions</span>
-          </div>
-          <div class="value">{int(sessions):,}</div>
-          <div class="sub">sessions yesterday</div>
-          <div class="bar-wrap" style="margin-top:10px;height:6px"><div class="bar-fill" style="width:{pct:.1f}%"></div></div>
-        </div>"""
-    return out
+def benchmark_status(label, color):
+    return f'<div class="sub" style="color:{color}">{label}</div>'
+
+def bm_mer(v):
+    if v is None: return ''
+    if v >= 4: return benchmark_status('Target 3×+ · excellent', '#22c55e')
+    if v >= 3: return benchmark_status('Target 3×+ · on track', '#22c55e')
+    if v >= 2: return benchmark_status('Target 3×+ · close', '#facc15')
+    return benchmark_status('Target 3×+ · below', '#ef4444')
+
+def bm_ncac(v, aov):
+    if v is None or aov in (None, 0): return ''
+    r = v / aov
+    if r < 0.5:  return benchmark_status(f'{r*100:.0f}% of AOV · profitable on first', '#22c55e')
+    if r < 1.0:  return benchmark_status(f'{r*100:.0f}% of AOV · breakeven on first', '#facc15')
+    return benchmark_status(f'{r*100:.0f}% of AOV · loss on first (needs LTV)', '#ef4444')
+
+def bm_email_pct(v):
+    if v is None: return ''
+    pct = v * 100 if abs(v) < 1 else v
+    if pct >= 30: return benchmark_status('Target 25-30% · strong', '#22c55e')
+    if pct >= 20: return benchmark_status('Target 25-30% · healthy', '#22c55e')
+    if pct >= 10: return benchmark_status('Target 25-30% · below', '#facc15')
+    return benchmark_status('Target 25-30% · low', '#ef4444')
+
+def bm_new_rev(v):
+    if v is None: return ''
+    pct = v * 100 if abs(v) < 1 else v
+    if pct >= 50: return benchmark_status('Growth-stage mix', '#22c55e')
+    if pct >= 30: return benchmark_status('Balanced acquisition/retention', '#22c55e')
+    return benchmark_status('Retention-dominated', '#9ca3af')
+
+def bm_cvr(v):
+    if v is None: return ''
+    pct = v * 100 if abs(v) < 1 else v
+    if pct >= 3: return benchmark_status('Target 2-3% · strong', '#22c55e')
+    if pct >= 2: return benchmark_status('Target 2-3% · healthy', '#22c55e')
+    if pct >= 1: return benchmark_status('Target 2-3% · below', '#facc15')
+    return benchmark_status('Target 2-3% · low', '#ef4444')
+
+def bm_ltv_cac(v):
+    if v is None: return ''
+    if v >= 3: return benchmark_status('Target 3×+ · healthy', '#22c55e')
+    if v >= 2: return benchmark_status('Target 3×+ · close', '#facc15')
+    return benchmark_status('Target 3×+ · below', '#ef4444')
+
+def bm_rpr(v):
+    if v is None: return ''
+    pct = v * 100 if abs(v) < 1 else v
+    if pct >= 30: return benchmark_status('Target 25-30% · strong', '#22c55e')
+    if pct >= 20: return benchmark_status('Target 25-30% · healthy', '#22c55e')
+    if pct >= 10: return benchmark_status('Target 25-30% · building', '#facc15')
+    return benchmark_status('Target 25-30% · low', '#ef4444')
 
 def campaign_rows():
     out = ""
@@ -785,12 +864,21 @@ html = f"""<!DOCTYPE html>
 
 <div class="panel" id="panel-1">
   <div class="section">
-    {section_title(None, 'Performance Health', DISPLAY_DATE)}
+    {section_title(None, 'Performance Health', f'30-day blended · {T30_LABEL}')}
     <div class="cards-4">
-      {card(fmt_roas(mer_val), 'MER (Blended ROAS)', f'<div class="sub">{fmt_money(shopify_net)} rev / {fmt_money(total_ad_spend)} spend</div>')}
-      {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC', f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>')}
-      {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo attributed ÷ Shopify</div>')}
-      {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>')}
+      {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
+      {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
+      {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo attributed ÷ Shopify</div>' + bm_email_pct(email_pct))}
+      {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
+    </div>
+  </div>
+  <div class="section">
+    {section_title(None, 'Customer Health', '90-day rolling')}
+    <div class="cards-4">
+      {card(fmt_money(ltv_90) if ltv_90 else '—', 'LTV (90-day)', f'<div class="sub">{unique_customers_90:,} unique customers</div>')}
+      {card(fmt_roas(ltv_cac_ratio) if ltv_cac_ratio else '—', 'LTV : CAC', f'<div class="sub">vs 30d nCAC of {fmt_money(ncac_30)}</div>' + bm_ltv_cac(ltv_cac_ratio))}
+      {card(fmt_pct(rpr_90), 'Repeat purchase rate', f'<div class="sub">{repeat_customers:,} of {unique_customers_90:,} customers</div>' + bm_rpr(rpr_90))}
+      {card(fmt_money(ncac_30) if ncac_30 else '—', 'nCAC (30-day avg)', f'<div class="sub">{int(new_orders_30):,} new orders / {fmt_money(total_spend_30, big=True)} spend</div>')}
     </div>
   </div>
   <div class="section">
@@ -880,16 +968,9 @@ html = f"""<!DOCTYPE html>
     <div class="cards-4">
       {card(fmt_num(ga4_sessions, big=True), 'Sessions (yesterday)', '<div class="sub">from Google Analytics</div>')}
       {card(fmt_num(shopify_orders_yest), 'Orders', '<div class="sub">from Shopify</div>')}
-      {card(fmt_pct(site_cvr_val), 'Site CVR (yesterday)', '<div class="sub">orders ÷ sessions</div>')}
-      {card(fmt_pct(site_cvr_30), '30-Day Site CVR', f'<div class="sub">{fmt_num(ga4_sessions_30,big=True)} sessions total</div>')}
+      {card(fmt_pct(site_cvr_val), 'Site CVR (yesterday)', '<div class="sub">orders ÷ sessions</div>' + bm_cvr(site_cvr_val))}
+      {card(fmt_pct(site_cvr_30), '30-Day Site CVR', f'<div class="sub">{fmt_num(ga4_sessions_30,big=True)} sessions total</div>' + bm_cvr(site_cvr_30))}
     </div>
-  </div>
-  <div class="section">
-    {section_title('shopify', 'Device Split (Sessions)', DISPLAY_DATE)}
-    <div class="cards-3">
-      {device_cards()}
-    </div>
-    <div class="sub" style="margin-top:10px;font-size:11px">Note: orders/revenue by device requires GA4 enhanced ecommerce events (add_to_cart, purchase) to be configured on your site.</div>
   </div>
   <div class="section">
     {section_title('meta', 'Meta Ads — 30-Day Overview', T30_LABEL)}
