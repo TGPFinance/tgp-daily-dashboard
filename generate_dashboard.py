@@ -244,7 +244,7 @@ def ensure_new_returning_split():
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "order_is_returning_customer,net_sales,sm_order_count",
                          DATE_STR, DATE_STR,
-                         extra_params={"report_type": "Order", "filter": "net_sales > 0"},
+                         extra_params={"report_type": "Order", "filters": "net_sales > 0"},
                          timeout=180, timezone=DEFAULT_TZ)
     if rows:
         cache['new_returning_yesterday'] = {"data": rows, "date": DATE_STR}
@@ -253,7 +253,7 @@ def ensure_new_returning_30d():
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "order_is_returning_customer,net_sales,sm_order_count",
                          T30_START, T30_END,
-                         extra_params={"report_type": "Order", "filter": "net_sales > 0"},
+                         extra_params={"report_type": "Order", "filters": "net_sales > 0"},
                          timeout=180, timezone=DEFAULT_TZ)
     if rows:
         cache['new_returning_30d'] = {"data": rows, "date": DATE_STR}
@@ -270,30 +270,45 @@ def ensure_customer_ltv():
         cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
 
 def ensure_cohort_data():
-    """Pull customer creation dates + 6 months of monthly order activity for cohort retention."""
-    # Cover 6 full calendar months back from current month start
+    """Pull 6 months of monthly order activity + 12 months of prior paying customers for cohort retention.
+
+    Cohort definition: a customer enters cohort month M if M is their first paid order month
+    AND they had no paid orders in the 12 months prior to the display window (i.e. they're
+    genuinely new paying customers, not returning ones).
+    """
+    # Display window: 6 calendar months back from current month start
     first_of_this_month = YESTERDAY.replace(day=1)
     cohort_start_dt = first_of_this_month
     for _ in range(5):  # back 5 more months to get 6 total
         cohort_start_dt = (cohort_start_dt - timedelta(days=1)).replace(day=1)
     cohort_start = cohort_start_dt.strftime("%Y-%m-%d")
 
-    # Q1: ALL customers (filter to cohort window client-side; Customer report ignores date_range)
-    customers = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
-                              "customer_id,customer_created_at_date",
-                              cohort_start, DATE_STR,
-                              extra_params={"report_type": "Customer"},
-                              timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    # Prior window: 12 months BEFORE the display window — used to identify returning customers
+    # who had a paid order pre-window and should be excluded from cohorts
+    prior_window_end_dt = cohort_start_dt - timedelta(days=1)
+    prior_window_start_dt = cohort_start_dt
+    for _ in range(12):
+        prior_window_start_dt = (prior_window_start_dt - timedelta(days=1)).replace(day=1)
+    prior_window_start = prior_window_start_dt.strftime("%Y-%m-%d")
+    prior_window_end = prior_window_end_dt.strftime("%Y-%m-%d")
 
-    # Q2: per-customer per-month order activity, paid orders only
+    # Q1: customer_ids who placed paid orders in the 12 months PRIOR to display window
+    # (these are pre-existing paying customers — exclude them from cohorts)
+    prior_paid = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                               "customer_id",
+                               prior_window_start, prior_window_end,
+                               extra_params={"report_type": "Order", "filters": "net_sales > 0"},
+                               timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+
+    # Q2: per-customer per-month paid order activity in display window
     orders = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                            "customer_id,yearMonth,sm_order_count",
                            cohort_start, DATE_STR,
-                           extra_params={"report_type": "Order", "filter": "net_sales > 0"},
+                           extra_params={"report_type": "Order", "filters": "net_sales > 0"},
                            timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
 
-    if customers and orders:
-        cache['cohort_data'] = {"customers": customers, "orders": orders, "window_start": cohort_start, "date": DATE_STR}
+    if orders:
+        cache['cohort_data'] = {"prior_paid": prior_paid or [], "orders": orders, "window_start": cohort_start, "date": DATE_STR}
     elif 'cohort_data' in cache:
         cache_warnings.append(f"cohort_data (from {cache['cohort_data'].get('date','?')})")
 
@@ -306,7 +321,7 @@ def ensure_campaigns():
         "campaign_name,shopify_placed_order,shopify_placed_order_value",
         T30_START, T30_END,
         extra_params={"report_type": "MetricExportAttributedCampaign",
-                      "filter": "campaign_is_part_of_flow == false"},
+                      "filters": "campaign_is_part_of_flow == false"},
         timeout=300, timezone=DEFAULT_TZ)
     if em:
         cache['campaigns'] = {"email": em, "attr": attr, "date": DATE_STR}
@@ -534,12 +549,12 @@ repeat_customers = sum(1 for c in ltv_customers.values() if c['orders'] >= 2)
 rpr_90 = safe_div(repeat_customers, unique_customers_90)
 ltv_cac_ratio = safe_div(ltv_90, ncac_30) if (ltv_90 and ncac_30) else None
 
-# ── Cohort Retention (6-month window, true first purchase = customer_created_at_date) ──
+# ── Cohort Retention (6-month display window, cohort = first paid order, excluding customers paid in 12 months prior) ──
 from collections import defaultdict
 import calendar
 
 cohort_raw = cache.get('cohort_data', {})
-cohort_customers_raw = cohort_raw.get('customers', [])
+cohort_prior_paid_raw = cohort_raw.get('prior_paid', [])
 cohort_orders_raw = cohort_raw.get('orders', [])
 cohort_window_start = cohort_raw.get('window_start', '')  # e.g. "2025-12-01"
 
@@ -548,20 +563,18 @@ cohort_weighted_avg = []
 COHORT_MONTHS_DISPLAYED = 6  # show 6 cohort rows
 COHORT_M_OFFSETS = 6         # M0..M5
 
-if cohort_customers_raw and cohort_orders_raw and cohort_window_start:
+if cohort_orders_raw and cohort_window_start:
     window_start_ym = cohort_window_start[:7]  # "2025-12"
 
-    # Set of customer_ids whose Shopify account was newly created within the cohort window
-    # (excludes existing customers who happen to place orders in the window)
-    new_in_window = set()
-    for row in cohort_customers_raw:
+    # Set of customer_ids who already had paid orders BEFORE our display window —
+    # these are returning customers, not new acquisitions, so exclude them from cohorts
+    prior_paid_set = set()
+    for row in cohort_prior_paid_raw:
         cid = row.get('customer_id')
-        created = row.get('customer_created_at_date', '') or ''
-        if not cid or len(created) < 7: continue
-        if created[:7] >= window_start_ym:
-            new_in_window.add(cid)
+        if cid:
+            prior_paid_set.add(cid)
 
-    # Parse Q2 orders and find each customer's first PAID order month
+    # Parse Q2 orders and find each customer's first PAID order month in the display window
     # Q2 is already filtered net_sales > 0, so ShopMy 100%-comp orders are absent
     first_paid_month = {}
     customer_paid_months = defaultdict(set)
@@ -574,13 +587,14 @@ if cohort_customers_raw and cohort_orders_raw and cohort_window_start:
         if cid not in first_paid_month or ym < first_paid_month[cid]:
             first_paid_month[cid] = ym
 
-    # Customer cohort assignment: first paid order month, but ONLY for customers
-    # whose account was created in the window (= genuinely new in the window)
-    # AND who placed at least one paid order (excludes pure ShopMy comp accounts)
+    # Cohort = customers whose first paid order in our window is their FIRST paid order ever
+    # (i.e. they were NOT in the prior-12-months paid set)
+    # This is the standard DTC cohort definition: anchored on first purchase, not account creation
     customer_cohort = {}
-    for cid in new_in_window:
-        if cid in first_paid_month:
-            customer_cohort[cid] = first_paid_month[cid]
+    for cid, fpm in first_paid_month.items():
+        if cid in prior_paid_set:
+            continue  # returning customer — exclude
+        customer_cohort[cid] = fpm
 
     # Build (cohort_month, calendar_month) -> set of active customer_ids
     cohort_activity = defaultdict(lambda: defaultdict(set))
@@ -611,7 +625,9 @@ if cohort_customers_raw and cohort_orders_raw and cohort_window_start:
         row_vals = []
         for offset in range(COHORT_M_OFFSETS):
             target_ym = add_months(cmonth, offset)
-            if target_ym > current_ym:
+            # Hide if target month is in the future, OR is the current (partial) month —
+            # except when target_ym IS the cohort's own month (M0), which is always 100%
+            if target_ym > current_ym or (target_ym == current_ym and target_ym != cmonth):
                 row_vals.append(None)
             elif offset == 0:
                 row_vals.append(1.0)  # M0 is 100% by definition (cohort = first paid month)
@@ -1106,18 +1122,18 @@ html = f"""<!DOCTYPE html>
       {section_title('activity', 'Performance Health', f'30-day blended · {T30_LABEL}')}
       <div class="cards-4">
         {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
-        {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
+        {card(fmt_money(ncac_val) if ncac_val else '—', 'Shopify nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new Shopify orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
         {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo broadcast campaigns ÷ Shopify</div>' + bm_email_pct(email_pct))}
         {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
       </div>
     </div>
     <div class="section">
-      {section_title('users', 'Customer Health', '90-day rolling')}
+      {section_title('users', 'Customer Health', '90-day rolling · Shopify only')}
       <div class="cards-4">
-        {card(fmt_money(ltv_90) if ltv_90 else '—', 'LTV (90-day)', f'<div class="sub">{unique_customers_90:,} unique customers</div>')}
-        {card(fmt_roas(ltv_cac_ratio) if ltv_cac_ratio else '—', 'LTV : CAC', f'<div class="sub">vs 30d nCAC of {fmt_money(ncac_30)}</div>' + bm_ltv_cac(ltv_cac_ratio))}
-        {card(fmt_pct(rpr_90), 'Repeat purchase rate', f'<div class="sub">{repeat_customers:,} of {unique_customers_90:,} customers</div>' + bm_rpr(rpr_90))}
-        {card(fmt_money(ncac_30) if ncac_30 else '—', 'nCAC (30-day avg)', f'<div class="sub">{int(new_orders_30):,} new / {fmt_money(dtc_spend_30, big=True)} DTC spend</div>')}
+        {card(fmt_money(ltv_90) if ltv_90 else '—', 'LTV (90-day)', f'<div class="sub">{unique_customers_90:,} unique Shopify customers</div>')}
+        {card(fmt_roas(ltv_cac_ratio) if ltv_cac_ratio else '—', 'LTV : CAC', f'<div class="sub">vs 30d Shopify nCAC of {fmt_money(ncac_30)}</div>' + bm_ltv_cac(ltv_cac_ratio))}
+        {card(fmt_pct(rpr_90), 'Repeat purchase rate', f'<div class="sub">{repeat_customers:,} of {unique_customers_90:,} Shopify customers</div>' + bm_rpr(rpr_90))}
+        {card(fmt_money(ncac_30) if ncac_30 else '—', 'Shopify nCAC (30-day avg)', f'<div class="sub">{int(new_orders_30):,} new / {fmt_money(dtc_spend_30, big=True)} DTC spend</div>')}
       </div>
     </div>
     {render_cohort_table()}
