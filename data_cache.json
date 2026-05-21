@@ -2359,10 +2359,10 @@
         "page_views": 2512
       },
       "2026-05-17": {
-        "ordered_product_sales": 8763.9,
-        "units_ordered": 314,
+        "ordered_product_sales": 8743.92,
+        "units_ordered": 313,
         "sessions": 2144,
-        "unit_session_percentage": 14.65,
+        "unit_session_percentage": 14.6,
         "page_views": 2726
       },
       "2026-05-18": {
@@ -2380,8 +2380,8 @@
         "page_views": 2438
       },
       "2026-05-20": {
-        "ordered_product_sales": 8208.5,
-        "units_ordered": 302,
+        "ordered_product_sales": 8188.52,
+        "units_ordered": 301,
         "sessions": 0,
         "unit_session_percentage": 0,
         "page_views": 0
@@ -2947,10 +2947,13 @@
         "impressions": 3158
       },
       "2026-05-20": {
-        "spend": 448.38,
+        "spend": 448.78,
         "purchase_value": 304.6,
-        "clicks": 131,
-        "impressions": 10120
+        "clicks": 132,
+        "impressions": 10124,
+        "roas": 0.6787289986184768,
+        "cpc": 3.3998484848484845,
+        "ctr": 0.013038324772817068
       }
     },
     "google_ads": {
@@ -3118,7 +3121,7 @@
       },
       "2026-05-17": {
         "cost": 382.9627,
-        "conversions_value": 519.31,
+        "conversions_value": 583.11,
         "clicks": 283,
         "impressions": 40491
       },
@@ -3138,7 +3141,10 @@
         "cost": 201.0129,
         "conversions_value": 103.72,
         "clicks": 153,
-        "impressions": 13903
+        "impressions": 13902,
+        "roas": 0.5159867849277335,
+        "cpc": 1.3138098039215687,
+        "ctr": 0.0110056107034959
       }
     },
     "klaviyo_email": {
@@ -3474,7 +3480,9 @@
         "campaign_send_date": "2026-05-11",
         "klaviyo_total_recipients": 51145,
         "klaviyo_open_rate": 0.693225,
-        "klaviyo_click_rate": 0.006177
+        "klaviyo_click_rate": 0.006177,
+        "shopify_placed_order": 6,
+        "shopify_placed_order_value": 599.46
       },
       {
         "campaign_name": "05/13: Eye Patch Feature",
@@ -3482,7 +3490,9 @@
         "campaign_send_date": "2026-05-13",
         "klaviyo_total_recipients": 50907,
         "klaviyo_open_rate": 0.647224,
-        "klaviyo_click_rate": 0.004859
+        "klaviyo_click_rate": 0.004859,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 35
       },
       {
         "campaign_name": "05/03: Mother's Day Gift Guide",
@@ -3490,7 +3500,9 @@
         "campaign_send_date": "2026-05-03",
         "klaviyo_total_recipients": 49506,
         "klaviyo_open_rate": 0.632293,
-        "klaviyo_click_rate": 0.004371
+        "klaviyo_click_rate": 0.004371,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 135.97
       },
       {
         "campaign_name": "04/22: Earth Day",
@@ -3498,7 +3510,9 @@
         "campaign_send_date": "2026-04-23",
         "klaviyo_total_recipients": 49351,
         "klaviyo_open_rate": 0.802166,
-        "klaviyo_click_rate": 0.004827
+        "klaviyo_click_rate": 0.004827,
+        "shopify_placed_order": 6,
+        "shopify_placed_order_value": 365.48
       },
       {
         "campaign_name": "05/17: 5-Star Reviews",
@@ -3506,7 +3520,9 @@
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 46662,
         "klaviyo_open_rate": 0.687002,
-        "klaviyo_click_rate": 0.004424
+        "klaviyo_click_rate": 0.004424,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 92.09
       },
       {
         "campaign_name": "05/19: Sale Teaser",
@@ -3514,7 +3530,9 @@
         "campaign_send_date": "2026-05-19",
         "klaviyo_total_recipients": 43901,
         "klaviyo_open_rate": 0.721431,
-        "klaviyo_click_rate": 0.006725
+        "klaviyo_click_rate": 0.006725,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 79.88
       },
       {
         "campaign_name": "05/08: Energy | 15% off",
@@ -3522,7 +3540,9 @@
         "campaign_send_date": "2026-05-09",
         "klaviyo_total_recipients": 40682,
         "klaviyo_open_rate": 0.81236,
-        "klaviyo_click_rate": 0.005513
+        "klaviyo_click_rate": 0.005513,
+        "shopify_placed_order": 9,
+        "shopify_placed_order_value": 519.72
       },
       {
         "campaign_name": "05/07: Target run?",
@@ -3530,7 +3550,9 @@
         "campaign_send_date": "2026-05-07",
         "klaviyo_total_recipients": 5261,
         "klaviyo_open_rate": 0.764728,
-        "klaviyo_click_rate": 0.002288
+        "klaviyo_click_rate": 0.002288,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "05/17: 5-Star Reviews (non-purchasers 15% off)",
@@ -3538,7 +3560,9 @@
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 1485,
         "klaviyo_open_rate": 0.018206,
-        "klaviyo_click_rate": 0.002023
+        "klaviyo_click_rate": 0.002023,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T1 - Restart your wellness routine",
@@ -3546,7 +3570,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 1085,
         "klaviyo_open_rate": 0.307692,
-        "klaviyo_click_rate": 0.004634
+        "klaviyo_click_rate": 0.004634,
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 18.13
       },
       {
         "campaign_name": "PM | Sunset Flow Email #2",
@@ -3554,7 +3580,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 939,
         "klaviyo_open_rate": 0.012987,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Sunset Flow Email #1",
@@ -3562,7 +3590,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 938,
         "klaviyo_open_rate": 0.023784,
-        "klaviyo_click_rate": 0.001081
+        "klaviyo_click_rate": 0.001081,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Post Purchase Email #3",
@@ -3570,7 +3600,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 772,
         "klaviyo_open_rate": 0.254545,
-        "klaviyo_click_rate": 0.003896
+        "klaviyo_click_rate": 0.003896,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Post Purchase Email #1",
@@ -3578,7 +3610,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 745,
         "klaviyo_open_rate": 0.33678,
-        "klaviyo_click_rate": 0.028065
+        "klaviyo_click_rate": 0.028065,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #1",
@@ -3586,7 +3620,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 645,
         "klaviyo_open_rate": 0.486529,
-        "klaviyo_click_rate": 0.053883
+        "klaviyo_click_rate": 0.053883,
+        "shopify_placed_order": 11,
+        "shopify_placed_order_value": 425.23
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #1",
@@ -3594,7 +3630,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 633,
         "klaviyo_open_rate": 0.54213,
-        "klaviyo_click_rate": 0.025437
+        "klaviyo_click_rate": 0.025437,
+        "shopify_placed_order": 3,
+        "shopify_placed_order_value": 279.09
       },
       {
         "campaign_name": "Welcome Email #4",
@@ -3602,7 +3640,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 625,
         "klaviyo_open_rate": 0.433172,
-        "klaviyo_click_rate": 0.012882
+        "klaviyo_click_rate": 0.012882,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 255.33
       },
       {
         "campaign_name": "PM | Post Purchase Email #2",
@@ -3610,7 +3650,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 624,
         "klaviyo_open_rate": 0.341385,
-        "klaviyo_click_rate": 0.006441
+        "klaviyo_click_rate": 0.006441,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #2",
@@ -3618,7 +3660,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 608,
         "klaviyo_open_rate": 0.522241,
-        "klaviyo_click_rate": 0.029654
+        "klaviyo_click_rate": 0.029654,
+        "shopify_placed_order": 5,
+        "shopify_placed_order_value": 369.28
       },
       {
         "campaign_name": "Welcome Email #2",
@@ -3626,7 +3670,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 593,
         "klaviyo_open_rate": 0.41286,
-        "klaviyo_click_rate": 0.011844
+        "klaviyo_click_rate": 0.011844,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #3",
@@ -3634,7 +3680,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 584,
         "klaviyo_open_rate": 0.438144,
-        "klaviyo_click_rate": 0.0189
+        "klaviyo_click_rate": 0.0189,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T2B - no code - treat yourself",
@@ -3642,7 +3690,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 528,
         "klaviyo_open_rate": 0.290875,
-        "klaviyo_click_rate": 0.003802
+        "klaviyo_click_rate": 0.003802,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T2A - 20% off your restock",
@@ -3650,7 +3700,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 522,
         "klaviyo_open_rate": 0.313462,
-        "klaviyo_click_rate": 0.005769
+        "klaviyo_click_rate": 0.005769,
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 120.66
       },
       {
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
@@ -3658,7 +3710,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 504,
         "klaviyo_open_rate": 0.290837,
-        "klaviyo_click_rate": 0.005976
+        "klaviyo_click_rate": 0.005976,
+        "shopify_placed_order": 3,
+        "shopify_placed_order_value": 159
       },
       {
         "campaign_name": "T3B - FOMO - occasions focus",
@@ -3666,7 +3720,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 499,
         "klaviyo_open_rate": 0.299197,
-        "klaviyo_click_rate": 0.006024
+        "klaviyo_click_rate": 0.006024,
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 73.06
       },
       {
         "campaign_name": "PM | 60D Non Buyer Email #1",
@@ -3674,7 +3730,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 456,
         "klaviyo_open_rate": 0.40708,
-        "klaviyo_click_rate": 0.006637
+        "klaviyo_click_rate": 0.006637,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #2",
@@ -3682,7 +3740,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 199,
         "klaviyo_open_rate": 0.609137,
-        "klaviyo_click_rate": 0.035533
+        "klaviyo_click_rate": 0.035533,
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 51.2
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #1",
@@ -3690,7 +3750,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 191,
         "klaviyo_open_rate": 0.610811,
-        "klaviyo_click_rate": 0.032432
+        "klaviyo_click_rate": 0.032432,
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 76.21
       },
       {
         "campaign_name": "Welcome Email #1 [meta ads]",
@@ -3698,7 +3760,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 71,
         "klaviyo_open_rate": 0.323944,
-        "klaviyo_click_rate": 0.014085
+        "klaviyo_click_rate": 0.014085,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #1",
@@ -3706,7 +3770,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 63,
         "klaviyo_open_rate": 0.571429,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #2 [meta ads]",
@@ -3714,7 +3780,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 56,
         "klaviyo_open_rate": 0.428571,
-        "klaviyo_click_rate": 0.017857
+        "klaviyo_click_rate": 0.017857,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #3 [meta ads]",
@@ -3722,7 +3790,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 54,
         "klaviyo_open_rate": 0.296296,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #4 [meta ads]",
@@ -3730,7 +3800,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 53,
         "klaviyo_open_rate": 0.358491,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
@@ -3738,7 +3810,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 52,
         "klaviyo_open_rate": 0.615385,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T1 - Non-purchaser - 2 hrs post trigger",
@@ -3746,7 +3820,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 20,
         "klaviyo_open_rate": 0.65,
-        "klaviyo_click_rate": 0.05
+        "klaviyo_click_rate": 0.05,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T2 - Non-purchaser - 1 day post trigger",
@@ -3754,7 +3830,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 19,
         "klaviyo_open_rate": 0.578947,
-        "klaviyo_click_rate": 0.052632
+        "klaviyo_click_rate": 0.052632,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T1 - Previous purchaser - 2 hrs post trigger",
@@ -3762,7 +3840,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 11,
         "klaviyo_open_rate": 0.636364,
-        "klaviyo_click_rate": 0.090909
+        "klaviyo_click_rate": 0.090909,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3A - Non-purchaser - 4 days post trigger",
@@ -3770,7 +3850,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 10,
         "klaviyo_open_rate": 0.8,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T2 - Previous purchaser - 1 day post trigger",
@@ -3778,7 +3860,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 9,
         "klaviyo_open_rate": 0.666667,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3B - Previous purchaser - 4 days post trigger",
@@ -3786,7 +3870,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 6,
         "klaviyo_open_rate": 0.666667,
-        "klaviyo_click_rate": 0.166667
+        "klaviyo_click_rate": 0.166667,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3B - Non-purchaser - 4 days post trigger",
@@ -3794,7 +3880,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 5,
         "klaviyo_open_rate": 0.2,
-        "klaviyo_click_rate": 0
+        "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3A - Previous purchaser - 4 days post trigger",
@@ -3802,7 +3890,9 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 2,
         "klaviyo_open_rate": 1,
-        "klaviyo_click_rate": 0.5
+        "klaviyo_click_rate": 0.5,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/03: Ready to move into your feel-good era.",
@@ -3810,7 +3900,9 @@
         "campaign_send_date": "2026-01-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/04: Skincare",
@@ -3818,7 +3910,9 @@
         "campaign_send_date": "2026-01-04",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/06: New Year, Same You",
@@ -3826,7 +3920,9 @@
         "campaign_send_date": "2026-01-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/08 - 5AM Routine",
@@ -3834,7 +3930,9 @@
         "campaign_send_date": "2026-01-09",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/10: Jan Goals",
@@ -3842,7 +3940,9 @@
         "campaign_send_date": "2026-01-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/15: Subscribe Feature",
@@ -3850,7 +3950,9 @@
         "campaign_send_date": "2026-01-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/19: UGC Feature",
@@ -3858,7 +3960,9 @@
         "campaign_send_date": "2026-01-19",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/22: Desire Spotlight",
@@ -3866,7 +3970,9 @@
         "campaign_send_date": "2026-01-22",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/28 - 2016",
@@ -3874,7 +3980,9 @@
         "campaign_send_date": "2026-01-30",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/28: B12 Awake Feature",
@@ -3882,7 +3990,9 @@
         "campaign_send_date": "2026-01-29",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "01/30 - Relax",
@@ -3890,7 +4000,9 @@
         "campaign_send_date": "2026-01-31",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/02 - Game Day",
@@ -3898,7 +4010,9 @@
         "campaign_send_date": "2026-02-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/03 - Un-Wrinkle Feature",
@@ -3906,7 +4020,9 @@
         "campaign_send_date": "2026-02-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/04 - Focus",
@@ -3914,7 +4030,9 @@
         "campaign_send_date": "2026-02-04",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/06 - Olympics Edition",
@@ -3922,7 +4040,9 @@
         "campaign_send_date": "2026-02-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/06: Thistle",
@@ -3930,7 +4050,9 @@
         "campaign_send_date": "2026-02-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/07 - Galentine's Day",
@@ -3938,7 +4060,9 @@
         "campaign_send_date": "2026-02-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/08 - Target Retail",
@@ -3946,7 +4070,9 @@
         "campaign_send_date": "2026-02-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/09 - Self Gifting",
@@ -3954,7 +4080,9 @@
         "campaign_send_date": "2026-02-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/13 - President's Day",
@@ -3962,7 +4090,9 @@
         "campaign_send_date": "2026-02-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/14 - Valentine\u2019s Day text only",
@@ -3970,7 +4100,9 @@
         "campaign_send_date": "2026-02-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/15 - February Essentials",
@@ -3978,7 +4110,9 @@
         "campaign_send_date": "2026-02-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/20 - Still Wintering",
@@ -3986,7 +4120,9 @@
         "campaign_send_date": "2026-02-20",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/22 - National Margarita Day",
@@ -3994,7 +4130,9 @@
         "campaign_send_date": "2026-02-22",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/24 - winter energy",
@@ -4002,7 +4140,9 @@
         "campaign_send_date": "2026-02-24",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/27 - survey (non-purchasers)",
@@ -4010,7 +4150,9 @@
         "campaign_send_date": "2026-02-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/27 - survey (purchasers)",
@@ -4018,7 +4160,9 @@
         "campaign_send_date": "2026-02-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "02/28 - Brighten Up",
@@ -4026,7 +4170,9 @@
         "campaign_send_date": "2026-02-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/03: Skincare",
@@ -4034,7 +4180,9 @@
         "campaign_send_date": "2026-03-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/06: Spring Break Packing",
@@ -4042,7 +4190,9 @@
         "campaign_send_date": "2026-03-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/07: Pre DLS",
@@ -4050,7 +4200,9 @@
         "campaign_send_date": "2026-03-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/08 - intl. womens day",
@@ -4058,7 +4210,9 @@
         "campaign_send_date": "2026-03-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/09: Sleept Week #1",
@@ -4066,7 +4220,9 @@
         "campaign_send_date": "2026-03-09",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/10: Target",
@@ -4074,7 +4230,9 @@
         "campaign_send_date": "2026-03-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/11 - Sleep Week #3",
@@ -4082,7 +4240,9 @@
         "campaign_send_date": "2026-03-11",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/12: Sleep Week #4",
@@ -4090,7 +4250,9 @@
         "campaign_send_date": "2026-03-12",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/13: Sleep Week #5",
@@ -4098,7 +4260,9 @@
         "campaign_send_date": "2026-03-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/14: Sleep Week #6",
@@ -4106,7 +4270,9 @@
         "campaign_send_date": "2026-03-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/15: Oscar's",
@@ -4114,7 +4280,9 @@
         "campaign_send_date": "2026-03-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/16: Find Rescue IRL",
@@ -4122,7 +4290,9 @@
         "campaign_send_date": "2026-03-16",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/18: March Madness",
@@ -4130,7 +4300,9 @@
         "campaign_send_date": "2026-03-18",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/19: De-Puff",
@@ -4138,7 +4310,9 @@
         "campaign_send_date": "2026-03-19",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/21: Find Your Perfect Patch",
@@ -4146,7 +4320,9 @@
         "campaign_send_date": "2026-03-21",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/23: Hemp Queen",
@@ -4154,7 +4330,9 @@
         "campaign_send_date": "2026-03-23",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/25: Active",
@@ -4162,7 +4340,9 @@
         "campaign_send_date": "2026-03-25",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/28: Duos",
@@ -4170,7 +4350,9 @@
         "campaign_send_date": "2026-03-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "03/31: Bachelorette Survival Guide",
@@ -4178,7 +4360,9 @@
         "campaign_send_date": "2026-03-31",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/01: April Fools",
@@ -4186,7 +4370,9 @@
         "campaign_send_date": "2026-04-01",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/02: Spring Reset",
@@ -4194,7 +4380,9 @@
         "campaign_send_date": "2026-04-02",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/03: Festival Season",
@@ -4202,7 +4390,9 @@
         "campaign_send_date": "2026-04-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/05: Spring Break",
@@ -4210,7 +4400,9 @@
         "campaign_send_date": "2026-04-05",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/07: Rescue Feature",
@@ -4218,7 +4410,9 @@
         "campaign_send_date": "2026-04-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/08: Ulta Sale",
@@ -4226,7 +4420,9 @@
         "campaign_send_date": "2026-04-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/10: Ulta Sale II",
@@ -4234,7 +4430,9 @@
         "campaign_send_date": "2026-04-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/11: Desire Feature",
@@ -4242,7 +4440,9 @@
         "campaign_send_date": "2026-04-11",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/12: Sleep Collection",
@@ -4250,7 +4450,9 @@
         "campaign_send_date": "2026-04-12",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/13: Be Calm Promo",
@@ -4258,7 +4460,9 @@
         "campaign_send_date": "2026-04-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/14: Under eye Patches",
@@ -4266,7 +4470,9 @@
         "campaign_send_date": "2026-04-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "04/15: GWP Last Day + Tax Day | Promo",
@@ -4274,7 +4480,9 @@
         "campaign_send_date": "2026-04-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/04: UGC Feature",
@@ -4282,7 +4490,9 @@
         "campaign_send_date": "2025-10-04",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/08: Cycle Feature",
@@ -4290,7 +4500,9 @@
         "campaign_send_date": "2025-10-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/13: B12 Feature",
@@ -4298,7 +4510,9 @@
         "campaign_send_date": "2025-10-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/16: Halloween Guide",
@@ -4306,7 +4520,9 @@
         "campaign_send_date": "2025-10-16",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/18: end of Summer",
@@ -4314,7 +4530,9 @@
         "campaign_send_date": "2025-10-18",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/24: Subscribe feature",
@@ -4322,7 +4540,9 @@
         "campaign_send_date": "2025-10-24",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "10/31: Fall Skincare",
@@ -4330,7 +4550,9 @@
         "campaign_send_date": "2025-10-31",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/03: MVPs",
@@ -4338,7 +4560,9 @@
         "campaign_send_date": "2025-11-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/09: Mom feature",
@@ -4346,7 +4570,9 @@
         "campaign_send_date": "2025-11-09",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/12: BFCM Early access",
@@ -4354,7 +4580,9 @@
         "campaign_send_date": "2025-11-12",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/16 - Holiday Sale, text only",
@@ -4362,7 +4590,9 @@
         "campaign_send_date": "2025-11-16",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/22: Undereye Patches Feature",
@@ -4370,7 +4600,9 @@
         "campaign_send_date": "2025-11-22",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/23: Hemp Queen",
@@ -4378,7 +4610,9 @@
         "campaign_send_date": "2025-11-23",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/27 - Thanksgiving, text only",
@@ -4386,7 +4620,9 @@
         "campaign_send_date": "2025-11-27",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/28 - Black Friday, text only",
@@ -4394,7 +4630,9 @@
         "campaign_send_date": "2025-11-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/28: BFCM AM",
@@ -4402,7 +4640,9 @@
         "campaign_send_date": "2025-11-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/29: help you with your Stocking Stuffer Game",
@@ -4410,7 +4650,9 @@
         "campaign_send_date": "2025-11-29",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "11/30: Sale feature",
@@ -4418,7 +4660,9 @@
         "campaign_send_date": "2025-11-30",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/10: Bake Off Feature",
@@ -4426,7 +4670,9 @@
         "campaign_send_date": "2025-12-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/14: FSA Feature",
@@ -4434,7 +4680,9 @@
         "campaign_send_date": "2025-12-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/15: Shipping",
@@ -4442,7 +4690,9 @@
         "campaign_send_date": "2025-12-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/1: Playlist",
@@ -4450,7 +4700,9 @@
         "campaign_send_date": "2025-12-01",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/21: Winter Solstice - B12 Awake",
@@ -4458,7 +4710,9 @@
         "campaign_send_date": "2025-12-21",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/25 - Merry Everything",
@@ -4466,7 +4720,9 @@
         "campaign_send_date": "2025-12-25",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/27: Stock Up",
@@ -4474,7 +4730,9 @@
         "campaign_send_date": "2025-12-27",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/2: BFCM Last Call",
@@ -4482,7 +4740,9 @@
         "campaign_send_date": "2025-12-02",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/8: Dream Feature",
@@ -4490,7 +4750,9 @@
         "campaign_send_date": "2025-12-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "12/9: Brighten Up Feature",
@@ -4498,7 +4760,9 @@
         "campaign_send_date": "2025-12-09",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "8/16: Weighted Vest/ Active",
@@ -4506,7 +4770,9 @@
         "campaign_send_date": "2025-08-16",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "8/19: Fan Faves",
@@ -4514,7 +4780,9 @@
         "campaign_send_date": "2025-08-17",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "8/26: sale (text only)",
@@ -4522,7 +4790,9 @@
         "campaign_send_date": "2025-08-26",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "8/29: End of Summer Sale",
@@ -4530,7 +4800,9 @@
         "campaign_send_date": "2025-08-29",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "9/10: Clear Up Feature",
@@ -4538,7 +4810,9 @@
         "campaign_send_date": "2025-09-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "9/20: HSA/FSA",
@@ -4546,7 +4820,9 @@
         "campaign_send_date": "2025-09-20",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Clone 12/4: Gift Giving - White Elephant",
@@ -4554,7 +4830,9 @@
         "campaign_send_date": "2025-12-04",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Clone 12/6: Holiday Movies - Patch edition",
@@ -4562,7 +4840,9 @@
         "campaign_send_date": "2025-12-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       }
     ],
     "attr": [
@@ -4664,93 +4944,103 @@
     "data": [
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (8 Total Patches)",
-        "ordered_product_sales": 20739.24,
-        "units_ordered": 1040
+        "ordered_product_sales": 21638.34,
+        "units_ordered": 1085
       },
       {
         "title": "The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea Extract, Natural Plant Powered Wearable Wellness, Helps to Promote Energy (8 Total Patches)",
-        "ordered_product_sales": 16003.98,
-        "units_ordered": 801
+        "ordered_product_sales": 16223.76,
+        "units_ordered": 812
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12707.28,
-        "units_ordered": 636
+        "ordered_product_sales": 13086.9,
+        "units_ordered": 655
       },
       {
         "title": "The Good Patch Relax Patches, Supports Relaxation, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12467.52,
-        "units_ordered": 625
+        "ordered_product_sales": 13046.94,
+        "units_ordered": 654
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 9995,
-        "units_ordered": 500
+        "ordered_product_sales": 10334.83,
+        "units_ordered": 517
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 8440.96,
-        "units_ordered": 352
-      },
-      {
-        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 7598.48,
-        "units_ordered": 152
+        "ordered_product_sales": 8608.82,
+        "units_ordered": 359
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (16 Total Patches)",
-        "ordered_product_sales": 7361.48,
-        "units_ordered": 213
+        "ordered_product_sales": 7816.35,
+        "units_ordered": 226
+      },
+      {
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
+        "ordered_product_sales": 7648.47,
+        "units_ordered": 153
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
-        "ordered_product_sales": 7185.84,
-        "units_ordered": 146
+        "ordered_product_sales": 7485.78,
+        "units_ordered": 152
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 6906.24,
-        "units_ordered": 288
+        "ordered_product_sales": 7122.06,
+        "units_ordered": 297
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 6171.98,
-        "units_ordered": 179
+        "ordered_product_sales": 6416.91,
+        "units_ordered": 186
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 6098.78,
-        "units_ordered": 122
+        "ordered_product_sales": 6198.76,
+        "units_ordered": 124
       },
       {
         "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
-        "ordered_product_sales": 5577.21,
-        "units_ordered": 279
+        "ordered_product_sales": 5837.08,
+        "units_ordered": 292
       },
       {
         "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
-        "ordered_product_sales": 5574.42,
-        "units_ordered": 279
+        "ordered_product_sales": 5794.2,
+        "units_ordered": 290
       },
       {
         "title": "The Good Patch Most Loved Patches \u2013 Awake B12 for Energy, Dream for Sleep, Rescue for Recovery, Relax for Calm \u2013 Plant-Powered (16 Patches)",
-        "ordered_product_sales": 3873.6,
-        "units_ordered": 99
+        "ordered_product_sales": 3979.2,
+        "units_ordered": 103
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3574.35,
-        "units_ordered": 65
-      },
-      {
-        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 3484.62,
-        "units_ordered": 102
+        "ordered_product_sales": 3739.32,
+        "units_ordered": 68
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 3399.15,
-        "units_ordered": 85
+        "ordered_product_sales": 3719.07,
+        "units_ordered": 93
+      },
+      {
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 3624.58,
+        "units_ordered": 106
+      },
+      {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3316.68,
+        "units_ordered": 166
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3278.36,
+        "units_ordered": 167
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
@@ -4763,39 +5053,49 @@
         "units_ordered": 65
       },
       {
-        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3198.4,
-        "units_ordered": 163
-      },
-      {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3156.84,
-        "units_ordered": 158
-      },
-      {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
         "ordered_product_sales": 3150,
         "units_ordered": 105
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2854.96,
-        "units_ordered": 83
+        "ordered_product_sales": 2889.95,
+        "units_ordered": 84
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
-        "ordered_product_sales": 2658.67,
-        "units_ordered": 133
+        "ordered_product_sales": 2718.64,
+        "units_ordered": 136
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 2493.92,
-        "units_ordered": 104
+        "ordered_product_sales": 2565.86,
+        "units_ordered": 107
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 2460,
+        "units_ordered": 83
+      },
+      {
+        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
+        "ordered_product_sales": 2430,
+        "units_ordered": 51
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 2379.32,
-        "units_ordered": 68
+        "ordered_product_sales": 2414.31,
+        "units_ordered": 69
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2399.4,
+        "units_ordered": 60
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
+        "ordered_product_sales": 2397.6,
+        "units_ordered": 120
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
@@ -4803,54 +5103,34 @@
         "units_ordered": 43
       },
       {
-        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2319.42,
-        "units_ordered": 58
-      },
-      {
-        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
-        "ordered_product_sales": 2317.68,
-        "units_ordered": 116
-      },
-      {
-        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
-        "ordered_product_sales": 2280,
-        "units_ordered": 47
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 2280,
-        "units_ordered": 77
-      },
-      {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 1854.47,
-        "units_ordered": 53
+        "ordered_product_sales": 1924.45,
+        "units_ordered": 55
       },
       {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (36 Total Patches)",
-        "ordered_product_sales": 1799.64,
-        "units_ordered": 36
+        "ordered_product_sales": 1899.62,
+        "units_ordered": 38
       },
       {
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 1680,
-        "units_ordered": 56
+        "ordered_product_sales": 1740,
+        "units_ordered": 58
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (8 Total Patches)",
-        "ordered_product_sales": 1402.62,
-        "units_ordered": 70
+        "ordered_product_sales": 1562.46,
+        "units_ordered": 78
+      },
+      {
+        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
+        "ordered_product_sales": 1432.8,
+        "units_ordered": 50
       },
       {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
         "ordered_product_sales": 1399.72,
         "units_ordered": 28
-      },
-      {
-        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
-        "ordered_product_sales": 1332,
-        "units_ordered": 46
       },
       {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
@@ -4859,8 +5139,8 @@
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
-        "ordered_product_sales": 1149.77,
-        "units_ordered": 23
+        "ordered_product_sales": 1299.74,
+        "units_ordered": 26
       },
       {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (24 Total Patches)",
@@ -4868,14 +5148,19 @@
         "units_ordered": 28
       },
       {
-        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 879.78,
-        "units_ordered": 22
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 960,
+        "units_ordered": 20
       },
       {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 864,
-        "units_ordered": 18
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 840,
+        "units_ordered": 14
+      },
+      {
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 839.79,
+        "units_ordered": 21
       },
       {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
@@ -4889,18 +5174,13 @@
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (16 Total Patches)",
-        "ordered_product_sales": 576,
-        "units_ordered": 12
+        "ordered_product_sales": 672,
+        "units_ordered": 14
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (24 Total Patches)",
         "ordered_product_sales": 549.9,
         "units_ordered": 10
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
-        "ordered_product_sales": 540,
-        "units_ordered": 9
       },
       {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
@@ -4923,6 +5203,11 @@
         "units_ordered": 6
       },
       {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (18 Total Patch Sets)",
+        "ordered_product_sales": 360,
+        "units_ordered": 4
+      },
+      {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (24 Total Patches)",
         "ordered_product_sales": 360,
         "units_ordered": 5
@@ -4931,11 +5216,6 @@
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (12 Total Patch Sets)",
         "ordered_product_sales": 300,
         "units_ordered": 5
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (18 Total Patch Sets)",
-        "ordered_product_sales": 270,
-        "units_ordered": 3
       },
       {
         "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (16 Total Patches)",
