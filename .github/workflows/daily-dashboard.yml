@@ -2,7 +2,8 @@ name: Daily Dashboard
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '0 9 * * *'    # 4am ET — first attempt (post only if Amazon Ads ready)
+    - cron: '0 11 * * *'   # 6am ET — final attempt (post regardless)
   workflow_dispatch:
 
 jobs:
@@ -20,12 +21,12 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install anthropic requests
+        run: pip install requests
 
       - name: Generate dashboard
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SUPERMETRICS_API_KEY: ${{ secrets.SUPERMETRICS_API_KEY }}
+          IS_FINAL_ATTEMPT: ${{ (github.event.schedule == '0 11 * * *' || github.event_name == 'workflow_dispatch') && 'true' || 'false' }}
         run: python generate_dashboard.py
 
       - name: Commit and push
@@ -36,7 +37,14 @@ jobs:
           git diff --staged --quiet || git commit -m "Dashboard update $(date +%Y-%m-%d)"
           git push
 
+      - name: Check post flag
+        id: check
+        run: |
+          FLAG=$(cat should_post.flag 2>/dev/null || echo "no")
+          echo "should_post=$FLAG" >> $GITHUB_OUTPUT
+
       - name: Post to Slack
+        if: steps.check.outputs.should_post == 'yes'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
