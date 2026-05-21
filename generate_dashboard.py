@@ -737,9 +737,10 @@ has_aa_data = bool(cache['daily'].get('amazon_ads', {}).get(DATE_STR))
 already_posted = cache.get('last_posted_date') == DATE_STR
 is_final_attempt = os.environ.get('IS_FINAL_ATTEMPT') == 'true'
 
+is_manual = os.environ.get('GITHUB_EVENT_NAME') == 'workflow_dispatch'
 should_post = False
-if not already_posted:
-    if has_aa_data or is_final_attempt:
+if is_manual or not already_posted:
+    if has_aa_data or is_final_attempt or is_manual:
         should_post = True
         cache['last_posted_date'] = DATE_STR
         save_cache(cache)
