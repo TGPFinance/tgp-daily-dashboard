@@ -741,15 +741,16 @@ print(f"Dashboard generated successfully for {DISPLAY_DATE}.")
 
 # ── Slack post decision ────────────────────────────────────────────────────────
 # Post to Slack if:
-#   - Haven't posted today yet
-#   - AND (Amazon Ads has yesterday's data OR this is the final attempt)
+#   - Manual workflow trigger (always post), OR
+#   - Haven't posted today yet AND (Amazon Ads has yesterday's data OR final attempt)
 has_aa_data = bool(cache['daily'].get('amazon_ads', {}).get(DATE_STR))
 already_posted = cache.get('last_posted_date') == DATE_STR
 is_final_attempt = os.environ.get('IS_FINAL_ATTEMPT') == 'true'
+is_manual = os.environ.get('GITHUB_EVENT_NAME') == 'workflow_dispatch'
 
 should_post = False
-if not already_posted:
-    if has_aa_data or is_final_attempt:
+if is_manual or not already_posted:
+    if has_aa_data or is_final_attempt or is_manual:
         should_post = True
         cache['last_posted_date'] = DATE_STR
         save_cache(cache)
@@ -757,6 +758,7 @@ if not already_posted:
 print(f"  Amazon Ads for {DATE_STR}: {'OK' if has_aa_data else 'missing'}")
 print(f"  Already posted today: {already_posted}")
 print(f"  Final attempt (6am): {is_final_attempt}")
+print(f"  Manual trigger: {is_manual}")
 print(f"  -> Posting to Slack: {should_post}")
 
 Path('should_post.flag').write_text('yes' if should_post else 'no')
