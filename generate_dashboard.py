@@ -24,6 +24,9 @@ CACHE_FILE = "data_cache.json"
 DEFAULT_TZ = "America/New_York"
 REFRESH_RECENT_DAYS = 7  # Always re-fetch last N days (handles settling orders + API lag)
 
+# Feature flags — flip to True when GA4 tag is fully migrated and tracking stable
+SHOW_GA4_SITE_CVR = False  # Hide Site CVR section while GA4 sessions are under-reporting post-migration
+
 # Brand
 BRAND_COLOR = "#2c4ea2"
 BRAND_COLOR_DARK = "#1e3a7a"
@@ -302,7 +305,9 @@ def ensure_campaigns():
     attr = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
         "campaign_name,shopify_placed_order,shopify_placed_order_value",
         T30_START, T30_END,
-        extra_params={"report_type": "MetricExportAttributedCampaign"}, timeout=300, timezone=DEFAULT_TZ)
+        extra_params={"report_type": "MetricExportAttributedCampaign",
+                      "filter": "campaign_is_part_of_flow == false"},
+        timeout=300, timezone=DEFAULT_TZ)
     if em:
         cache['campaigns'] = {"email": em, "attr": attr, "date": DATE_STR}
     elif 'campaigns' in cache:
@@ -546,27 +551,43 @@ COHORT_M_OFFSETS = 6         # M0..M5
 if cohort_customers_raw and cohort_orders_raw and cohort_window_start:
     window_start_ym = cohort_window_start[:7]  # "2025-12"
 
-    # Build customer_id -> cohort_month from customer_created_at_date
-    # Customer report returns ALL customers, so we filter to those created within the window
-    customer_cohort = {}
+    # Set of customer_ids whose Shopify account was newly created within the cohort window
+    # (excludes existing customers who happen to place orders in the window)
+    new_in_window = set()
     for row in cohort_customers_raw:
         cid = row.get('customer_id')
         created = row.get('customer_created_at_date', '') or ''
-        if not cid or not created or len(created) < 7: continue
-        cohort_ym = created[:7]  # "2026-01"
-        if cohort_ym >= window_start_ym:
-            customer_cohort[cid] = cohort_ym
+        if not cid or len(created) < 7: continue
+        if created[:7] >= window_start_ym:
+            new_in_window.add(cid)
 
-    # Build (cohort_month, calendar_month) -> set of active customer_ids
-    cohort_activity = defaultdict(lambda: defaultdict(set))
+    # Parse Q2 orders and find each customer's first PAID order month
+    # Q2 is already filtered net_sales > 0, so ShopMy 100%-comp orders are absent
+    first_paid_month = {}
+    customer_paid_months = defaultdict(set)
     for row in cohort_orders_raw:
         cid = row.get('customer_id')
         ym_raw = row.get('yearMonth', '') or ''  # format "2025|12" or "2025-12"
         if not cid or not ym_raw: continue
         ym = ym_raw.replace('|', '-')
-        cohort_ym = customer_cohort.get(cid)
-        if not cohort_ym or ym < cohort_ym: continue
-        cohort_activity[cohort_ym][ym].add(cid)
+        customer_paid_months[cid].add(ym)
+        if cid not in first_paid_month or ym < first_paid_month[cid]:
+            first_paid_month[cid] = ym
+
+    # Customer cohort assignment: first paid order month, but ONLY for customers
+    # whose account was created in the window (= genuinely new in the window)
+    # AND who placed at least one paid order (excludes pure ShopMy comp accounts)
+    customer_cohort = {}
+    for cid in new_in_window:
+        if cid in first_paid_month:
+            customer_cohort[cid] = first_paid_month[cid]
+
+    # Build (cohort_month, calendar_month) -> set of active customer_ids
+    cohort_activity = defaultdict(lambda: defaultdict(set))
+    for cid, cohort_ym in customer_cohort.items():
+        for ym in customer_paid_months[cid]:
+            if ym >= cohort_ym:
+                cohort_activity[cohort_ym][ym].add(cid)
 
     # Cohort sizes (denominators)
     cohort_sizes = defaultdict(int)
@@ -593,7 +614,7 @@ if cohort_customers_raw and cohort_orders_raw and cohort_window_start:
             if target_ym > current_ym:
                 row_vals.append(None)
             elif offset == 0:
-                row_vals.append(1.0)  # M0 is always 100%
+                row_vals.append(1.0)  # M0 is 100% by definition (cohort = first paid month)
             else:
                 active = len(cohort_activity[cmonth].get(target_ym, set()))
                 row_vals.append(active / size if size > 0 else 0)
@@ -1018,11 +1039,12 @@ html = f"""<!DOCTYPE html>
   <div class="date">Performance Report · {DISPLAY_DATE}</div>
 </div>
 <div class="tabs">
-  <button class="tab active" onclick="showTab(0)">Amazon</button>
-  <button class="tab" onclick="showTab(1)">Shopify, Meta, Google, Klaviyo</button>
+  <button class="tab active" onclick="showTab(0)">Summary</button>
+  <button class="tab" onclick="showTab(1)">Amazon</button>
+  <button class="tab" onclick="showTab(2)">Shopify, Meta, Google, Klaviyo</button>
 </div>
 
-<div class="panel active" id="panel-0">
+<div class="panel" id="panel-1">
   <div class="section">
     {section_title('amazon', 'Seller Central · Amazon.com (US)', AMAZON_SELLER_DISPLAY)}
     <div class="cards-3">
@@ -1078,14 +1100,14 @@ html = f"""<!DOCTYPE html>
   </div>
 </div>
 
-<div class="panel" id="panel-1">
+<div class="panel active" id="panel-0">
   <div class="summary-block">
     <div class="section">
       {section_title('activity', 'Performance Health', f'30-day blended · {T30_LABEL}')}
       <div class="cards-4">
         {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
         {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
-        {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo attributed ÷ Shopify</div>' + bm_email_pct(email_pct))}
+        {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo broadcast campaigns ÷ Shopify</div>' + bm_email_pct(email_pct))}
         {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
       </div>
     </div>
@@ -1100,11 +1122,9 @@ html = f"""<!DOCTYPE html>
     </div>
     {render_cohort_table()}
   </div>
-  <div class="section-divider">
-    <div class="line"></div>
-    <div class="label">Channel Detail</div>
-    <div class="line"></div>
-  </div>
+</div>
+
+<div class="panel" id="panel-2">
   <div class="section">
     {section_title('shopify', 'Shopify', DISPLAY_DATE)}
     <div class="cards-4">
@@ -1187,7 +1207,7 @@ html = f"""<!DOCTYPE html>
       <tbody>{state_rows()}</tbody>
     </table>
   </div>
-  <div class="section">
+  {f'''<div class="section">
     {section_title('shopify', 'Site Conversion (GA4)', DISPLAY_DATE)}
     <div class="cards-4">
       {card(fmt_num(ga4_sessions, big=True), 'Sessions (yesterday)', '<div class="sub">from Google Analytics</div>')}
@@ -1195,7 +1215,7 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(site_cvr_val), 'Site CVR (yesterday)', '<div class="sub">orders ÷ sessions</div>' + bm_cvr(site_cvr_val))}
       {card(fmt_pct(site_cvr_30), '30-Day Site CVR', f'<div class="sub">{fmt_num(ga4_sessions_30,big=True)} sessions total</div>' + bm_cvr(site_cvr_30))}
     </div>
-  </div>
+  </div>''' if SHOW_GA4_SITE_CVR else ''}
   <div class="section">
     {section_title('meta', 'Meta Ads — 30-Day Overview', T30_LABEL)}
     <div class="cards-4">
@@ -1218,7 +1238,7 @@ html = f"""<!DOCTYPE html>
 <script>
 function showTab(i) {{
   document.querySelectorAll('.tab').forEach((t, idx) => t.classList.toggle('active', idx === i));
-  document.querySelectorAll('.panel').forEach((p, idx) => p.classList.toggle('active', idx === i));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + i));
 }}
 window.addEventListener('load', () => {{
   {revenue_chart_js('amazonRevChart', amazon_chart_labels, amazon_chart_values, amazon_chart_avg7)}
