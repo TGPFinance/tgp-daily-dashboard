@@ -30,12 +30,15 @@ BRAND_COLOR_DARK = "#1e3a7a"
 LOGO_PATH = "TGP-Logo-White.png"
 
 ICONS = {
-    'amazon':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg',
-    'shopify': 'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg',
-    'meta':    'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg',
-    'google':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleads.svg',
-    'klaviyo': 'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/mail.svg',
-    'tgp':     'TGP-Logo-White.png',
+    'amazon':   'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg',
+    'shopify':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg',
+    'meta':     'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg',
+    'google':   'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleads.svg',
+    'klaviyo':  'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/mail.svg',
+    'tgp':      'TGP-Logo-White.png',
+    'activity': 'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/activity.svg',
+    'users':    'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/users.svg',
+    'grid':     'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/grid.svg',
 }
 
 ACCOUNTS = {
@@ -238,7 +241,7 @@ def ensure_new_returning_split():
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "order_is_returning_customer,net_sales,sm_order_count",
                          DATE_STR, DATE_STR,
-                         extra_params={"report_type": "Order"},
+                         extra_params={"report_type": "Order", "filter": "net_sales > 0"},
                          timeout=180, timezone=DEFAULT_TZ)
     if rows:
         cache['new_returning_yesterday'] = {"data": rows, "date": DATE_STR}
@@ -247,7 +250,7 @@ def ensure_new_returning_30d():
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "order_is_returning_customer,net_sales,sm_order_count",
                          T30_START, T30_END,
-                         extra_params={"report_type": "Order"},
+                         extra_params={"report_type": "Order", "filter": "net_sales > 0"},
                          timeout=180, timezone=DEFAULT_TZ)
     if rows:
         cache['new_returning_30d'] = {"data": rows, "date": DATE_STR}
@@ -262,6 +265,34 @@ def ensure_customer_ltv():
                          timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
         cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
+
+def ensure_cohort_data():
+    """Pull customer creation dates + 6 months of monthly order activity for cohort retention."""
+    # Cover 6 full calendar months back from current month start
+    first_of_this_month = YESTERDAY.replace(day=1)
+    cohort_start_dt = first_of_this_month
+    for _ in range(5):  # back 5 more months to get 6 total
+        cohort_start_dt = (cohort_start_dt - timedelta(days=1)).replace(day=1)
+    cohort_start = cohort_start_dt.strftime("%Y-%m-%d")
+
+    # Q1: ALL customers (filter to cohort window client-side; Customer report ignores date_range)
+    customers = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                              "customer_id,customer_created_at_date",
+                              cohort_start, DATE_STR,
+                              extra_params={"report_type": "Customer"},
+                              timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+
+    # Q2: per-customer per-month order activity, paid orders only
+    orders = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                           "customer_id,yearMonth,sm_order_count",
+                           cohort_start, DATE_STR,
+                           extra_params={"report_type": "Order", "filter": "net_sales > 0"},
+                           timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+
+    if customers and orders:
+        cache['cohort_data'] = {"customers": customers, "orders": orders, "window_start": cohort_start, "date": DATE_STR}
+    elif 'cohort_data' in cache:
+        cache_warnings.append(f"cohort_data (from {cache['cohort_data'].get('date','?')})")
 
 def ensure_campaigns():
     em = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
@@ -291,6 +322,7 @@ with ThreadPoolExecutor(max_workers=14) as ex:
     futs.append(ex.submit(ensure_new_returning_split))
     futs.append(ex.submit(ensure_new_returning_30d))
     futs.append(ex.submit(ensure_customer_ltv))
+    futs.append(ex.submit(ensure_cohort_data))
     futs.append(ex.submit(ensure_campaigns))
     for f in futs:
         f.result()
@@ -484,9 +516,11 @@ for row in ltv_data:
     if not cid: continue
     orders = to_float(row.get('sm_order_count'))
     if orders < 1: continue  # exclude refund-only / canceled-only customer rows
+    rev = to_float(row.get('net_sales'))
+    if rev <= 0: continue    # exclude 100%-discount comp orders (ShopMy Lookbook) and net-refunded customers
     if cid not in ltv_customers:
         ltv_customers[cid] = {'rev': 0, 'orders': 0}
-    ltv_customers[cid]['rev'] += to_float(row.get('net_sales'))
+    ltv_customers[cid]['rev'] += rev
     ltv_customers[cid]['orders'] += orders
 unique_customers_90 = len(ltv_customers)
 total_rev_90 = sum(c['rev'] for c in ltv_customers.values())
@@ -494,6 +528,88 @@ ltv_90 = safe_div(total_rev_90, unique_customers_90)
 repeat_customers = sum(1 for c in ltv_customers.values() if c['orders'] >= 2)
 rpr_90 = safe_div(repeat_customers, unique_customers_90)
 ltv_cac_ratio = safe_div(ltv_90, ncac_30) if (ltv_90 and ncac_30) else None
+
+# ── Cohort Retention (6-month window, true first purchase = customer_created_at_date) ──
+from collections import defaultdict
+import calendar
+
+cohort_raw = cache.get('cohort_data', {})
+cohort_customers_raw = cohort_raw.get('customers', [])
+cohort_orders_raw = cohort_raw.get('orders', [])
+cohort_window_start = cohort_raw.get('window_start', '')  # e.g. "2025-12-01"
+
+cohort_matrix = []
+cohort_weighted_avg = []
+COHORT_MONTHS_DISPLAYED = 6  # show 6 cohort rows
+COHORT_M_OFFSETS = 6         # M0..M5
+
+if cohort_customers_raw and cohort_orders_raw and cohort_window_start:
+    window_start_ym = cohort_window_start[:7]  # "2025-12"
+
+    # Build customer_id -> cohort_month from customer_created_at_date
+    # Customer report returns ALL customers, so we filter to those created within the window
+    customer_cohort = {}
+    for row in cohort_customers_raw:
+        cid = row.get('customer_id')
+        created = row.get('customer_created_at_date', '') or ''
+        if not cid or not created or len(created) < 7: continue
+        cohort_ym = created[:7]  # "2026-01"
+        if cohort_ym >= window_start_ym:
+            customer_cohort[cid] = cohort_ym
+
+    # Build (cohort_month, calendar_month) -> set of active customer_ids
+    cohort_activity = defaultdict(lambda: defaultdict(set))
+    for row in cohort_orders_raw:
+        cid = row.get('customer_id')
+        ym_raw = row.get('yearMonth', '') or ''  # format "2025|12" or "2025-12"
+        if not cid or not ym_raw: continue
+        ym = ym_raw.replace('|', '-')
+        cohort_ym = customer_cohort.get(cid)
+        if not cohort_ym or ym < cohort_ym: continue
+        cohort_activity[cohort_ym][ym].add(cid)
+
+    # Cohort sizes (denominators)
+    cohort_sizes = defaultdict(int)
+    for cmonth in customer_cohort.values():
+        cohort_sizes[cmonth] += 1
+
+    # Sort cohort months chronologically, keep last N
+    sorted_cohorts = sorted(cohort_sizes.keys())[-COHORT_MONTHS_DISPLAYED:]
+    current_ym = YESTERDAY.strftime("%Y-%m")
+
+    def add_months(ym_str, n):
+        y, m = map(int, ym_str.split('-'))
+        m += n
+        y += (m - 1) // 12
+        m = ((m - 1) % 12) + 1
+        return f"{y:04d}-{m:02d}"
+
+    # Build the matrix: each row = (cohort_ym, size, [m0, m1, ..., m5])
+    for cmonth in sorted_cohorts:
+        size = cohort_sizes[cmonth]
+        row_vals = []
+        for offset in range(COHORT_M_OFFSETS):
+            target_ym = add_months(cmonth, offset)
+            if target_ym > current_ym:
+                row_vals.append(None)
+            elif offset == 0:
+                row_vals.append(1.0)  # M0 is always 100%
+            else:
+                active = len(cohort_activity[cmonth].get(target_ym, set()))
+                row_vals.append(active / size if size > 0 else 0)
+        cohort_matrix.append((cmonth, size, row_vals))
+
+    # Weighted average per column (size-weighted across mature cohorts)
+    for offset in range(COHORT_M_OFFSETS):
+        weighted_num = 0
+        weighted_den = 0
+        for cmonth, size, row_vals in cohort_matrix:
+            pct = row_vals[offset]
+            if pct is None: continue
+            weighted_num += size * pct
+            weighted_den += size
+        cohort_weighted_avg.append(weighted_num / weighted_den if weighted_den > 0 else None)
+
 
 # ── Top States ──
 states_data = cache.get('top_states', {}).get('data', [])
@@ -588,6 +704,71 @@ def section_title(icon_key, title, badge=''):
         icon = ''
     badge_html = f'<span class="badge">{badge}</span>' if badge else ''
     return f'<div class="section-title">{icon}<h2>{title}</h2>{badge_html}</div>'
+
+def render_cohort_table():
+    """Render cohort retention heatmap. Returns empty string if no data."""
+    if not cohort_matrix:
+        return ""
+
+    benchmarks = ['100%', '25-35%', '15-22%', '10-15%', '7-12%', '5-10%']
+    current_ym = YESTERDAY.strftime("%Y-%m")
+
+    def fmt_cohort_label(ym):
+        y, m = ym.split('-')
+        return f"{calendar.month_abbr[int(m)]} {y}"
+
+    def cell_html(pct, is_m0=False):
+        if pct is None:
+            return '<td class="ck null">—</td>'
+        if is_m0 or pct >= 1.0:
+            return f'<td class="ck full">{int(round(pct*100))}%</td>'
+        # Scale intensity 0-100% → alpha 0.18-0.7
+        alpha = min(0.70, max(0.18, pct * 2.2))
+        return f'<td class="ck" style="background:rgba(44,78,162,{alpha:.2f})">{int(round(pct*100))}%</td>'
+
+    body_rows = ""
+    for cmonth, size, row_vals in cohort_matrix:
+        is_partial = (cmonth == current_ym)
+        label = fmt_cohort_label(cmonth) + ("*" if is_partial else "")
+        cells = "".join(cell_html(v, is_m0=(i==0)) for i, v in enumerate(row_vals))
+        body_rows += f'<tr><td class="ch-label">{label}</td><td class="ch-size">{size:,}</td>{cells}</tr>'
+
+    avg_cells = "".join(cell_html(v, is_m0=(i==0)) for i, v in enumerate(cohort_weighted_avg))
+    bench_cells = "".join(f'<td class="ck bench">{b}</td>' for b in benchmarks)
+
+    has_partial = any(c[0] == current_ym for c in cohort_matrix)
+    footnote = ("*Partial month — incomplete data. " if has_partial else "") + \
+               "Benchmarks based on Shopify/Klaviyo/Lifetimely wellness DTC reports (2024-25). " + \
+               "Range = average-to-strong performance."
+
+    return f'''
+<div class="section">
+  {section_title('grid', 'Cohort Retention', '6 months · true first purchase')}
+  <div class="cohort-wrap">
+    <table class="cohort-tbl">
+      <thead>
+        <tr>
+          <th class="ch-label">Cohort</th>
+          <th class="ch-size">Size</th>
+          <th>M0</th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th>
+        </tr>
+      </thead>
+      <tbody>
+        {body_rows}
+        <tr class="ch-avg-row">
+          <td class="ch-label" colspan="2">Your weighted avg</td>
+          {avg_cells}
+        </tr>
+        <tr class="ch-bench-row">
+          <td class="ch-label" colspan="2">Wellness DTC benchmark</td>
+          {bench_cells}
+        </tr>
+      </tbody>
+    </table>
+    <div class="cohort-foot">{footnote}</div>
+  </div>
+</div>'''
+
 
 def rolling_avg(values, window=7):
     out = []
@@ -791,6 +972,21 @@ html = f"""<!DOCTYPE html>
   .section-title h2 {{ font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid {BRAND_COLOR}; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }}
   .channel-icon {{ width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: 0.85; }}
   .tgp-icon {{ height: 22px; width: auto; opacity: 0.95; }}
+  .cohort-wrap {{ background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; }}
+  .cohort-tbl {{ width: 100%; border-collapse: separate; border-spacing: 3px; font-size: 11px; }}
+  .cohort-tbl th {{ color: #9ca3af; font-weight: 500; padding: 4px 6px; text-transform: uppercase; letter-spacing: 0.6px; font-size: 9px; }}
+  .cohort-tbl th.ch-label {{ text-align: left; }}
+  .cohort-tbl th.ch-size {{ text-align: right; }}
+  .cohort-tbl td.ch-label {{ color: #d1d5db; padding: 3px 6px; }}
+  .cohort-tbl td.ch-size {{ color: #9ca3af; padding: 3px 6px; text-align: right; }}
+  .cohort-tbl td.ck {{ color: white; text-align: center; padding: 6px; border-radius: 4px; font-weight: 500; }}
+  .cohort-tbl td.ck.full {{ background: {BRAND_COLOR}; }}
+  .cohort-tbl td.ck.null {{ background: rgba(255,255,255,0.03); color: #4b5563; font-weight: 400; }}
+  .cohort-tbl tr.ch-avg-row td {{ font-style: italic; font-size: 10px; color: #6b7280; }}
+  .cohort-tbl tr.ch-avg-row td.ck {{ font-style: normal; font-size: 10px; color: white; }}
+  .cohort-tbl tr.ch-bench-row td {{ color: #facc15; font-size: 10px; font-weight: 500; }}
+  .cohort-tbl td.ck.bench {{ background: rgba(255,255,255,0.04); border: 1px dashed rgba(250,204,21,0.4); color: #facc15; padding: 5px; font-size: 10px; }}
+  .cohort-foot {{ margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 10px; color: #6b7280; line-height: 1.5; }}
   .badge {{ font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }}
   .cards {{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }}
   .cards-4 {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }}
@@ -885,7 +1081,7 @@ html = f"""<!DOCTYPE html>
 <div class="panel" id="panel-1">
   <div class="summary-block">
     <div class="section">
-      {section_title('tgp', 'Performance Health', f'30-day blended · {T30_LABEL}')}
+      {section_title('activity', 'Performance Health', f'30-day blended · {T30_LABEL}')}
       <div class="cards-4">
         {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
         {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
@@ -894,7 +1090,7 @@ html = f"""<!DOCTYPE html>
       </div>
     </div>
     <div class="section">
-      {section_title('tgp', 'Customer Health', '90-day rolling')}
+      {section_title('users', 'Customer Health', '90-day rolling')}
       <div class="cards-4">
         {card(fmt_money(ltv_90) if ltv_90 else '—', 'LTV (90-day)', f'<div class="sub">{unique_customers_90:,} unique customers</div>')}
         {card(fmt_roas(ltv_cac_ratio) if ltv_cac_ratio else '—', 'LTV : CAC', f'<div class="sub">vs 30d nCAC of {fmt_money(ncac_30)}</div>' + bm_ltv_cac(ltv_cac_ratio))}
@@ -902,6 +1098,7 @@ html = f"""<!DOCTYPE html>
         {card(fmt_money(ncac_30) if ncac_30 else '—', 'nCAC (30-day avg)', f'<div class="sub">{int(new_orders_30):,} new / {fmt_money(dtc_spend_30, big=True)} DTC spend</div>')}
       </div>
     </div>
+    {render_cohort_table()}
   </div>
   <div class="section-divider">
     <div class="line"></div>
