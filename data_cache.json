@@ -2558,7 +2558,7 @@
       },
       "2026-05-18": {
         "cost": 1773.32,
-        "attributedSales14d": 3298.29,
+        "attributedSales14d": 3322.27,
         "clicks": 858,
         "impressions": 103186
       },
@@ -2572,7 +2572,7 @@
         "cost": 2283.94,
         "attributedSales14d": 2865.96,
         "clicks": 945,
-        "impressions": 156552,
+        "impressions": 156252,
         "roas": 1.2548315630007794,
         "acos": 0.7969197057879385
       }
@@ -3789,8 +3789,8 @@
         "klaviyo_total_recipients": 1085,
         "klaviyo_open_rate": 0.307692,
         "klaviyo_click_rate": 0.004634,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 18.13
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Sunset Flow Email #2",
@@ -3839,8 +3839,8 @@
         "klaviyo_total_recipients": 645,
         "klaviyo_open_rate": 0.486529,
         "klaviyo_click_rate": 0.053883,
-        "shopify_placed_order": 11,
-        "shopify_placed_order_value": 425.23
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #1",
@@ -3849,8 +3849,8 @@
         "klaviyo_total_recipients": 633,
         "klaviyo_open_rate": 0.54213,
         "klaviyo_click_rate": 0.025437,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 279.09
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #4",
@@ -3859,8 +3859,8 @@
         "klaviyo_total_recipients": 625,
         "klaviyo_open_rate": 0.433172,
         "klaviyo_click_rate": 0.012882,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 255.33
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Post Purchase Email #2",
@@ -3879,8 +3879,8 @@
         "klaviyo_total_recipients": 608,
         "klaviyo_open_rate": 0.522241,
         "klaviyo_click_rate": 0.029654,
-        "shopify_placed_order": 5,
-        "shopify_placed_order_value": 369.28
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #2",
@@ -3919,8 +3919,8 @@
         "klaviyo_total_recipients": 522,
         "klaviyo_open_rate": 0.313462,
         "klaviyo_click_rate": 0.005769,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 120.66
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
@@ -3929,8 +3929,8 @@
         "klaviyo_total_recipients": 504,
         "klaviyo_open_rate": 0.290837,
         "klaviyo_click_rate": 0.005976,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 159
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3B - FOMO - occasions focus",
@@ -3939,8 +3939,8 @@
         "klaviyo_total_recipients": 499,
         "klaviyo_open_rate": 0.299197,
         "klaviyo_click_rate": 0.006024,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 73.06
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | 60D Non Buyer Email #1",
@@ -3959,8 +3959,8 @@
         "klaviyo_total_recipients": 199,
         "klaviyo_open_rate": 0.609137,
         "klaviyo_click_rate": 0.035533,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 51.2
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #1",
@@ -3969,8 +3969,8 @@
         "klaviyo_total_recipients": 191,
         "klaviyo_open_rate": 0.610811,
         "klaviyo_click_rate": 0.032432,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 76.21
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #1 [meta ads]",
@@ -5065,11 +5065,6 @@
     ],
     "attr": [
       {
-        "campaign_name": "Welcome Email #1",
-        "shopify_placed_order": 11,
-        "shopify_placed_order_value": 425.23
-      },
-      {
         "campaign_name": "05/08: Energy | 15% off",
         "shopify_placed_order": 9,
         "shopify_placed_order_value": 519.72
@@ -5083,21 +5078,6 @@
         "campaign_name": "05/10: Mother's Day | 15% Off",
         "shopify_placed_order": 6,
         "shopify_placed_order_value": 599.46
-      },
-      {
-        "campaign_name": "PM | Abandoned Cart Email #2",
-        "shopify_placed_order": 5,
-        "shopify_placed_order_value": 369.28
-      },
-      {
-        "campaign_name": "PM | Abandoned Cart Email #1",
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 279.09
-      },
-      {
-        "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 159
       },
       {
         "campaign_name": "05/03: Mother's Day Gift Guide",
@@ -5118,36 +5098,6 @@
         "campaign_name": "05/19: Sale Teaser",
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 79.88
-      },
-      {
-        "campaign_name": "Welcome Email #4",
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 255.33
-      },
-      {
-        "campaign_name": "PM | Abandoned Checkout Email #1",
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 76.21
-      },
-      {
-        "campaign_name": "PM | Abandoned Checkout Email #2",
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 51.2
-      },
-      {
-        "campaign_name": "T1 - Restart your wellness routine",
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 18.13
-      },
-      {
-        "campaign_name": "T2A - 20% off your restock",
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 120.66
-      },
-      {
-        "campaign_name": "T3B - FOMO - occasions focus",
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 73.06
       }
     ],
     "date": "2026-05-20"
