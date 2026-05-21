@@ -354,10 +354,8 @@ for d in amazon_sess_labels:
     if 0 < cvr < 1: cvr *= 100
     amazon_cvr_values.append(cvr)
 
-# Shopify chart: filter $0 days, drop most recent (still settling)
+# Shopify chart: include all days with sales
 shopify_chart_raw = [(d, v) for d, v in daily_series('shopify', 'net_sales') if v > 0]
-if len(shopify_chart_raw) > 1:
-    shopify_chart_raw = shopify_chart_raw[:-1]
 shopify_chart_labels = [d for d, _ in shopify_chart_raw]
 shopify_chart_values = [v for _, v in shopify_chart_raw]
 
@@ -406,6 +404,18 @@ def fmt_roas(v):
     try: return f"{float(v):,.2f}×"
     except: return "—"
 
+def shorten_product_title(title):
+    """Take text before first comma, append any trailing parenthetical (e.g. '(8 Total Patches)')."""
+    if not title:
+        return 'Unknown'
+    before_comma = title.split(',')[0].strip()
+    stripped = title.rstrip()
+    if stripped.endswith(')'):
+        paren_start = stripped.rfind('(')
+        if paren_start != -1:
+            return f"{before_comma} {stripped[paren_start:]}"
+    return before_comma
+
 def yoy_badge(cur, prior, fmt=fmt_money, py_year=None):
     if cur in (None, '', 0) or prior in (None, '', 0): return ""
     if py_year is None: py_year = PY_DISPLAY
@@ -441,7 +451,7 @@ def product_rows():
         rev = to_float(p.get('ordered_product_sales'))
         units = to_float(p.get('units_ordered'))
         share = (rev / top_total) * 100
-        title = (p.get('title') or 'Unknown')[:60]
+        title = shorten_product_title(p.get('title'))
         out += f"""
         <tr>
           <td class="prod-name">{title}</td>
@@ -737,10 +747,9 @@ has_aa_data = bool(cache['daily'].get('amazon_ads', {}).get(DATE_STR))
 already_posted = cache.get('last_posted_date') == DATE_STR
 is_final_attempt = os.environ.get('IS_FINAL_ATTEMPT') == 'true'
 
-is_manual = os.environ.get('GITHUB_EVENT_NAME') == 'workflow_dispatch'
 should_post = False
-if is_manual or not already_posted:
-    if has_aa_data or is_final_attempt or is_manual:
+if not already_posted:
+    if has_aa_data or is_final_attempt:
         should_post = True
         cache['last_posted_date'] = DATE_STR
         save_cache(cache)
