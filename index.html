@@ -14,9 +14,15 @@
   .tab { padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; font-weight: 500; }
   .tab.active { background: linear-gradient(135deg, #2c4ea2, #1e3a7a); color: white; }
   .section { margin-bottom: 30px; }
+  .summary-block { background: rgba(44, 78, 162, 0.06); border: 1px solid rgba(44, 78, 162, 0.18); border-radius: 12px; padding: 20px 20px 4px; margin-bottom: 28px; }
+  .summary-block .section { margin-bottom: 18px; }
+  .section-divider { display: flex; align-items: center; gap: 14px; margin: 8px 0 24px; }
+  .section-divider .line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent); }
+  .section-divider .label { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #6b7280; }
   .section-title { display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }
   .section-title h2 { font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid #2c4ea2; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }
   .channel-icon { width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: 0.85; }
+  .tgp-icon { height: 22px; width: auto; opacity: 0.95; }
   .badge { font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }
   .cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
   .cards-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
@@ -56,9 +62,9 @@
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg" alt="" /><h2>Seller Central · Amazon.com (US)</h2><span class="badge">May 20, 2026</span></div>
     <div class="cards-3">
-      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$8,168.54</div><div class="sub">vs $5,328.40 (2025) <span style="color:#22c55e;font-weight:500">+53.3% YoY</span></div></div>
-      <div class="card"><div class="label">Units Ordered</div><div class="value">300</div><div class="sub">vs 159 (2025) <span style="color:#22c55e;font-weight:500">+88.7% YoY</span></div></div>
-      <div class="card"><div class="label">AOV</div><div class="value">$27.23</div><div class="sub">vs $33.51 (2025) <span style="color:#ef4444;font-weight:500">-18.7% YoY</span></div></div>
+      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$8,148.56</div><div class="sub">vs $5,328.40 (2025) <span style="color:#22c55e;font-weight:500">+52.9% YoY</span></div></div>
+      <div class="card"><div class="label">Units Ordered</div><div class="value">299</div><div class="sub">vs 159 (2025) <span style="color:#22c55e;font-weight:500">+88.1% YoY</span></div></div>
+      <div class="card"><div class="label">AOV</div><div class="value">$27.25</div><div class="sub">vs $33.51 (2025) <span style="color:#ef4444;font-weight:500">-18.7% YoY</span></div></div>
     </div>
   </div>
   <div class="section">
@@ -75,11 +81,11 @@
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg" alt="" /><h2>Seller Central — 30-Day Overview</h2><span class="badge">Apr 21 – May 20, 2026</span></div>
     <div class="cards">
-      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$213.2K</div><div class="sub">30-day total</div></div>
+      <div class="card"><div class="label">Ordered Revenue</div><div class="value">$213.1K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Units Ordered</div><div class="value">8.0K</div><div class="sub">~268 / day avg</div></div>
       <div class="card"><div class="label">Sessions</div><div class="value">49.4K</div><div class="sub">~1,645 / day avg</div></div>
-      <div class="card"><div class="label">Conversion Rate</div><div class="value">16.30%</div><div class="sub">units ÷ sessions</div></div>
-      <div class="card"><div class="label">Daily Avg Revenue</div><div class="value">$7,105.62</div><div class="sub">revenue ÷ 30</div></div>
+      <div class="card"><div class="label">Conversion Rate</div><div class="value">16.29%</div><div class="sub">units ÷ sessions</div></div>
+      <div class="card"><div class="label">Daily Avg Revenue</div><div class="value">$7,104.95</div><div class="sub">revenue ÷ 30</div></div>
     </div>
     <div class="chart-card">
       <div class="chart-title">Daily ordered revenue (USD)</div>
@@ -139,23 +145,30 @@
 </div>
 
 <div class="panel" id="panel-1">
-  <div class="section">
-    <div class="section-title"><h2>Performance Health</h2><span class="badge">30-day blended · Apr 21 – May 20, 2026</span></div>
-    <div class="cards-4">
-      <div class="card"><div class="label">MER (Blended, 30d)</div><div class="value">3.55×</div><div class="sub">$261.6K rev / $73.8K spend</div><div class="sub" style="color:#22c55e">Target 3×+ · on track</div></div>
-      <div class="card"><div class="label">nCAC (yesterday)</div><div class="value">$133.35</div><div class="sub">spend ÷ 22 new orders</div><div class="sub" style="color:#ef4444">224% of AOV · loss on first (needs LTV)</div></div>
-      <div class="card"><div class="label">Email % of revenue</div><div class="value">86.12%</div><div class="sub">Klaviyo attributed ÷ Shopify</div><div class="sub" style="color:#22c55e">Target 25-30% · strong</div></div>
-      <div class="card"><div class="label">New customer rev %</div><div class="value">13.79%</div><div class="sub">$379.35 new / $2,751.45 total</div><div class="sub" style="color:#9ca3af">Retention-dominated</div></div>
+  <div class="summary-block">
+    <div class="section">
+      <div class="section-title"><img class="tgp-icon" src="TGP-Logo-White.png" alt="" /><h2>Performance Health</h2><span class="badge">30-day blended · Apr 21 – May 20, 2026</span></div>
+      <div class="cards-4">
+        <div class="card"><div class="label">MER (Blended, 30d)</div><div class="value">3.55×</div><div class="sub">$261.6K rev / $73.8K spend</div><div class="sub" style="color:#22c55e">Target 3×+ · on track</div></div>
+        <div class="card"><div class="label">nCAC (yesterday)</div><div class="value">$29.57</div><div class="sub">spend ÷ 22 new orders</div><div class="sub" style="color:#22c55e">50% of AOV · profitable on first</div></div>
+        <div class="card"><div class="label">Email % of revenue</div><div class="value">86.12%</div><div class="sub">Klaviyo attributed ÷ Shopify</div><div class="sub" style="color:#22c55e">Target 25-30% · strong</div></div>
+        <div class="card"><div class="label">New customer rev %</div><div class="value">13.79%</div><div class="sub">$379.35 new / $2,751.45 total</div><div class="sub" style="color:#9ca3af">Retention-dominated</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title"><img class="tgp-icon" src="TGP-Logo-White.png" alt="" /><h2>Customer Health</h2><span class="badge">90-day rolling</span></div>
+      <div class="cards-4">
+        <div class="card"><div class="label">LTV (90-day)</div><div class="value">$48.23</div><div class="sub">3,949 unique customers</div></div>
+        <div class="card"><div class="label">LTV : CAC</div><div class="value">1.47×</div><div class="sub">vs 30d nCAC of $32.72</div><div class="sub" style="color:#ef4444">Target 3×+ · below</div></div>
+        <div class="card"><div class="label">Repeat purchase rate</div><div class="value">15.17%</div><div class="sub">599 of 3,949 customers</div><div class="sub" style="color:#facc15">Target 25-30% · building</div></div>
+        <div class="card"><div class="label">nCAC (30-day avg)</div><div class="value">$32.72</div><div class="sub">775 new / $25.4K DTC spend</div></div>
+      </div>
     </div>
   </div>
-  <div class="section">
-    <div class="section-title"><h2>Customer Health</h2><span class="badge">90-day rolling</span></div>
-    <div class="cards-4">
-      <div class="card"><div class="label">LTV (90-day)</div><div class="value">$136.92</div><div class="sub">1,000 unique customers</div></div>
-      <div class="card"><div class="label">LTV : CAC</div><div class="value">1.44×</div><div class="sub">vs 30d nCAC of $95.18</div><div class="sub" style="color:#ef4444">Target 3×+ · below</div></div>
-      <div class="card"><div class="label">Repeat purchase rate</div><div class="value">45.60%</div><div class="sub">456 of 1,000 customers</div><div class="sub" style="color:#22c55e">Target 25-30% · strong</div></div>
-      <div class="card"><div class="label">nCAC (30-day avg)</div><div class="value">$95.18</div><div class="sub">775 new orders / $73.8K spend</div></div>
-    </div>
+  <div class="section-divider">
+    <div class="line"></div>
+    <div class="label">Channel Detail</div>
+    <div class="line"></div>
   </div>
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/shopify.svg" alt="" /><h2>Shopify</h2><span class="badge">May 20, 2026</span></div>
@@ -169,7 +182,7 @@
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg" alt="" /><h2>Meta Ads</h2><span class="badge">May 20, 2026</span></div>
     <div class="cards">
-      <div class="card"><div class="label">Spend</div><div class="value">$448.84</div></div>
+      <div class="card"><div class="label">Spend</div><div class="value">$448.90</div></div>
       <div class="card"><div class="label">Purchase Value</div><div class="value">$304.60</div></div>
       <div class="card"><div class="label">ROAS</div><div class="value">0.68×</div></div>
       <div class="card"><div class="label">CPC</div><div class="value">$3.40</div></div>
@@ -179,11 +192,11 @@
   <div class="section">
     <div class="section-title"><img class="channel-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleads.svg" alt="" /><h2>Google Ads</h2><span class="badge">May 20, 2026</span></div>
     <div class="cards">
-      <div class="card"><div class="label">Spend</div><div class="value">$201.01</div></div>
+      <div class="card"><div class="label">Spend</div><div class="value">$201.71</div></div>
       <div class="card"><div class="label">Conversion Value</div><div class="value">$103.72</div></div>
-      <div class="card"><div class="label">ROAS</div><div class="value">0.52×</div></div>
+      <div class="card"><div class="label">ROAS</div><div class="value">0.51×</div></div>
       <div class="card"><div class="label">CPC</div><div class="value">$1.31</div></div>
-      <div class="card"><div class="label">CTR</div><div class="value">1.10%</div></div>
+      <div class="card"><div class="label">CTR</div><div class="value">1.11%</div></div>
     </div>
   </div>
   <div class="section">
@@ -368,7 +381,7 @@
       <div class="card"><div class="label">Spend</div><div class="value">$11.7K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">Conversion Value</div><div class="value">$21.6K</div><div class="sub">30-day total</div></div>
       <div class="card"><div class="label">ROAS</div><div class="value">1.84×</div><div class="sub">value ÷ cost</div></div>
-      <div class="card"><div class="label">Daily Avg Spend</div><div class="value">$390.49</div><div class="sub">spend ÷ 30</div></div>
+      <div class="card"><div class="label">Daily Avg Spend</div><div class="value">$390.52</div><div class="sub">spend ÷ 30</div></div>
     </div>
   </div>
 </div>
@@ -381,8 +394,8 @@ window.addEventListener('load', () => {
   new Chart(document.getElementById('amazonRevChart'), {
       type: 'bar',
       data: { labels: ["2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20"], datasets: [
-        { label: 'Daily revenue', data: [7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7676.39, 8743.92, 8576.71, 7590.05, 8168.54], backgroundColor: 'rgba(44, 78, 162, 0.7)', borderRadius: 2 },
-        { label: '7-day avg', type: 'line', data: [7540.34, 7767.69, 7509.77, 7305.29, 6974.97, 6926.15, 6898.28, 6732.67, 6560.95, 6455.2, 6422.97, 6545.18, 6624.27, 6680.97, 6755.26, 6755.06, 6839.98, 6906.71, 6944.96, 6972.78, 6957.87, 7096.43, 7194.64, 7201.02, 7126.29, 7254.79, 7442.44, 7664.31, 7624.18, 7722.66], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
+        { label: 'Daily revenue', data: [7540.34, 7995.05, 6993.91, 6691.87, 5653.69, 6682.02, 6731.08, 6381.05, 6793.05, 6253.62, 6466.25, 6509.16, 7235.68, 7127.99, 6901.04, 6791.67, 6848.04, 6933.4, 6776.88, 7430.42, 7023.62, 7870.96, 7479.13, 6892.73, 6410.3, 7676.39, 8743.92, 8576.71, 7590.05, 8148.56], backgroundColor: 'rgba(44, 78, 162, 0.7)', borderRadius: 2 },
+        { label: '7-day avg', type: 'line', data: [7540.34, 7767.69, 7509.77, 7305.29, 6974.97, 6926.15, 6898.28, 6732.67, 6560.95, 6455.2, 6422.97, 6545.18, 6624.27, 6680.97, 6755.26, 6755.06, 6839.98, 6906.71, 6944.96, 6972.78, 6957.87, 7096.43, 7194.64, 7201.02, 7126.29, 7254.79, 7442.44, 7664.31, 7624.18, 7719.81], borderColor: '#22c55e', borderDash: [4,4], pointRadius: 0, tension: 0.3, fill: false, borderWidth: 2 }
       ]},
       options: { responsive: true, plugins: { legend: { labels: { color: '#9ca3af', boxWidth: 12 } } },
         scales: { x: { ticks: { color: '#6b7280', maxTicksLimit: 8 }, grid: { display: false } },
