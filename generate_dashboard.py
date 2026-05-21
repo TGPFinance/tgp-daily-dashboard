@@ -44,6 +44,7 @@ ACCOUNTS = {
     "google_ads":    "9578659454",
     "klaviyo":       "the good patch",
     "shopify":       "gid://shopify/Shop/5489557622",
+    "ga4":           "315555733",
 }
 
 SOURCES = {
@@ -87,6 +88,12 @@ SOURCES = {
         'ds_id': 'KLAV', 'account_key': 'klaviyo',
         'fields': 'shopify_placed_order,shopify_placed_order_value',
         'extra_params': {'report_type': 'MetricExportAttributedCampaignDaily'},
+        'timeout': 180, 'timezone': DEFAULT_TZ,
+    },
+    'ga4': {
+        'ds_id': 'GAWA', 'account_key': 'ga4',
+        'fields': 'sessions,addToCarts,checkouts,ecommercePurchases,purchaseRevenue',
+        'extra_params': None,
         'timeout': 180, 'timezone': DEFAULT_TZ,
     },
 }
@@ -203,6 +210,45 @@ def ensure_top_products():
     elif 'top_products' in cache:
         cache_warnings.append(f"top_products (from {cache['top_products'].get('date','?')})")
 
+def ensure_top_shopify_variants():
+    rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                         "title,variant_title,net_sales,net_quantity",
+                         T30_START, T30_END,
+                         extra_params={"report_type": "ProductSales"},
+                         timeout=300, timezone=DEFAULT_TZ)
+    if rows:
+        cache['top_shopify_variants'] = {"data": rows, "date": DATE_STR}
+    elif 'top_shopify_variants' in cache:
+        cache_warnings.append(f"top_shopify_variants (from {cache['top_shopify_variants'].get('date','?')})")
+
+def ensure_top_states():
+    rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                         "order_shipping_province,net_sales,sm_order_count",
+                         T30_START, T30_END,
+                         extra_params={"report_type": "Order"},
+                         timeout=180, timezone=DEFAULT_TZ)
+    if rows:
+        cache['top_states'] = {"data": rows, "date": DATE_STR}
+    elif 'top_states' in cache:
+        cache_warnings.append(f"top_states (from {cache['top_states'].get('date','?')})")
+
+def ensure_new_returning_split():
+    rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                         "order_is_returning_customer,net_sales,sm_order_count",
+                         DATE_STR, DATE_STR,
+                         extra_params={"report_type": "Order"},
+                         timeout=180, timezone=DEFAULT_TZ)
+    if rows:
+        cache['new_returning_yesterday'] = {"data": rows, "date": DATE_STR}
+
+def ensure_device_split():
+    rows = sm_fetch_rows("GAWA", ACCOUNTS["ga4"],
+                         "deviceCategory,sessions",
+                         DATE_STR, DATE_STR,
+                         timeout=180, timezone=DEFAULT_TZ)
+    if rows:
+        cache['device_split_yesterday'] = {"data": rows, "date": DATE_STR}
+
 def ensure_campaigns():
     em = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
         "campaign_name,campaign_subject,campaign_send_date,klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
@@ -226,6 +272,10 @@ with ThreadPoolExecutor(max_workers=14) as ex:
     for src in ['amazon_seller', 'shopify']:
         futs.append(ex.submit(ensure_py, src))
     futs.append(ex.submit(ensure_top_products))
+    futs.append(ex.submit(ensure_top_shopify_variants))
+    futs.append(ex.submit(ensure_top_states))
+    futs.append(ex.submit(ensure_new_returning_split))
+    futs.append(ex.submit(ensure_device_split))
     futs.append(ex.submit(ensure_campaigns))
     for f in futs:
         f.result()
@@ -362,6 +412,50 @@ shopify_chart_values = [v for _, v in shopify_chart_raw]
 amazon_products = sorted(cache.get('top_products', {}).get('data', []),
                          key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
 
+shopify_variants = sorted(cache.get('top_shopify_variants', {}).get('data', []),
+                         key=lambda r: to_float(r.get('net_sales')), reverse=True)[:5]
+
+# ── Performance Health: New vs Returning customer split for yesterday ──
+nr_data = cache.get('new_returning_yesterday', {}).get('data', [])
+new_rev = 0; new_orders = 0; returning_rev = 0; returning_orders = 0
+for row in nr_data:
+    flag = str(row.get('order_is_returning_customer', '')).strip().lower()
+    is_returning = flag in ('true', '1', 'yes', 't')
+    rev = to_float(row.get('net_sales', 0))
+    orders = to_float(row.get('sm_order_count', 0))
+    if is_returning:
+        returning_rev += rev; returning_orders += orders
+    else:
+        new_rev += rev; new_orders += orders
+
+total_ad_spend = to_float(meta.get('spend')) + to_float(google_ads.get('cost')) + to_float(amazon_ads.get('cost'))
+shopify_net = to_float(shopify.get('net_sales'))
+
+mer_val      = safe_div(shopify_net, total_ad_spend)
+ncac_val     = safe_div(total_ad_spend, new_orders)
+email_pct    = safe_div(klaviyo_attr.get('shopify_placed_order_value'), shopify_net)
+new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
+
+# ── Top States ──
+states_data = cache.get('top_states', {}).get('data', [])
+top_states = [s for s in states_data if (s.get('order_shipping_province') or '').strip()]
+top_states = sorted(top_states, key=lambda r: to_float(r.get('net_sales')), reverse=True)[:10]
+
+# ── Device Split ──
+device_data = cache.get('device_split_yesterday', {}).get('data', [])
+device_total = sum(to_float(d.get('sessions', 0)) for d in device_data) or 1
+device_rows_sorted = sorted(device_data, key=lambda r: to_float(r.get('sessions')), reverse=True)
+
+# ── Site CVR (GA4 sessions / Shopify orders) ──
+ga4_yesterday = day('ga4')
+ga4_sessions  = to_float(ga4_yesterday.get('sessions'))
+shopify_orders_yest = to_float(shopify.get('sm_order_count'))
+site_cvr_val  = safe_div(shopify_orders_yest, ga4_sessions)
+
+# 30-day Site CVR
+ga4_sessions_30 = sum_field('ga4', 'sessions')
+site_cvr_30     = safe_div(shop_ord_30, ga4_sessions_30)
+
 camp_data = cache.get('campaigns', {})
 camp_email = camp_data.get('email', [])
 camp_attr = {c.get('campaign_name'): c for c in camp_data.get('attr', [])}
@@ -459,6 +553,63 @@ def product_rows():
           <td class="prod-num">{units:,.0f}</td>
           <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
         </tr>"""
+    return out
+
+def shopify_variant_rows():
+    top_total = sum(to_float(v.get('net_sales')) for v in shopify_variants) or 1
+    out = ""
+    for v in shopify_variants:
+        sales = to_float(v.get('net_sales'))
+        qty = to_float(v.get('net_quantity'))
+        share = (sales / top_total) * 100
+        product = v.get('title') or 'Unknown'
+        variant = v.get('variant_title') or ''
+        name = f"{product} — {variant}" if variant else product
+        out += f"""
+        <tr>
+          <td class="prod-name">{name}</td>
+          <td class="prod-num">${sales:,.0f}</td>
+          <td class="prod-num">{qty:,.0f}</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
+        </tr>"""
+    return out
+
+def state_rows():
+    if not top_states: return '<tr><td colspan="4" style="text-align:center;color:#6b7280">No state data available</td></tr>'
+    top_total = to_float(top_states[0].get('net_sales')) or 1
+    out = ""
+    for s in top_states:
+        rev = to_float(s.get('net_sales'))
+        orders = to_float(s.get('sm_order_count'))
+        share = (rev / top_total) * 100
+        state = s.get('order_shipping_province') or 'Unknown'
+        out += f"""
+        <tr>
+          <td class="prod-name">{state}</td>
+          <td class="prod-num">${rev:,.0f}</td>
+          <td class="prod-num">{orders:,.0f}</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
+        </tr>"""
+    return out
+
+def device_cards():
+    if not device_rows_sorted:
+        return '<div class="card" style="grid-column:1/-1;text-align:center;color:#6b7280">No device data available yet</div>'
+    out = ""
+    for d in device_rows_sorted:
+        device = (d.get('deviceCategory') or 'unknown').title()
+        sessions = to_float(d.get('sessions'))
+        pct = (sessions / device_total) * 100
+        out += f"""
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <span class="label" style="margin-bottom:0">{device}</span>
+            <span class="sub" style="margin-top:0">{pct:.1f}% of sessions</span>
+          </div>
+          <div class="value">{int(sessions):,}</div>
+          <div class="sub">sessions yesterday</div>
+          <div class="bar-wrap" style="margin-top:10px;height:6px"><div class="bar-fill" style="width:{pct:.1f}%"></div></div>
+        </div>"""
     return out
 
 def campaign_rows():
@@ -634,6 +785,15 @@ html = f"""<!DOCTYPE html>
 
 <div class="panel" id="panel-1">
   <div class="section">
+    {section_title(None, 'Performance Health', DISPLAY_DATE)}
+    <div class="cards-4">
+      {card(fmt_roas(mer_val), 'MER (Blended ROAS)', f'<div class="sub">{fmt_money(shopify_net)} rev / {fmt_money(total_ad_spend)} spend</div>')}
+      {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC', f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>')}
+      {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo attributed ÷ Shopify</div>')}
+      {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>')}
+    </div>
+  </div>
+  <div class="section">
     {section_title('shopify', 'Shopify', DISPLAY_DATE)}
     <div class="cards-4">
       {card(fmt_money(shopify.get('net_sales')), 'Net Sales', yoy_badge(shopify.get('net_sales'), shopify_py.get('net_sales'), fmt_money))}
@@ -700,6 +860,36 @@ html = f"""<!DOCTYPE html>
       <div class="chart-title">Daily net sales (USD)</div>
       <canvas id="shopifyRevChart" height="80"></canvas>
     </div>
+  </div>
+  <div class="section">
+    {section_title('shopify', 'Top Product Variants by Revenue', T30_LABEL)}
+    <table class="products">
+      <thead><tr><th>Product Variant</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
+      <tbody>{shopify_variant_rows()}</tbody>
+    </table>
+  </div>
+  <div class="section">
+    {section_title('shopify', 'Top States by Revenue', T30_LABEL)}
+    <table class="products">
+      <thead><tr><th>State / Province</th><th class="prod-num">Revenue</th><th class="prod-num">Orders</th><th>Share of #1</th></tr></thead>
+      <tbody>{state_rows()}</tbody>
+    </table>
+  </div>
+  <div class="section">
+    {section_title('shopify', 'Site Conversion (GA4)', DISPLAY_DATE)}
+    <div class="cards-4">
+      {card(fmt_num(ga4_sessions, big=True), 'Sessions (yesterday)', '<div class="sub">from Google Analytics</div>')}
+      {card(fmt_num(shopify_orders_yest), 'Orders', '<div class="sub">from Shopify</div>')}
+      {card(fmt_pct(site_cvr_val), 'Site CVR (yesterday)', '<div class="sub">orders ÷ sessions</div>')}
+      {card(fmt_pct(site_cvr_30), '30-Day Site CVR', f'<div class="sub">{fmt_num(ga4_sessions_30,big=True)} sessions total</div>')}
+    </div>
+  </div>
+  <div class="section">
+    {section_title('shopify', 'Device Split (Sessions)', DISPLAY_DATE)}
+    <div class="cards-3">
+      {device_cards()}
+    </div>
+    <div class="sub" style="margin-top:10px;font-size:11px">Note: orders/revenue by device requires GA4 enhanced ecommerce events (add_to_cart, purchase) to be configured on your site.</div>
   </div>
   <div class="section">
     {section_title('meta', 'Meta Ads — 30-Day Overview', T30_LABEL)}
