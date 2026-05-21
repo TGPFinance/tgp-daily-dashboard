@@ -35,6 +35,7 @@ ICONS = {
     'meta':    'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/meta.svg',
     'google':  'https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googleads.svg',
     'klaviyo': 'https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/icons/mail.svg',
+    'tgp':     'TGP-Logo-White.png',
 }
 
 ACCOUNTS = {
@@ -119,11 +120,12 @@ def safe_div(numer, denom):
         return n / d if d > 0 else None
     except: return None
 
-def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=1, timezone=None):
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=1, timezone=None, max_rows=None):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
     if timezone: params['timezone'] = timezone
+    if max_rows: params['max_rows'] = max_rows
     for attempt in range(retries + 1):
         try:
             r = requests.get(SM_BASE, params=params, timeout=timeout)
@@ -257,7 +259,7 @@ def ensure_customer_ltv():
                          "customer_id,net_sales,sm_order_count",
                          ltv_start, DATE_STR,
                          extra_params={"report_type": "Order"},
-                         timeout=300, timezone=DEFAULT_TZ)
+                         timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
         cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
 
@@ -444,13 +446,18 @@ for row in nr_data:
 total_ad_spend = to_float(meta.get('spend')) + to_float(google_ads.get('cost')) + to_float(amazon_ads.get('cost'))
 shopify_net = to_float(shopify.get('net_sales'))
 
-# MER: 30-day trailing blended (Shopify + Amazon revenue / all ad spend)
+# MER: 30-day trailing blended (Shopify + Amazon revenue / all ad spend incl. Amazon Ads)
 total_rev_30   = shop_net_30 + amzs_rev_30
 total_spend_30 = meta_spend_30 + g_spend_30 + amza_cost_30
 mer_val        = safe_div(total_rev_30, total_spend_30)
 
-# Daily nCAC (yesterday) - rough proxy: spend / new orders
-ncac_val     = safe_div(total_ad_spend, new_orders)
+# DTC ad spend only (Meta + Google) — used for nCAC and LTV:CAC since these are
+# Shopify-customer metrics. Amazon Ads acquire Amazon buyers, not Shopify customers.
+dtc_spend_30 = meta_spend_30 + g_spend_30
+dtc_spend_day = to_float(meta.get('spend')) + to_float(google_ads.get('cost'))
+
+# Daily nCAC (yesterday) — DTC spend / new Shopify orders
+ncac_val     = safe_div(dtc_spend_day, new_orders)
 
 # 30-day new vs returning split (for 30-day nCAC and LTV:CAC)
 nr_30 = cache.get('new_returning_30d', {}).get('data', [])
@@ -464,7 +471,7 @@ for row in nr_30:
         returning_rev_30 += rev; returning_orders_30 += orders
     else:
         new_rev_30 += rev; new_orders_30 += orders
-ncac_30 = safe_div(total_spend_30, new_orders_30)
+ncac_30 = safe_div(dtc_spend_30, new_orders_30)
 
 email_pct    = safe_div(klaviyo_attr.get('shopify_placed_order_value'), shopify_net)
 new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
@@ -475,10 +482,12 @@ ltv_customers = {}
 for row in ltv_data:
     cid = row.get('customer_id')
     if not cid: continue
+    orders = to_float(row.get('sm_order_count'))
+    if orders < 1: continue  # exclude refund-only / canceled-only customer rows
     if cid not in ltv_customers:
         ltv_customers[cid] = {'rev': 0, 'orders': 0}
     ltv_customers[cid]['rev'] += to_float(row.get('net_sales'))
-    ltv_customers[cid]['orders'] += to_float(row.get('sm_order_count'))
+    ltv_customers[cid]['orders'] += orders
 unique_customers_90 = len(ltv_customers)
 total_rev_90 = sum(c['rev'] for c in ltv_customers.values())
 ltv_90 = safe_div(total_rev_90, unique_customers_90)
@@ -571,7 +580,12 @@ def card(value, label, sub=""):
     return f'<div class="card"><div class="label">{label}</div><div class="value">{value}</div>{sub}</div>'
 
 def section_title(icon_key, title, badge=''):
-    icon = f'<img class="channel-icon" src="{ICONS[icon_key]}" alt="" />' if icon_key else ''
+    if icon_key == 'tgp':
+        icon = f'<img class="tgp-icon" src="{ICONS[icon_key]}" alt="" />'
+    elif icon_key:
+        icon = f'<img class="channel-icon" src="{ICONS[icon_key]}" alt="" />'
+    else:
+        icon = ''
     badge_html = f'<span class="badge">{badge}</span>' if badge else ''
     return f'<div class="section-title">{icon}<h2>{title}</h2>{badge_html}</div>'
 
@@ -768,9 +782,15 @@ html = f"""<!DOCTYPE html>
   .tab {{ padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; font-weight: 500; }}
   .tab.active {{ background: linear-gradient(135deg, {BRAND_COLOR}, {BRAND_COLOR_DARK}); color: white; }}
   .section {{ margin-bottom: 30px; }}
+  .summary-block {{ background: rgba(44, 78, 162, 0.06); border: 1px solid rgba(44, 78, 162, 0.18); border-radius: 12px; padding: 20px 20px 4px; margin-bottom: 28px; }}
+  .summary-block .section {{ margin-bottom: 18px; }}
+  .section-divider {{ display: flex; align-items: center; gap: 14px; margin: 8px 0 24px; }}
+  .section-divider .line {{ flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.18), transparent); }}
+  .section-divider .label {{ font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #6b7280; }}
   .section-title {{ display: flex; align-items: center; gap: 10px; margin: 0 0 14px; }}
   .section-title h2 {{ font-size: 12px; font-weight: 600; margin: 0; padding-left: 8px; border-left: 3px solid {BRAND_COLOR}; text-transform: uppercase; letter-spacing: 0.6px; color: #d1d5db; }}
   .channel-icon {{ width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: 0.85; }}
+  .tgp-icon {{ height: 22px; width: auto; opacity: 0.95; }}
   .badge {{ font-size: 11px; padding: 3px 8px; background: #1f2937; color: #9ca3af; border-radius: 4px; }}
   .cards {{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }}
   .cards-4 {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }}
@@ -863,23 +883,30 @@ html = f"""<!DOCTYPE html>
 </div>
 
 <div class="panel" id="panel-1">
-  <div class="section">
-    {section_title(None, 'Performance Health', f'30-day blended · {T30_LABEL}')}
-    <div class="cards-4">
-      {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
-      {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
-      {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo attributed ÷ Shopify</div>' + bm_email_pct(email_pct))}
-      {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
+  <div class="summary-block">
+    <div class="section">
+      {section_title('tgp', 'Performance Health', f'30-day blended · {T30_LABEL}')}
+      <div class="cards-4">
+        {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
+        {card(fmt_money(ncac_val) if ncac_val else '—', 'nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
+        {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo attributed ÷ Shopify</div>' + bm_email_pct(email_pct))}
+        {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
+      </div>
+    </div>
+    <div class="section">
+      {section_title('tgp', 'Customer Health', '90-day rolling')}
+      <div class="cards-4">
+        {card(fmt_money(ltv_90) if ltv_90 else '—', 'LTV (90-day)', f'<div class="sub">{unique_customers_90:,} unique customers</div>')}
+        {card(fmt_roas(ltv_cac_ratio) if ltv_cac_ratio else '—', 'LTV : CAC', f'<div class="sub">vs 30d nCAC of {fmt_money(ncac_30)}</div>' + bm_ltv_cac(ltv_cac_ratio))}
+        {card(fmt_pct(rpr_90), 'Repeat purchase rate', f'<div class="sub">{repeat_customers:,} of {unique_customers_90:,} customers</div>' + bm_rpr(rpr_90))}
+        {card(fmt_money(ncac_30) if ncac_30 else '—', 'nCAC (30-day avg)', f'<div class="sub">{int(new_orders_30):,} new / {fmt_money(dtc_spend_30, big=True)} DTC spend</div>')}
+      </div>
     </div>
   </div>
-  <div class="section">
-    {section_title(None, 'Customer Health', '90-day rolling')}
-    <div class="cards-4">
-      {card(fmt_money(ltv_90) if ltv_90 else '—', 'LTV (90-day)', f'<div class="sub">{unique_customers_90:,} unique customers</div>')}
-      {card(fmt_roas(ltv_cac_ratio) if ltv_cac_ratio else '—', 'LTV : CAC', f'<div class="sub">vs 30d nCAC of {fmt_money(ncac_30)}</div>' + bm_ltv_cac(ltv_cac_ratio))}
-      {card(fmt_pct(rpr_90), 'Repeat purchase rate', f'<div class="sub">{repeat_customers:,} of {unique_customers_90:,} customers</div>' + bm_rpr(rpr_90))}
-      {card(fmt_money(ncac_30) if ncac_30 else '—', 'nCAC (30-day avg)', f'<div class="sub">{int(new_orders_30):,} new orders / {fmt_money(total_spend_30, big=True)} spend</div>')}
-    </div>
+  <div class="section-divider">
+    <div class="line"></div>
+    <div class="label">Channel Detail</div>
+    <div class="line"></div>
   </div>
   <div class="section">
     {section_title('shopify', 'Shopify', DISPLAY_DATE)}
