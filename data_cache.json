@@ -2540,7 +2540,7 @@
       },
       "2026-05-15": {
         "cost": 1682.82,
-        "attributedSales14d": 2861.58,
+        "attributedSales14d": 2881.56,
         "clicks": 758,
         "impressions": 100483
       },
@@ -2566,13 +2566,13 @@
         "cost": 1681.44,
         "attributedSales14d": 2386.34,
         "clicks": 804,
-        "impressions": 97273
+        "impressions": 97274
       },
       "2026-05-20": {
         "cost": 2283.94,
         "attributedSales14d": 2865.96,
         "clicks": 945,
-        "impressions": 156844,
+        "impressions": 156552,
         "roas": 1.2548315630007794,
         "acos": 0.7969197057879385
       }
@@ -6451,6 +6451,5026 @@
         "order_is_returning_customer": false,
         "net_sales": 379.35,
         "sm_order_count": 22
+      }
+    ],
+    "date": "2026-05-20"
+  },
+  "new_returning_30d": {
+    "data": [
+      {
+        "order_is_returning_customer": true,
+        "net_sales": 30720.07,
+        "sm_order_count": 622
+      },
+      {
+        "order_is_returning_customer": false,
+        "net_sales": 18095.57,
+        "sm_order_count": 775
+      }
+    ],
+    "date": "2026-05-20"
+  },
+  "customer_ltv": {
+    "data": [
+      {
+        "customer_id": 8050496209014,
+        "net_sales": 2821,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8032812073078,
+        "net_sales": 2176,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8165248041078,
+        "net_sales": 1320,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8190534156406,
+        "net_sales": 1116,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6934401876086,
+        "net_sales": 945.2,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 3604814725238,
+        "net_sales": 821.1,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8350575231094,
+        "net_sales": 653.2,
+        "sm_order_count": 7
+      },
+      {
+        "customer_id": 5588446609526,
+        "net_sales": 639.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6924617416822,
+        "net_sales": 598.4,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 3639470456950,
+        "net_sales": 596.7,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 6086892683382,
+        "net_sales": 580.85,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 6465765146742,
+        "net_sales": 545.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8034597929078,
+        "net_sales": 531.93,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7761174298742,
+        "net_sales": 522.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5970219237494,
+        "net_sales": 520,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8348626747510,
+        "net_sales": 500,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8345709314166,
+        "net_sales": 490.13,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5114397720694,
+        "net_sales": 489.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6708320764022,
+        "net_sales": 486,
+        "sm_order_count": 15
+      },
+      {
+        "customer_id": 8304196485238,
+        "net_sales": 484.7,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8315425489014,
+        "net_sales": 481.95,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8223704711286,
+        "net_sales": 459,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8326947635318,
+        "net_sales": 447.25,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8080727605366,
+        "net_sales": 445.9,
+        "sm_order_count": 9
+      },
+      {
+        "customer_id": 5997492994166,
+        "net_sales": 420,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8007557152886,
+        "net_sales": 418,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3636251361398,
+        "net_sales": 416.6,
+        "sm_order_count": 9
+      },
+      {
+        "customer_id": 5772332171382,
+        "net_sales": 410.55,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5956914774134,
+        "net_sales": 408,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 6977269727350,
+        "net_sales": 408,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8199764410486,
+        "net_sales": 408,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8303859531894,
+        "net_sales": 400,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8309260386422,
+        "net_sales": 385,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7453394141302,
+        "net_sales": 380.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5567415287926,
+        "net_sales": 378,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7186071748726,
+        "net_sales": 377.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6510496415862,
+        "net_sales": 377.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8317578051702,
+        "net_sales": 367.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8291269607542,
+        "net_sales": 366.06,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 3416686166134,
+        "net_sales": 363.5,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 5970221334646,
+        "net_sales": 361.25,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 6704720543862,
+        "net_sales": 357,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5944957927542,
+        "net_sales": 352.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6069398765686,
+        "net_sales": 349.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6891687968886,
+        "net_sales": 339.15,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8112712384630,
+        "net_sales": 337.2,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 7193878331510,
+        "net_sales": 326.4,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 6810774438006,
+        "net_sales": 325.23,
+        "sm_order_count": 7
+      },
+      {
+        "customer_id": 8078102691958,
+        "net_sales": 324,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6354783240310,
+        "net_sales": 323,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 2966472032374,
+        "net_sales": 307.7,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5609633054838,
+        "net_sales": 306,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6594662432886,
+        "net_sales": 303.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7673456230518,
+        "net_sales": 302,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7703837081718,
+        "net_sales": 298.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8215248601206,
+        "net_sales": 292,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7606995419254,
+        "net_sales": 290.7,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5746957942902,
+        "net_sales": 289,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5389203275894,
+        "net_sales": 285.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5948646654070,
+        "net_sales": 285.6,
+        "sm_order_count": 9
+      },
+      {
+        "customer_id": 5784621678710,
+        "net_sales": 284,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 8072671461494,
+        "net_sales": 283.9,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 8564561936502,
+        "net_sales": 283.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7567957819510,
+        "net_sales": 280,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8099798614134,
+        "net_sales": 280,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5920180011126,
+        "net_sales": 279,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8185066029174,
+        "net_sales": 277.35,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7462471008374,
+        "net_sales": 276,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6457363136630,
+        "net_sales": 272.85,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7822924972150,
+        "net_sales": 272.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7642281771126,
+        "net_sales": 267.1,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7876710105206,
+        "net_sales": 266.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7669629649014,
+        "net_sales": 266.3,
+        "sm_order_count": 12
+      },
+      {
+        "customer_id": 7112104312950,
+        "net_sales": 265.2,
+        "sm_order_count": 8
+      },
+      {
+        "customer_id": 7863183409270,
+        "net_sales": 265,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6112805847158,
+        "net_sales": 258.8,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 5069831012470,
+        "net_sales": 255,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7678380966006,
+        "net_sales": 255,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7714855780470,
+        "net_sales": 255,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6114860859510,
+        "net_sales": 254,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7127368433782,
+        "net_sales": 250.75,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 6379456495734,
+        "net_sales": 250,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6325793554550,
+        "net_sales": 249.2,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 6786414280822,
+        "net_sales": 247.35,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8320078119030,
+        "net_sales": 247.35,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 5856653705334,
+        "net_sales": 246,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7657542189174,
+        "net_sales": 244.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7709774413942,
+        "net_sales": 244.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7209853124726,
+        "net_sales": 244.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5975834919030,
+        "net_sales": 244,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5048704073846,
+        "net_sales": 242.55,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8289982742646,
+        "net_sales": 242,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6976923238518,
+        "net_sales": 239.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3278567211126,
+        "net_sales": 239.2,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8201921069174,
+        "net_sales": 238,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 3650907111542,
+        "net_sales": 237,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8146817482870,
+        "net_sales": 236,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8341483520118,
+        "net_sales": 234.9,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6586216284278,
+        "net_sales": 233.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7787703337078,
+        "net_sales": 233.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7067634696310,
+        "net_sales": 233.1,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7990002548854,
+        "net_sales": 233,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7083320574070,
+        "net_sales": 232.7,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3561885171830,
+        "net_sales": 232.05,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5524030161014,
+        "net_sales": 232.05,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6123437391990,
+        "net_sales": 232.05,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6401371603062,
+        "net_sales": 229.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3613488054390,
+        "net_sales": 226,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5501184475254,
+        "net_sales": 225.95,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8096735330422,
+        "net_sales": 224.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3129836404854,
+        "net_sales": 224.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8579857252470,
+        "net_sales": 224,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8154415300726,
+        "net_sales": 223.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8156068970614,
+        "net_sales": 223,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7743167791222,
+        "net_sales": 222.75,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7165740154998,
+        "net_sales": 222,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6565320163446,
+        "net_sales": 220,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7296711131254,
+        "net_sales": 217.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7879099023478,
+        "net_sales": 216.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7815754842230,
+        "net_sales": 214.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7155193675894,
+        "net_sales": 214,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8404150616182,
+        "net_sales": 211.65,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8112918986870,
+        "net_sales": 210,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7671922819190,
+        "net_sales": 207.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6027751915638,
+        "net_sales": 207.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8165132828790,
+        "net_sales": 207.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6581214118006,
+        "net_sales": 206.55,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3054635319414,
+        "net_sales": 206,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8149036367990,
+        "net_sales": 205,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3371881037942,
+        "net_sales": 204,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5201168007286,
+        "net_sales": 204,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5471096668278,
+        "net_sales": 204,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6481812783222,
+        "net_sales": 204,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6929771135094,
+        "net_sales": 204,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 7821395787894,
+        "net_sales": 204,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6377904799862,
+        "net_sales": 202.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7502813560950,
+        "net_sales": 199.75,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7095152345206,
+        "net_sales": 199.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7991400824950,
+        "net_sales": 199.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8067803578486,
+        "net_sales": 196.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7917189496950,
+        "net_sales": 195.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5965209698422,
+        "net_sales": 195.15,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7032614682742,
+        "net_sales": 193.4,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 8393950625910,
+        "net_sales": 193,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7819218288758,
+        "net_sales": 192,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8202611523702,
+        "net_sales": 192,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8374350446710,
+        "net_sales": 191.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7330132492406,
+        "net_sales": 191.25,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7829351956598,
+        "net_sales": 191.25,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6400285868150,
+        "net_sales": 190.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6458014433398,
+        "net_sales": 190.4,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8332811960438,
+        "net_sales": 190,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8293445894262,
+        "net_sales": 189.25,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7343983100022,
+        "net_sales": 189,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7300653809782,
+        "net_sales": 186.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7717499895926,
+        "net_sales": 186.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8049121984630,
+        "net_sales": 186.3,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6511665283190,
+        "net_sales": 186.15,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6050468331638,
+        "net_sales": 183.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5291357962358,
+        "net_sales": 183.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7387790901366,
+        "net_sales": 183.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7631404695670,
+        "net_sales": 183.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8127446777974,
+        "net_sales": 183.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7627084136566,
+        "net_sales": 182.6,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 8118209314934,
+        "net_sales": 180.92,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5389312557174,
+        "net_sales": 180.6,
+        "sm_order_count": 6
+      },
+      {
+        "customer_id": 5678477934710,
+        "net_sales": 180,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7890194890870,
+        "net_sales": 180,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8309652815990,
+        "net_sales": 180,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6049679278198,
+        "net_sales": 179.9,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7195246755958,
+        "net_sales": 179.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6279645626486,
+        "net_sales": 179,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 2187445928054,
+        "net_sales": 178.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5450310353014,
+        "net_sales": 178.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5907959480438,
+        "net_sales": 178.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6049554628726,
+        "net_sales": 178.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6101633237110,
+        "net_sales": 178.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6972048343158,
+        "net_sales": 178.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7325969154166,
+        "net_sales": 178.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8123191394422,
+        "net_sales": 178.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6930351816822,
+        "net_sales": 178.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6767371616374,
+        "net_sales": 176,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8134379536502,
+        "net_sales": 175.5,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8537521160310,
+        "net_sales": 174,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 1335045849206,
+        "net_sales": 173.4,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 7031623909494,
+        "net_sales": 173.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8399252488310,
+        "net_sales": 172.13,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8587771052150,
+        "net_sales": 172,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8563523911798,
+        "net_sales": 171,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8277166686326,
+        "net_sales": 170.99,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8082618253430,
+        "net_sales": 170.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3630513815670,
+        "net_sales": 170,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5384483831926,
+        "net_sales": 170,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 7874824732790,
+        "net_sales": 170,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167120535670,
+        "net_sales": 170,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8322153119862,
+        "net_sales": 170,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6856900575350,
+        "net_sales": 169.55,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 1392751476854,
+        "net_sales": 169.38,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8165025480822,
+        "net_sales": 169,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8022593405046,
+        "net_sales": 168,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6780419113078,
+        "net_sales": 166.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8098928361590,
+        "net_sales": 166.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8072141832310,
+        "net_sales": 166,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7191013326966,
+        "net_sales": 165,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5874674172022,
+        "net_sales": 164,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6784476872822,
+        "net_sales": 163.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8034574893174,
+        "net_sales": 163.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8584778252406,
+        "net_sales": 163.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8309338341494,
+        "net_sales": 162.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7082758766710,
+        "net_sales": 161.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6481291214966,
+        "net_sales": 161.38,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7441486676086,
+        "net_sales": 160,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5872005972086,
+        "net_sales": 159.08,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5827400433782,
+        "net_sales": 159,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8397615759478,
+        "net_sales": 158.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8071168589942,
+        "net_sales": 158.1,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8372631863414,
+        "net_sales": 157,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8291982671990,
+        "net_sales": 156.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8119700193398,
+        "net_sales": 156.5,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 7371773280374,
+        "net_sales": 156.4,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8310097543286,
+        "net_sales": 156.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8557645791350,
+        "net_sales": 156,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8525219168374,
+        "net_sales": 155.25,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8162331164790,
+        "net_sales": 154.7,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8412736946294,
+        "net_sales": 154.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5316401692790,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5349831639158,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6066498601078,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7049425617014,
+        "net_sales": 153,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 7482485571702,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8088616763510,
+        "net_sales": 153,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8146629591158,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8207042773110,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8337735352438,
+        "net_sales": 153,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8033839054966,
+        "net_sales": 152,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8051928858742,
+        "net_sales": 151.3,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8164100964470,
+        "net_sales": 150,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5495716675702,
+        "net_sales": 149.6,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8337565188214,
+        "net_sales": 149.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8280788631670,
+        "net_sales": 149,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8369199153270,
+        "net_sales": 148.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7228324184182,
+        "net_sales": 148,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6465438285942,
+        "net_sales": 147.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6182052036726,
+        "net_sales": 147.65,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8569338462326,
+        "net_sales": 147,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8144854319222,
+        "net_sales": 146.3,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5393534779510,
+        "net_sales": 146.2,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8163219341430,
+        "net_sales": 146.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8314624344182,
+        "net_sales": 146.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6486407577718,
+        "net_sales": 145,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7748394057846,
+        "net_sales": 144.5,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8202696327286,
+        "net_sales": 144.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8351239307382,
+        "net_sales": 144.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7998930845814,
+        "net_sales": 144.5,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 6577324687478,
+        "net_sales": 144,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6502328565878,
+        "net_sales": 142.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7466153869430,
+        "net_sales": 142.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5118653005942,
+        "net_sales": 142.7,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8150462562422,
+        "net_sales": 142.1,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8347468464246,
+        "net_sales": 141.83,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7963867906166,
+        "net_sales": 140.25,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8516379705462,
+        "net_sales": 140.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8166129795190,
+        "net_sales": 140,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5982881579126,
+        "net_sales": 139.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6070511927414,
+        "net_sales": 139.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6164469776502,
+        "net_sales": 139.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7839439618166,
+        "net_sales": 139,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6029817151606,
+        "net_sales": 138.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7666784403574,
+        "net_sales": 138.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8281451823222,
+        "net_sales": 137.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8223992545398,
+        "net_sales": 137.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7082296901750,
+        "net_sales": 137.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8202048962678,
+        "net_sales": 136.07,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7176490090614,
+        "net_sales": 136,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8311377363062,
+        "net_sales": 136,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8331273338998,
+        "net_sales": 136,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7269609111670,
+        "net_sales": 135.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 2812152971382,
+        "net_sales": 135.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5688835604598,
+        "net_sales": 135,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7929383354486,
+        "net_sales": 135,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5415193182326,
+        "net_sales": 134.83,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8374128279670,
+        "net_sales": 134,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5604747083894,
+        "net_sales": 133.45,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5549331906678,
+        "net_sales": 133.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7580133032054,
+        "net_sales": 132.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7641911951478,
+        "net_sales": 132.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5948692201590,
+        "net_sales": 132.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6290693619830,
+        "net_sales": 132.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7960996708470,
+        "net_sales": 132,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8220407529590,
+        "net_sales": 132,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8365471498358,
+        "net_sales": 132,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8188385722486,
+        "net_sales": 131.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7323803123830,
+        "net_sales": 131.45,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 3458688122998,
+        "net_sales": 130.9,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3631311421558,
+        "net_sales": 130,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7710494228598,
+        "net_sales": 130,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7824804937846,
+        "net_sales": 130,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7983618457718,
+        "net_sales": 130,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8006813843574,
+        "net_sales": 130,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7060822098038,
+        "net_sales": 128.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8066909241462,
+        "net_sales": 128,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8347394998390,
+        "net_sales": 128,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5801308389494,
+        "net_sales": 127.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6295685955702,
+        "net_sales": 127.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6454966255734,
+        "net_sales": 127.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7709819109494,
+        "net_sales": 127.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7825810030710,
+        "net_sales": 127.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8012262834294,
+        "net_sales": 127.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8071041089654,
+        "net_sales": 127.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8111860809846,
+        "net_sales": 127.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8174033076342,
+        "net_sales": 127.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5915841003638,
+        "net_sales": 127,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8112082649206,
+        "net_sales": 126.6,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 6857952329846,
+        "net_sales": 125.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8013472235638,
+        "net_sales": 125.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8179081642102,
+        "net_sales": 124.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8370333712502,
+        "net_sales": 123.9,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 8220262563958,
+        "net_sales": 123.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6070508421238,
+        "net_sales": 122.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6695786414198,
+        "net_sales": 122.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7292194160758,
+        "net_sales": 122.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7988623736950,
+        "net_sales": 122.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8014258864246,
+        "net_sales": 122.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8584296956022,
+        "net_sales": 122.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6720959447158,
+        "net_sales": 122.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7113281831030,
+        "net_sales": 122.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8160251871350,
+        "net_sales": 122.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8055509090422,
+        "net_sales": 122,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3536138829942,
+        "net_sales": 121.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8572325298294,
+        "net_sales": 121.45,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7204384407670,
+        "net_sales": 121.38,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8316490252406,
+        "net_sales": 121,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8292873961590,
+        "net_sales": 120.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7460090314870,
+        "net_sales": 120.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3582591631478,
+        "net_sales": 120,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6596963598454,
+        "net_sales": 120,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8339055247478,
+        "net_sales": 120,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8526317092982,
+        "net_sales": 120,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8531737051254,
+        "net_sales": 120,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7704628592758,
+        "net_sales": 119.85,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 7803069071478,
+        "net_sales": 119.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5114075545718,
+        "net_sales": 119.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3570006294646,
+        "net_sales": 119.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5987785900150,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6137371721846,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6930276057206,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6954659971190,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7191571923062,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7413884223606,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7947625431158,
+        "net_sales": 119,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8036322476150,
+        "net_sales": 119,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8212404502646,
+        "net_sales": 119,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8315422769270,
+        "net_sales": 119,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5028909744246,
+        "net_sales": 118.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5849710723190,
+        "net_sales": 118.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5798121504886,
+        "net_sales": 118.15,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8195348365430,
+        "net_sales": 118,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8213608988790,
+        "net_sales": 118,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5627310145654,
+        "net_sales": 117.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8304661364854,
+        "net_sales": 117.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3115619876982,
+        "net_sales": 117.3,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8581613518966,
+        "net_sales": 117.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7884166758518,
+        "net_sales": 116.85,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3057212555382,
+        "net_sales": 116.45,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 2874388381814,
+        "net_sales": 116,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8114269061238,
+        "net_sales": 115.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6899961430134,
+        "net_sales": 115.6,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5539829514358,
+        "net_sales": 115.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8200310718582,
+        "net_sales": 115,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8210612060278,
+        "net_sales": 114.9,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8489388900470,
+        "net_sales": 114.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8053885730934,
+        "net_sales": 114,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 2813453992054,
+        "net_sales": 113.9,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5718959915126,
+        "net_sales": 113.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7371800641654,
+        "net_sales": 113.6,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5372547104886,
+        "net_sales": 113.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8148419903606,
+        "net_sales": 113.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6537097904246,
+        "net_sales": 113.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7999705317494,
+        "net_sales": 112.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8515419144310,
+        "net_sales": 112.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5474892480630,
+        "net_sales": 112.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6133043036278,
+        "net_sales": 112.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6449670684790,
+        "net_sales": 112.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8087728390262,
+        "net_sales": 112.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3581935386742,
+        "net_sales": 112,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7980668452982,
+        "net_sales": 111.35,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7732298842230,
+        "net_sales": 110.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7823799517302,
+        "net_sales": 110.55,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6284212338806,
+        "net_sales": 110.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8171916492918,
+        "net_sales": 110,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5581295943798,
+        "net_sales": 109.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167514800246,
+        "net_sales": 109.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8090265321590,
+        "net_sales": 109,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8221682008182,
+        "net_sales": 109,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8600155422838,
+        "net_sales": 109,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5355927994486,
+        "net_sales": 108.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6153129721974,
+        "net_sales": 108.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6312865235062,
+        "net_sales": 108.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7328789594230,
+        "net_sales": 108.7,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8558429732982,
+        "net_sales": 108.68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8378861912182,
+        "net_sales": 108.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5230233452662,
+        "net_sales": 108.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8170380427382,
+        "net_sales": 108,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8175432138870,
+        "net_sales": 108,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8559426699382,
+        "net_sales": 108,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8559758311542,
+        "net_sales": 108,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8560159195254,
+        "net_sales": 108,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8088149262454,
+        "net_sales": 107.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6051588800630,
+        "net_sales": 107,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8179630637174,
+        "net_sales": 107,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7228305277046,
+        "net_sales": 106.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 2676179173494,
+        "net_sales": 106.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6356081541238,
+        "net_sales": 106.25,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7217106878582,
+        "net_sales": 106.25,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7830366290038,
+        "net_sales": 106.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8409573261430,
+        "net_sales": 106.1,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8170180280438,
+        "net_sales": 106,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8075496423542,
+        "net_sales": 105.62,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7420968468598,
+        "net_sales": 105.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8389381521526,
+        "net_sales": 105.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7019654545526,
+        "net_sales": 105,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7903532646518,
+        "net_sales": 105,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8171404623990,
+        "net_sales": 105,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8330747248758,
+        "net_sales": 105,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8570258227318,
+        "net_sales": 104.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6768358490230,
+        "net_sales": 104.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 2811871264886,
+        "net_sales": 104,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3611149467766,
+        "net_sales": 104,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8580198334582,
+        "net_sales": 104,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8282111082614,
+        "net_sales": 103.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8069684166774,
+        "net_sales": 103.7,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8518722781302,
+        "net_sales": 103.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8526645198966,
+        "net_sales": 103.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8565288730742,
+        "net_sales": 103.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6050551627894,
+        "net_sales": 103.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8406464430198,
+        "net_sales": 102.7,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6908517711990,
+        "net_sales": 102.64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5122540404854,
+        "net_sales": 102.4,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5054930124918,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5113786990710,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5282260713590,
+        "net_sales": 102,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5428761559158,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5436811509878,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5838129627254,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6166864560246,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6340981588086,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7131955560566,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7203726753910,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7626241245302,
+        "net_sales": 102,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7824991354998,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7831679959158,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8099656761462,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8110591869046,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8201968353398,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8342240395382,
+        "net_sales": 102,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7369849241718,
+        "net_sales": 101.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8221867933814,
+        "net_sales": 101.15,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5929555230838,
+        "net_sales": 100.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5963196825718,
+        "net_sales": 100.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8154576126070,
+        "net_sales": 100.3,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8112321036406,
+        "net_sales": 100.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8220683010166,
+        "net_sales": 100.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3606965420150,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6788000514166,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7049839935606,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7973503500406,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8020262715510,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8025782845558,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8080862773366,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8142452621430,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8146876006518,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8150086811766,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8150676734070,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8155846836342,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8156738977910,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8162375204982,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8164912136310,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8165765644406,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8166245204086,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167299809398,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167885340790,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167922696310,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8168710242422,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8176064102518,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8176342958198,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8176839164022,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8177956225142,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8178146148470,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8178684002422,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8179915817078,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8180020805750,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8181731328118,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8182499410038,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8182744055926,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8183953621110,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8184384290934,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8188803645558,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8192497188982,
+        "net_sales": 100,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8197231247478,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8197532057718,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8199217873014,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8199647330422,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8200047394934,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8200597274742,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8200902738038,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8201078341750,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8201687957622,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8201754443894,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8202870882422,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8203916214390,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8204109578358,
+        "net_sales": 100,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8204478808182,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8208921231478,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8209133174902,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8210769903734,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8212437598326,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8215337926774,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8221914234998,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8280157225078,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8281133809782,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8282517405814,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8288046710902,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8288148815990,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8289808285814,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8290263498870,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8292591173750,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8293052252278,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8294690619510,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8295780483190,
+        "net_sales": 100,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8296955969654,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8297270411382,
+        "net_sales": 100,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8297958998134,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8299699896438,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8299789418614,
+        "net_sales": 100,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8301970030710,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8304939335798,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8313350979702,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8318040375414,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8321883734134,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8322119303286,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8323001155702,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8337894604918,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8338288574582,
+        "net_sales": 100,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8339409928310,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8340350959734,
+        "net_sales": 100,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8341859139702,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8346179666038,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8403750223990,
+        "net_sales": 100,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6882649800822,
+        "net_sales": 99.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8502258204790,
+        "net_sales": 99,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8588746129526,
+        "net_sales": 98.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6185632792694,
+        "net_sales": 98.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7966173462646,
+        "net_sales": 98.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7343593717878,
+        "net_sales": 98.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167175782518,
+        "net_sales": 98,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8290294038646,
+        "net_sales": 98,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8299162468470,
+        "net_sales": 98,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8306271060086,
+        "net_sales": 98,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8352053002358,
+        "net_sales": 98,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7267830595702,
+        "net_sales": 97.86,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7538063409270,
+        "net_sales": 97.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8195372023926,
+        "net_sales": 97.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8302445068406,
+        "net_sales": 97.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6100457259126,
+        "net_sales": 97.05,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7299650879606,
+        "net_sales": 97,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8075037966454,
+        "net_sales": 97,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8399204876406,
+        "net_sales": 97,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3498178707574,
+        "net_sales": 96.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7888485384310,
+        "net_sales": 96.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8558434254966,
+        "net_sales": 96.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8525103071350,
+        "net_sales": 96.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5396513063030,
+        "net_sales": 96,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6786554298486,
+        "net_sales": 96,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8156634972278,
+        "net_sales": 96,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8170599415926,
+        "net_sales": 96,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8301446496374,
+        "net_sales": 96,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8316922232950,
+        "net_sales": 96,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8582199410806,
+        "net_sales": 96,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8531714048118,
+        "net_sales": 95.93,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8154378141814,
+        "net_sales": 95.9,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6477281034358,
+        "net_sales": 95.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5894090195062,
+        "net_sales": 95.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6082013888630,
+        "net_sales": 95.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6266008600694,
+        "net_sales": 95.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8135797342326,
+        "net_sales": 95.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8196360142966,
+        "net_sales": 95.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8318951456886,
+        "net_sales": 95.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6944231161974,
+        "net_sales": 95.2,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7458471247990,
+        "net_sales": 95.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8288603832438,
+        "net_sales": 95,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5359567569014,
+        "net_sales": 94.65,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5874246910070,
+        "net_sales": 94.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3388412297334,
+        "net_sales": 94,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6242939601014,
+        "net_sales": 93.15,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8166467764342,
+        "net_sales": 92.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5591282286710,
+        "net_sales": 92.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5998759510134,
+        "net_sales": 92.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5372489924726,
+        "net_sales": 92,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7776827310198,
+        "net_sales": 92,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8199981400182,
+        "net_sales": 92,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8295523614838,
+        "net_sales": 92,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8348216230006,
+        "net_sales": 92,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5751384375414,
+        "net_sales": 91.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6770468225142,
+        "net_sales": 91.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6897034494070,
+        "net_sales": 91.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7102975082614,
+        "net_sales": 91.8,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7436997853302,
+        "net_sales": 91.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8026816807030,
+        "net_sales": 91.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8096805355638,
+        "net_sales": 91.8,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8532685193334,
+        "net_sales": 91.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8558527643766,
+        "net_sales": 91.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5680050503798,
+        "net_sales": 91.12,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 3273324200054,
+        "net_sales": 91,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5563362738294,
+        "net_sales": 91,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7788565004406,
+        "net_sales": 91,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8161636122742,
+        "net_sales": 91,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3621171495030,
+        "net_sales": 90.95,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7777852293238,
+        "net_sales": 90.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6185917382774,
+        "net_sales": 90.1,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8390692798582,
+        "net_sales": 90.1,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3328471728246,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6532359684214,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6876913631350,
+        "net_sales": 90,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7144055799926,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8222606655606,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8281845989494,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8345783500918,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8392383070326,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8399130099830,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8525726056566,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8293528666230,
+        "net_sales": 89.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6719335923830,
+        "net_sales": 89.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8555510300790,
+        "net_sales": 89.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6098931351670,
+        "net_sales": 89.04,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8378221625462,
+        "net_sales": 88.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7021758611574,
+        "net_sales": 88.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8351736004726,
+        "net_sales": 88.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3566645477494,
+        "net_sales": 88,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8212895137910,
+        "net_sales": 88,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8376309121142,
+        "net_sales": 88,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8378792411254,
+        "net_sales": 88,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8578494005366,
+        "net_sales": 88,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8322155905142,
+        "net_sales": 87.55,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7064032378998,
+        "net_sales": 87.5,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8169633022070,
+        "net_sales": 87,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8476541386870,
+        "net_sales": 86.74,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8073618063478,
+        "net_sales": 86.7,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6140393554038,
+        "net_sales": 86.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8523478073462,
+        "net_sales": 86.55,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5961339797622,
+        "net_sales": 86.55,
+        "sm_order_count": 5
+      },
+      {
+        "customer_id": 5944855593078,
+        "net_sales": 86.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7235076554870,
+        "net_sales": 86.35,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5776316072054,
+        "net_sales": 86.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6864793174134,
+        "net_sales": 86,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8072124137590,
+        "net_sales": 86,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8123006681206,
+        "net_sales": 86,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8301067337846,
+        "net_sales": 86,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8344871108726,
+        "net_sales": 86,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8393631563894,
+        "net_sales": 86,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8281844351094,
+        "net_sales": 85.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8540387311734,
+        "net_sales": 85.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8565258649718,
+        "net_sales": 85.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3470526906486,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3593720037494,
+        "net_sales": 85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5855873892470,
+        "net_sales": 85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6016945324150,
+        "net_sales": 85,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6197733982326,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6492918546550,
+        "net_sales": 85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6571364221046,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7211687379062,
+        "net_sales": 85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7237724504182,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7294364680310,
+        "net_sales": 85,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 7580252504182,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8067280371830,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8137097674870,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8156735930486,
+        "net_sales": 85,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8174604091510,
+        "net_sales": 85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8348158722166,
+        "net_sales": 85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5939711443062,
+        "net_sales": 84.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8152016584822,
+        "net_sales": 84.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7317510291574,
+        "net_sales": 84,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8156868706422,
+        "net_sales": 84,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8580580245622,
+        "net_sales": 83.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8350511562870,
+        "net_sales": 83.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8406401220726,
+        "net_sales": 83.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5053614653558,
+        "net_sales": 83.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6245828526198,
+        "net_sales": 83,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8156442558582,
+        "net_sales": 83,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8319228543094,
+        "net_sales": 82.74,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6723809706102,
+        "net_sales": 82.6,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8539353251958,
+        "net_sales": 82.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7182585102454,
+        "net_sales": 82.45,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5389363937398,
+        "net_sales": 82,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 2848409387126,
+        "net_sales": 81.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3644565160054,
+        "net_sales": 81.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5125665063030,
+        "net_sales": 81.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5139353239670,
+        "net_sales": 81.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5161183084662,
+        "net_sales": 81.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5586724094070,
+        "net_sales": 81.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5875466076278,
+        "net_sales": 81.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5992770338934,
+        "net_sales": 81.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6673981341814,
+        "net_sales": 81.6,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7183312814198,
+        "net_sales": 81.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8196082204790,
+        "net_sales": 81.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8291074834550,
+        "net_sales": 81.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8295094288502,
+        "net_sales": 81.6,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 2919343784054,
+        "net_sales": 81.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8347949760630,
+        "net_sales": 81,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8590379876470,
+        "net_sales": 81,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8591323234422,
+        "net_sales": 80.92,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6060664356982,
+        "net_sales": 80.82,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6706627608694,
+        "net_sales": 80.75,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5100785795190,
+        "net_sales": 80.33,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7653876498550,
+        "net_sales": 80.03,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5141956001910,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5367022485622,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5621791293558,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6537739796598,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7108559306870,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8291524313206,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8340109492342,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6787009020022,
+        "net_sales": 79.84,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8319475351670,
+        "net_sales": 79.7,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8559826206838,
+        "net_sales": 79.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7979603656822,
+        "net_sales": 79.05,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8108318752886,
+        "net_sales": 78.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7237612830838,
+        "net_sales": 78.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8337393320054,
+        "net_sales": 78.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7154255855734,
+        "net_sales": 78.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8567781916790,
+        "net_sales": 78.15,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6028438438006,
+        "net_sales": 78,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8407049338998,
+        "net_sales": 78,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8587871584374,
+        "net_sales": 77.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5196091555958,
+        "net_sales": 77.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5892321706102,
+        "net_sales": 77.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6529401127030,
+        "net_sales": 77.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7595199529078,
+        "net_sales": 77.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8334290845814,
+        "net_sales": 77.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6311483768950,
+        "net_sales": 77,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8519347929206,
+        "net_sales": 76.88,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8584968437878,
+        "net_sales": 76.59,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5205414510710,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5860859150454,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5911235690614,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6163216564342,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6394721992822,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6835269501046,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6874088505462,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7045767463030,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7579062796406,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7599137194102,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7866066272374,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7870194253942,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8049528111222,
+        "net_sales": 76.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8077399556214,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8139435081846,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8147152306294,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8172027871350,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8190862688374,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8207480619126,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8210402738294,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8311401775222,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8370049548406,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8381801300086,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8553165324406,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8567962108022,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8302533214326,
+        "net_sales": 76.4,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 3378066063478,
+        "net_sales": 76,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8211013271670,
+        "net_sales": 76,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8204044894326,
+        "net_sales": 75.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8524689703030,
+        "net_sales": 75.23,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8518562316406,
+        "net_sales": 75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8531220267126,
+        "net_sales": 75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8535072473206,
+        "net_sales": 75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8559590178934,
+        "net_sales": 75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7383816372342,
+        "net_sales": 74.9,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 5146053869686,
+        "net_sales": 74.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7984731684982,
+        "net_sales": 74.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8096375832694,
+        "net_sales": 74.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8163745464438,
+        "net_sales": 74.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8311694065782,
+        "net_sales": 74.8,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5598849990774,
+        "net_sales": 74.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5927770652790,
+        "net_sales": 74,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7797063483510,
+        "net_sales": 74,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8175531688054,
+        "net_sales": 74,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8362297294966,
+        "net_sales": 74,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7355805827190,
+        "net_sales": 73.95,
+        "sm_order_count": 4
+      },
+      {
+        "customer_id": 8393624092790,
+        "net_sales": 73.95,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8349690003574,
+        "net_sales": 73.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8164708417654,
+        "net_sales": 73.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8225090338934,
+        "net_sales": 73.1,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8352232276086,
+        "net_sales": 73.1,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 3232859324534,
+        "net_sales": 73,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6010128662646,
+        "net_sales": 72.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3637181448310,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5022448943222,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5668460920950,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6084922179702,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6481800265846,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6988093063286,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8084752302198,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8147013632118,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8225036533878,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8291645489270,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8295240892534,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8308504658038,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8334396620918,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8397904511094,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8541269852278,
+        "net_sales": 72,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8565257470070,
+        "net_sales": 72,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8055875567734,
+        "net_sales": 71.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 1434343276662,
+        "net_sales": 71.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6296296652918,
+        "net_sales": 71.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6697628729462,
+        "net_sales": 71.4,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8528690610294,
+        "net_sales": 71.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8554286252150,
+        "net_sales": 70.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8520016822390,
+        "net_sales": 70.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8533689303158,
+        "net_sales": 70.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8573121921142,
+        "net_sales": 70.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7284223443062,
+        "net_sales": 70.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8289586282614,
+        "net_sales": 70.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8393464447094,
+        "net_sales": 70.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5138463228022,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5902760870006,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6021794955382,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7274998694006,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8110257373302,
+        "net_sales": 70,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8148628078710,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8304256548982,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8368823828598,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8529132290166,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8537016959094,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8553181839478,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8554823417974,
+        "net_sales": 70,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8288008208502,
+        "net_sales": 69.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6479208480886,
+        "net_sales": 69.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8369844224118,
+        "net_sales": 69.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8335381266550,
+        "net_sales": 69,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8379488600182,
+        "net_sales": 69,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8523889770614,
+        "net_sales": 69,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8558057128054,
+        "net_sales": 69,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8582244204662,
+        "net_sales": 69,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8315563638902,
+        "net_sales": 68.85,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5834985046134,
+        "net_sales": 68.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7495511801974,
+        "net_sales": 68.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8305652072566,
+        "net_sales": 68.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7574084747382,
+        "net_sales": 68.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8406581051510,
+        "net_sales": 68.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5274331611254,
+        "net_sales": 68.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8523262558326,
+        "net_sales": 68.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7323592327286,
+        "net_sales": 68.1,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5238607183990,
+        "net_sales": 68,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5504291012726,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5704437727350,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6962330566774,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6975298502774,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7088942088310,
+        "net_sales": 68,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7220183040118,
+        "net_sales": 68,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7769903759478,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8122617331830,
+        "net_sales": 68,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8128546537590,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8165215895670,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8239483158646,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8308103086198,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8322795896950,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8536344002678,
+        "net_sales": 68,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8112607592566,
+        "net_sales": 67.9,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3161691652214,
+        "net_sales": 67.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6767212429430,
+        "net_sales": 67.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6899510182006,
+        "net_sales": 67.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8518461816950,
+        "net_sales": 67.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8523107991670,
+        "net_sales": 67.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8172492488822,
+        "net_sales": 67.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8213275803766,
+        "net_sales": 67.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8362278748278,
+        "net_sales": 67.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5111030743158,
+        "net_sales": 67.05,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3634358157430,
+        "net_sales": 67,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7635977371766,
+        "net_sales": 67,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8175435579510,
+        "net_sales": 67,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5093175361654,
+        "net_sales": 66.38,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 1323503648886,
+        "net_sales": 66.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7034371473526,
+        "net_sales": 66.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8348312076406,
+        "net_sales": 66.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5526164504694,
+        "net_sales": 66,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7233705705590,
+        "net_sales": 66,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8080887349366,
+        "net_sales": 66,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8529476943990,
+        "net_sales": 66,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8570546454646,
+        "net_sales": 66,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8591743189110,
+        "net_sales": 66,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8009506914422,
+        "net_sales": 65.55,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6786170454134,
+        "net_sales": 65.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 2016344277110,
+        "net_sales": 65.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8533620392054,
+        "net_sales": 65.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8321231683702,
+        "net_sales": 65.05,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6361394643062,
+        "net_sales": 65,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8160172245110,
+        "net_sales": 65,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 2930640683126,
+        "net_sales": 64.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8190195138678,
+        "net_sales": 64.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8594193809526,
+        "net_sales": 64.7,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8394942906486,
+        "net_sales": 64.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5932458868854,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6112499040374,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6225855905910,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6244876058742,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6554807795830,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7067472920694,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7334230163574,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7551727534198,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7585431552118,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7609252642934,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7682765914230,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8169708028022,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8172473122934,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8178485428342,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8301063536758,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8328027340918,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8344070815862,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8347612446838,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8390482854006,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8516639162486,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3567816048758,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 3635252592758,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5222443778166,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5262037549174,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5588511391862,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5976750719094,
+        "net_sales": 63.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6139577303158,
+        "net_sales": 63.75,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6370223784054,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6724167499894,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6783044157558,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 6784280789110,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7225480183926,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7266402271350,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7503804661878,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7575665934454,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7629226082422,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7837330702454,
+        "net_sales": 63.75,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7853696155766,
+        "net_sales": 63.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8523585159286,
+        "net_sales": 63.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8541766549622,
+        "net_sales": 63.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8555493490806,
+        "net_sales": 63.75,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8299821138038,
+        "net_sales": 63.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6031665856630,
+        "net_sales": 63.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8144957538422,
+        "net_sales": 63.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5349616255094,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5917194256502,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7002864091254,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8031696617590,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8139302633590,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8344001347702,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8375470915702,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8534190424182,
+        "net_sales": 63,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7671867998326,
+        "net_sales": 62.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7807832621174,
+        "net_sales": 62.9,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8111658762358,
+        "net_sales": 62.9,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8108035276918,
+        "net_sales": 62.44,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5940869562486,
+        "net_sales": 62.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8320742785142,
+        "net_sales": 62.05,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8360840462454,
+        "net_sales": 62.05,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5899489345654,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6786518089846,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7726318190710,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8067304128630,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8157038805110,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8167707410550,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8172133220470,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8182366568566,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8325285707894,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8388227530870,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8391693140086,
+        "net_sales": 62,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7220245758070,
+        "net_sales": 61.6,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8183800397942,
+        "net_sales": 61.3,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5922282045558,
+        "net_sales": 61.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 6326998794358,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6917827788918,
+        "net_sales": 61.2,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 7783987839094,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7827155845238,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8180603420790,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8210800672886,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8222586208374,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8223733874806,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8384952696950,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5024970571894,
+        "net_sales": 61.2,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5025765818486,
+        "net_sales": 61.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 5932359614582,
+        "net_sales": 61.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7198860607606,
+        "net_sales": 61.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7395872637046,
+        "net_sales": 61.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7836521136246,
+        "net_sales": 61.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 8183021928566,
+        "net_sales": 60.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8295630962806,
+        "net_sales": 60.4,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8199271022710,
+        "net_sales": 60.35,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 3282687623286,
+        "net_sales": 60,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 5025022869622,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5194669981814,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5955529670774,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6904413192310,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6907900100726,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6945206567030,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7068942434422,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7085398360182,
+        "net_sales": 60,
+        "sm_order_count": 1
       }
     ],
     "date": "2026-05-20"
