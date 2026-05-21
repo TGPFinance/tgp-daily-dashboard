@@ -234,6 +234,7 @@ save_cache(cache)
 
 # ── Find latest date with data for Amazon (handles Amazon's 1-2 day reporting lag) ──
 def latest_date_with_data(source, key_field, max_back=5):
+    """Find most recent date in cache where key_field has data > 0."""
     for d in range(max_back):
         check_date = YESTERDAY - timedelta(days=d)
         ds = check_date.strftime("%Y-%m-%d")
@@ -242,6 +243,7 @@ def latest_date_with_data(source, key_field, max_back=5):
             return check_date
     return YESTERDAY
 
+# Use revenue/cost as the criterion (publishes faster than sessions)
 AMAZON_SELLER_DATE = latest_date_with_data('amazon_seller', 'ordered_product_sales')
 AMAZON_ADS_DATE    = latest_date_with_data('amazon_ads', 'cost')
 AMAZON_SELLER_DATE_STR = AMAZON_SELLER_DATE.strftime("%Y-%m-%d")
@@ -332,15 +334,21 @@ g_spend_30 = sum_field('google_ads', 'cost')
 g_cv_30    = sum_field('google_ads', 'conversions_value')
 g_roas_30  = safe_div(g_cv_30, g_spend_30)
 
-# Amazon chart: drop trailing zero days (no data yet from Amazon)
+# Revenue chart: trim trailing days with no revenue
 amazon_revenue_raw = daily_series('amazon_seller', 'ordered_product_sales')
 while amazon_revenue_raw and amazon_revenue_raw[-1][1] == 0:
     amazon_revenue_raw.pop()
 amazon_chart_labels = [d for d, _ in amazon_revenue_raw]
 amazon_chart_values = [v for _, v in amazon_revenue_raw]
-amazon_sess_values  = [to_float(cache['daily'].get('amazon_seller', {}).get(d, {}).get('sessions', 0)) for d in amazon_chart_labels]
-amazon_cvr_values   = []
-for d in amazon_chart_labels:
+
+# Sessions/CVR chart: separate labels — trails behind revenue when Amazon publishes sessions later
+amazon_sess_raw = daily_series('amazon_seller', 'sessions')
+while amazon_sess_raw and amazon_sess_raw[-1][1] == 0:
+    amazon_sess_raw.pop()
+amazon_sess_labels = [d for d, _ in amazon_sess_raw]
+amazon_sess_values = [v for _, v in amazon_sess_raw]
+amazon_cvr_values  = []
+for d in amazon_sess_labels:
     row = cache['daily'].get('amazon_seller', {}).get(d, {})
     cvr = to_float(row.get('unit_session_percentage', 0))
     if 0 < cvr < 1: cvr *= 100
@@ -709,7 +717,7 @@ function showTab(i) {{
 }}
 window.addEventListener('load', () => {{
   {revenue_chart_js('amazonRevChart', amazon_chart_labels, amazon_chart_values, amazon_chart_avg7)}
-  {sessions_cvr_chart_js('amazonSessChart', amazon_chart_labels, amazon_sess_values, amazon_cvr_values)}
+  {sessions_cvr_chart_js('amazonSessChart', amazon_sess_labels, amazon_sess_values, amazon_cvr_values)}
   {revenue_chart_js('shopifyRevChart', shopify_chart_labels, shopify_chart_values, shopify_chart_avg7, 'Daily net sales')}
 }});
 </script>
