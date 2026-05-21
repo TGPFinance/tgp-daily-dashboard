@@ -2,7 +2,7 @@ import os
 import json
 import requests
 from pathlib import Path
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 
 SUPERMETRICS_API_KEY = os.environ["SUPERMETRICS_API_KEY"]
@@ -21,6 +21,8 @@ T30_LABEL    = f"{T30_START_DT.strftime('%b %d')} – {YESTERDAY.strftime('%b %d
 
 SM_BASE = "https://api.supermetrics.com/enterprise/v2/query/data/json"
 CACHE_FILE = "data_cache.json"
+DEFAULT_TZ = "America/New_York"
+REFRESH_RECENT_DAYS = 7  # Always re-fetch last N days (handles settling orders + API lag)
 
 # Brand
 BRAND_COLOR = "#2c4ea2"
@@ -49,43 +51,43 @@ SOURCES = {
         'ds_id': 'ASELL', 'account_key': 'amazon_seller',
         'fields': 'ordered_product_sales,units_ordered,sessions,unit_session_percentage,page_views',
         'extra_params': {'report_type': 'sales_and_traffic_by_date'},
-        'timeout': 300,
+        'timeout': 300, 'timezone': DEFAULT_TZ,
     },
     'amazon_ads': {
         'ds_id': 'AA', 'account_key': 'amazon_ads',
         'fields': 'cost,attributedSales14d,clicks,impressions',
         'extra_params': {'report_type': 'SponsoredProduct'},
-        'timeout': 300,
+        'timeout': 300, 'timezone': DEFAULT_TZ,
     },
     'shopify': {
         'ds_id': 'SHP', 'account_key': 'shopify',
         'fields': 'gross_sales,sm_order_count,net_sales,net_quantity',
         'extra_params': {'report_type': 'Order'},
-        'timeout': 180,
+        'timeout': 180, 'timezone': DEFAULT_TZ,
     },
     'meta': {
         'ds_id': 'FA', 'account_key': 'meta',
         'fields': 'spend,purchase_value,clicks,impressions',
         'extra_params': None,
-        'timeout': 180,
+        'timeout': 180, 'timezone': DEFAULT_TZ,
     },
     'google_ads': {
         'ds_id': 'AW', 'account_key': 'google_ads',
         'fields': 'cost,conversions_value,clicks,impressions',
         'extra_params': None,
-        'timeout': 180,
+        'timeout': 180, 'timezone': DEFAULT_TZ,
     },
     'klaviyo_email': {
         'ds_id': 'KLAV', 'account_key': 'klaviyo',
         'fields': 'klaviyo_total_recipients,klaviyo_received_email,klaviyo_opened_email_unique,klaviyo_clicked_email_unique',
         'extra_params': {'report_type': 'MetricExportDaily'},
-        'timeout': 180,
+        'timeout': 180, 'timezone': DEFAULT_TZ,
     },
     'klaviyo_attr': {
         'ds_id': 'KLAV', 'account_key': 'klaviyo',
         'fields': 'shopify_placed_order,shopify_placed_order_value',
         'extra_params': {'report_type': 'MetricExportAttributedCampaignDaily'},
-        'timeout': 180,
+        'timeout': 180, 'timezone': DEFAULT_TZ,
     },
 }
 
@@ -110,10 +112,11 @@ def safe_div(numer, denom):
         return n / d if d > 0 else None
     except: return None
 
-def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=1):
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=1, timezone=None):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
+    if timezone: params['timezone'] = timezone
     for attempt in range(retries + 1):
         try:
             r = requests.get(SM_BASE, params=params, timeout=timeout)
@@ -137,28 +140,35 @@ def all_30d_dates():
 def ensure_30d_cache(source_key):
     cfg = SOURCES[source_key]
     daily = cache['daily'].setdefault(source_key, {})
-    needed = [d for d in all_30d_dates() if d not in daily]
-    if not needed:
+
+    # Always refresh the last REFRESH_RECENT_DAYS days (handles settling data + API lag)
+    recent_dates = {(YESTERDAY - timedelta(days=d)).strftime("%Y-%m-%d") for d in range(REFRESH_RECENT_DAYS)}
+    missing_dates = set(all_30d_dates()) - set(daily.keys())
+    to_fetch = sorted(missing_dates | recent_dates)
+
+    if not to_fetch:
         return
-    start, end = min(needed), max(needed)
+    start, end = to_fetch[0], to_fetch[-1]
     fields = f"date,{cfg['fields']}"
-    print(f"  Fetching {source_key}: {len(needed)} days ({start}→{end})")
+    print(f"  Fetching {source_key}: {len(to_fetch)} days ({start}→{end})")
     rows = sm_fetch_rows(cfg['ds_id'], ACCOUNTS[cfg['account_key']],
                          fields, start, end,
                          extra_params=cfg.get('extra_params'),
-                         timeout=cfg.get('timeout', 180))
+                         timeout=cfg.get('timeout', 180),
+                         timezone=cfg.get('timezone'))
     if rows:
         for row in rows:
             d = row.get('date')
             if d:
                 daily[d] = {k: v for k, v in row.items() if k != 'date'}
         return
-    if DATE_STR in needed:
+    if DATE_STR in to_fetch:
         print(f"  {source_key}: range fetch failed, trying yesterday only")
         rows = sm_fetch_rows(cfg['ds_id'], ACCOUNTS[cfg['account_key']],
                              fields, DATE_STR, DATE_STR,
                              extra_params=cfg.get('extra_params'),
-                             timeout=cfg.get('timeout', 180))
+                             timeout=cfg.get('timeout', 180),
+                             timezone=cfg.get('timezone'))
         if rows:
             for row in rows:
                 d = row.get('date')
@@ -167,15 +177,18 @@ def ensure_30d_cache(source_key):
             return
     cache_warnings.append(f"{source_key} (cached: {len(daily)}/30 days)")
 
-def ensure_py(source_key):
-    py_key = f"py_{source_key}_{PY_DATE_STR}"
+def ensure_py(source_key, py_date_str=None):
+    if py_date_str is None:
+        py_date_str = PY_DATE_STR
+    py_key = f"py_{source_key}_{py_date_str}"
     if py_key in cache:
         return
     cfg = SOURCES[source_key]
     rows = sm_fetch_rows(cfg['ds_id'], ACCOUNTS[cfg['account_key']],
-                         f"date,{cfg['fields']}", PY_DATE_STR, PY_DATE_STR,
+                         f"date,{cfg['fields']}", py_date_str, py_date_str,
                          extra_params=cfg.get('extra_params'),
-                         timeout=cfg.get('timeout', 180))
+                         timeout=cfg.get('timeout', 180),
+                         timezone=cfg.get('timezone'))
     if rows:
         cache[py_key] = {k: v for k, v in rows[0].items() if k != 'date'}
 
@@ -184,7 +197,7 @@ def ensure_top_products():
                          "title,ordered_product_sales,units_ordered",
                          T30_START, T30_END,
                          extra_params={"report_type": "sales_and_traffic_by_asin"},
-                         timeout=300)
+                         timeout=300, timezone=DEFAULT_TZ)
     if rows:
         cache['top_products'] = {"data": rows, "date": DATE_STR}
     elif 'top_products' in cache:
@@ -194,11 +207,11 @@ def ensure_campaigns():
     em = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
         "campaign_name,campaign_subject,campaign_send_date,klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
         T30_START, T30_END,
-        extra_params={"report_type": "MetricExportCampaign"}, timeout=300)
+        extra_params={"report_type": "MetricExportCampaign"}, timeout=300, timezone=DEFAULT_TZ)
     attr = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
         "campaign_name,shopify_placed_order,shopify_placed_order_value",
         T30_START, T30_END,
-        extra_params={"report_type": "MetricExportAttributedCampaign"}, timeout=300)
+        extra_params={"report_type": "MetricExportAttributedCampaign"}, timeout=300, timezone=DEFAULT_TZ)
     if em:
         cache['campaigns'] = {"email": em, "attr": attr, "date": DATE_STR}
     elif 'campaigns' in cache:
@@ -219,6 +232,31 @@ with ThreadPoolExecutor(max_workers=14) as ex:
 
 save_cache(cache)
 
+# ── Find latest date with data for Amazon (handles Amazon's 1-2 day reporting lag) ──
+def latest_date_with_data(source, key_field, max_back=5):
+    for d in range(max_back):
+        check_date = YESTERDAY - timedelta(days=d)
+        ds = check_date.strftime("%Y-%m-%d")
+        data = cache['daily'].get(source, {}).get(ds, {})
+        if to_float(data.get(key_field, 0)) > 0:
+            return check_date
+    return YESTERDAY
+
+AMAZON_SELLER_DATE = latest_date_with_data('amazon_seller', 'ordered_product_sales')
+AMAZON_ADS_DATE    = latest_date_with_data('amazon_ads', 'cost')
+AMAZON_SELLER_DATE_STR = AMAZON_SELLER_DATE.strftime("%Y-%m-%d")
+AMAZON_SELLER_DISPLAY  = AMAZON_SELLER_DATE.strftime("%B %d, %Y")
+AMAZON_ADS_DATE_STR    = AMAZON_ADS_DATE.strftime("%Y-%m-%d")
+AMAZON_ADS_DISPLAY     = AMAZON_ADS_DATE.strftime("%B %d, %Y")
+AMAZON_PY_DATE_STR     = (AMAZON_SELLER_DATE - timedelta(days=365)).strftime("%Y-%m-%d")
+AMAZON_PY_DISPLAY      = (AMAZON_SELLER_DATE - timedelta(days=365)).strftime("%Y")
+
+# Ensure Amazon PY data is cached for the actual Amazon date used
+if f"py_amazon_seller_{AMAZON_PY_DATE_STR}" not in cache:
+    print(f"  Fetching Amazon PY for {AMAZON_PY_DATE_STR}")
+    ensure_py('amazon_seller', AMAZON_PY_DATE_STR)
+    save_cache(cache)
+
 def day(src, d=DATE_STR):
     return cache['daily'].get(src, {}).get(d, {})
 
@@ -238,15 +276,18 @@ def daily_series(src, field, days=30):
         series.append((date_str, to_float(daily.get(date_str, {}).get(field, 0))))
     return series
 
-amazon_seller = day('amazon_seller')
-amazon_ads    = day('amazon_ads')
+# Yesterday's data for sources that publish daily
 shopify       = day('shopify')
 meta          = day('meta')
 google_ads    = day('google_ads')
 klaviyo_email = day('klaviyo_email')
 klaviyo_attr  = day('klaviyo_attr')
 
-amazon_seller_py = cache.get(f"py_amazon_seller_{PY_DATE_STR}", {})
+# Amazon uses latest available date (handles lag)
+amazon_seller = day('amazon_seller', AMAZON_SELLER_DATE_STR)
+amazon_ads    = day('amazon_ads', AMAZON_ADS_DATE_STR)
+
+amazon_seller_py = cache.get(f"py_amazon_seller_{AMAZON_PY_DATE_STR}", {})
 shopify_py       = cache.get(f"py_shopify_{PY_DATE_STR}", {})
 
 amazon_ads['roas'] = safe_div(amazon_ads.get('attributedSales14d'), amazon_ads.get('cost'))
@@ -291,18 +332,26 @@ g_spend_30 = sum_field('google_ads', 'cost')
 g_cv_30    = sum_field('google_ads', 'conversions_value')
 g_roas_30  = safe_div(g_cv_30, g_spend_30)
 
-amazon_daily_series  = daily_series('amazon_seller', 'ordered_product_sales')
-amazon_sess_series   = daily_series('amazon_seller', 'sessions')
-amazon_cvr_series    = []
-for d_str, _ in amazon_daily_series:
-    row = cache['daily'].get('amazon_seller', {}).get(d_str, {})
+# Amazon chart: drop trailing zero days (no data yet from Amazon)
+amazon_revenue_raw = daily_series('amazon_seller', 'ordered_product_sales')
+while amazon_revenue_raw and amazon_revenue_raw[-1][1] == 0:
+    amazon_revenue_raw.pop()
+amazon_chart_labels = [d for d, _ in amazon_revenue_raw]
+amazon_chart_values = [v for _, v in amazon_revenue_raw]
+amazon_sess_values  = [to_float(cache['daily'].get('amazon_seller', {}).get(d, {}).get('sessions', 0)) for d in amazon_chart_labels]
+amazon_cvr_values   = []
+for d in amazon_chart_labels:
+    row = cache['daily'].get('amazon_seller', {}).get(d, {})
     cvr = to_float(row.get('unit_session_percentage', 0))
     if 0 < cvr < 1: cvr *= 100
-    amazon_cvr_series.append((d_str, cvr))
+    amazon_cvr_values.append(cvr)
 
+# Shopify chart: filter $0 days, drop most recent (still settling)
 shopify_chart_raw = [(d, v) for d, v in daily_series('shopify', 'net_sales') if v > 0]
 if len(shopify_chart_raw) > 1:
     shopify_chart_raw = shopify_chart_raw[:-1]
+shopify_chart_labels = [d for d, _ in shopify_chart_raw]
+shopify_chart_values = [v for _, v in shopify_chart_raw]
 
 amazon_products = sorted(cache.get('top_products', {}).get('data', []),
                          key=lambda r: to_float(r.get('ordered_product_sales')), reverse=True)[:5]
@@ -317,8 +366,9 @@ for c in camp_email:
 klaviyo_campaigns = sorted(camp_email, key=lambda c: c.get('campaign_send_date', ''), reverse=True)[:5]
 
 print(f"  Days cached: amazon_seller={len(cache['daily'].get('amazon_seller',{}))}, amazon_ads={len(cache['daily'].get('amazon_ads',{}))}, shopify={len(cache['daily'].get('shopify',{}))}")
+print(f"  Amazon Seller showing: {AMAZON_SELLER_DATE_STR} | Amazon Ads showing: {AMAZON_ADS_DATE_STR}")
 if cache_warnings:
-    print(f"  Cache fallbacks: {cache_warnings}")
+    print(f"  Cache fallbacks (not displayed in dashboard): {cache_warnings}")
 
 def fmt_money(v, big=False):
     if v in (None, '', 0): return "—"
@@ -348,15 +398,16 @@ def fmt_roas(v):
     try: return f"{float(v):,.2f}×"
     except: return "—"
 
-def yoy_badge(cur, prior, fmt=fmt_money):
+def yoy_badge(cur, prior, fmt=fmt_money, py_year=None):
     if cur in (None, '', 0) or prior in (None, '', 0): return ""
+    if py_year is None: py_year = PY_DISPLAY
     try:
         c, p = float(cur), float(prior)
         if p == 0: return ""
         pct = ((c - p) / p) * 100
         color = "#22c55e" if pct >= 0 else "#ef4444"
         sign = "+" if pct >= 0 else ""
-        return f'<div class="sub">vs {fmt(prior)} ({PY_DISPLAY}) <span style="color:{color};font-weight:500">{sign}{pct:.1f}% YoY</span></div>'
+        return f'<div class="sub">vs {fmt(prior)} ({py_year}) <span style="color:{color};font-weight:500">{sign}{pct:.1f}% YoY</span></div>'
     except: return ""
 
 def card(value, label, sub=""):
@@ -415,14 +466,8 @@ def campaign_rows():
         </tr>"""
     return out
 
-amazon_chart_labels = [d for d, _ in amazon_daily_series]
-amazon_chart_values = [v for _, v in amazon_daily_series]
 amazon_chart_avg7   = rolling_avg(amazon_chart_values, 7)
-amazon_sess_values  = [v for _, v in amazon_sess_series]
-amazon_cvr_values   = [v for _, v in amazon_cvr_series]
-shopify_chart_labels = [d for d, _ in shopify_chart_raw]
-shopify_chart_values = [v for _, v in shopify_chart_raw]
-shopify_chart_avg7   = rolling_avg(shopify_chart_values, 7)
+shopify_chart_avg7  = rolling_avg(shopify_chart_values, 7)
 
 def revenue_chart_js(canvas_id, labels, values, avg, label_name='Daily revenue'):
     return f"""new Chart(document.getElementById('{canvas_id}'), {{
@@ -452,10 +497,6 @@ def sessions_cvr_chart_js(canvas_id, labels, sessions, cvr):
         }} }} }}
     );"""
 
-cache_notice = ""
-if cache_warnings:
-    cache_notice = f'<div class="cache-notice">⚠ Some metrics using cached data: {", ".join(cache_warnings)}</div>'
-
 amazon_aov_str = fmt_money(amazon_aov_val) if amazon_aov_val else "—"
 shopify_aov_str = fmt_money(shopify_aov_val) if shopify_aov_val else "—"
 shopify_per_unit_str = fmt_money(shopify_per_unit_val) if shopify_per_unit_val else "—"
@@ -475,7 +516,6 @@ html = f"""<!DOCTYPE html>
   .logo-wrap {{ display: inline-block; margin-bottom: 14px; }}
   .logo-wrap img {{ height: 100px; width: auto; display: block; }}
   .header .date {{ color: #9ca3af; font-size: 14px; margin-top: 8px; }}
-  .cache-notice {{ background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; padding: 10px 14px; border-radius: 8px; font-size: 12px; margin-bottom: 20px; }}
   .tabs {{ display: flex; gap: 8px; margin: 30px 0 20px; border-bottom: 1px solid #1f2937; padding-bottom: 8px; }}
   .tab {{ padding: 8px 16px; background: transparent; border: none; color: #9ca3af; cursor: pointer; border-radius: 6px; font-size: 14px; font-weight: 500; }}
   .tab.active {{ background: linear-gradient(135deg, {BRAND_COLOR}, {BRAND_COLOR_DARK}); color: white; }}
@@ -513,7 +553,6 @@ html = f"""<!DOCTYPE html>
   <div class="logo-wrap"><img src="{LOGO_PATH}" alt="The Good Patch" /></div>
   <div class="date">Performance Report · {DISPLAY_DATE}</div>
 </div>
-{cache_notice}
 <div class="tabs">
   <button class="tab active" onclick="showTab(0)">Amazon</button>
   <button class="tab" onclick="showTab(1)">Shopify, Meta, Google, Klaviyo</button>
@@ -521,15 +560,15 @@ html = f"""<!DOCTYPE html>
 
 <div class="panel active" id="panel-0">
   <div class="section">
-    {section_title('amazon', 'Seller Central · Amazon.com (US)', DISPLAY_DATE)}
+    {section_title('amazon', 'Seller Central · Amazon.com (US)', AMAZON_SELLER_DISPLAY)}
     <div class="cards-3">
-      {card(fmt_money(amazon_seller.get('ordered_product_sales')), 'Ordered Revenue', yoy_badge(amazon_seller.get('ordered_product_sales'), amazon_seller_py.get('ordered_product_sales'), fmt_money))}
-      {card(fmt_num(amazon_seller.get('units_ordered')), 'Units Ordered', yoy_badge(amazon_seller.get('units_ordered'), amazon_seller_py.get('units_ordered'), fmt_num))}
-      {card(amazon_aov_str, 'AOV', yoy_badge(amazon_aov_val, amazon_aov_py_val, fmt_money))}
+      {card(fmt_money(amazon_seller.get('ordered_product_sales')), 'Ordered Revenue', yoy_badge(amazon_seller.get('ordered_product_sales'), amazon_seller_py.get('ordered_product_sales'), fmt_money, AMAZON_PY_DISPLAY))}
+      {card(fmt_num(amazon_seller.get('units_ordered')), 'Units Ordered', yoy_badge(amazon_seller.get('units_ordered'), amazon_seller_py.get('units_ordered'), fmt_num, AMAZON_PY_DISPLAY))}
+      {card(amazon_aov_str, 'AOV', yoy_badge(amazon_aov_val, amazon_aov_py_val, fmt_money, AMAZON_PY_DISPLAY))}
     </div>
   </div>
   <div class="section">
-    {section_title('amazon', 'Sponsored Products · La Mend (US)', DISPLAY_DATE)}
+    {section_title('amazon', 'Sponsored Products · La Mend (US)', AMAZON_ADS_DISPLAY)}
     <div class="cards">
       {card(fmt_money(amazon_ads.get('cost')), 'Ad Spend')}
       {card(fmt_money(amazon_ads.get('attributedSales14d')), 'Ad Sales')}
@@ -681,3 +720,25 @@ with open("index.html", "w") as f:
     f.write(html)
 
 print(f"Dashboard generated successfully for {DISPLAY_DATE}.")
+
+# ── Slack post decision ────────────────────────────────────────────────────────
+# Post to Slack if:
+#   - Haven't posted today yet
+#   - AND (Amazon Ads has yesterday's data OR this is the final attempt)
+has_aa_data = bool(cache['daily'].get('amazon_ads', {}).get(DATE_STR))
+already_posted = cache.get('last_posted_date') == DATE_STR
+is_final_attempt = os.environ.get('IS_FINAL_ATTEMPT') == 'true'
+
+should_post = False
+if not already_posted:
+    if has_aa_data or is_final_attempt:
+        should_post = True
+        cache['last_posted_date'] = DATE_STR
+        save_cache(cache)
+
+print(f"  Amazon Ads for {DATE_STR}: {'OK' if has_aa_data else 'missing'}")
+print(f"  Already posted today: {already_posted}")
+print(f"  Final attempt (6am): {is_final_attempt}")
+print(f"  -> Posting to Slack: {should_post}")
+
+Path('should_post.flag').write_text('yes' if should_post else 'no')
