@@ -177,10 +177,10 @@
         "page_views": 2512
       },
       "2026-05-17": {
-        "ordered_product_sales": 8638.96,
-        "units_ordered": 311,
+        "ordered_product_sales": 8599,
+        "units_ordered": 309,
         "sessions": 2144,
-        "unit_session_percentage": 14.51,
+        "unit_session_percentage": 14.41,
         "page_views": 2726
       },
       "2026-05-18": {
@@ -382,11 +382,11 @@
       },
       "2026-05-21": {
         "cost": 2182.22,
-        "attributedSales14d": 2117.78,
+        "attributedSales14d": 2157.75,
         "clicks": 840,
-        "impressions": 164126,
-        "roas": 0.9704704383609354,
-        "acos": 1.0304280897921407
+        "impressions": 164031,
+        "roas": 0.988786648458909,
+        "acos": 1.0113405167419764
       }
     },
     "shopify": {
@@ -753,13 +753,13 @@
         "impressions": 10136
       },
       "2026-05-21": {
-        "spend": 456.75,
+        "spend": 456.84,
         "purchase_value": 832.05,
         "clicks": 141,
-        "impressions": 11817,
-        "roas": 1.8216748768472906,
-        "cpc": 3.2393617021276597,
-        "ctr": 0.011931962427011932
+        "impressions": 11823,
+        "roas": 1.8213159968479118,
+        "cpc": 3.2399999999999998,
+        "ctr": 0.011925907130170008
       }
     },
     "google_ads": {
@@ -21889,78 +21889,88 @@
     "data": [
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (8 Total Patches)",
-        "ordered_product_sales": 21038.94,
-        "units_ordered": 1055
+        "ordered_product_sales": 21738.24,
+        "units_ordered": 1090
       },
       {
         "title": "The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea Extract, Natural Plant Powered Wearable Wellness, Helps to Promote Energy (8 Total Patches)",
-        "ordered_product_sales": 15584.4,
-        "units_ordered": 780
+        "ordered_product_sales": 16273.2,
+        "units_ordered": 821
       },
       {
         "title": "The Good Patch Relax Patches, Supports Relaxation, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12707.28,
-        "units_ordered": 637
+        "ordered_product_sales": 12947.04,
+        "units_ordered": 649
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12507.48,
-        "units_ordered": 626
+        "ordered_product_sales": 12847.14,
+        "units_ordered": 643
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 9895.05,
-        "units_ordered": 495
+        "ordered_product_sales": 10194.9,
+        "units_ordered": 510
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 8249.12,
-        "units_ordered": 344
+        "ordered_product_sales": 8608.82,
+        "units_ordered": 359
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (16 Total Patches)",
-        "ordered_product_sales": 7564.71,
-        "units_ordered": 217
+        "ordered_product_sales": 7844.63,
+        "units_ordered": 225
       },
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 7498.5,
-        "units_ordered": 150
+        "ordered_product_sales": 7598.48,
+        "units_ordered": 152
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
-        "ordered_product_sales": 7108.32,
-        "units_ordered": 143
+        "ordered_product_sales": 7558.23,
+        "units_ordered": 152
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 6954.2,
-        "units_ordered": 290
+        "ordered_product_sales": 7241.96,
+        "units_ordered": 302
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 6221.19,
-        "units_ordered": 179
-      },
-      {
-        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 5948.81,
-        "units_ordered": 119
+        "ordered_product_sales": 6606.08,
+        "units_ordered": 190
       },
       {
         "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
-        "ordered_product_sales": 5614.38,
-        "units_ordered": 281
+        "ordered_product_sales": 5874.12,
+        "units_ordered": 294
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 5848.83,
+        "units_ordered": 117
       },
       {
         "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
-        "ordered_product_sales": 5537.23,
-        "units_ordered": 277
+        "ordered_product_sales": 5797.1,
+        "units_ordered": 290
       },
       {
         "title": "The Good Patch Most Loved Patches \u2013 Awake B12 for Energy, Dream for Sleep, Rescue for Recovery, Relax for Calm \u2013 Plant-Powered (16 Patches)",
-        "ordered_product_sales": 3931.2,
-        "units_ordered": 102
+        "ordered_product_sales": 4128,
+        "units_ordered": 107
+      },
+      {
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 3820.78,
+        "units_ordered": 110
+      },
+      {
+        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 3599.1,
+        "units_ordered": 90
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
@@ -21968,104 +21978,104 @@
         "units_ordered": 65
       },
       {
-        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 3559.11,
-        "units_ordered": 89
-      },
-      {
-        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 3400.9,
-        "units_ordered": 98
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3396.6,
+        "units_ordered": 170
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 3349.33,
+        "units_ordered": 67
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3278.36,
+        "units_ordered": 167
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (24 Total Patches)",
         "ordered_product_sales": 3249.35,
         "units_ordered": 65
       },
       {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3176.82,
-        "units_ordered": 159
-      },
-      {
-        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3138.43,
-        "units_ordered": 160
-      },
-      {
-        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3099.38,
-        "units_ordered": 62
-      },
-      {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
-        "ordered_product_sales": 3060,
-        "units_ordered": 102
+        "ordered_product_sales": 3180,
+        "units_ordered": 106
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2778.11,
-        "units_ordered": 80
+        "ordered_product_sales": 2953.06,
+        "units_ordered": 85
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
-        "ordered_product_sales": 2558.72,
-        "units_ordered": 128
-      },
-      {
-        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 2517.9,
-        "units_ordered": 105
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 2430,
-        "units_ordered": 82
-      },
-      {
-        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
-        "ordered_product_sales": 2370,
-        "units_ordered": 50
-      },
-      {
-        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 2364.57,
-        "units_ordered": 43
+        "ordered_product_sales": 2638.68,
+        "units_ordered": 132
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2359.41,
-        "units_ordered": 59
-      },
-      {
-        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 2274.35,
+        "ordered_product_sales": 2599.35,
         "units_ordered": 65
       },
       {
-        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
-        "ordered_product_sales": 2137.86,
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
+        "ordered_product_sales": 2565.86,
         "units_ordered": 107
       },
       {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 2490,
+        "units_ordered": 84
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 2474.55,
+        "units_ordered": 45
+      },
+      {
+        "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
+        "ordered_product_sales": 2454,
+        "units_ordered": 52
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 2449.3,
+        "units_ordered": 70
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
+        "ordered_product_sales": 2257.74,
+        "units_ordered": 113
+      },
+      {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 1924.45,
-        "units_ordered": 55
+        "ordered_product_sales": 1994.43,
+        "units_ordered": 57
       },
       {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (36 Total Patches)",
         "ordered_product_sales": 1899.62,
-        "units_ordered": 38
+        "units_ordered": 39
       },
       {
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 1620,
-        "units_ordered": 54
+        "ordered_product_sales": 1650,
+        "units_ordered": 55
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (8 Total Patches)",
-        "ordered_product_sales": 1562.46,
-        "units_ordered": 78
+        "ordered_product_sales": 1642.38,
+        "units_ordered": 82
+      },
+      {
+        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
+        "ordered_product_sales": 1436.4,
+        "units_ordered": 51
+      },
+      {
+        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
+        "ordered_product_sales": 1399.72,
+        "units_ordered": 28
       },
       {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
@@ -22073,24 +22083,14 @@
         "units_ordered": 28
       },
       {
-        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
-        "ordered_product_sales": 1360.8,
-        "units_ordered": 48
-      },
-      {
-        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
-        "ordered_product_sales": 1299.74,
-        "units_ordered": 26
-      },
-      {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 1294.63,
-        "units_ordered": 37
+        "ordered_product_sales": 1329.62,
+        "units_ordered": 38
       },
       {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 1121.72,
-        "units_ordered": 28
+        "ordered_product_sales": 1154.71,
+        "units_ordered": 29
       },
       {
         "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
@@ -22098,14 +22098,14 @@
         "units_ordered": 20
       },
       {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 840,
+        "units_ordered": 14
+      },
+      {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
         "ordered_product_sales": 799.8,
         "units_ordered": 20
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
-        "ordered_product_sales": 780,
-        "units_ordered": 13
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (16 Total Patches)",
@@ -22128,6 +22128,11 @@
         "units_ordered": 10
       },
       {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
+        "ordered_product_sales": 540,
+        "units_ordered": 10
+      },
+      {
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
         "ordered_product_sales": 450,
         "units_ordered": 5
@@ -22141,11 +22146,6 @@
         "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
         "ordered_product_sales": 432,
         "units_ordered": 6
-      },
-      {
-        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
-        "ordered_product_sales": 420,
-        "units_ordered": 8
       },
       {
         "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (18 Total Patch Sets)",
@@ -136874,18 +136874,18 @@
       },
       {
         "ship_state": "WA",
-        "item_price": 6762.63,
+        "item_price": 6759.45,
         "item_quantity": 259
       },
       {
         "ship_state": "NC",
-        "item_price": 6370.29,
-        "item_quantity": 236
+        "item_price": 6350.31,
+        "item_quantity": 235
       },
       {
         "ship_state": "IL",
-        "item_price": 6117.49,
-        "item_quantity": 244
+        "item_price": 6077.53,
+        "item_quantity": 242
       },
       {
         "ship_state": "GA",
@@ -137747,6 +137747,121 @@
   },
   "amazon_promo_yesterday": {
     "data": [
+      {
+        "date": "2026-04-22",
+        "item_promotion_discount": 96.18,
+        "ship_promotion_discount": 90.89
+      },
+      {
+        "date": "2026-04-23",
+        "item_promotion_discount": 118.95,
+        "ship_promotion_discount": 86.59
+      },
+      {
+        "date": "2026-04-24",
+        "item_promotion_discount": 133.95,
+        "ship_promotion_discount": 71.81
+      },
+      {
+        "date": "2026-04-25",
+        "item_promotion_discount": 94.45,
+        "ship_promotion_discount": 60.45
+      },
+      {
+        "date": "2026-04-26",
+        "item_promotion_discount": 120,
+        "ship_promotion_discount": 83.53
+      },
+      {
+        "date": "2026-04-27",
+        "item_promotion_discount": 95.2,
+        "ship_promotion_discount": 94.26
+      },
+      {
+        "date": "2026-04-28",
+        "item_promotion_discount": 122.09,
+        "ship_promotion_discount": 103.06
+      },
+      {
+        "date": "2026-04-29",
+        "item_promotion_discount": 140.7,
+        "ship_promotion_discount": 72.13
+      },
+      {
+        "date": "2026-04-30",
+        "item_promotion_discount": 142.4,
+        "ship_promotion_discount": 53.94
+      },
+      {
+        "date": "2026-05-01",
+        "item_promotion_discount": 86.15,
+        "ship_promotion_discount": 63.72
+      },
+      {
+        "date": "2026-05-02",
+        "item_promotion_discount": 94.95,
+        "ship_promotion_discount": 84.49
+      },
+      {
+        "date": "2026-05-03",
+        "item_promotion_discount": 128.8,
+        "ship_promotion_discount": 83.73
+      },
+      {
+        "date": "2026-05-04",
+        "item_promotion_discount": 135.7,
+        "ship_promotion_discount": 97.05
+      },
+      {
+        "date": "2026-05-05",
+        "item_promotion_discount": 141.7,
+        "ship_promotion_discount": 93.8
+      },
+      {
+        "date": "2026-05-06",
+        "item_promotion_discount": 174.4,
+        "ship_promotion_discount": 75.96
+      },
+      {
+        "date": "2026-05-07",
+        "item_promotion_discount": 261.52,
+        "ship_promotion_discount": 70.9
+      },
+      {
+        "date": "2026-05-08",
+        "item_promotion_discount": 191.05,
+        "ship_promotion_discount": 76.27
+      },
+      {
+        "date": "2026-05-09",
+        "item_promotion_discount": 152.9,
+        "ship_promotion_discount": 88.1
+      },
+      {
+        "date": "2026-05-10",
+        "item_promotion_discount": 139.28,
+        "ship_promotion_discount": 68.22
+      },
+      {
+        "date": "2026-05-11",
+        "item_promotion_discount": 162.39,
+        "ship_promotion_discount": 96.79
+      },
+      {
+        "date": "2026-05-12",
+        "item_promotion_discount": 93.46,
+        "ship_promotion_discount": 97.46
+      },
+      {
+        "date": "2026-05-13",
+        "item_promotion_discount": 111.87,
+        "ship_promotion_discount": 84.82
+      },
+      {
+        "date": "2026-05-14",
+        "item_promotion_discount": 217.74,
+        "ship_promotion_discount": 88.03
+      },
       {
         "date": "2026-05-15",
         "item_promotion_discount": 144.39,
