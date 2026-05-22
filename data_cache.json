@@ -177,38 +177,38 @@
         "page_views": 2156
       },
       "2026-05-16": {
-        "ordered_product_sales": 7656.41,
-        "units_ordered": 282,
+        "ordered_product_sales": 7606.42,
+        "units_ordered": 281,
         "sessions": 1952,
-        "unit_session_percentage": 14.45,
+        "unit_session_percentage": 14.4,
         "page_views": 2512
       },
       "2026-05-17": {
-        "ordered_product_sales": 8723.94,
+        "ordered_product_sales": 8673.95,
         "units_ordered": 312,
         "sessions": 2144,
         "unit_session_percentage": 14.55,
         "page_views": 2726
       },
       "2026-05-18": {
-        "ordered_product_sales": 8576.71,
-        "units_ordered": 330,
+        "ordered_product_sales": 8516.76,
+        "units_ordered": 327,
         "sessions": 1971,
-        "unit_session_percentage": 16.74,
+        "unit_session_percentage": 16.59,
         "page_views": 2461
       },
       "2026-05-19": {
-        "ordered_product_sales": 7590.05,
-        "units_ordered": 276,
+        "ordered_product_sales": 7540.06,
+        "units_ordered": 275,
         "sessions": 1935,
-        "unit_session_percentage": 14.26,
+        "unit_session_percentage": 14.21,
         "page_views": 2438
       },
       "2026-05-20": {
-        "ordered_product_sales": 8078.59,
-        "units_ordered": 297,
+        "ordered_product_sales": 8058.61,
+        "units_ordered": 296,
         "sessions": 2016,
-        "unit_session_percentage": 14.73,
+        "unit_session_percentage": 14.68,
         "page_views": 2540
       }
     },
@@ -542,10 +542,10 @@
         "net_quantity": 108
       },
       "2026-05-15": {
-        "gross_sales": 3329.8,
-        "sm_order_count": 63,
-        "net_sales": 2571.15,
-        "net_quantity": 166
+        "gross_sales": 2056.2,
+        "sm_order_count": 42,
+        "net_sales": 1729.2,
+        "net_quantity": 94
       },
       "2026-05-16": {
         "gross_sales": 1185.95,
@@ -578,10 +578,16 @@
         "net_quantity": 154
       },
       "2026-05-21": {
-        "gross_sales": 592.15,
+        "gross_sales": 3873,
+        "sm_order_count": 53,
+        "net_sales": 2917.95,
+        "net_quantity": 183
+      },
+      "2026-05-22": {
+        "gross_sales": 930.1,
         "sm_order_count": 12,
-        "net_sales": 292.15,
-        "net_quantity": 37
+        "net_sales": 783.1,
+        "net_quantity": 48
       }
     },
     "meta": {
@@ -760,13 +766,19 @@
         "impressions": 3158
       },
       "2026-05-20": {
-        "spend": 448.97,
+        "spend": 449.05,
         "purchase_value": 304.6,
         "clicks": 132,
-        "impressions": 10132,
-        "roas": 0.6784417667104706,
-        "cpc": 3.401287878787879,
-        "ctr": 0.013028030003947888
+        "impressions": 10135
+      },
+      "2026-05-21": {
+        "spend": 455.37,
+        "purchase_value": 832.05,
+        "clicks": 141,
+        "impressions": 11785,
+        "roas": 1.8271954674220963,
+        "cpc": 3.2295744680851066,
+        "ctr": 0.011964361476453118
       }
     },
     "google_ads": {
@@ -928,30 +940,36 @@
       },
       "2026-05-17": {
         "cost": 382.9407,
-        "conversions_value": 583.11,
+        "conversions_value": 455.51,
         "clicks": 283,
         "impressions": 40487
       },
       "2026-05-18": {
-        "cost": 321.4705,
-        "conversions_value": 792.19,
+        "cost": 321.4527,
+        "conversions_value": 983.59,
         "clicks": 455,
-        "impressions": 29501
+        "impressions": 29499
       },
       "2026-05-19": {
-        "cost": 278.7204,
+        "cost": 278.7054,
         "conversions_value": 582.12,
         "clicks": 364,
-        "impressions": 31623
+        "impressions": 31620
       },
       "2026-05-20": {
         "cost": 201.7129,
         "conversions_value": 103.72,
         "clicks": 154,
-        "impressions": 13902,
-        "roas": 0.5141961669283422,
-        "cpc": 1.309824025974026,
-        "ctr": 0.011077542799597181
+        "impressions": 13902
+      },
+      "2026-05-21": {
+        "cost": 227.627,
+        "conversions_value": 0,
+        "clicks": 240,
+        "impressions": 21489,
+        "roas": 0.0,
+        "cpc": 0.9484458333333333,
+        "ctr": 0.011168504816417702
       }
     },
     "klaviyo_email": {
@@ -1100,10 +1118,10 @@
         "klaviyo_clicked_email_unique": 16
       },
       "2026-05-14": {
-        "klaviyo_total_recipients": 438,
-        "klaviyo_received_email": 431,
-        "klaviyo_opened_email_unique": 4543,
-        "klaviyo_clicked_email_unique": 12
+        "klaviyo_total_recipients": 135,
+        "klaviyo_received_email": 132,
+        "klaviyo_opened_email_unique": 1715,
+        "klaviyo_clicked_email_unique": 5
       },
       "2026-05-15": {
         "klaviyo_total_recipients": 288,
@@ -1136,10 +1154,16 @@
         "klaviyo_clicked_email_unique": 284
       },
       "2026-05-20": {
-        "klaviyo_total_recipients": 186,
-        "klaviyo_received_email": 183,
-        "klaviyo_opened_email_unique": 4245,
-        "klaviyo_clicked_email_unique": 20
+        "klaviyo_total_recipients": 5951,
+        "klaviyo_received_email": 5938,
+        "klaviyo_opened_email_unique": 8189,
+        "klaviyo_clicked_email_unique": 37
+      },
+      "2026-05-21": {
+        "klaviyo_total_recipients": 51003,
+        "klaviyo_received_email": 50497,
+        "klaviyo_opened_email_unique": 20082,
+        "klaviyo_clicked_email_unique": 294
       }
     },
     "klaviyo_attr": {
@@ -1240,8 +1264,8 @@
         "shopify_placed_order_value": 628.21
       },
       "2026-05-14": {
-        "shopify_placed_order": 62,
-        "shopify_placed_order_value": 1889.27
+        "shopify_placed_order": 23,
+        "shopify_placed_order_value": 1018.73
       },
       "2026-05-15": {
         "shopify_placed_order": 48,
@@ -1264,8 +1288,12 @@
         "shopify_placed_order_value": 1079.98
       },
       "2026-05-20": {
-        "shopify_placed_order": 29,
-        "shopify_placed_order_value": 2363.37
+        "shopify_placed_order": 43,
+        "shopify_placed_order_value": 2871.76
+      },
+      "2026-05-21": {
+        "shopify_placed_order": 39,
+        "shopify_placed_order_value": 2551.32
       }
     },
     "ga4": {
@@ -1478,6 +1506,13 @@
         "checkouts": "",
         "ecommercePurchases": "",
         "purchaseRevenue": ""
+      },
+      "2026-05-21": {
+        "sessions": 802,
+        "addToCarts": 145,
+        "checkouts": 58,
+        "ecommercePurchases": 15,
+        "purchaseRevenue": 1086.9
       }
     }
   },
@@ -1492,54 +1527,60 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 2372.1,
-        "sm_order_count": 22
+        "net_sales": 2653.5,
+        "sm_order_count": 37
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 379.35,
-        "sm_order_count": 22
+        "net_sales": 755.4,
+        "sm_order_count": 16
       }
     ],
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
   "top_shopify_variants": {
     "data": [
       {
         "title": "B12 Awake",
         "variant_title": "20 Patches ($2.50 Per Patch)",
-        "net_sales": 6377.44,
-        "net_quantity": 191
+        "net_sales": 6943.69,
+        "net_quantity": 204
       },
       {
         "title": "B12 Awake",
         "variant_title": "4 Patches ($3.00 Per Patch)",
-        "net_sales": 2066.32,
-        "net_quantity": 582
+        "net_sales": 2140.12,
+        "net_quantity": 585
       },
       {
         "title": "Hemp Queen",
         "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 1994.19,
-        "net_quantity": 172
+        "net_sales": 1938.19,
+        "net_quantity": 158
       },
       {
         "title": "Nite Nite",
         "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 1662.61,
-        "net_quantity": 142
+        "net_sales": 1918.61,
+        "net_quantity": 156
       },
       {
         "title": "Be Calm",
         "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 1493.2,
-        "net_quantity": 154
+        "net_sales": 1621.2,
+        "net_quantity": 165
       },
       {
         "title": "Dream",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 1490.4,
-        "net_quantity": 492
+        "net_sales": 1607.4,
+        "net_quantity": 501
+      },
+      {
+        "title": "Nite Nite",
+        "variant_title": "40 Patches ($3.00/patch)",
+        "net_sales": 1434,
+        "net_quantity": 16
       },
       {
         "title": "Dream",
@@ -1549,15 +1590,21 @@
       },
       {
         "title": "Nite Nite",
-        "variant_title": "40 Patches ($3.00/patch)",
-        "net_sales": 1344,
-        "net_quantity": 15
+        "variant_title": "16 Patches ($3.50/patch)",
+        "net_sales": 953.97,
+        "net_quantity": 21
       },
       {
         "title": "Slumber",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 1009,
-        "net_quantity": 117
+        "net_sales": 932.8,
+        "net_quantity": 113
+      },
+      {
+        "title": "Think",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 910.61,
+        "net_quantity": 122
       },
       {
         "title": "The Starter Set",
@@ -1573,18 +1620,6 @@
       },
       {
         "title": "Nite Nite",
-        "variant_title": "16 Patches ($3.50/patch)",
-        "net_sales": 897.97,
-        "net_quantity": 20
-      },
-      {
-        "title": "Think",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 838.01,
-        "net_quantity": 116
-      },
-      {
-        "title": "Nite Nite",
         "variant_title": "28 Patches ($3.25/patch)",
         "net_sales": 832.65,
         "net_quantity": 11
@@ -1593,13 +1628,7 @@
         "title": "Think",
         "variant_title": "16 Patches ($2.75/patch)",
         "net_sales": 793.65,
-        "net_quantity": 23
-      },
-      {
-        "title": "Be Calm",
-        "variant_title": "16 Patches ($3.50/patch)",
-        "net_sales": 742.92,
-        "net_quantity": 16
+        "net_quantity": 24
       },
       {
         "title": "Rescue",
@@ -1610,14 +1639,14 @@
       {
         "title": "Un-Frown",
         "variant_title": "1 PACK = 2 FOREHEAD PATCHES",
-        "net_sales": 734,
-        "net_quantity": 43
+        "net_sales": 714,
+        "net_quantity": 42
       },
       {
-        "title": "Dream",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 714.12,
-        "net_quantity": 21
+        "title": "Be Calm",
+        "variant_title": "16 Patches ($3.50/patch)",
+        "net_sales": 695.32,
+        "net_quantity": 15
       },
       {
         "title": "Rescue",
@@ -1626,46 +1655,52 @@
         "net_quantity": 11
       },
       {
+        "title": "Dream",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 683.32,
+        "net_quantity": 21
+      },
+      {
         "title": "Hemp Queen",
         "variant_title": "16 Patches ($3.50/patch)",
         "net_sales": 682.78,
         "net_quantity": 15
       },
       {
-        "title": "Slumber",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 643.5,
-        "net_quantity": 19
-      },
-      {
         "title": "Adult Zzz",
         "variant_title": "",
-        "net_sales": 640.4,
-        "net_quantity": 25
+        "net_sales": 680.4,
+        "net_quantity": 27
       },
       {
         "title": "Relief",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 626.52,
-        "net_quantity": 65
+        "net_sales": 654.72,
+        "net_quantity": 68
       },
       {
         "title": "Slumber",
-        "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 604.14,
-        "net_quantity": 9
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 643.5,
+        "net_quantity": 20
       },
       {
         "title": "Cycle",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 599.8,
+        "net_sales": 589.6,
         "net_quantity": 78
       },
       {
-        "title": "Rescue",
+        "title": "Relax",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 574.61,
-        "net_quantity": 370
+        "net_sales": 583.5,
+        "net_quantity": 81
+      },
+      {
+        "title": "Rescue",
+        "variant_title": "8 Patches ($2.75/patch)",
+        "net_sales": 580.46,
+        "net_quantity": 32
       },
       {
         "title": "Be Calm",
@@ -1674,28 +1709,22 @@
         "net_quantity": 8
       },
       {
-        "title": "Relax",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 511.5,
-        "net_quantity": 72
-      },
-      {
-        "title": "Un-Wrinkle",
-        "variant_title": "4 Patches (1 Pack)",
-        "net_sales": 505.5,
-        "net_quantity": 38
+        "title": "Slumber",
+        "variant_title": "40 Patches ($2.25/patch)",
+        "net_sales": 527.64,
+        "net_quantity": 8
       },
       {
         "title": "Active",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 497.2,
+        "net_sales": 495.4,
         "net_quantity": 50
       },
       {
-        "title": "Rescue",
-        "variant_title": "8 Patches ($2.75/patch)",
-        "net_sales": 492.46,
-        "net_quantity": 27
+        "title": "Hot Flash Relief",
+        "variant_title": "4 Patches ($4.00/patch)",
+        "net_sales": 495.2,
+        "net_quantity": 38
       },
       {
         "title": "Brighten Up",
@@ -1704,16 +1733,28 @@
         "net_quantity": 102
       },
       {
+        "title": "Starter Set",
+        "variant_title": "Premium (20 Patches)",
+        "net_sales": 490,
+        "net_quantity": 13
+      },
+      {
         "title": "Think",
         "variant_title": "40 Patches ($2.25/patch)",
         "net_sales": 479.25,
         "net_quantity": 7
       },
       {
-        "title": "Hot Flash Relief",
-        "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 479.2,
-        "net_quantity": 37
+        "title": "Ultimate Zen Duo",
+        "variant_title": "",
+        "net_sales": 478.4,
+        "net_quantity": 22
+      },
+      {
+        "title": "Un-Wrinkle",
+        "variant_title": "4 Patches (1 Pack)",
+        "net_sales": 475.5,
+        "net_quantity": 36
       },
       {
         "title": "De-Puff",
@@ -1728,10 +1769,10 @@
         "net_quantity": 9
       },
       {
-        "title": "Ultimate Zen Duo",
-        "variant_title": "",
-        "net_sales": 452.4,
-        "net_quantity": 21
+        "title": "De-Puff",
+        "variant_title": "3 Pairs",
+        "net_sales": 456.73,
+        "net_quantity": 36
       },
       {
         "title": "Un-Wrinkle",
@@ -1740,16 +1781,28 @@
         "net_quantity": 10
       },
       {
-        "title": "Relax",
+        "title": "Active",
         "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 411.95,
-        "net_quantity": 12
+        "net_sales": 412.5,
+        "net_quantity": 11
       },
       {
-        "title": "De-Puff",
-        "variant_title": "3 Pairs",
-        "net_sales": 411.73,
-        "net_quantity": 33
+        "title": "Rescue",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 401.21,
+        "net_quantity": 353
+      },
+      {
+        "title": "Desire",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 398.26,
+        "net_quantity": 42
+      },
+      {
+        "title": "Cycle",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 396.44,
+        "net_quantity": 11
       },
       {
         "title": "Un-Wrinkle",
@@ -1758,16 +1811,16 @@
         "net_quantity": 7
       },
       {
-        "title": "Glow Up Set",
-        "variant_title": "",
-        "net_sales": 387.8,
-        "net_quantity": 9
+        "title": "Family Zzz",
+        "variant_title": "18 Patches",
+        "net_sales": 384.3,
+        "net_quantity": 10
       },
       {
-        "title": "Desire",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 374.26,
-        "net_quantity": 39
+        "title": "Relax",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 374.55,
+        "net_quantity": 11
       },
       {
         "title": "Hot Flash Relief",
@@ -1782,22 +1835,10 @@
         "net_quantity": 6
       },
       {
-        "title": "Cycle",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 352.44,
-        "net_quantity": 10
-      },
-      {
         "title": "Hemp Queen",
         "variant_title": "28 Patches ($3.25/patch)",
         "net_sales": 349.22,
-        "net_quantity": 6
-      },
-      {
-        "title": "Family Zzz",
-        "variant_title": "18 Patches",
-        "net_sales": 342.3,
-        "net_quantity": 9
+        "net_quantity": 5
       },
       {
         "title": "Nite Owl",
@@ -1806,22 +1847,40 @@
         "net_quantity": 6
       },
       {
+        "title": "Glow Up Set",
+        "variant_title": "",
+        "net_sales": 335.8,
+        "net_quantity": 8
+      },
+      {
+        "title": "Nite Owl",
+        "variant_title": "24 Patches ($1.83/patch)",
+        "net_sales": 335.13,
+        "net_quantity": 10
+      },
+      {
         "title": "Slumber",
         "variant_title": "28 Patches ($2.50/patch)",
         "net_sales": 335.13,
         "net_quantity": 6
       },
       {
-        "title": "Starter Set",
-        "variant_title": "Premium (20 Patches)",
-        "net_sales": 330,
+        "title": "Weekly Grind Set",
+        "variant_title": "20 Patches",
+        "net_sales": 321.75,
         "net_quantity": 9
       },
       {
-        "title": "Active",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 324.5,
-        "net_quantity": 9
+        "title": "B12 Awake",
+        "variant_title": "Trial Run Bundle (40% OFF Saving!)",
+        "net_sales": 317.75,
+        "net_quantity": 13
+      },
+      {
+        "title": "Relax",
+        "variant_title": "40 Patches ($2.25/patch)",
+        "net_sales": 300.38,
+        "net_quantity": 4
       },
       {
         "title": "Active",
@@ -1830,22 +1889,10 @@
         "net_quantity": 4
       },
       {
-        "title": "Nite Owl",
-        "variant_title": "24 Patches ($1.83/patch)",
-        "net_sales": 291.13,
-        "net_quantity": 8
-      },
-      {
-        "title": "B12 Awake",
-        "variant_title": "Trial Run Bundle (40% OFF Saving!)",
-        "net_sales": 285.75,
-        "net_quantity": 12
-      },
-      {
-        "title": "Weekly Grind Set",
-        "variant_title": "20 Patches",
-        "net_sales": 281.75,
-        "net_quantity": 8
+        "title": "De-Puff",
+        "variant_title": "18 Pairs",
+        "net_sales": 294.3,
+        "net_quantity": 5
       },
       {
         "title": "Nite Owl",
@@ -1854,16 +1901,16 @@
         "net_quantity": 4
       },
       {
-        "title": "Weekday Hustle Duo",
-        "variant_title": "",
-        "net_sales": 272,
-        "net_quantity": 16
-      },
-      {
         "title": "Be Calm",
         "variant_title": "40 Patches ($3.00/patch)",
         "net_sales": 268.5,
         "net_quantity": 3
+      },
+      {
+        "title": "Weekday Hustle Duo",
+        "variant_title": "",
+        "net_sales": 267,
+        "net_quantity": 16
       },
       {
         "title": "The Skincare Trio",
@@ -1872,16 +1919,28 @@
         "net_quantity": 9
       },
       {
-        "title": "De-Puff",
-        "variant_title": "18 Pairs",
-        "net_sales": 233.1,
+        "title": "Relax",
+        "variant_title": "28 Patches ($2.50/patch)",
+        "net_sales": 233.63,
         "net_quantity": 4
       },
       {
-        "title": "Relax",
-        "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 210.38,
-        "net_quantity": 3
+        "title": "Relief",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 226.6,
+        "net_quantity": 6
+      },
+      {
+        "title": "Winter Chill Set",
+        "variant_title": "",
+        "net_sales": 216,
+        "net_quantity": 6
+      },
+      {
+        "title": "After Party Duo",
+        "variant_title": "",
+        "net_sales": 194.35,
+        "net_quantity": 11
       },
       {
         "title": "Desire",
@@ -1890,39 +1949,9 @@
         "net_quantity": 5
       },
       {
-        "title": "Winter Chill Set",
-        "variant_title": "",
-        "net_sales": 180,
-        "net_quantity": 5
-      },
-      {
-        "title": "The Trial Run",
-        "variant_title": "",
-        "net_sales": 178,
-        "net_quantity": 7
-      },
-      {
-        "title": "Relax",
-        "variant_title": "28 Patches ($2.50/patch)",
-        "net_sales": 174.13,
-        "net_quantity": 3
-      },
-      {
-        "title": "Nite Owl",
-        "variant_title": "6 Patches ($2.00/patch)",
-        "net_sales": 173.35,
-        "net_quantity": 20
-      },
-      {
         "title": "Rise And Shine Set",
         "variant_title": "8 Patches",
         "net_sales": 172,
-        "net_quantity": 10
-      },
-      {
-        "title": "After Party Duo",
-        "variant_title": "",
-        "net_sales": 171.35,
         "net_quantity": 10
       },
       {
@@ -1932,16 +1961,22 @@
         "net_quantity": 3
       },
       {
+        "title": "The Trial Run",
+        "variant_title": "",
+        "net_sales": 153.35,
+        "net_quantity": 6
+      },
+      {
         "title": "Cycle",
         "variant_title": "28 Patches ($2.50/patch)",
         "net_sales": 147.35,
         "net_quantity": 2
       },
       {
-        "title": "Relief",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 145.2,
-        "net_quantity": 4
+        "title": "Nite Owl",
+        "variant_title": "6 Patches ($2.00/patch)",
+        "net_sales": 142.75,
+        "net_quantity": 17
       },
       {
         "title": "The Essentials Set",
@@ -1954,6 +1989,12 @@
         "variant_title": "",
         "net_sales": 130.01,
         "net_quantity": 6
+      },
+      {
+        "title": "Poker Face Duo",
+        "variant_title": "",
+        "net_sales": 129,
+        "net_quantity": 5
       },
       {
         "title": "Hemp Queen",
@@ -1972,12 +2013,6 @@
         "variant_title": "20 Patches",
         "net_sales": 105,
         "net_quantity": 2
-      },
-      {
-        "title": "Poker Face Duo",
-        "variant_title": "",
-        "net_sales": 99,
-        "net_quantity": 4
       },
       {
         "title": "Hot Flash Relief",
@@ -2016,10 +2051,16 @@
         "net_quantity": 1
       },
       {
+        "title": "Starter Set",
+        "variant_title": "Sleep (12 Patches)",
+        "net_sales": 48,
+        "net_quantity": 2
+      },
+      {
         "title": "Brighten Up: Sample",
         "variant_title": "",
         "net_sales": 46.5,
-        "net_quantity": 114
+        "net_quantity": 113
       },
       {
         "title": "Brighten Up",
@@ -2070,16 +2111,10 @@
         "net_quantity": 2
       },
       {
-        "title": "Starter Set",
-        "variant_title": "Sleep (12 Patches)",
-        "net_sales": 24,
-        "net_quantity": 1
-      },
-      {
         "title": "De-Puff: Sample",
         "variant_title": "",
         "net_sales": 5,
-        "net_quantity": 6
+        "net_quantity": 1
       },
       {
         "title": "Be Calm [ShopMy]",
@@ -2103,7 +2138,7 @@
         "title": "GWP - 3 Be Calm Singles",
         "variant_title": "",
         "net_sales": 0,
-        "net_quantity": 3
+        "net_quantity": 2
       },
       {
         "title": "Limited Edition Rescue",
@@ -2190,109 +2225,99 @@
         "net_quantity": 0
       }
     ],
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
   "top_products": {
     "data": [
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (8 Total Patches)",
-        "ordered_product_sales": 21638.34,
-        "units_ordered": 1085
+        "ordered_product_sales": 21038.94,
+        "units_ordered": 1055
       },
       {
         "title": "The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea Extract, Natural Plant Powered Wearable Wellness, Helps to Promote Energy (8 Total Patches)",
-        "ordered_product_sales": 16223.76,
-        "units_ordered": 812
-      },
-      {
-        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 13086.9,
-        "units_ordered": 655
+        "ordered_product_sales": 15584.4,
+        "units_ordered": 780
       },
       {
         "title": "The Good Patch Relax Patches, Supports Relaxation, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 13046.94,
-        "units_ordered": 654
+        "ordered_product_sales": 12707.28,
+        "units_ordered": 637
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 12507.48,
+        "units_ordered": 626
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 10334.83,
-        "units_ordered": 517
+        "ordered_product_sales": 9895.05,
+        "units_ordered": 495
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 8608.82,
-        "units_ordered": 359
+        "ordered_product_sales": 8249.12,
+        "units_ordered": 344
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (16 Total Patches)",
-        "ordered_product_sales": 7816.35,
-        "units_ordered": 226
+        "ordered_product_sales": 7564.71,
+        "units_ordered": 217
       },
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 7648.47,
-        "units_ordered": 153
+        "ordered_product_sales": 7498.5,
+        "units_ordered": 150
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
-        "ordered_product_sales": 7485.78,
-        "units_ordered": 152
+        "ordered_product_sales": 7108.32,
+        "units_ordered": 143
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 7122.06,
-        "units_ordered": 297
-      },
-      {
-        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 6416.91,
-        "units_ordered": 186
-      },
-      {
-        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 6198.76,
-        "units_ordered": 124
-      },
-      {
-        "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
-        "ordered_product_sales": 5837.08,
-        "units_ordered": 292
-      },
-      {
-        "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
-        "ordered_product_sales": 5794.2,
+        "ordered_product_sales": 6954.2,
         "units_ordered": 290
       },
       {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 6221.19,
+        "units_ordered": 179
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 5948.81,
+        "units_ordered": 119
+      },
+      {
+        "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
+        "ordered_product_sales": 5614.38,
+        "units_ordered": 281
+      },
+      {
+        "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
+        "ordered_product_sales": 5537.23,
+        "units_ordered": 277
+      },
+      {
         "title": "The Good Patch Most Loved Patches \u2013 Awake B12 for Energy, Dream for Sleep, Rescue for Recovery, Relax for Calm \u2013 Plant-Powered (16 Patches)",
-        "ordered_product_sales": 3979.2,
-        "units_ordered": 103
+        "ordered_product_sales": 3931.2,
+        "units_ordered": 102
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3739.32,
-        "units_ordered": 68
+        "ordered_product_sales": 3574.35,
+        "units_ordered": 65
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 3719.07,
-        "units_ordered": 93
+        "ordered_product_sales": 3559.11,
+        "units_ordered": 89
       },
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 3624.58,
-        "units_ordered": 106
-      },
-      {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3316.68,
-        "units_ordered": 166
-      },
-      {
-        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3278.36,
-        "units_ordered": 167
+        "ordered_product_sales": 3400.9,
+        "units_ordered": 98
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
@@ -2300,59 +2325,69 @@
         "units_ordered": 65
       },
       {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3176.82,
+        "units_ordered": 159
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3138.43,
+        "units_ordered": 160
+      },
+      {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3249.35,
-        "units_ordered": 65
+        "ordered_product_sales": 3099.38,
+        "units_ordered": 62
       },
       {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
-        "ordered_product_sales": 3150,
-        "units_ordered": 105
+        "ordered_product_sales": 3060,
+        "units_ordered": 102
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2889.95,
-        "units_ordered": 84
+        "ordered_product_sales": 2778.11,
+        "units_ordered": 80
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
-        "ordered_product_sales": 2718.64,
-        "units_ordered": 136
+        "ordered_product_sales": 2558.72,
+        "units_ordered": 128
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 2565.86,
-        "units_ordered": 107
+        "ordered_product_sales": 2517.9,
+        "units_ordered": 105
       },
       {
         "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 2460,
-        "units_ordered": 83
+        "ordered_product_sales": 2430,
+        "units_ordered": 82
       },
       {
         "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
-        "ordered_product_sales": 2430,
-        "units_ordered": 51
-      },
-      {
-        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 2414.31,
-        "units_ordered": 69
-      },
-      {
-        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2399.4,
-        "units_ordered": 60
-      },
-      {
-        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
-        "ordered_product_sales": 2397.6,
-        "units_ordered": 120
+        "ordered_product_sales": 2370,
+        "units_ordered": 50
       },
       {
         "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
         "ordered_product_sales": 2364.57,
         "units_ordered": 43
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2359.41,
+        "units_ordered": 59
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 2274.35,
+        "units_ordered": 65
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
+        "ordered_product_sales": 2137.86,
+        "units_ordered": 107
       },
       {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (16 Total Patches)",
@@ -2366,8 +2401,8 @@
       },
       {
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 1740,
-        "units_ordered": 58
+        "ordered_product_sales": 1620,
+        "units_ordered": 54
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (8 Total Patches)",
@@ -2375,24 +2410,24 @@
         "units_ordered": 78
       },
       {
-        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
-        "ordered_product_sales": 1432.8,
-        "units_ordered": 50
-      },
-      {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
         "ordered_product_sales": 1399.72,
         "units_ordered": 28
       },
       {
-        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 1329.62,
-        "units_ordered": 38
+        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
+        "ordered_product_sales": 1360.8,
+        "units_ordered": 48
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
         "ordered_product_sales": 1299.74,
         "units_ordered": 26
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 1294.63,
+        "units_ordered": 37
       },
       {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (24 Total Patches)",
@@ -2405,19 +2440,14 @@
         "units_ordered": 20
       },
       {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
-        "ordered_product_sales": 840,
-        "units_ordered": 14
-      },
-      {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 839.79,
-        "units_ordered": 21
+        "ordered_product_sales": 799.8,
+        "units_ordered": 20
       },
       {
-        "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 759.81,
-        "units_ordered": 19
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 780,
+        "units_ordered": 13
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (16 Total Patches)",
@@ -2425,9 +2455,14 @@
         "units_ordered": 15
       },
       {
+        "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 719.82,
+        "units_ordered": 18
+      },
+      {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (16 Total Patches)",
-        "ordered_product_sales": 672,
-        "units_ordered": 14
+        "ordered_product_sales": 576,
+        "units_ordered": 12
       },
       {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (24 Total Patches)",
@@ -2435,17 +2470,12 @@
         "units_ordered": 10
       },
       {
-        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
-        "ordered_product_sales": 540,
-        "units_ordered": 10
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
+        "ordered_product_sales": 450,
+        "units_ordered": 5
       },
       {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (24 Total Microdart Patches)",
-        "ordered_product_sales": 540,
-        "units_ordered": 6
-      },
-      {
-        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
         "ordered_product_sales": 450,
         "units_ordered": 5
       },
@@ -2455,14 +2485,14 @@
         "units_ordered": 6
       },
       {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
+        "ordered_product_sales": 420,
+        "units_ordered": 8
+      },
+      {
         "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (18 Total Patch Sets)",
         "ordered_product_sales": 360,
         "units_ordered": 4
-      },
-      {
-        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (24 Total Patches)",
-        "ordered_product_sales": 360,
-        "units_ordered": 5
       },
       {
         "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (12 Total Patch Sets)",
@@ -2470,39 +2500,44 @@
         "units_ordered": 5
       },
       {
+        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (24 Total Patches)",
+        "ordered_product_sales": 288,
+        "units_ordered": 4
+      },
+      {
         "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (16 Total Patches)",
         "ordered_product_sales": 34.99,
         "units_ordered": 1
       }
     ],
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
   "top_states": {
     "data": [
       {
         "order_shipping_province": "California",
-        "net_sales": 7937.58,
-        "sm_order_count": 206
-      },
-      {
-        "order_shipping_province": "Texas",
-        "net_sales": 4331.68,
-        "sm_order_count": 113
+        "net_sales": 7987.78,
+        "sm_order_count": 209
       },
       {
         "order_shipping_province": "New York",
-        "net_sales": 4240.02,
-        "sm_order_count": 129
+        "net_sales": 4705.52,
+        "sm_order_count": 130
+      },
+      {
+        "order_shipping_province": "Texas",
+        "net_sales": 4690.48,
+        "sm_order_count": 115
       },
       {
         "order_shipping_province": "Florida",
-        "net_sales": 2972.41,
-        "sm_order_count": 107
+        "net_sales": 2960.21,
+        "sm_order_count": 105
       },
       {
-        "order_shipping_province": "Virginia",
-        "net_sales": 1523.09,
-        "sm_order_count": 36
+        "order_shipping_province": "Michigan",
+        "net_sales": 1514.4,
+        "sm_order_count": 30
       },
       {
         "order_shipping_province": "New Jersey",
@@ -2511,28 +2546,33 @@
       },
       {
         "order_shipping_province": "Georgia",
-        "net_sales": 1449.05,
+        "net_sales": 1429.8,
         "sm_order_count": 48
       },
       {
-        "order_shipping_province": "Michigan",
-        "net_sales": 1426.4,
-        "sm_order_count": 29
-      },
-      {
-        "order_shipping_province": "Illinois",
-        "net_sales": 1379.78,
-        "sm_order_count": 39
-      },
-      {
-        "order_shipping_province": "Ohio",
-        "net_sales": 1261.6,
+        "order_shipping_province": "Pennsylvania",
+        "net_sales": 1428.28,
         "sm_order_count": 38
       },
       {
-        "order_shipping_province": "Pennsylvania",
-        "net_sales": 1240.28,
-        "sm_order_count": 37
+        "order_shipping_province": "Illinois",
+        "net_sales": 1423.78,
+        "sm_order_count": 40
+      },
+      {
+        "order_shipping_province": "Ohio",
+        "net_sales": 1309.6,
+        "sm_order_count": 38
+      },
+      {
+        "order_shipping_province": "Virginia",
+        "net_sales": 1306.79,
+        "sm_order_count": 34
+      },
+      {
+        "order_shipping_province": "Minnesota",
+        "net_sales": 1297.42,
+        "sm_order_count": 30
       },
       {
         "order_shipping_province": "Tennessee",
@@ -2540,19 +2580,14 @@
         "sm_order_count": 45
       },
       {
-        "order_shipping_province": "Washington",
-        "net_sales": 1134.4,
-        "sm_order_count": 35
-      },
-      {
         "order_shipping_province": "Kentucky",
         "net_sales": 1120.31,
-        "sm_order_count": 22
+        "sm_order_count": 21
       },
       {
-        "order_shipping_province": "Minnesota",
-        "net_sales": 1103.42,
-        "sm_order_count": 29
+        "order_shipping_province": "Washington",
+        "net_sales": 1114.4,
+        "sm_order_count": 34
       },
       {
         "order_shipping_province": "Utah",
@@ -2561,8 +2596,8 @@
       },
       {
         "order_shipping_province": "Arizona",
-        "net_sales": 999.78,
-        "sm_order_count": 29
+        "net_sales": 978.58,
+        "sm_order_count": 28
       },
       {
         "order_shipping_province": "Colorado",
@@ -2571,28 +2606,33 @@
       },
       {
         "order_shipping_province": "Oregon",
-        "net_sales": 950.02,
-        "sm_order_count": 26
+        "net_sales": 939.82,
+        "sm_order_count": 25
       },
       {
         "order_shipping_province": "North Carolina",
-        "net_sales": 943.2,
+        "net_sales": 935.2,
+        "sm_order_count": 24
+      },
+      {
+        "order_shipping_province": "Missouri",
+        "net_sales": 912.3,
+        "sm_order_count": 24
+      },
+      {
+        "order_shipping_province": "Indiana",
+        "net_sales": 897,
         "sm_order_count": 24
       },
       {
         "order_shipping_province": "Massachusetts",
-        "net_sales": 857.65,
-        "sm_order_count": 31
+        "net_sales": 885.65,
+        "sm_order_count": 30
       },
       {
-        "order_shipping_province": "Indiana",
-        "net_sales": 790.8,
-        "sm_order_count": 22
-      },
-      {
-        "order_shipping_province": "Connecticut",
-        "net_sales": 709.05,
-        "sm_order_count": 17
+        "order_shipping_province": "Louisiana",
+        "net_sales": 744.43,
+        "sm_order_count": 20
       },
       {
         "order_shipping_province": "South Carolina",
@@ -2600,9 +2640,9 @@
         "sm_order_count": 22
       },
       {
-        "order_shipping_province": "Missouri",
-        "net_sales": 615.1,
-        "sm_order_count": 21
+        "order_shipping_province": "Maryland",
+        "net_sales": 649.87,
+        "sm_order_count": 26
       },
       {
         "order_shipping_province": "Alabama",
@@ -2610,19 +2650,14 @@
         "sm_order_count": 19
       },
       {
-        "order_shipping_province": "Louisiana",
-        "net_sales": 594.43,
-        "sm_order_count": 19
-      },
-      {
-        "order_shipping_province": "Maryland",
-        "net_sales": 558.47,
-        "sm_order_count": 24
-      },
-      {
         "order_shipping_province": "Wisconsin",
-        "net_sales": 485.35,
-        "sm_order_count": 15
+        "net_sales": 549.35,
+        "sm_order_count": 16
+      },
+      {
+        "order_shipping_province": "Connecticut",
+        "net_sales": 497.4,
+        "sm_order_count": 16
       },
       {
         "order_shipping_province": "Kansas",
@@ -2631,8 +2666,13 @@
       },
       {
         "order_shipping_province": "Idaho",
-        "net_sales": 419.95,
-        "sm_order_count": 12
+        "net_sales": 457.35,
+        "sm_order_count": 13
+      },
+      {
+        "order_shipping_province": "Arkansas",
+        "net_sales": 338.1,
+        "sm_order_count": 14
       },
       {
         "order_shipping_province": "Nevada",
@@ -2653,11 +2693,6 @@
         "order_shipping_province": "New Mexico",
         "net_sales": 249.33,
         "sm_order_count": 8
-      },
-      {
-        "order_shipping_province": "Arkansas",
-        "net_sales": 247.6,
-        "sm_order_count": 13
       },
       {
         "order_shipping_province": "Wyoming",
@@ -2685,19 +2720,24 @@
         "sm_order_count": 3
       },
       {
+        "order_shipping_province": "Oklahoma",
+        "net_sales": 151.25,
+        "sm_order_count": 6
+      },
+      {
         "order_shipping_province": "Vermont",
         "net_sales": 142,
         "sm_order_count": 3
       },
       {
-        "order_shipping_province": "Oklahoma",
-        "net_sales": 141.05,
-        "sm_order_count": 5
-      },
-      {
         "order_shipping_province": "District of Columbia",
         "net_sales": 140.5,
         "sm_order_count": 3
+      },
+      {
+        "order_shipping_province": "Iowa",
+        "net_sales": 127.6,
+        "sm_order_count": 4
       },
       {
         "order_shipping_province": "Delaware",
@@ -2730,11 +2770,6 @@
         "sm_order_count": 1
       },
       {
-        "order_shipping_province": "Iowa",
-        "net_sales": 38.4,
-        "sm_order_count": 3
-      },
-      {
         "order_shipping_province": "New Yodk",
         "net_sales": 0,
         "sm_order_count": 1
@@ -2745,7 +2780,7 @@
         "sm_order_count": 1
       }
     ],
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
   "py_shopify_2025-05-20": {
     "gross_sales": 2365.7,
@@ -2757,16 +2792,16 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 30720.07,
-        "sm_order_count": 622
+        "net_sales": 32308.72,
+        "sm_order_count": 634
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 18095.57,
-        "sm_order_count": 775
+        "net_sales": 18388.72,
+        "sm_order_count": 776
       }
     ],
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
   "customer_ltv": {
     "data": [
@@ -2777,8 +2812,8 @@
       },
       {
         "customer_id": 8032812073078,
-        "net_sales": 2176,
-        "sm_order_count": 4
+        "net_sales": 1632,
+        "sm_order_count": 3
       },
       {
         "customer_id": 8165248041078,
@@ -2891,6 +2926,11 @@
         "sm_order_count": 9
       },
       {
+        "customer_id": 5970221334646,
+        "net_sales": 442,
+        "sm_order_count": 7
+      },
+      {
         "customer_id": 5997492994166,
         "net_sales": 420,
         "sm_order_count": 2
@@ -2899,11 +2939,6 @@
         "customer_id": 8007557152886,
         "net_sales": 418,
         "sm_order_count": 1
-      },
-      {
-        "customer_id": 3636251361398,
-        "net_sales": 416.6,
-        "sm_order_count": 9
       },
       {
         "customer_id": 5772332171382,
@@ -2931,12 +2966,17 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 3636251361398,
+        "net_sales": 389.4,
+        "sm_order_count": 8
+      },
+      {
         "customer_id": 8309260386422,
         "net_sales": 385,
         "sm_order_count": 1
       },
       {
-        "customer_id": 7453394141302,
+        "customer_id": 5389203275894,
         "net_sales": 380.8,
         "sm_order_count": 4
       },
@@ -2956,6 +2996,11 @@
         "sm_order_count": 2
       },
       {
+        "customer_id": 5746957942902,
+        "net_sales": 377,
+        "sm_order_count": 5
+      },
+      {
         "customer_id": 8317578051702,
         "net_sales": 367.2,
         "sm_order_count": 2
@@ -2971,11 +3016,6 @@
         "sm_order_count": 5
       },
       {
-        "customer_id": 5970221334646,
-        "net_sales": 361.25,
-        "sm_order_count": 6
-      },
-      {
         "customer_id": 6704720543862,
         "net_sales": 357,
         "sm_order_count": 1
@@ -2989,6 +3029,11 @@
         "customer_id": 6069398765686,
         "net_sales": 349.8,
         "sm_order_count": 1
+      },
+      {
+        "customer_id": 8293445894262,
+        "net_sales": 339.25,
+        "sm_order_count": 3
       },
       {
         "customer_id": 6891687968886,
@@ -3041,6 +3086,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8320078119030,
+        "net_sales": 301.35,
+        "sm_order_count": 6
+      },
+      {
         "customer_id": 7703837081718,
         "net_sales": 298.4,
         "sm_order_count": 1
@@ -3056,12 +3106,7 @@
         "sm_order_count": 4
       },
       {
-        "customer_id": 5746957942902,
-        "net_sales": 289,
-        "sm_order_count": 4
-      },
-      {
-        "customer_id": 5389203275894,
+        "customer_id": 7453394141302,
         "net_sales": 285.6,
         "sm_order_count": 3
       },
@@ -3146,11 +3191,6 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 6112805847158,
-        "net_sales": 258.8,
-        "sm_order_count": 5
-      },
-      {
         "customer_id": 5069831012470,
         "net_sales": 255,
         "sm_order_count": 3
@@ -3191,11 +3231,6 @@
         "sm_order_count": 3
       },
       {
-        "customer_id": 8320078119030,
-        "net_sales": 247.35,
-        "sm_order_count": 5
-      },
-      {
         "customer_id": 5856653705334,
         "net_sales": 246,
         "sm_order_count": 2
@@ -3214,6 +3249,11 @@
         "customer_id": 7209853124726,
         "net_sales": 244.8,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 8351736004726,
+        "net_sales": 244.2,
+        "sm_order_count": 2
       },
       {
         "customer_id": 5975834919030,
@@ -3316,6 +3356,11 @@
         "sm_order_count": 4
       },
       {
+        "customer_id": 6112805847158,
+        "net_sales": 224.8,
+        "sm_order_count": 4
+      },
+      {
         "customer_id": 8096735330422,
         "net_sales": 224.4,
         "sm_order_count": 2
@@ -3341,8 +3386,8 @@
         "sm_order_count": 3
       },
       {
-        "customer_id": 7743167791222,
-        "net_sales": 222.75,
+        "customer_id": 8049121984630,
+        "net_sales": 222.9,
         "sm_order_count": 4
       },
       {
@@ -3379,6 +3424,21 @@
         "customer_id": 8404150616182,
         "net_sales": 211.65,
         "sm_order_count": 1
+      },
+      {
+        "customer_id": 5389312557174,
+        "net_sales": 211.2,
+        "sm_order_count": 7
+      },
+      {
+        "customer_id": 5776316072054,
+        "net_sales": 210.2,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7743167791222,
+        "net_sales": 210,
+        "sm_order_count": 3
       },
       {
         "customer_id": 8112918986870,
@@ -3481,6 +3541,11 @@
         "sm_order_count": 2
       },
       {
+        "customer_id": 6916302340214,
+        "net_sales": 194,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 7032614682742,
         "net_sales": 193.4,
         "sm_order_count": 5
@@ -3531,14 +3596,14 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8293445894262,
-        "net_sales": 189.25,
-        "sm_order_count": 2
-      },
-      {
         "customer_id": 7343983100022,
         "net_sales": 189,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 6760537555062,
+        "net_sales": 188,
+        "sm_order_count": 1
       },
       {
         "customer_id": 7300653809782,
@@ -3551,14 +3616,14 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 8049121984630,
-        "net_sales": 186.3,
-        "sm_order_count": 3
-      },
-      {
         "customer_id": 6511665283190,
         "net_sales": 186.15,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 8148449132662,
+        "net_sales": 185,
+        "sm_order_count": 2
       },
       {
         "customer_id": 6050468331638,
@@ -3596,11 +3661,6 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 5389312557174,
-        "net_sales": 180.6,
-        "sm_order_count": 6
-      },
-      {
         "customer_id": 5678477934710,
         "net_sales": 180,
         "sm_order_count": 1
@@ -3636,11 +3696,6 @@
         "sm_order_count": 3
       },
       {
-        "customer_id": 5450310353014,
-        "net_sales": 178.5,
-        "sm_order_count": 2
-      },
-      {
         "customer_id": 5907959480438,
         "net_sales": 178.5,
         "sm_order_count": 3
@@ -3657,6 +3712,11 @@
       },
       {
         "customer_id": 6972048343158,
+        "net_sales": 178.5,
+        "sm_order_count": 3
+      },
+      {
+        "customer_id": 7191571923062,
         "net_sales": 178.5,
         "sm_order_count": 3
       },
@@ -3796,6 +3856,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 6312865235062,
+        "net_sales": 163.2,
+        "sm_order_count": 3
+      },
+      {
         "customer_id": 6784476872822,
         "net_sales": 163.2,
         "sm_order_count": 1
@@ -3814,6 +3879,11 @@
         "customer_id": 8309338341494,
         "net_sales": 162.35,
         "sm_order_count": 1
+      },
+      {
+        "customer_id": 8393369976950,
+        "net_sales": 162,
+        "sm_order_count": 2
       },
       {
         "customer_id": 7082758766710,
@@ -3861,6 +3931,11 @@
         "sm_order_count": 2
       },
       {
+        "customer_id": 8523478073462,
+        "net_sales": 156.75,
+        "sm_order_count": 2
+      },
+      {
         "customer_id": 8119700193398,
         "net_sales": 156.5,
         "sm_order_count": 5
@@ -3902,11 +3977,6 @@
       },
       {
         "customer_id": 5349831639158,
-        "net_sales": 153,
-        "sm_order_count": 2
-      },
-      {
-        "customer_id": 6066498601078,
         "net_sales": 153,
         "sm_order_count": 2
       },
@@ -4056,6 +4126,11 @@
         "sm_order_count": 3
       },
       {
+        "customer_id": 6899961430134,
+        "net_sales": 142.8,
+        "sm_order_count": 5
+      },
+      {
         "customer_id": 5118653005942,
         "net_sales": 142.7,
         "sm_order_count": 3
@@ -4084,6 +4159,11 @@
         "customer_id": 8166129795190,
         "net_sales": 140,
         "sm_order_count": 2
+      },
+      {
+        "customer_id": 8170599415926,
+        "net_sales": 140,
+        "sm_order_count": 3
       },
       {
         "customer_id": 5982881579126,
@@ -4236,17 +4316,17 @@
         "sm_order_count": 4
       },
       {
+        "customer_id": 8362278748278,
+        "net_sales": 131.2,
+        "sm_order_count": 3
+      },
+      {
         "customer_id": 3458688122998,
         "net_sales": 130.9,
         "sm_order_count": 1
       },
       {
         "customer_id": 3631311421558,
-        "net_sales": 130,
-        "sm_order_count": 2
-      },
-      {
-        "customer_id": 7710494228598,
         "net_sales": 130,
         "sm_order_count": 2
       },
@@ -4269,11 +4349,6 @@
         "customer_id": 7060822098038,
         "net_sales": 128.8,
         "sm_order_count": 2
-      },
-      {
-        "customer_id": 8066909241462,
-        "net_sales": 128,
-        "sm_order_count": 1
       },
       {
         "customer_id": 8347394998390,
@@ -4351,6 +4426,11 @@
         "sm_order_count": 2
       },
       {
+        "customer_id": 8514194636918,
+        "net_sales": 124.2,
+        "sm_order_count": 2
+      },
+      {
         "customer_id": 8370333712502,
         "net_sales": 123.9,
         "sm_order_count": 5
@@ -4382,6 +4462,11 @@
       },
       {
         "customer_id": 8014258864246,
+        "net_sales": 122.4,
+        "sm_order_count": 2
+      },
+      {
+        "customer_id": 8222586208374,
         "net_sales": 122.4,
         "sm_order_count": 2
       },
@@ -4466,11 +4551,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 7704628592758,
-        "net_sales": 119.85,
-        "sm_order_count": 5
-      },
-      {
         "customer_id": 7803069071478,
         "net_sales": 119.75,
         "sm_order_count": 1
@@ -4484,6 +4564,11 @@
         "customer_id": 3570006294646,
         "net_sales": 119.2,
         "sm_order_count": 2
+      },
+      {
+        "customer_id": 5450310353014,
+        "net_sales": 119,
+        "sm_order_count": 1
       },
       {
         "customer_id": 5987785900150,
@@ -4502,11 +4587,6 @@
       },
       {
         "customer_id": 6954659971190,
-        "net_sales": 119,
-        "sm_order_count": 2
-      },
-      {
-        "customer_id": 7191571923062,
         "net_sales": 119,
         "sm_order_count": 2
       },
@@ -4601,11 +4681,6 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 6899961430134,
-        "net_sales": 115.6,
-        "sm_order_count": 4
-      },
-      {
         "customer_id": 5539829514358,
         "net_sales": 115.5,
         "sm_order_count": 1
@@ -4624,11 +4699,6 @@
         "customer_id": 8489388900470,
         "net_sales": 114.75,
         "sm_order_count": 1
-      },
-      {
-        "customer_id": 8053885730934,
-        "net_sales": 114,
-        "sm_order_count": 2
       },
       {
         "customer_id": 2813453992054,
@@ -4756,11 +4826,6 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 6312865235062,
-        "net_sales": 108.8,
-        "sm_order_count": 2
-      },
-      {
         "customer_id": 7328789594230,
         "net_sales": 108.7,
         "sm_order_count": 2
@@ -4849,6 +4914,11 @@
         "customer_id": 8409573261430,
         "net_sales": 106.1,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 8104299397238,
+        "net_sales": 106,
+        "sm_order_count": 2
       },
       {
         "customer_id": 8170180280438,
@@ -5116,16 +5186,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8142452621430,
-        "net_sales": 100,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8146876006518,
-        "net_sales": 100,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 8150086811766,
         "net_sales": 100,
         "sm_order_count": 1
@@ -5361,6 +5421,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8270265679990,
+        "net_sales": 100,
+        "sm_order_count": 3
+      },
+      {
         "customer_id": 8280157225078,
         "net_sales": 100,
         "sm_order_count": 1
@@ -5541,6 +5606,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 7818146513014,
+        "net_sales": 98,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 8167175782518,
         "net_sales": 98,
         "sm_order_count": 1
@@ -5641,11 +5711,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8170599415926,
-        "net_sales": 96,
-        "sm_order_count": 2
-      },
-      {
         "customer_id": 8301446496374,
         "net_sales": 96,
         "sm_order_count": 2
@@ -5674,6 +5739,11 @@
         "customer_id": 6477281034358,
         "net_sales": 95.7,
         "sm_order_count": 1
+      },
+      {
+        "customer_id": 7959946690678,
+        "net_sales": 95.5,
+        "sm_order_count": 2
       },
       {
         "customer_id": 5894090195062,
@@ -5739,6 +5809,11 @@
         "customer_id": 6242939601014,
         "net_sales": 93.15,
         "sm_order_count": 1
+      },
+      {
+        "customer_id": 7704628592758,
+        "net_sales": 92.65,
+        "sm_order_count": 4
       },
       {
         "customer_id": 8166467764342,
@@ -5841,6 +5916,11 @@
         "sm_order_count": 2
       },
       {
+        "customer_id": 6001076011126,
+        "net_sales": 91,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 7788565004406,
         "net_sales": 91,
         "sm_order_count": 1
@@ -5853,6 +5933,11 @@
       {
         "customer_id": 3621171495030,
         "net_sales": 90.95,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8593223647350,
+        "net_sales": 90.5,
         "sm_order_count": 1
       },
       {
@@ -5891,6 +5976,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 7852099666038,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 8222606655606,
         "net_sales": 90,
         "sm_order_count": 1
@@ -5921,6 +6011,16 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8603355152502,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8606588665974,
+        "net_sales": 90,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 8293528666230,
         "net_sales": 89.6,
         "sm_order_count": 1
@@ -5936,6 +6036,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8588039913590,
+        "net_sales": 89.2,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 6098931351670,
         "net_sales": 89.04,
         "sm_order_count": 1
@@ -5944,16 +6049,6 @@
         "customer_id": 8378221625462,
         "net_sales": 88.8,
         "sm_order_count": 2
-      },
-      {
-        "customer_id": 7021758611574,
-        "net_sales": 88.4,
-        "sm_order_count": 3
-      },
-      {
-        "customer_id": 8351736004726,
-        "net_sales": 88.2,
-        "sm_order_count": 1
       },
       {
         "customer_id": 3566645477494,
@@ -6011,11 +6106,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8523478073462,
-        "net_sales": 86.55,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 5961339797622,
         "net_sales": 86.55,
         "sm_order_count": 5
@@ -6029,11 +6119,6 @@
         "customer_id": 7235076554870,
         "net_sales": 86.35,
         "sm_order_count": 4
-      },
-      {
-        "customer_id": 5776316072054,
-        "net_sales": 86.2,
-        "sm_order_count": 2
       },
       {
         "customer_id": 6864793174134,
@@ -6134,6 +6219,11 @@
         "customer_id": 7580252504182,
         "net_sales": 85,
         "sm_order_count": 2
+      },
+      {
+        "customer_id": 7921909137526,
+        "net_sales": 85,
+        "sm_order_count": 1
       },
       {
         "customer_id": 8067280371830,
@@ -6256,11 +6346,6 @@
         "sm_order_count": 3
       },
       {
-        "customer_id": 5161183084662,
-        "net_sales": 81.6,
-        "sm_order_count": 2
-      },
-      {
         "customer_id": 5586724094070,
         "net_sales": 81.6,
         "sm_order_count": 1
@@ -6362,6 +6447,11 @@
       },
       {
         "customer_id": 7108559306870,
+        "net_sales": 80,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7475611402358,
         "net_sales": 80,
         "sm_order_count": 1
       },
@@ -6491,6 +6581,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 6066498601078,
+        "net_sales": 76.5,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 6163216564342,
         "net_sales": 76.5,
         "sm_order_count": 1
@@ -6547,11 +6642,6 @@
       },
       {
         "customer_id": 8139435081846,
-        "net_sales": 76.5,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8147152306294,
         "net_sales": 76.5,
         "sm_order_count": 1
       },
@@ -6701,11 +6791,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 7355805827190,
-        "net_sales": 73.95,
-        "sm_order_count": 4
-      },
-      {
         "customer_id": 8393624092790,
         "net_sales": 73.95,
         "sm_order_count": 1
@@ -6772,11 +6857,6 @@
       },
       {
         "customer_id": 8084752302198,
-        "net_sales": 72,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8147013632118,
         "net_sales": 72,
         "sm_order_count": 1
       },
@@ -7041,11 +7121,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 6962330566774,
-        "net_sales": 68,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 6975298502774,
         "net_sales": 68,
         "sm_order_count": 1
@@ -7139,11 +7214,6 @@
         "customer_id": 8213275803766,
         "net_sales": 67.2,
         "sm_order_count": 1
-      },
-      {
-        "customer_id": 8362278748278,
-        "net_sales": 67.2,
-        "sm_order_count": 2
       },
       {
         "customer_id": 5111030743158,
@@ -7271,11 +7341,6 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 5932458868854,
-        "net_sales": 64,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 6112499040374,
         "net_sales": 64,
         "sm_order_count": 1
@@ -7287,6 +7352,11 @@
       },
       {
         "customer_id": 6244876058742,
+        "net_sales": 64,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6322390368374,
         "net_sales": 64,
         "sm_order_count": 1
       },
@@ -7379,6 +7449,11 @@
         "customer_id": 3635252592758,
         "net_sales": 63.75,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 3657399861366,
+        "net_sales": 63.75,
+        "sm_order_count": 4
       },
       {
         "customer_id": 5222443778166,
@@ -7581,6 +7656,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8053885730934,
+        "net_sales": 62,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 8067304128630,
         "net_sales": 62,
         "sm_order_count": 1
@@ -7666,11 +7746,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8222586208374,
-        "net_sales": 61.2,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 8223733874806,
         "net_sales": 61.2,
         "sm_order_count": 1
@@ -7709,6 +7784,11 @@
         "customer_id": 7836521136246,
         "net_sales": 61.2,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 7710494228598,
+        "net_sales": 61,
+        "sm_order_count": 1
       },
       {
         "customer_id": 8183021928566,
@@ -7787,11 +7867,6 @@
       },
       {
         "customer_id": 8147709165686,
-        "net_sales": 60,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8148449132662,
         "net_sales": 60,
         "sm_order_count": 1
       },
@@ -7901,6 +7976,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8599448191094,
+        "net_sales": 60,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 7865413402742,
         "net_sales": 59.93,
         "sm_order_count": 1
@@ -7956,11 +8036,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 7959946690678,
-        "net_sales": 59.5,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 8168864252022,
         "net_sales": 59.5,
         "sm_order_count": 1
@@ -8012,6 +8087,11 @@
       },
       {
         "customer_id": 8587357716598,
+        "net_sales": 59.5,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8605475274870,
         "net_sales": 59.5,
         "sm_order_count": 1
       },
@@ -8253,11 +8333,6 @@
       {
         "customer_id": 8067458891894,
         "net_sales": 56.8,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8514194636918,
-        "net_sales": 56.2,
         "sm_order_count": 1
       },
       {
@@ -8851,6 +8926,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 7355805827190,
+        "net_sales": 52.7,
+        "sm_order_count": 3
+      },
+      {
         "customer_id": 7694459142262,
         "net_sales": 52.7,
         "sm_order_count": 1
@@ -8936,6 +9016,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 6907644838006,
+        "net_sales": 52,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 7257744506998,
         "net_sales": 52,
         "sm_order_count": 1
@@ -8949,11 +9034,6 @@
         "customer_id": 8010624729206,
         "net_sales": 52,
         "sm_order_count": 1
-      },
-      {
-        "customer_id": 8270265679990,
-        "net_sales": 52,
-        "sm_order_count": 2
       },
       {
         "customer_id": 8280253890678,
@@ -9422,16 +9502,6 @@
       },
       {
         "customer_id": 8128744915062,
-        "net_sales": 50,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142415036534,
-        "net_sales": 50,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142751989878,
         "net_sales": 50,
         "sm_order_count": 1
       },
@@ -10221,6 +10291,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 6092074647670,
+        "net_sales": 49.6,
+        "sm_order_count": 2
+      },
+      {
         "customer_id": 5372633940086,
         "net_sales": 49.4,
         "sm_order_count": 1
@@ -10267,6 +10342,11 @@
       },
       {
         "customer_id": 5343564824694,
+        "net_sales": 48,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 6114612805750,
         "net_sales": 48,
         "sm_order_count": 1
       },
@@ -10641,7 +10721,7 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 6633063350390,
+        "customer_id": 6498402173046,
         "net_sales": 44,
         "sm_order_count": 1
       },
@@ -10672,11 +10752,6 @@
       },
       {
         "customer_id": 8107448434806,
-        "net_sales": 44,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8146777047158,
         "net_sales": 44,
         "sm_order_count": 1
       },
@@ -10717,11 +10792,6 @@
       },
       {
         "customer_id": 8393219637366,
-        "net_sales": 44,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8393369976950,
         "net_sales": 44,
         "sm_order_count": 1
       },
@@ -10781,6 +10851,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8605387522166,
+        "net_sales": 44,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 5188755161206,
         "net_sales": 43.35,
         "sm_order_count": 3
@@ -10809,11 +10884,6 @@
         "customer_id": 3617910915190,
         "net_sales": 42.5,
         "sm_order_count": 1
-      },
-      {
-        "customer_id": 3657399861366,
-        "net_sales": 42.5,
-        "sm_order_count": 2
       },
       {
         "customer_id": 5176623923318,
@@ -10864,16 +10934,6 @@
         "customer_id": 6784002293878,
         "net_sales": 42.5,
         "sm_order_count": 1
-      },
-      {
-        "customer_id": 7068291530870,
-        "net_sales": 42.5,
-        "sm_order_count": 2
-      },
-      {
-        "customer_id": 7190150283382,
-        "net_sales": 42.5,
-        "sm_order_count": 2
       },
       {
         "customer_id": 7301373132918,
@@ -11021,11 +11081,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8147154468982,
-        "net_sales": 41.6,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 8282241859702,
         "net_sales": 41.6,
         "sm_order_count": 1
@@ -11082,6 +11137,11 @@
       },
       {
         "customer_id": 5035547623542,
+        "net_sales": 40.8,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 5161183084662,
         "net_sales": 40.8,
         "sm_order_count": 1
       },
@@ -11144,6 +11204,11 @@
         "customer_id": 7005748101238,
         "net_sales": 40.8,
         "sm_order_count": 3
+      },
+      {
+        "customer_id": 7021758611574,
+        "net_sales": 40.8,
+        "sm_order_count": 2
       },
       {
         "customer_id": 7088165879926,
@@ -11451,6 +11516,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 5823849660534,
+        "net_sales": 37.4,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 5833679470710,
         "net_sales": 37.4,
         "sm_order_count": 1
@@ -11474,11 +11544,6 @@
         "customer_id": 6361381535862,
         "net_sales": 37.4,
         "sm_order_count": 2
-      },
-      {
-        "customer_id": 6791084933238,
-        "net_sales": 37.4,
-        "sm_order_count": 1
       },
       {
         "customer_id": 7221772943478,
@@ -11538,7 +11603,7 @@
       {
         "customer_id": 8385624604790,
         "net_sales": 37.4,
-        "sm_order_count": 1
+        "sm_order_count": 2
       },
       {
         "customer_id": 8389747441782,
@@ -11701,6 +11766,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8336915857526,
+        "net_sales": 36,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 8347872559222,
         "net_sales": 36,
         "sm_order_count": 1
@@ -11816,6 +11886,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8599735173238,
+        "net_sales": 34.2,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 5039348318326,
         "net_sales": 34,
         "sm_order_count": 1
@@ -11827,11 +11902,6 @@
       },
       {
         "customer_id": 7959960453238,
-        "net_sales": 34,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8146948522102,
         "net_sales": 34,
         "sm_order_count": 1
       },
@@ -11932,16 +12002,6 @@
       },
       {
         "customer_id": 7311237709942,
-        "net_sales": 32,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8104299397238,
-        "net_sales": 32,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142616395894,
         "net_sales": 32,
         "sm_order_count": 1
       },
@@ -12104,11 +12164,6 @@
         "customer_id": 7338039115894,
         "net_sales": 31.45,
         "sm_order_count": 2
-      },
-      {
-        "customer_id": 7568064020598,
-        "net_sales": 31.45,
-        "sm_order_count": 1
       },
       {
         "customer_id": 7658726293622,
@@ -12303,11 +12358,6 @@
       {
         "customer_id": 7822892007542,
         "net_sales": 29.25,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8143242625142,
-        "net_sales": 29,
         "sm_order_count": 1
       },
       {
@@ -12509,11 +12559,6 @@
         "customer_id": 6650391691382,
         "net_sales": 27.2,
         "sm_order_count": 2
-      },
-      {
-        "customer_id": 6776851234934,
-        "net_sales": 27.2,
-        "sm_order_count": 1
       },
       {
         "customer_id": 6786862415990,
@@ -12792,11 +12837,6 @@
       },
       {
         "customer_id": 8136808366198,
-        "net_sales": 24,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8147032047734,
         "net_sales": 24,
         "sm_order_count": 1
       },
@@ -13221,12 +13261,22 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 7068291530870,
+        "net_sales": 21.25,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 7075376726134,
         "net_sales": 21.25,
         "sm_order_count": 1
       },
       {
         "customer_id": 7090469503094,
+        "net_sales": 21.25,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 7190150283382,
         "net_sales": 21.25,
         "sm_order_count": 1
       },
@@ -13289,6 +13339,11 @@
         "customer_id": 5891684728950,
         "net_sales": 20.4,
         "sm_order_count": 1
+      },
+      {
+        "customer_id": 5966244577398,
+        "net_sales": 20.4,
+        "sm_order_count": 2
       },
       {
         "customer_id": 6466994045046,
@@ -13638,11 +13693,6 @@
       {
         "customer_id": 8535788257398,
         "net_sales": 19.2,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 2972141224054,
-        "net_sales": 18.7,
         "sm_order_count": 1
       },
       {
@@ -14076,11 +14126,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8142423752822,
-        "net_sales": 15,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 8155488813174,
         "net_sales": 15,
         "sm_order_count": 1
@@ -14326,11 +14371,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 6092074647670,
-        "net_sales": 13.6,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 6236075491446,
         "net_sales": 13.6,
         "sm_order_count": 1
@@ -14486,11 +14526,6 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 2721614004342,
-        "net_sales": 12,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 2868855799926,
         "net_sales": 12,
         "sm_order_count": 1
@@ -14542,11 +14577,6 @@
       },
       {
         "customer_id": 8107226005622,
-        "net_sales": 12,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8146753781878,
         "net_sales": 12,
         "sm_order_count": 1
       },
@@ -15091,6 +15121,11 @@
         "sm_order_count": 1
       },
       {
+        "customer_id": 8606196433014,
+        "net_sales": 12,
+        "sm_order_count": 1
+      },
+      {
         "customer_id": 6043283882102,
         "net_sales": 10.5,
         "sm_order_count": 1
@@ -15142,11 +15177,6 @@
       },
       {
         "customer_id": 5948643868790,
-        "net_sales": 10.2,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 5966244577398,
         "net_sales": 10.2,
         "sm_order_count": 1
       },
@@ -15267,11 +15297,6 @@
       },
       {
         "customer_id": 8138977083510,
-        "net_sales": 10.2,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142549450870,
         "net_sales": 10.2,
         "sm_order_count": 1
       },
@@ -15781,22 +15806,12 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 7826565890166,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 7826591613046,
         "net_sales": 0,
         "sm_order_count": 1
       },
       {
         "customer_id": 7826705743990,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 7837990682742,
         "net_sales": 0,
         "sm_order_count": 1
       },
@@ -15826,11 +15841,6 @@
         "sm_order_count": 2
       },
       {
-        "customer_id": 7886826831990,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 7898470776950,
         "net_sales": 0,
         "sm_order_count": 1
@@ -15847,11 +15857,6 @@
       },
       {
         "customer_id": 7915845615734,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 7915853938806,
         "net_sales": 0,
         "sm_order_count": 1
       },
@@ -16041,92 +16046,7 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 8141966278774,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8141989249142,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142078804086,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142267613302,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142461370486,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142497448054,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142497546358,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8142617477238,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8143149170806,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8143178465398,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8143178858614,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8144813949046,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8145612472438,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
         "customer_id": 8145853153398,
-        "net_sales": 0,
-        "sm_order_count": 2
-      },
-      {
-        "customer_id": 8146412765302,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8146757779574,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8146785763446,
-        "net_sales": 0,
-        "sm_order_count": 1
-      },
-      {
-        "customer_id": 8147056820342,
         "net_sales": 0,
         "sm_order_count": 1
       },
@@ -22511,8 +22431,23 @@
         "sm_order_count": 1
       },
       {
-        "customer_id": 7970837659766,
-        "net_sales": -2.84,
+        "customer_id": 8605040377974,
+        "net_sales": 0,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8605273358454,
+        "net_sales": 0,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8606186406006,
+        "net_sales": 0,
+        "sm_order_count": 1
+      },
+      {
+        "customer_id": 8606239850614,
+        "net_sales": 0,
         "sm_order_count": 1
       },
       {
@@ -22526,8 +22461,18 @@
         "sm_order_count": 0
       },
       {
+        "customer_id": 8144813949046,
+        "net_sales": -15,
+        "sm_order_count": 0
+      },
+      {
         "customer_id": 8128101187702,
         "net_sales": -32,
+        "sm_order_count": 0
+      },
+      {
+        "customer_id": 7970837659766,
+        "net_sales": -34.84,
         "sm_order_count": 0
       },
       {
@@ -22541,16 +22486,26 @@
         "sm_order_count": 0
       }
     ],
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
   "campaigns": {
     "email": [
+      {
+        "campaign_name": "",
+        "campaign_subject": "",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 56484,
+        "klaviyo_open_rate": 0.385911,
+        "klaviyo_click_rate": 0.005306,
+        "shopify_placed_order": 14,
+        "shopify_placed_order_value": 1313.88
+      },
       {
         "campaign_name": "05/10: Mother's Day | 15% Off",
         "campaign_subject": "Cheers to the Moms...",
         "campaign_send_date": "2026-05-11",
         "klaviyo_total_recipients": 51145,
-        "klaviyo_open_rate": 0.693225,
+        "klaviyo_open_rate": 0.694245,
         "klaviyo_click_rate": 0.006177,
         "shopify_placed_order": 6,
         "shopify_placed_order_value": 599.46
@@ -22560,7 +22515,7 @@
         "campaign_subject": "The 15-minute Under-Eye Reset",
         "campaign_send_date": "2026-05-13",
         "klaviyo_total_recipients": 50907,
-        "klaviyo_open_rate": 0.647224,
+        "klaviyo_open_rate": 0.648857,
         "klaviyo_click_rate": 0.004859,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 35
@@ -22570,7 +22525,7 @@
         "campaign_subject": "Gifts For The Moms In Your Life (yourself included)",
         "campaign_send_date": "2026-05-03",
         "klaviyo_total_recipients": 49506,
-        "klaviyo_open_rate": 0.632293,
+        "klaviyo_open_rate": 0.632717,
         "klaviyo_click_rate": 0.004371,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 135.97
@@ -22580,7 +22535,7 @@
         "campaign_subject": "Happy Earth Day from The Good Patch",
         "campaign_send_date": "2026-04-23",
         "klaviyo_total_recipients": 49351,
-        "klaviyo_open_rate": 0.802166,
+        "klaviyo_open_rate": 0.80318,
         "klaviyo_click_rate": 0.004827,
         "shopify_placed_order": 6,
         "shopify_placed_order_value": 365.48
@@ -22590,8 +22545,8 @@
         "campaign_subject": "10,000+ Five-Star Reviews",
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 46662,
-        "klaviyo_open_rate": 0.687002,
-        "klaviyo_click_rate": 0.004424,
+        "klaviyo_open_rate": 0.692821,
+        "klaviyo_click_rate": 0.004445,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 92.09
       },
@@ -22600,17 +22555,17 @@
         "campaign_subject": "\ud83d\udce3 Something BIG is Coming",
         "campaign_send_date": "2026-05-19",
         "klaviyo_total_recipients": 43901,
-        "klaviyo_open_rate": 0.721431,
-        "klaviyo_click_rate": 0.006725,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 79.88
+        "klaviyo_open_rate": 0.756514,
+        "klaviyo_click_rate": 0.006862,
+        "shopify_placed_order": 5,
+        "shopify_placed_order_value": 375.39
       },
       {
         "campaign_name": "05/08: Energy | 15% off",
         "campaign_subject": "Feel Like Yourself Again",
         "campaign_send_date": "2026-05-09",
         "klaviyo_total_recipients": 40682,
-        "klaviyo_open_rate": 0.81236,
+        "klaviyo_open_rate": 0.813197,
         "klaviyo_click_rate": 0.005513,
         "shopify_placed_order": 9,
         "shopify_placed_order_value": 519.72
@@ -22620,7 +22575,7 @@
         "campaign_subject": "Target run?",
         "campaign_send_date": "2026-05-07",
         "klaviyo_total_recipients": 5261,
-        "klaviyo_open_rate": 0.764728,
+        "klaviyo_open_rate": 0.764919,
         "klaviyo_click_rate": 0.002288,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22630,7 +22585,7 @@
         "campaign_subject": "10,000+ Five-Star Reviews",
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 1485,
-        "klaviyo_open_rate": 0.018206,
+        "klaviyo_open_rate": 0.019555,
         "klaviyo_click_rate": 0.002023,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22639,29 +22594,29 @@
         "campaign_name": "T1 - Restart your wellness routine",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, running low on your faves?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 1085,
-        "klaviyo_open_rate": 0.307692,
-        "klaviyo_click_rate": 0.004634,
+        "klaviyo_total_recipients": 1036,
+        "klaviyo_open_rate": 0.323301,
+        "klaviyo_click_rate": 0.006796,
         "shopify_placed_order": 1,
         "shopify_placed_order_value": 18.13
-      },
-      {
-        "campaign_name": "PM | Sunset Flow Email #2",
-        "campaign_subject": "still want email-exclusive perks?",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 939,
-        "klaviyo_open_rate": 0.012987,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "PM | Sunset Flow Email #1",
         "campaign_subject": "Keep the good vibes coming",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 938,
-        "klaviyo_open_rate": 0.023784,
-        "klaviyo_click_rate": 0.001081,
+        "klaviyo_total_recipients": 917,
+        "klaviyo_open_rate": 0.02323,
+        "klaviyo_click_rate": 0.001106,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
+      },
+      {
+        "campaign_name": "PM | Sunset Flow Email #2",
+        "campaign_subject": "still want email-exclusive perks?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 904,
+        "klaviyo_open_rate": 0.011236,
+        "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22669,9 +22624,9 @@
         "campaign_name": "PM | Post Purchase Email #3",
         "campaign_subject": "Let\u2019s stick together?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 772,
-        "klaviyo_open_rate": 0.254545,
-        "klaviyo_click_rate": 0.003896,
+        "klaviyo_total_recipients": 762,
+        "klaviyo_open_rate": 0.251316,
+        "klaviyo_click_rate": 0.003947,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22679,69 +22634,59 @@
         "campaign_name": "PM | Post Purchase Email #1",
         "campaign_subject": "Good things on the way!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 745,
-        "klaviyo_open_rate": 0.33678,
-        "klaviyo_click_rate": 0.028065,
+        "klaviyo_total_recipients": 736,
+        "klaviyo_open_rate": 0.328849,
+        "klaviyo_click_rate": 0.026906,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
-      },
-      {
-        "campaign_name": "Welcome Email #1",
-        "campaign_subject": "Welcome to The Good Patch",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 645,
-        "klaviyo_open_rate": 0.486529,
-        "klaviyo_click_rate": 0.053883,
-        "shopify_placed_order": 11,
-        "shopify_placed_order_value": 425.23
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #1",
         "campaign_subject": "Your cart is waiting!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 633,
-        "klaviyo_open_rate": 0.54213,
-        "klaviyo_click_rate": 0.025437,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 279.09
+        "klaviyo_total_recipients": 653,
+        "klaviyo_open_rate": 0.51926,
+        "klaviyo_click_rate": 0.027735,
+        "shopify_placed_order": 4,
+        "shopify_placed_order_value": 377.09
       },
       {
-        "campaign_name": "Welcome Email #4",
-        "campaign_subject": "Last chance to save 15%",
+        "campaign_name": "Welcome Email #1",
+        "campaign_subject": "Welcome to The Good Patch",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 625,
-        "klaviyo_open_rate": 0.433172,
-        "klaviyo_click_rate": 0.012882,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 255.33
-      },
-      {
-        "campaign_name": "PM | Post Purchase Email #2",
-        "campaign_subject": "We're always looking to improve",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 624,
-        "klaviyo_open_rate": 0.341385,
-        "klaviyo_click_rate": 0.006441,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_total_recipients": 653,
+        "klaviyo_open_rate": 0.475,
+        "klaviyo_click_rate": 0.053125,
+        "shopify_placed_order": 11,
+        "shopify_placed_order_value": 425.23
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #2",
         "campaign_subject": "15% Off Your Cart [Limited Time]",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 608,
-        "klaviyo_open_rate": 0.522241,
-        "klaviyo_click_rate": 0.029654,
-        "shopify_placed_order": 5,
-        "shopify_placed_order_value": 369.28
+        "klaviyo_total_recipients": 611,
+        "klaviyo_open_rate": 0.530378,
+        "klaviyo_click_rate": 0.027915,
+        "shopify_placed_order": 4,
+        "shopify_placed_order_value": 264.08
+      },
+      {
+        "campaign_name": "Welcome Email #4",
+        "campaign_subject": "Last chance to save 15%",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 610,
+        "klaviyo_open_rate": 0.433993,
+        "klaviyo_click_rate": 0.013201,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 255.33
       },
       {
         "campaign_name": "Welcome Email #2",
         "campaign_subject": "3 friends. 1 shared belief. \u2728",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 593,
-        "klaviyo_open_rate": 0.41286,
-        "klaviyo_click_rate": 0.011844,
+        "klaviyo_total_recipients": 589,
+        "klaviyo_open_rate": 0.415673,
+        "klaviyo_click_rate": 0.011925,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22749,9 +22694,19 @@
         "campaign_name": "Welcome Email #3",
         "campaign_subject": "9000+ rave reviews and counting",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 584,
-        "klaviyo_open_rate": 0.438144,
-        "klaviyo_click_rate": 0.0189,
+        "klaviyo_total_recipients": 578,
+        "klaviyo_open_rate": 0.423611,
+        "klaviyo_click_rate": 0.020833,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
+      },
+      {
+        "campaign_name": "PM | Post Purchase Email #2",
+        "campaign_subject": "We're always looking to improve",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 573,
+        "klaviyo_open_rate": 0.364912,
+        "klaviyo_click_rate": 0.005263,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22759,9 +22714,9 @@
         "campaign_name": "T2B - no code - treat yourself",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, its called self-care",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 528,
-        "klaviyo_open_rate": 0.290875,
-        "klaviyo_click_rate": 0.003802,
+        "klaviyo_total_recipients": 520,
+        "klaviyo_open_rate": 0.299228,
+        "klaviyo_click_rate": 0.003861,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22769,9 +22724,9 @@
         "campaign_name": "T2A - 20% off your restock",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, here\u2019s 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 522,
-        "klaviyo_open_rate": 0.313462,
-        "klaviyo_click_rate": 0.005769,
+        "klaviyo_total_recipients": 502,
+        "klaviyo_open_rate": 0.325301,
+        "klaviyo_click_rate": 0.006024,
         "shopify_placed_order": 1,
         "shopify_placed_order_value": 120.66
       },
@@ -22779,9 +22734,9 @@
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, last chance for 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 504,
-        "klaviyo_open_rate": 0.290837,
-        "klaviyo_click_rate": 0.005976,
+        "klaviyo_total_recipients": 500,
+        "klaviyo_open_rate": 0.285141,
+        "klaviyo_click_rate": 0.006024,
         "shopify_placed_order": 3,
         "shopify_placed_order_value": 159
       },
@@ -22789,9 +22744,9 @@
         "campaign_name": "T3B - FOMO - occasions focus",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 499,
-        "klaviyo_open_rate": 0.299197,
-        "klaviyo_click_rate": 0.006024,
+        "klaviyo_total_recipients": 495,
+        "klaviyo_open_rate": 0.302231,
+        "klaviyo_click_rate": 0.006085,
         "shopify_placed_order": 1,
         "shopify_placed_order_value": 73.06
       },
@@ -22799,31 +22754,31 @@
         "campaign_name": "PM | 60D Non Buyer Email #1",
         "campaign_subject": "Make every day feel a little lighter",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 456,
-        "klaviyo_open_rate": 0.40708,
-        "klaviyo_click_rate": 0.006637,
+        "klaviyo_total_recipients": 454,
+        "klaviyo_open_rate": 0.415556,
+        "klaviyo_click_rate": 0.006667,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
-      },
-      {
-        "campaign_name": "PM | Abandoned Checkout Email #2",
-        "campaign_subject": "Looking for a sign?",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 199,
-        "klaviyo_open_rate": 0.609137,
-        "klaviyo_click_rate": 0.035533,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 51.2
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #1",
         "campaign_subject": "Ready to feel your best?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 191,
-        "klaviyo_open_rate": 0.610811,
-        "klaviyo_click_rate": 0.032432,
+        "klaviyo_total_recipients": 204,
+        "klaviyo_open_rate": 0.580808,
+        "klaviyo_click_rate": 0.030303,
         "shopify_placed_order": 1,
         "shopify_placed_order_value": 76.21
+      },
+      {
+        "campaign_name": "PM | Abandoned Checkout Email #2",
+        "campaign_subject": "Looking for a sign?",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 173,
+        "klaviyo_open_rate": 0.619883,
+        "klaviyo_click_rate": 0.040936,
+        "shopify_placed_order": 1,
+        "shopify_placed_order_value": 51.2
       },
       {
         "campaign_name": "Welcome Email #1 [meta ads]",
@@ -22839,8 +22794,8 @@
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #1",
         "campaign_subject": "We appreciate you",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 63,
-        "klaviyo_open_rate": 0.571429,
+        "klaviyo_total_recipients": 65,
+        "klaviyo_open_rate": 0.538462,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22859,8 +22814,8 @@
         "campaign_name": "Welcome Email #3 [meta ads]",
         "campaign_subject": "9000+ rave reviews and counting",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 54,
-        "klaviyo_open_rate": 0.296296,
+        "klaviyo_total_recipients": 55,
+        "klaviyo_open_rate": 0.290909,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22869,8 +22824,8 @@
         "campaign_name": "Welcome Email #4 [meta ads]",
         "campaign_subject": "Last chance to save 30%",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 53,
-        "klaviyo_open_rate": 0.358491,
+        "klaviyo_total_recipients": 54,
+        "klaviyo_open_rate": 0.351852,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22879,8 +22834,8 @@
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
         "campaign_subject": "Ready to make your wellness effortless?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 52,
-        "klaviyo_open_rate": 0.615385,
+        "klaviyo_total_recipients": 53,
+        "klaviyo_open_rate": 0.622642,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22899,9 +22854,9 @@
         "campaign_name": "T2 - Non-purchaser - 1 day post trigger",
         "campaign_subject": "Still thinking about it?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 19,
-        "klaviyo_open_rate": 0.578947,
-        "klaviyo_click_rate": 0.052632,
+        "klaviyo_total_recipients": 18,
+        "klaviyo_open_rate": 0.611111,
+        "klaviyo_click_rate": 0.055556,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22960,7 +22915,7 @@
         "campaign_subject": "{{ first_name|default:'Hey there' }}, feel good\u2014one patch at a time",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 2,
-        "klaviyo_open_rate": 1,
+        "klaviyo_open_rate": 0.5,
         "klaviyo_click_rate": 0.5,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -23716,16 +23671,6 @@
         "shopify_placed_order_value": null
       },
       {
-        "campaign_name": "11/29: help you with your Stocking Stuffer Game",
-        "campaign_subject": "Consider the stockings stuffed",
-        "campaign_send_date": "2025-11-29",
-        "klaviyo_total_recipients": "",
-        "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
-      },
-      {
         "campaign_name": "11/30: Sale feature",
         "campaign_subject": "Going, going, gone",
         "campaign_send_date": "2025-11-30",
@@ -23918,6 +23863,12 @@
     ],
     "attr": [
       {
+        "campaign_name": "",
+        "campaign_is_part_of_flow": "",
+        "shopify_placed_order": 14,
+        "shopify_placed_order_value": 1313.88
+      },
+      {
         "campaign_name": "Welcome Email #1",
         "campaign_is_part_of_flow": true,
         "shopify_placed_order": 11,
@@ -23942,16 +23893,22 @@
         "shopify_placed_order_value": 599.46
       },
       {
-        "campaign_name": "PM | Abandoned Cart Email #2",
-        "campaign_is_part_of_flow": true,
+        "campaign_name": "05/19: Sale Teaser",
+        "campaign_is_part_of_flow": false,
         "shopify_placed_order": 5,
-        "shopify_placed_order_value": 369.28
+        "shopify_placed_order_value": 375.39
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #1",
         "campaign_is_part_of_flow": true,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 279.09
+        "shopify_placed_order": 4,
+        "shopify_placed_order_value": 377.09
+      },
+      {
+        "campaign_name": "PM | Abandoned Cart Email #2",
+        "campaign_is_part_of_flow": true,
+        "shopify_placed_order": 4,
+        "shopify_placed_order_value": 264.08
       },
       {
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
@@ -23976,12 +23933,6 @@
         "campaign_is_part_of_flow": false,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 92.09
-      },
-      {
-        "campaign_name": "05/19: Sale Teaser",
-        "campaign_is_part_of_flow": false,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 79.88
       },
       {
         "campaign_name": "Welcome Email #4",
@@ -24020,9 +23971,9 @@
         "shopify_placed_order_value": 73.06
       }
     ],
-    "date": "2026-05-20",
-    "broadcast_orders_30d": 29,
-    "broadcast_value_30d": 1827.6
+    "date": "2026-05-21",
+    "broadcast_orders_30d": 46,
+    "broadcast_value_30d": 3436.99
   },
   "cohort_data": {
     "prior_paid": [
@@ -78617,6 +78568,12 @@
         "net_sales": 21.25
       },
       {
+        "customer_id": 3657399861366,
+        "yearMonth": "2026|05",
+        "sm_order_count": 2,
+        "net_sales": 21.25
+      },
+      {
         "customer_id": 3657729310838,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -80123,6 +80080,12 @@
         "net_sales": 95.2
       },
       {
+        "customer_id": 5389203275894,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 95.2
+      },
+      {
         "customer_id": 5389312557174,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -80155,8 +80118,8 @@
       {
         "customer_id": 5389312557174,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 13.6
+        "sm_order_count": 2,
+        "net_sales": 44.2
       },
       {
         "customer_id": 5389363937398,
@@ -81499,8 +81462,8 @@
       {
         "customer_id": 5746957942902,
         "yearMonth": "2026|05",
-        "sm_order_count": 2,
-        "net_sales": 144.5
+        "sm_order_count": 3,
+        "net_sales": 232.5
       },
       {
         "customer_id": 5751384375414,
@@ -81665,6 +81628,12 @@
         "net_sales": 76
       },
       {
+        "customer_id": 5776316072054,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 124
+      },
+      {
         "customer_id": 5778104549494,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -81747,6 +81716,12 @@
         "yearMonth": "2025|12",
         "sm_order_count": 1,
         "net_sales": 70
+      },
+      {
+        "customer_id": 5823849660534,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 37.4
       },
       {
         "customer_id": 5824989692022,
@@ -83039,6 +83014,12 @@
         "net_sales": 10.2
       },
       {
+        "customer_id": 5966244577398,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 10.2
+      },
+      {
         "customer_id": 5968956227702,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -83125,8 +83106,8 @@
       {
         "customer_id": 5970221334646,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 44.2
+        "sm_order_count": 2,
+        "net_sales": 124.95
       },
       {
         "customer_id": 5975550197878,
@@ -83391,6 +83372,12 @@
         "yearMonth": "2026|01",
         "sm_order_count": 1,
         "net_sales": 28
+      },
+      {
+        "customer_id": 6001076011126,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 91
       },
       {
         "customer_id": 6001627693174,
@@ -84269,6 +84256,12 @@
         "net_sales": 13.6
       },
       {
+        "customer_id": 6092074647670,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 36
+      },
+      {
         "customer_id": 6098931351670,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -84363,6 +84356,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 71.4
+      },
+      {
+        "customer_id": 6114612805750,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 48
       },
       {
         "customer_id": 6114860859510,
@@ -85343,6 +85342,18 @@
         "net_sales": 54.4
       },
       {
+        "customer_id": 6312865235062,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 54.4
+      },
+      {
+        "customer_id": 6322390368374,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 64
+      },
+      {
         "customer_id": 6323957170294,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -86163,6 +86174,12 @@
         "yearMonth": "2026|01",
         "sm_order_count": 1,
         "net_sales": 110.5
+      },
+      {
+        "customer_id": 6498402173046,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 44
       },
       {
         "customer_id": 6498540978294,
@@ -87225,6 +87242,12 @@
         "yearMonth": "2025|12",
         "sm_order_count": 1,
         "net_sales": 101
+      },
+      {
+        "customer_id": 6760537555062,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 188
       },
       {
         "customer_id": 6761286566006,
@@ -88349,6 +88372,12 @@
         "net_sales": 57.8
       },
       {
+        "customer_id": 6899961430134,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 27.2
+      },
+      {
         "customer_id": 6902638575734,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -88371,6 +88400,12 @@
         "yearMonth": "2025|12",
         "sm_order_count": 1,
         "net_sales": 25
+      },
+      {
+        "customer_id": 6907644838006,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 52
       },
       {
         "customer_id": 6907660107894,
@@ -88473,6 +88508,12 @@
         "yearMonth": "2026|02",
         "sm_order_count": 1,
         "net_sales": 20.4
+      },
+      {
+        "customer_id": 6916302340214,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 194
       },
       {
         "customer_id": 6917827788918,
@@ -90553,6 +90594,12 @@
       {
         "customer_id": 7191571923062,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 59.5
+      },
+      {
+        "customer_id": 7191571923062,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 59.5
       },
@@ -92715,6 +92762,12 @@
         "yearMonth": "2026|02",
         "sm_order_count": 1,
         "net_sales": 42
+      },
+      {
+        "customer_id": 7475611402358,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 80
       },
       {
         "customer_id": 7476129529974,
@@ -97193,6 +97246,12 @@
         "net_sales": 10.2
       },
       {
+        "customer_id": 7818146513014,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 98
+      },
+      {
         "customer_id": 7819218288758,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -97869,6 +97928,12 @@
         "yearMonth": "2025|12",
         "sm_order_count": 1,
         "net_sales": 0
+      },
+      {
+        "customer_id": 7852099666038,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 90
       },
       {
         "customer_id": 7852258459766,
@@ -106457,6 +106522,12 @@
         "net_sales": 100
       },
       {
+        "customer_id": 7921909137526,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 85
+      },
+      {
         "customer_id": 7922093981814,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -110817,6 +110888,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 1,
         "net_sales": 59.5
+      },
+      {
+        "customer_id": 7959946690678,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 36
       },
       {
         "customer_id": 7959954817142,
@@ -116991,6 +117068,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 57.8
+      },
+      {
+        "customer_id": 8049121984630,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 36.6
       },
       {
         "customer_id": 8049299193974,
@@ -123293,6 +123376,12 @@
         "net_sales": 32
       },
       {
+        "customer_id": 8104299397238,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 74
+      },
+      {
         "customer_id": 8104302870646,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -126473,6 +126562,12 @@
         "net_sales": 60
       },
       {
+        "customer_id": 8148449132662,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 125
+      },
+      {
         "customer_id": 8148628078710,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -128079,6 +128174,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 2,
         "net_sales": 96
+      },
+      {
+        "customer_id": 8170599415926,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 44
       },
       {
         "customer_id": 8170645553270,
@@ -130451,6 +130552,12 @@
         "net_sales": 61.2
       },
       {
+        "customer_id": 8222586208374,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 61.2
+      },
+      {
         "customer_id": 8222606655606,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -130947,6 +131054,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 16
+      },
+      {
+        "customer_id": 8270265679990,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 48
       },
       {
         "customer_id": 8271386968182,
@@ -131899,8 +132012,8 @@
       {
         "customer_id": 8293445894262,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 89.25
+        "sm_order_count": 2,
+        "net_sales": 239.25
       },
       {
         "customer_id": 8293528666230,
@@ -133741,8 +133854,8 @@
       {
         "customer_id": 8320078119030,
         "yearMonth": "2026|05",
-        "sm_order_count": 2,
-        "net_sales": 85
+        "sm_order_count": 3,
+        "net_sales": 139
       },
       {
         "customer_id": 8320084344950,
@@ -134727,6 +134840,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 0
+      },
+      {
+        "customer_id": 8336915857526,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 36
       },
       {
         "customer_id": 8337166794870,
@@ -136307,6 +136426,12 @@
         "net_sales": 88.2
       },
       {
+        "customer_id": 8351736004726,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 156
+      },
+      {
         "customer_id": 8351764447350,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -136465,8 +136590,8 @@
       {
         "customer_id": 8362278748278,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 13.6
+        "sm_order_count": 2,
+        "net_sales": 77.6
       },
       {
         "customer_id": 8362297294966,
@@ -136749,184 +136874,23 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 63
-      },
-      {
-        "customer_id": 8375564566646,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 60
-      },
-      {
-        "customer_id": 8375722213494,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8375899455606,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 52
-      },
-      {
-        "customer_id": 8376006639734,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8376106909814,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 15
-      },
-      {
-        "customer_id": 8376195580022,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 20
-      },
-      {
-        "customer_id": 8376309121142,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 88
-      },
-      {
-        "customer_id": 8376314298486,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 16
-      },
-      {
-        "customer_id": 8376397594742,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 20.4
-      },
-      {
-        "customer_id": 8376643420278,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 55.25
-      },
-      {
-        "customer_id": 8376686575734,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 60
-      },
-      {
-        "customer_id": 8377490866294,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 12
-      },
-      {
-        "customer_id": 8377945948278,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378066632822,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 24
-      },
-      {
-        "customer_id": 8378118013046,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 12
-      },
-      {
-        "customer_id": 8378133610614,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378134462582,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378134757494,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378137378934,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378138853494,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378141212790,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378141704310,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378144620662,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378157236342,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378157727862,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378159005814,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378159857782,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378160021622,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8378165100662,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
       }
     ],
     "window_start": "2025-12-01",
-    "date": "2026-05-20"
+    "date": "2026-05-21"
   },
-  "last_posted_date": "2026-05-20"
+  "last_posted_date": "2026-05-21",
+  "py_amazon_seller_2025-05-21": {
+    "ordered_product_sales": 6023.9,
+    "units_ordered": 185,
+    "sessions": 1542,
+    "unit_session_percentage": 12,
+    "page_views": 2029
+  },
+  "py_shopify_2025-05-21": {
+    "gross_sales": 1925.5,
+    "sm_order_count": 39,
+    "net_sales": 1668.05,
+    "net_quantity": 79
+  }
 }
