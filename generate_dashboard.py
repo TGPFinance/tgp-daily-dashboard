@@ -364,6 +364,55 @@ def ensure_yoy_yesterday():
     elif 'yoy_yesterday' in cache:
         cache_warnings.append(f"yoy_yesterday (from {cache['yoy_yesterday'].get('date','?')})")
 
+def ensure_repeat_behavior():
+    """Pull 6 months of order + line-item data for SKU affinity and time-between-orders.
+    Weekly refresh — repeat patterns change slowly, no need to refetch daily."""
+    if is_cached_recently('repeat_behavior', max_age_days=7): return
+
+    # Same 6-month window as cohort (use same calc)
+    first_of_this_month = YESTERDAY.replace(day=1)
+    window_start_dt = first_of_this_month
+    for _ in range(5):
+        window_start_dt = (window_start_dt - timedelta(days=1)).replace(day=1)
+    window_start = window_start_dt.strftime("%Y-%m-%d")
+
+    # Q1: Order-level (customer_id, date) for time between orders — already aggregated per customer-day
+    orders_dated = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                  "customer_id,order_created_at_date,sm_order_count,net_sales",
+                                  window_start, DATE_STR,
+                                  extra_params={"report_type": "Order"},
+                                  timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+
+    # Q2 + Q3: LineItem data, chunked into 2 × 3-month windows for SKU affinity
+    # (LineItem has higher row count than Order — typically 15-25K over 6 months for TGP)
+    mid_dt = window_start_dt
+    for _ in range(3):
+        mid_dt = (mid_dt.replace(day=28) + timedelta(days=4)).replace(day=1)
+    chunk1_end = (mid_dt - timedelta(days=1)).strftime("%Y-%m-%d")
+    chunk2_start = mid_dt.strftime("%Y-%m-%d")
+
+    line_items_1 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                  "customer_id,order_created_at_date,title,net_sales",
+                                  window_start, chunk1_end,
+                                  extra_params={"report_type": "LineItem"},
+                                  timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    line_items_2 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                  "customer_id,order_created_at_date,title,net_sales",
+                                  chunk2_start, DATE_STR,
+                                  extra_params={"report_type": "LineItem"},
+                                  timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    line_items = (line_items_1 or []) + (line_items_2 or [])
+
+    if orders_dated:
+        cache['repeat_behavior'] = {
+            "orders_dated": orders_dated,
+            "line_items": line_items,
+            "window_start": window_start,
+            "date": DATE_STR
+        }
+    elif 'repeat_behavior' in cache:
+        cache_warnings.append(f"repeat_behavior (from {cache['repeat_behavior'].get('date','?')})")
+
 def ensure_cohort_data():
     """Pull 6 months of monthly order activity + 12 months of prior paying customers for cohort retention.
 
@@ -473,6 +522,7 @@ with ThreadPoolExecutor(max_workers=14) as ex:
     futs.append(ex.submit(ensure_new_returning_30d))
     futs.append(ex.submit(ensure_customer_ltv))
     futs.append(ex.submit(ensure_cohort_data))
+    futs.append(ex.submit(ensure_repeat_behavior))
     futs.append(ex.submit(ensure_amazon_promo_yesterday))
     futs.append(ex.submit(ensure_amazon_states))
     futs.append(ex.submit(ensure_yoy_yesterday))
@@ -849,6 +899,115 @@ for row in amz_states_raw:
     amz_state_agg[st]['units'] += qty
 amz_top_states = sorted(amz_state_agg.items(), key=lambda kv: kv[1]['rev'], reverse=True)[:5]
 
+# ── Combined Top States (Shopify + Amazon, last 30 days) ──
+combined_states = {}
+for s in states_data:
+    state_raw = (s.get('order_shipping_province') or '').strip()
+    if not state_raw: continue
+    state = expand_state(state_raw)
+    if state not in combined_states:
+        combined_states[state] = {'shopify': 0, 'amazon': 0, 'shopify_orders': 0, 'amazon_units': 0}
+    combined_states[state]['shopify'] += to_float(s.get('net_sales'))
+    combined_states[state]['shopify_orders'] += to_float(s.get('sm_order_count'))
+for state_code, vals in amz_state_agg.items():
+    state = expand_state(state_code)
+    if state not in combined_states:
+        combined_states[state] = {'shopify': 0, 'amazon': 0, 'shopify_orders': 0, 'amazon_units': 0}
+    combined_states[state]['amazon'] += vals['rev']
+    combined_states[state]['amazon_units'] += vals['units']
+combined_top_states = sorted(
+    [(state, v['shopify'] + v['amazon'], v['shopify'], v['amazon']) for state, v in combined_states.items()],
+    key=lambda x: x[1], reverse=True
+)[:5]
+
+# ── Repeat Purchase Behavior: SKU Affinity + Time Between Orders ──
+rb = cache.get('repeat_behavior', {})
+rb_orders_raw = rb.get('orders_dated', [])
+rb_lineitems_raw = rb.get('line_items', [])
+
+# Time Between Orders: per-customer paid order dates
+customer_dates = defaultdict(set)
+for row in rb_orders_raw:
+    cid = row.get('customer_id')
+    d = row.get('order_created_at_date', '')
+    ns = to_float(row.get('net_sales'))
+    if cid and d and ns > 0:
+        customer_dates[cid].add(d)
+
+gaps = []
+for cid, dates in customer_dates.items():
+    sorted_d = sorted(dates)
+    if len(sorted_d) < 2: continue
+    try:
+        d1 = datetime.strptime(sorted_d[0], "%Y-%m-%d")
+        d2 = datetime.strptime(sorted_d[1], "%Y-%m-%d")
+        gaps.append((d2 - d1).days)
+    except (ValueError, TypeError):
+        continue
+gaps.sort()
+tbo_count = len(gaps)
+tbo_median = gaps[tbo_count // 2] if tbo_count else 0
+tbo_pct_30 = (sum(1 for g in gaps if g <= 30) / tbo_count) if tbo_count else 0
+tbo_pct_90 = (sum(1 for g in gaps if g <= 90) / tbo_count) if tbo_count else 0
+tbo_buckets = [("0–7d", 0), ("8–14d", 0), ("15–30d", 0), ("31–60d", 0), ("61–90d", 0), ("90d+", 0)]
+tbo_dict = dict(tbo_buckets)
+for g in gaps:
+    if g <= 7: tbo_dict["0–7d"] += 1
+    elif g <= 14: tbo_dict["8–14d"] += 1
+    elif g <= 30: tbo_dict["15–30d"] += 1
+    elif g <= 60: tbo_dict["31–60d"] += 1
+    elif g <= 90: tbo_dict["61–90d"] += 1
+    else: tbo_dict["90d+"] += 1
+tbo_buckets = [(name, tbo_dict[name]) for name, _ in tbo_buckets]
+tbo_bucket_max = max((c for _, c in tbo_buckets), default=1) or 1
+
+# SKU Affinity: per-customer per-date set of product titles
+customer_orders_products = defaultdict(lambda: defaultdict(set))
+for row in rb_lineitems_raw:
+    cid = row.get('customer_id')
+    d = row.get('order_created_at_date', '')
+    title = (row.get('title') or '').strip()
+    ns = to_float(row.get('net_sales'))
+    if cid and d and title and ns > 0:
+        customer_orders_products[cid][d].add(title)
+
+# Pair first product → second product. Primary product = first alphabetically (deterministic).
+sku_pairs = defaultdict(lambda: defaultdict(int))
+sku_repeat_totals = defaultdict(int)
+sku_first_totals = defaultdict(int)
+for cid, orders in customer_orders_products.items():
+    if not orders: continue
+    sorted_dates = sorted(orders.keys())
+    first_prods = sorted(orders[sorted_dates[0]])
+    if not first_prods: continue
+    primary_first = first_prods[0]
+    sku_first_totals[primary_first] += 1
+    if len(sorted_dates) < 2: continue
+    second_prods = sorted(orders[sorted_dates[1]])
+    if not second_prods: continue
+    primary_second = second_prods[0]
+    sku_pairs[primary_first][primary_second] += 1
+    sku_repeat_totals[primary_first] += 1
+
+# Top 5 first products by N customers who returned for a 2nd order
+sku_top = sorted(sku_repeat_totals.items(), key=lambda kv: kv[1], reverse=True)[:5]
+sku_rows_data = []
+for product, n in sku_top:
+    second_counts = sku_pairs[product]
+    if second_counts:
+        most_common, mc_count = max(second_counts.items(), key=lambda kv: kv[1])
+        pct_bought = mc_count / n if n else 0
+    else:
+        most_common, pct_bought = '—', 0
+    repeat_rate = n / sku_first_totals[product] if sku_first_totals[product] else 0
+    sku_rows_data.append({
+        'first': product, 'n': n,
+        'second': most_common,
+        'label': 'restock' if most_common == product else 'cross-sell',
+        'pct_bought': pct_bought,
+        'repeat_rate': repeat_rate,
+    })
+
 # ── Site CVR (GA4 sessions / Shopify orders) ──
 ga4_yesterday = day('ga4')
 ga4_sessions  = to_float(ga4_yesterday.get('sessions'))
@@ -1088,6 +1247,58 @@ def amazon_state_rows():
         </tr>"""
     return out
 
+def combined_state_rows():
+    if not combined_top_states: return '<tr><td colspan="5" style="text-align:center;color:#6b7280">No state data available</td></tr>'
+    top_total = combined_top_states[0][1] or 1
+    out = ""
+    for state, total, shop, amz in combined_top_states:
+        share = (total / top_total) * 100
+        out += f"""
+        <tr>
+          <td class="prod-name">{state}</td>
+          <td class="prod-num">${total:,.0f}</td>
+          <td class="prod-num sub-channel">${shop:,.0f}</td>
+          <td class="prod-num sub-channel">${amz:,.0f}</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
+        </tr>"""
+    return out
+
+def sku_affinity_rows():
+    if not sku_rows_data: return '<tr><td colspan="5" style="text-align:center;color:#6b7280">Not enough repeat purchase data yet</td></tr>'
+    max_n = sku_rows_data[0]['n'] or 1
+    out = ""
+    for r in sku_rows_data:
+        bar_pct = (r['n'] / max_n) * 100
+        pct_color = '#22c55e' if r['pct_bought'] >= 0.4 else ('#facc15' if r['pct_bought'] >= 0.2 else '#94a3b8')
+        out += f"""
+        <tr>
+          <td class="prod-name">{r['first']}</td>
+          <td class="prod-num">{r['n']:,}</td>
+          <td class="prod-name">{r['second']} <span class="sku-label">· {r['label']}</span></td>
+          <td class="prod-num" style="color:{pct_color}">{r['pct_bought']*100:.0f}%</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{bar_pct:.1f}%"></div></div> <span class="sub-channel" style="font-size:11px">{r['repeat_rate']*100:.0f}%</span></td>
+        </tr>"""
+    return out
+
+def tbo_histogram_bars():
+    """Render the time-between-orders histogram as flexbox bars."""
+    if not tbo_buckets or tbo_bucket_max == 0:
+        return '<div style="color:#6b7280;text-align:center;padding:20px">Not enough repeat purchase data yet</div>'
+    out = '<div class="tbo-hist">'
+    for i, (name, count) in enumerate(tbo_buckets):
+        pct = (count / tbo_count * 100) if tbo_count else 0
+        height_pct = (count / tbo_bucket_max * 100) if tbo_bucket_max else 0
+        # Buckets at 31+ days are de-emphasized
+        bar_color = BRAND_COLOR if i < 3 else ('#1e3a7a' if i < 5 else '#475569')
+        out += f'''
+        <div class="tbo-col">
+          <div class="tbo-val">{pct:.0f}%</div>
+          <div class="tbo-bar" style="height:{max(height_pct, 3):.0f}%; background:{bar_color}"></div>
+          <div class="tbo-label">{name}</div>
+        </div>'''
+    out += '</div>'
+    return out
+
 def benchmark_status(label, color):
     return f'<div class="sub" style="color:{color}">{label}</div>'
 
@@ -1273,7 +1484,19 @@ html = f"""<!DOCTYPE html>
   table.products tr:last-child td {{ border-bottom: 0; }}
   .prod-name {{ max-width: 280px; }}
   .prod-num {{ text-align: right; font-variant-numeric: tabular-nums; }}
-  .prod-bar {{ width: 40%; }}
+  .prod-num.sub-channel {{ color: #94a3b8; font-size: 12px; }}
+  .prod-bar {{ width: 25%; }}
+  .sku-label {{ color: #64748b; font-size: 11px; }}
+  .tbo-stats {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }}
+  .tbo-stat {{ padding: 12px 14px; background: #0a1220; border: 0.5px solid #1f2937; border-radius: 6px; }}
+  .tbo-stat .lbl {{ font-size: 10px; color: #64748b; letter-spacing: 0.05em; text-transform: uppercase; }}
+  .tbo-stat .val {{ font-size: 22px; font-weight: 500; color: #e5e7eb; margin-top: 2px; }}
+  .tbo-hist {{ display: flex; align-items: flex-end; gap: 10px; height: 140px; padding: 0 6px; }}
+  .tbo-col {{ flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; }}
+  .tbo-val {{ font-size: 11px; color: #cbd5e1; font-weight: 500; }}
+  .tbo-bar {{ width: 100%; border-radius: 3px 3px 0 0; flex-grow: 0; min-height: 4px; }}
+  .tbo-col {{ justify-content: flex-end; }}
+  .tbo-label {{ font-size: 10px; color: #64748b; text-align: center; }}
   .bar-wrap {{ width: 100%; background: #1f2937; height: 8px; border-radius: 4px; overflow: hidden; }}
   .bar-fill {{ background: {BRAND_COLOR}; height: 100%; border-radius: 4px; }}
   @media (max-width: 900px) {{ .cards, .cards-4, .cards-3 {{ grid-template-columns: repeat(2, 1fr); }} }}
@@ -1337,13 +1560,6 @@ html = f"""<!DOCTYPE html>
     </table>
   </div>
   <div class="section">
-    {section_title('amazon', 'Top Ship-To States', f'{T30_LABEL} · US Marketplace')}
-    <table class="products">
-      <thead><tr><th>State</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
-      <tbody>{amazon_state_rows()}</tbody>
-    </table>
-  </div>
-  <div class="section">
     {section_title('amazon', 'Sponsored Products — 30-Day Overview', T30_LABEL)}
     <div class="cards-4">
       {card(fmt_money(amza_cost_30, big=True), 'Ad Spend', '<div class="sub">30-day total</div>')}
@@ -1375,6 +1591,43 @@ html = f"""<!DOCTYPE html>
       </div>
     </div>
     {render_cohort_table()}
+    <div class="section">
+      {section_title('grid', 'SKU Affinity', 'First → second order · 6 months · Shopify')}
+      <div class="sub" style="margin:-8px 0 12px;color:#94a3b8">For new customers who returned for a 2nd order, what was their original purchase and what did they buy next?</div>
+      <table class="products">
+        <thead><tr>
+          <th>First-order product</th>
+          <th class="prod-num">N customers</th>
+          <th>Most common 2nd product</th>
+          <th class="prod-num">% bought it</th>
+          <th>Repeat rate</th>
+        </tr></thead>
+        <tbody>{sku_affinity_rows()}</tbody>
+      </table>
+    </div>
+    <div class="section">
+      {section_title('grid', 'Time Between Orders', '1st → 2nd order · 6 months · Shopify')}
+      <div class="sub" style="margin:-8px 0 12px;color:#94a3b8">Of new customers who placed a 2nd order, how long did it take? Compressing this curve left = better email/SMS sequencing.</div>
+      <div class="tbo-stats">
+        <div class="tbo-stat"><div class="lbl">Median days to repeat</div><div class="val">{tbo_median}</div></div>
+        <div class="tbo-stat"><div class="lbl">% repeating in 30d</div><div class="val">{tbo_pct_30*100:.0f}%</div></div>
+        <div class="tbo-stat"><div class="lbl">% repeating in 90d</div><div class="val">{tbo_pct_90*100:.0f}%</div></div>
+      </div>
+      {tbo_histogram_bars()}
+    </div>
+    <div class="section">
+      {section_title('grid', 'Top States by Total Revenue', f'Combined Shopify + Amazon · {T30_LABEL}')}
+      <table class="products">
+        <thead><tr>
+          <th>State</th>
+          <th class="prod-num">Total Revenue</th>
+          <th class="prod-num">Shopify</th>
+          <th class="prod-num">Amazon</th>
+          <th>Share of Top 5</th>
+        </tr></thead>
+        <tbody>{combined_state_rows()}</tbody>
+      </table>
+    </div>
   </div>
 </div>
 
@@ -1418,21 +1671,6 @@ html = f"""<!DOCTYPE html>
       {card(fmt_pct(klav_click), 'Click Rate')}
     </div>
   </div>
-  <div class="section">
-    {section_title('klaviyo', 'Last 5 Email Campaigns', T30_LABEL)}
-    <table class="products">
-      <thead><tr>
-        <th>Campaign</th>
-        <th class="prod-num">Sent</th>
-        <th class="prod-num">Recipients</th>
-        <th class="prod-num">Open</th>
-        <th class="prod-num">Click</th>
-        <th class="prod-num">Revenue</th>
-        <th class="prod-num">Orders</th>
-      </tr></thead>
-      <tbody>{campaign_rows()}</tbody>
-    </table>
-  </div>
   <hr class="divider">
   <div class="section">
     {section_title('shopify', 'Shopify — 30-Day Overview', T30_LABEL)}
@@ -1452,13 +1690,6 @@ html = f"""<!DOCTYPE html>
     <table class="products">
       <thead><tr><th>Product Variant</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
       <tbody>{shopify_variant_rows()}</tbody>
-    </table>
-  </div>
-  <div class="section">
-    {section_title('shopify', 'Top States by Revenue', T30_LABEL)}
-    <table class="products">
-      <thead><tr><th>State / Province</th><th class="prod-num">Revenue</th><th class="prod-num">Orders</th><th>Share of #1</th></tr></thead>
-      <tbody>{state_rows()}</tbody>
     </table>
   </div>
   {f'''<div class="section">
