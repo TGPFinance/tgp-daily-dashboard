@@ -384,7 +384,7 @@
         "cost": 2182.22,
         "attributedSales14d": 2117.78,
         "clicks": 840,
-        "impressions": 164330,
+        "impressions": 164126,
         "roas": 0.9704704383609354,
         "acos": 1.0304280897921407
       }
@@ -137748,7 +137748,39 @@
   "amazon_promo_yesterday": {
     "data": [
       {
-        "item_promotion_discount": 44.07
+        "date": "2026-05-15",
+        "item_promotion_discount": 144.39,
+        "ship_promotion_discount": 80.7
+      },
+      {
+        "date": "2026-05-16",
+        "item_promotion_discount": 125.82,
+        "ship_promotion_discount": 76.58
+      },
+      {
+        "date": "2026-05-17",
+        "item_promotion_discount": 162.5,
+        "ship_promotion_discount": 117.99
+      },
+      {
+        "date": "2026-05-18",
+        "item_promotion_discount": 110.1,
+        "ship_promotion_discount": 90.62
+      },
+      {
+        "date": "2026-05-19",
+        "item_promotion_discount": 85.5,
+        "ship_promotion_discount": 66.22
+      },
+      {
+        "date": "2026-05-20",
+        "item_promotion_discount": 87.88,
+        "ship_promotion_discount": 58.06
+      },
+      {
+        "date": "2026-05-21",
+        "item_promotion_discount": 44.07,
+        "ship_promotion_discount": 85.95
       }
     ],
     "date": "2026-05-21"
@@ -137768,7 +137800,8 @@
     ],
     "amazon_promo": [
       {
-        "item_promotion_discount": 92.95
+        "item_promotion_discount": 92.95,
+        "ship_promotion_discount": 53.57
       }
     ],
     "date": "2026-05-21"
