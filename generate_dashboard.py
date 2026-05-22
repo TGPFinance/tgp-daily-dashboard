@@ -269,13 +269,30 @@ def ensure_customer_ltv():
     if rows:
         cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
 
+US_STATE_NAMES = {
+    'AL':'Alabama','AK':'Alaska','AZ':'Arizona','AR':'Arkansas','CA':'California','CO':'Colorado',
+    'CT':'Connecticut','DE':'Delaware','FL':'Florida','GA':'Georgia','HI':'Hawaii','ID':'Idaho',
+    'IL':'Illinois','IN':'Indiana','IA':'Iowa','KS':'Kansas','KY':'Kentucky','LA':'Louisiana',
+    'ME':'Maine','MD':'Maryland','MA':'Massachusetts','MI':'Michigan','MN':'Minnesota','MS':'Mississippi',
+    'MO':'Missouri','MT':'Montana','NE':'Nebraska','NV':'Nevada','NH':'New Hampshire','NJ':'New Jersey',
+    'NM':'New Mexico','NY':'New York','NC':'North Carolina','ND':'North Dakota','OH':'Ohio','OK':'Oklahoma',
+    'OR':'Oregon','PA':'Pennsylvania','RI':'Rhode Island','SC':'South Carolina','SD':'South Dakota',
+    'TN':'Tennessee','TX':'Texas','UT':'Utah','VT':'Vermont','VA':'Virginia','WA':'Washington',
+    'WV':'West Virginia','WI':'Wisconsin','WY':'Wyoming','DC':'District of Columbia',
+    'PR':'Puerto Rico','VI':'US Virgin Islands','GU':'Guam','AS':'American Samoa','MP':'Northern Mariana Islands',
+}
+def expand_state(code):
+    code = (code or '').strip().upper()
+    return US_STATE_NAMES.get(code, code)
+
 def ensure_amazon_promo_yesterday():
-    """Yesterday's Amazon item_promotion_discount (Subscribe & Save, coupons) for net revenue calc."""
+    """Amazon promotional discounts (S&S, coupons, ship promos) for last 7 days, with date dim
+    so the render code can match the same date as amazon_seller's latest available data."""
     rows = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
-                         "item_promotion_discount",
-                         DATE_STR, DATE_STR,
+                         "date,item_promotion_discount,ship_promotion_discount",
+                         (YESTERDAY - timedelta(days=6)).strftime("%Y-%m-%d"), DATE_STR,
                          extra_params={"report_type": "orders"},
-                         timeout=180, timezone=DEFAULT_TZ)
+                         timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
         cache['amazon_promo_yesterday'] = {"data": rows, "date": DATE_STR}
     elif 'amazon_promo_yesterday' in cache:
@@ -306,7 +323,7 @@ def ensure_yoy_yesterday():
                               yoy_date, yoy_date,
                               extra_params={"report_type": "sales_and_traffic_by_date"},
                               timeout=180, timezone=DEFAULT_TZ)
-    amz_promo = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "item_promotion_discount",
+    amz_promo = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "item_promotion_discount,ship_promotion_discount",
                               yoy_date, yoy_date,
                               extra_params={"report_type": "orders"},
                               timeout=180, timezone=DEFAULT_TZ)
@@ -617,10 +634,15 @@ new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
 # ── Total Sales (Yesterday) + YoY ──
 # Shopify net sales for yesterday from daily cache
 shopify_net_yest = to_float(shopify.get('net_sales'))
-# Amazon: gross ordered product sales minus item-level promo discount (S&S, coupons)
+# Amazon: gross ordered product sales minus item + ship promo discount (S&S, coupons, ship promos)
+# Match the same date as amazon_seller (which uses AMAZON_SELLER_DATE_STR to handle lag)
 amazon_gross_yest = to_float(amazon_seller.get('ordered_product_sales'))
-amazon_promo_yest = sum(to_float(r.get('item_promotion_discount'))
-                        for r in cache.get('amazon_promo_yesterday', {}).get('data', []))
+amazon_promo_yest = 0
+for row in cache.get('amazon_promo_yesterday', {}).get('data', []):
+    row_date = row.get('date', '')
+    if row_date == AMAZON_SELLER_DATE_STR:
+        amazon_promo_yest += to_float(row.get('item_promotion_discount'))
+        amazon_promo_yest += to_float(row.get('ship_promotion_discount'))
 amazon_net_yest = amazon_gross_yest - amazon_promo_yest
 total_sales_yest = shopify_net_yest + amazon_net_yest
 
@@ -629,7 +651,8 @@ yoy_raw = cache.get('yoy_yesterday', {})
 yoy_date_str = yoy_raw.get('yoy_date', '')
 yoy_shop_net = sum(to_float(r.get('net_sales')) for r in yoy_raw.get('shopify', []))
 yoy_amz_gross = sum(to_float(r.get('ordered_product_sales')) for r in yoy_raw.get('amazon_sales', []))
-yoy_amz_promo = sum(to_float(r.get('item_promotion_discount')) for r in yoy_raw.get('amazon_promo', []))
+yoy_amz_promo = sum(to_float(r.get('item_promotion_discount')) + to_float(r.get('ship_promotion_discount'))
+                    for r in yoy_raw.get('amazon_promo', []))
 yoy_amz_net = yoy_amz_gross - yoy_amz_promo
 yoy_total = yoy_shop_net + yoy_amz_net
 yoy_pct_change = safe_div(total_sales_yest - yoy_total, yoy_total) if yoy_total > 0 else None
@@ -998,7 +1021,7 @@ def state_rows():
         rev = to_float(s.get('net_sales'))
         orders = to_float(s.get('sm_order_count'))
         share = (rev / top_total) * 100
-        state = s.get('order_shipping_province') or 'Unknown'
+        state = expand_state(s.get('order_shipping_province') or 'Unknown')
         out += f"""
         <tr>
           <td class="prod-name">{state}</td>
@@ -1012,9 +1035,10 @@ def amazon_state_rows():
     if not amz_top_states: return '<tr><td colspan="4" style="text-align:center;color:#6b7280">No state data available</td></tr>'
     top_total = amz_top_states[0][1]['rev'] or 1
     out = ""
-    for state, vals in amz_top_states:
+    for state_code, vals in amz_top_states:
         rev = vals['rev']; units = vals['units']
         share = (rev / top_total) * 100
+        state = expand_state(state_code)
         out += f"""
         <tr>
           <td class="prod-name">{state}</td>
@@ -1204,6 +1228,7 @@ html = f"""<!DOCTYPE html>
   .chart-title {{ font-size: 13px; font-weight: 500; color: #d1d5db; margin-bottom: 12px; }}
   table.products {{ width: 100%; border-collapse: collapse; background: #111827; border: 1px solid #1f2937; border-radius: 10px; overflow: hidden; }}
   table.products th {{ text-align: left; font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; background: #0f172a; border-bottom: 1px solid #1f2937; font-weight: 500; }}
+  table.products th.prod-num {{ text-align: right; }}
   table.products td {{ padding: 12px 16px; border-bottom: 1px solid #1f2937; font-size: 13px; color: #e5e7eb; vertical-align: middle; }}
   table.products tr:last-child td {{ border-bottom: 0; }}
   .prod-name {{ max-width: 280px; }}
