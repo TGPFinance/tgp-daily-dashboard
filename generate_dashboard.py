@@ -522,7 +522,8 @@ with ThreadPoolExecutor(max_workers=14) as ex:
     futs.append(ex.submit(ensure_new_returning_30d))
     futs.append(ex.submit(ensure_customer_ltv))
     futs.append(ex.submit(ensure_cohort_data))
-    futs.append(ex.submit(ensure_repeat_behavior))
+    # ensure_repeat_behavior disabled — SKU Affinity + Time Between Orders sections hidden for now
+    # futs.append(ex.submit(ensure_repeat_behavior))
     futs.append(ex.submit(ensure_amazon_promo_yesterday))
     futs.append(ex.submit(ensure_amazon_states))
     futs.append(ex.submit(ensure_yoy_yesterday))
@@ -1257,8 +1258,8 @@ def combined_state_rows():
         <tr>
           <td class="prod-name">{state}</td>
           <td class="prod-num">${total:,.0f}</td>
-          <td class="prod-num sub-channel">${shop:,.0f}</td>
           <td class="prod-num sub-channel">${amz:,.0f}</td>
+          <td class="prod-num sub-channel">${shop:,.0f}</td>
           <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
         </tr>"""
     return out
@@ -1282,8 +1283,8 @@ def sku_affinity_rows():
 
 def tbo_histogram_bars():
     """Render the time-between-orders histogram as flexbox bars."""
-    if not tbo_buckets or tbo_bucket_max == 0:
-        return '<div style="color:#6b7280;text-align:center;padding:20px">Not enough repeat purchase data yet</div>'
+    if not tbo_count or tbo_bucket_max == 0:
+        return '<div style="color:#6b7280;text-align:center;padding:20px;font-size:13px">Not enough repeat purchase data yet</div>'
     out = '<div class="tbo-hist">'
     for i, (name, count) in enumerate(tbo_buckets):
         pct = (count / tbo_count * 100) if tbo_count else 0
@@ -1592,37 +1593,13 @@ html = f"""<!DOCTYPE html>
     </div>
     {render_cohort_table()}
     <div class="section">
-      {section_title('grid', 'SKU Affinity', 'First → second order · 6 months · Shopify')}
-      <div class="sub" style="margin:-8px 0 12px;color:#94a3b8">For new customers who returned for a 2nd order, what was their original purchase and what did they buy next?</div>
-      <table class="products">
-        <thead><tr>
-          <th>First-order product</th>
-          <th class="prod-num">N customers</th>
-          <th>Most common 2nd product</th>
-          <th class="prod-num">% bought it</th>
-          <th>Repeat rate</th>
-        </tr></thead>
-        <tbody>{sku_affinity_rows()}</tbody>
-      </table>
-    </div>
-    <div class="section">
-      {section_title('grid', 'Time Between Orders', '1st → 2nd order · 6 months · Shopify')}
-      <div class="sub" style="margin:-8px 0 12px;color:#94a3b8">Of new customers who placed a 2nd order, how long did it take? Compressing this curve left = better email/SMS sequencing.</div>
-      <div class="tbo-stats">
-        <div class="tbo-stat"><div class="lbl">Median days to repeat</div><div class="val">{tbo_median}</div></div>
-        <div class="tbo-stat"><div class="lbl">% repeating in 30d</div><div class="val">{tbo_pct_30*100:.0f}%</div></div>
-        <div class="tbo-stat"><div class="lbl">% repeating in 90d</div><div class="val">{tbo_pct_90*100:.0f}%</div></div>
-      </div>
-      {tbo_histogram_bars()}
-    </div>
-    <div class="section">
       {section_title('grid', 'Top States by Total Revenue', f'Combined Shopify + Amazon · {T30_LABEL}')}
       <table class="products">
         <thead><tr>
           <th>State</th>
           <th class="prod-num">Total Revenue</th>
-          <th class="prod-num">Shopify</th>
           <th class="prod-num">Amazon</th>
+          <th class="prod-num">Shopify</th>
           <th>Share of Top 5</th>
         </tr></thead>
         <tbody>{combined_state_rows()}</tbody>
