@@ -282,15 +282,21 @@ US_STATE_NAMES = {
     'PR':'Puerto Rico','VI':'US Virgin Islands','GU':'Guam','AS':'American Samoa','MP':'Northern Mariana Islands',
 }
 def expand_state(code):
-    code = (code or '').strip().upper()
-    return US_STATE_NAMES.get(code, code)
+    raw = (code or '').strip()
+    if not raw: return 'Unknown'
+    upper = raw.upper()
+    # 2-letter code (Amazon) → full name from map
+    if upper in US_STATE_NAMES:
+        return US_STATE_NAMES[upper]
+    # Already a full name (Shopify gives "CALIFORNIA"), title-case it
+    return raw.title()
 
 def ensure_amazon_promo_yesterday():
-    """Amazon promotional discounts (S&S, coupons, ship promos) for last 7 days, with date dim
-    so the render code can match the same date as amazon_seller's latest available data."""
+    """Amazon promotional discounts (S&S, coupons, ship promos) for last 30 days, with date dim
+    so render code can both pick yesterday's value and sum the full 30-day total."""
     rows = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
                          "date,item_promotion_discount,ship_promotion_discount",
-                         (YESTERDAY - timedelta(days=6)).strftime("%Y-%m-%d"), DATE_STR,
+                         T30_START, T30_END,
                          extra_params={"report_type": "orders"},
                          timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
@@ -632,30 +638,39 @@ email_pct    = safe_div(klaviyo_broadcast_value_30, shop_net_30)
 new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
 
 # ── Total Sales (Yesterday) + YoY ──
-# Shopify net sales for yesterday from daily cache
+# Summary card uses gross Amazon (ordered_product_sales) for consistency with Amazon tab
 shopify_net_yest = to_float(shopify.get('net_sales'))
-# Amazon: gross ordered product sales minus item + ship promo discount (S&S, coupons, ship promos)
-# Match the same date as amazon_seller (which uses AMAZON_SELLER_DATE_STR to handle lag)
 amazon_gross_yest = to_float(amazon_seller.get('ordered_product_sales'))
+# Promo discount still computed for the Amazon tab cards
 amazon_promo_yest = 0
 for row in cache.get('amazon_promo_yesterday', {}).get('data', []):
     row_date = row.get('date', '')
     if row_date == AMAZON_SELLER_DATE_STR:
         amazon_promo_yest += to_float(row.get('item_promotion_discount'))
         amazon_promo_yest += to_float(row.get('ship_promotion_discount'))
-amazon_net_yest = amazon_gross_yest - amazon_promo_yest
-total_sales_yest = shopify_net_yest + amazon_net_yest
+total_sales_yest = shopify_net_yest + amazon_gross_yest
 
-# YoY: same calendar date one year ago
+# YoY: same calendar date one year ago — compare GROSS to GROSS
 yoy_raw = cache.get('yoy_yesterday', {})
 yoy_date_str = yoy_raw.get('yoy_date', '')
 yoy_shop_net = sum(to_float(r.get('net_sales')) for r in yoy_raw.get('shopify', []))
 yoy_amz_gross = sum(to_float(r.get('ordered_product_sales')) for r in yoy_raw.get('amazon_sales', []))
 yoy_amz_promo = sum(to_float(r.get('item_promotion_discount')) + to_float(r.get('ship_promotion_discount'))
                     for r in yoy_raw.get('amazon_promo', []))
-yoy_amz_net = yoy_amz_gross - yoy_amz_promo
-yoy_total = yoy_shop_net + yoy_amz_net
+yoy_total = yoy_shop_net + yoy_amz_gross
 yoy_pct_change = safe_div(total_sales_yest - yoy_total, yoy_total) if yoy_total > 0 else None
+
+# Promo YoY for the Amazon tab daily card
+promo_yoy_pct = safe_div(amazon_promo_yest - yoy_amz_promo, yoy_amz_promo) if yoy_amz_promo > 0 else None
+
+# 30-day promo total from same cache (rows have date dim, sum all that fall in T30 window)
+amazon_promo_30d = 0
+for row in cache.get('amazon_promo_yesterday', {}).get('data', []):
+    row_date = row.get('date', '')
+    if T30_START <= row_date <= T30_END:
+        amazon_promo_30d += to_float(row.get('item_promotion_discount'))
+        amazon_promo_30d += to_float(row.get('ship_promotion_discount'))
+promo_pct_of_gross_30d = safe_div(amazon_promo_30d, amzs_rev_30) if amzs_rev_30 else None
 
 # Customer Health: 90-day LTV, repeat purchase rate, LTV:CAC
 ltv_data = cache.get('customer_ltv', {}).get('data', [])
@@ -1253,8 +1268,9 @@ html = f"""<!DOCTYPE html>
 <div class="panel" id="panel-1">
   <div class="section">
     {section_title('amazon', 'Seller Central · Amazon.com (US)', AMAZON_SELLER_DISPLAY)}
-    <div class="cards-3">
+    <div class="cards-4">
       {card(fmt_money(amazon_seller.get('ordered_product_sales')), 'Ordered Revenue', yoy_badge(amazon_seller.get('ordered_product_sales'), amazon_seller_py.get('ordered_product_sales'), fmt_money, AMAZON_PY_DISPLAY))}
+      {card(fmt_money(amazon_promo_yest), 'Promo Discount', f'<div class="sub">S&amp;S + coupons + ship promos</div>' + (yoy_change_badge(promo_yoy_pct, AMAZON_PY_DISPLAY, yoy_amz_promo) if promo_yoy_pct is not None else ''))}
       {card(fmt_num(amazon_seller.get('units_ordered')), 'Units Ordered', yoy_badge(amazon_seller.get('units_ordered'), amazon_seller_py.get('units_ordered'), fmt_num, AMAZON_PY_DISPLAY))}
       {card(amazon_aov_str, 'AOV', yoy_badge(amazon_aov_val, amazon_aov_py_val, fmt_money, AMAZON_PY_DISPLAY))}
     </div>
@@ -1274,6 +1290,7 @@ html = f"""<!DOCTYPE html>
     {section_title('amazon', 'Seller Central — 30-Day Overview', T30_LABEL)}
     <div class="cards">
       {card(fmt_money(amzs_rev_30, big=True), 'Ordered Revenue', '<div class="sub">30-day total</div>')}
+      {card(fmt_money(amazon_promo_30d, big=True) if amazon_promo_30d else '—', 'Promo Discount', f'<div class="sub">{fmt_pct(promo_pct_of_gross_30d)} of gross · 30-day total</div>' if promo_pct_of_gross_30d else '<div class="sub">30-day total</div>')}
       {card(fmt_num(amzs_unit_30, big=True), 'Units Ordered', f'<div class="sub">~{fmt_num(amzs_unit_30/30)} / day avg</div>' if amzs_unit_30 else '')}
       {card(fmt_num(amzs_sess_30, big=True), 'Sessions', f'<div class="sub">~{fmt_num(amzs_sess_30/30)} / day avg</div>' if amzs_sess_30 else '')}
       {card(amazon_cvr_30_str, 'Conversion Rate', '<div class="sub">units ÷ sessions</div>')}
@@ -1318,9 +1335,9 @@ html = f"""<!DOCTYPE html>
     <div class="section">
       {section_title('activity', 'Performance Health', f'30-day blended · {T30_LABEL}')}
       <div class="cards-4">
-        {card(fmt_money(total_sales_yest, big=True) if total_sales_yest else '—', 'Total Sales (Yesterday)', f'<div class="sub">{fmt_money(shopify_net_yest)} Shopify · {fmt_money(amazon_net_yest)} Amazon (net of {fmt_money(amazon_promo_yest)} promo)</div>' + yoy_change_badge(yoy_pct_change, yoy_date_str, yoy_total))}
-        {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
+        {card(fmt_money(total_sales_yest, big=True) if total_sales_yest else '—', 'Total Sales (Yesterday)', f'<div class="sub">{fmt_money(amazon_gross_yest)} Amazon · {fmt_money(shopify_net_yest)} Shopify</div>' + yoy_change_badge(yoy_pct_change, yoy_date_str, yoy_total))}
         {card(fmt_money(ncac_val) if ncac_val else '—', 'Shopify nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new Shopify orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
+        {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
         {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
       </div>
     </div>
@@ -1489,4 +1506,5 @@ print(f"  Final attempt (6am): {is_final_attempt}")
 print(f"  Manual trigger: {is_manual}")
 print(f"  -> Posting to Slack: {should_post}")
 
+Path('should_post.flag').write_text('yes' if should_post else 'no')
 Path('should_post.flag').write_text('yes' if should_post else 'no')
