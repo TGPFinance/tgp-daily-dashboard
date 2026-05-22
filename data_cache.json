@@ -177,17 +177,17 @@
         "page_views": 2512
       },
       "2026-05-17": {
-        "ordered_product_sales": 8673.95,
-        "units_ordered": 312,
+        "ordered_product_sales": 8638.96,
+        "units_ordered": 311,
         "sessions": 2144,
-        "unit_session_percentage": 14.55,
+        "unit_session_percentage": 14.51,
         "page_views": 2726
       },
       "2026-05-18": {
-        "ordered_product_sales": 8466.77,
-        "units_ordered": 326,
+        "ordered_product_sales": 8446.79,
+        "units_ordered": 325,
         "sessions": 1971,
-        "unit_session_percentage": 16.54,
+        "unit_session_percentage": 16.49,
         "page_views": 2461
       },
       "2026-05-19": {
@@ -205,7 +205,190 @@
         "page_views": 2540
       }
     },
-    "amazon_ads": {},
+    "amazon_ads": {
+      "2026-04-22": {
+        "cost": 2076.96,
+        "attributedSales14d": 2787.09,
+        "clicks": 851,
+        "impressions": 113064
+      },
+      "2026-04-23": {
+        "cost": 2157.67,
+        "attributedSales14d": 3567.08,
+        "clicks": 870,
+        "impressions": 113016
+      },
+      "2026-04-24": {
+        "cost": 2181.46,
+        "attributedSales14d": 2379.49,
+        "clicks": 776,
+        "impressions": 98069
+      },
+      "2026-04-25": {
+        "cost": 1258.72,
+        "attributedSales14d": 1892.81,
+        "clicks": 475,
+        "impressions": 52466
+      },
+      "2026-04-26": {
+        "cost": 1043.91,
+        "attributedSales14d": 2731.41,
+        "clicks": 481,
+        "impressions": 46900
+      },
+      "2026-04-27": {
+        "cost": 883.56,
+        "attributedSales14d": 2048.69,
+        "clicks": 432,
+        "impressions": 43068
+      },
+      "2026-04-28": {
+        "cost": 963.45,
+        "attributedSales14d": 2127.7,
+        "clicks": 449,
+        "impressions": 49041
+      },
+      "2026-04-29": {
+        "cost": 1153.76,
+        "attributedSales14d": 2316.34,
+        "clicks": 489,
+        "impressions": 53012
+      },
+      "2026-04-30": {
+        "cost": 1100.47,
+        "attributedSales14d": 2031.65,
+        "clicks": 464,
+        "impressions": 60147
+      },
+      "2026-05-01": {
+        "cost": 954.74,
+        "attributedSales14d": 2748.97,
+        "clicks": 439,
+        "impressions": 48611
+      },
+      "2026-05-02": {
+        "cost": 1006.61,
+        "attributedSales14d": 2498.56,
+        "clicks": 503,
+        "impressions": 49800
+      },
+      "2026-05-03": {
+        "cost": 1077.37,
+        "attributedSales14d": 2619.34,
+        "clicks": 527,
+        "impressions": 58042
+      },
+      "2026-05-04": {
+        "cost": 1400.66,
+        "attributedSales14d": 3024.14,
+        "clicks": 653,
+        "impressions": 77848
+      },
+      "2026-05-05": {
+        "cost": 1697.86,
+        "attributedSales14d": 3040.08,
+        "clicks": 732,
+        "impressions": 98722
+      },
+      "2026-05-06": {
+        "cost": 1703.14,
+        "attributedSales14d": 2706.34,
+        "clicks": 659,
+        "impressions": 97016
+      },
+      "2026-05-07": {
+        "cost": 1777.23,
+        "attributedSales14d": 3461.88,
+        "clicks": 689,
+        "impressions": 98544
+      },
+      "2026-05-08": {
+        "cost": 1490.27,
+        "attributedSales14d": 3020.04,
+        "clicks": 615,
+        "impressions": 79915
+      },
+      "2026-05-09": {
+        "cost": 1569.54,
+        "attributedSales14d": 2244.77,
+        "clicks": 658,
+        "impressions": 92129
+      },
+      "2026-05-10": {
+        "cost": 1851.58,
+        "attributedSales14d": 3075.57,
+        "clicks": 716,
+        "impressions": 106523
+      },
+      "2026-05-11": {
+        "cost": 2007.58,
+        "attributedSales14d": 3224.59,
+        "clicks": 805,
+        "impressions": 108669
+      },
+      "2026-05-12": {
+        "cost": 1983.49,
+        "attributedSales14d": 3513.05,
+        "clicks": 796,
+        "impressions": 127448
+      },
+      "2026-05-13": {
+        "cost": 1629.59,
+        "attributedSales14d": 3372.76,
+        "clicks": 773,
+        "impressions": 105927
+      },
+      "2026-05-14": {
+        "cost": 1606.28,
+        "attributedSales14d": 2686.6,
+        "clicks": 742,
+        "impressions": 95212
+      },
+      "2026-05-15": {
+        "cost": 1682.82,
+        "attributedSales14d": 2996.51,
+        "clicks": 758,
+        "impressions": 100483
+      },
+      "2026-05-16": {
+        "cost": 2079.73,
+        "attributedSales14d": 3110.12,
+        "clicks": 853,
+        "impressions": 104609
+      },
+      "2026-05-17": {
+        "cost": 2262.99,
+        "attributedSales14d": 2643.6,
+        "clicks": 930,
+        "impressions": 118854
+      },
+      "2026-05-18": {
+        "cost": 1773.32,
+        "attributedSales14d": 3382.25,
+        "clicks": 858,
+        "impressions": 103185
+      },
+      "2026-05-19": {
+        "cost": 1681.44,
+        "attributedSales14d": 2481.28,
+        "clicks": 804,
+        "impressions": 97274
+      },
+      "2026-05-20": {
+        "cost": 2283.94,
+        "attributedSales14d": 3042.67,
+        "clicks": 945,
+        "impressions": 150266
+      },
+      "2026-05-21": {
+        "cost": 2182.22,
+        "attributedSales14d": 2117.78,
+        "clicks": 840,
+        "impressions": 164330,
+        "roas": 0.9704704383609354,
+        "acos": 1.0304280897921407
+      }
+    },
     "shopify": {
       "2026-04-22": {
         "gross_sales": 1763.55,
@@ -346,10 +529,10 @@
         "net_quantity": 160
       },
       "2026-05-15": {
-        "gross_sales": 3329.8,
-        "sm_order_count": 63,
-        "net_sales": 2571.15,
-        "net_quantity": 166
+        "gross_sales": 2056.2,
+        "sm_order_count": 42,
+        "net_sales": 1729.2,
+        "net_quantity": 94
       },
       "2026-05-16": {
         "gross_sales": 1185.95,
@@ -570,13 +753,13 @@
         "impressions": 10136
       },
       "2026-05-21": {
-        "spend": 456.45,
+        "spend": 456.75,
         "purchase_value": 832.05,
         "clicks": 141,
-        "impressions": 11808,
-        "roas": 1.822872165626027,
-        "cpc": 3.2372340425531916,
-        "ctr": 0.011941056910569106
+        "impressions": 11817,
+        "roas": 1.8216748768472906,
+        "cpc": 3.2393617021276597,
+        "ctr": 0.011931962427011932
       }
     },
     "google_ads": {
@@ -904,10 +1087,10 @@
         "klaviyo_clicked_email_unique": 241
       },
       "2026-05-14": {
-        "klaviyo_total_recipients": 438,
-        "klaviyo_received_email": 431,
-        "klaviyo_opened_email_unique": 4543,
-        "klaviyo_clicked_email_unique": 12
+        "klaviyo_total_recipients": 135,
+        "klaviyo_received_email": 132,
+        "klaviyo_opened_email_unique": 1715,
+        "klaviyo_clicked_email_unique": 5
       },
       "2026-05-15": {
         "klaviyo_total_recipients": 288,
@@ -1046,8 +1229,8 @@
         "shopify_placed_order_value": 1772.35
       },
       "2026-05-14": {
-        "shopify_placed_order": 62,
-        "shopify_placed_order_value": 1889.27
+        "shopify_placed_order": 23,
+        "shopify_placed_order_value": 1018.73
       },
       "2026-05-15": {
         "shopify_placed_order": 48,
@@ -136661,5 +136844,933 @@
     "unit_session_percentage": 9.79,
     "page_views": 2088
   },
-  "last_posted_date": "2026-05-21"
+  "last_posted_date": "2026-05-21",
+  "amazon_states": {
+    "data": [
+      {
+        "ship_state": "CA",
+        "item_price": 29887.08,
+        "item_quantity": 1121
+      },
+      {
+        "ship_state": "FL",
+        "item_price": 19693.39,
+        "item_quantity": 706
+      },
+      {
+        "ship_state": "TX",
+        "item_price": 19558.67,
+        "item_quantity": 740
+      },
+      {
+        "ship_state": "NY",
+        "item_price": 10538.83,
+        "item_quantity": 409
+      },
+      {
+        "ship_state": "PA",
+        "item_price": 7085.37,
+        "item_quantity": 259
+      },
+      {
+        "ship_state": "WA",
+        "item_price": 6762.63,
+        "item_quantity": 259
+      },
+      {
+        "ship_state": "NC",
+        "item_price": 6370.29,
+        "item_quantity": 236
+      },
+      {
+        "ship_state": "IL",
+        "item_price": 6117.49,
+        "item_quantity": 244
+      },
+      {
+        "ship_state": "GA",
+        "item_price": 5935.82,
+        "item_quantity": 230
+      },
+      {
+        "ship_state": "NJ",
+        "item_price": 5818.57,
+        "item_quantity": 227
+      },
+      {
+        "ship_state": "VA",
+        "item_price": 5761.18,
+        "item_quantity": 205
+      },
+      {
+        "ship_state": "AZ",
+        "item_price": 5135.01,
+        "item_quantity": 191
+      },
+      {
+        "ship_state": "OH",
+        "item_price": 5010.97,
+        "item_quantity": 197
+      },
+      {
+        "ship_state": "MI",
+        "item_price": 4958.39,
+        "item_quantity": 182
+      },
+      {
+        "ship_state": "MA",
+        "item_price": 4861.21,
+        "item_quantity": 173
+      },
+      {
+        "ship_state": "TN",
+        "item_price": 4811.95,
+        "item_quantity": 176
+      },
+      {
+        "ship_state": "MD",
+        "item_price": 4463.25,
+        "item_quantity": 178
+      },
+      {
+        "ship_state": "CO",
+        "item_price": 4374.29,
+        "item_quantity": 169
+      },
+      {
+        "ship_state": "MN",
+        "item_price": 3281.47,
+        "item_quantity": 125
+      },
+      {
+        "ship_state": "OR",
+        "item_price": 2958.87,
+        "item_quantity": 105
+      },
+      {
+        "ship_state": "IN",
+        "item_price": 2896.09,
+        "item_quantity": 120
+      },
+      {
+        "ship_state": "KY",
+        "item_price": 2641.85,
+        "item_quantity": 105
+      },
+      {
+        "ship_state": "SC",
+        "item_price": 2585.2,
+        "item_quantity": 100
+      },
+      {
+        "ship_state": "WI",
+        "item_price": 2243.52,
+        "item_quantity": 95
+      },
+      {
+        "ship_state": "CT",
+        "item_price": 2192.78,
+        "item_quantity": 89
+      },
+      {
+        "ship_state": "MO",
+        "item_price": 2186.02,
+        "item_quantity": 94
+      },
+      {
+        "ship_state": "LA",
+        "item_price": 2095.12,
+        "item_quantity": 76
+      },
+      {
+        "ship_state": "AL",
+        "item_price": 1791.73,
+        "item_quantity": 67
+      },
+      {
+        "ship_state": "UT",
+        "item_price": 1688.57,
+        "item_quantity": 66
+      },
+      {
+        "ship_state": "OK",
+        "item_price": 1679.29,
+        "item_quantity": 64
+      },
+      {
+        "ship_state": "NH",
+        "item_price": 1558.32,
+        "item_quantity": 51
+      },
+      {
+        "ship_state": "NV",
+        "item_price": 1518.84,
+        "item_quantity": 60
+      },
+      {
+        "ship_state": "KS",
+        "item_price": 1283.82,
+        "item_quantity": 50
+      },
+      {
+        "ship_state": "DE",
+        "item_price": 1233.19,
+        "item_quantity": 51
+      },
+      {
+        "ship_state": "NM",
+        "item_price": 1226.13,
+        "item_quantity": 52
+      },
+      {
+        "ship_state": "ID",
+        "item_price": 1164,
+        "item_quantity": 42
+      },
+      {
+        "ship_state": "IA",
+        "item_price": 1046.14,
+        "item_quantity": 41
+      },
+      {
+        "ship_state": "HI",
+        "item_price": 1039.58,
+        "item_quantity": 31
+      },
+      {
+        "ship_state": "NE",
+        "item_price": 984.1,
+        "item_quantity": 36
+      },
+      {
+        "ship_state": "RI",
+        "item_price": 940.62,
+        "item_quantity": 28
+      },
+      {
+        "ship_state": "MS",
+        "item_price": 915.4,
+        "item_quantity": 38
+      },
+      {
+        "ship_state": "AR",
+        "item_price": 863.49,
+        "item_quantity": 34
+      },
+      {
+        "ship_state": "WV",
+        "item_price": 647.68,
+        "item_quantity": 20
+      },
+      {
+        "ship_state": "DC",
+        "item_price": 588.73,
+        "item_quantity": 20
+      },
+      {
+        "ship_state": "Texas",
+        "item_price": 579.5,
+        "item_quantity": 22
+      },
+      {
+        "ship_state": "AK",
+        "item_price": 526.95,
+        "item_quantity": 19
+      },
+      {
+        "ship_state": "ME",
+        "item_price": 496.73,
+        "item_quantity": 18
+      },
+      {
+        "ship_state": "MT",
+        "item_price": 468.36,
+        "item_quantity": 18
+      },
+      {
+        "ship_state": "PR",
+        "item_price": 407.03,
+        "item_quantity": 16
+      },
+      {
+        "ship_state": "FLORIDA",
+        "item_price": 388.82,
+        "item_quantity": 12
+      },
+      {
+        "ship_state": "WY",
+        "item_price": 381.81,
+        "item_quantity": 14
+      },
+      {
+        "ship_state": "OHIO",
+        "item_price": 342.87,
+        "item_quantity": 10
+      },
+      {
+        "ship_state": "Ca",
+        "item_price": 318.84,
+        "item_quantity": 11
+      },
+      {
+        "ship_state": "California",
+        "item_price": 297.85,
+        "item_quantity": 11
+      },
+      {
+        "ship_state": "TEXAS",
+        "item_price": 283.81,
+        "item_quantity": 11
+      },
+      {
+        "ship_state": "",
+        "item_price": 274.93,
+        "item_quantity": 52
+      },
+      {
+        "ship_state": "Florida",
+        "item_price": 273.81,
+        "item_quantity": 12
+      },
+      {
+        "ship_state": "nj",
+        "item_price": 270.46,
+        "item_quantity": 10
+      },
+      {
+        "ship_state": "Kentucky",
+        "item_price": 223.89,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "SD",
+        "item_price": 219.88,
+        "item_quantity": 9
+      },
+      {
+        "ship_state": "ND",
+        "item_price": 216.86,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "Virginia",
+        "item_price": 207.48,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "New Jersey",
+        "item_price": 204.92,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "MISSISSIPPI",
+        "item_price": 199.96,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "ca",
+        "item_price": 198.9,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "New York",
+        "item_price": 187.84,
+        "item_quantity": 9
+      },
+      {
+        "ship_state": "Fl",
+        "item_price": 183.88,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "Ga",
+        "item_price": 169.93,
+        "item_quantity": 5
+      },
+      {
+        "ship_state": "AE",
+        "item_price": 158.88,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "VT",
+        "item_price": 154.95,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "Tx",
+        "item_price": 154.87,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "INDIANA",
+        "item_price": 143.95,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "Oh",
+        "item_price": 134.92,
+        "item_quantity": 6
+      },
+      {
+        "ship_state": "Maryland",
+        "item_price": 134.91,
+        "item_quantity": 6
+      },
+      {
+        "ship_state": "new york",
+        "item_price": 129.91,
+        "item_quantity": 5
+      },
+      {
+        "ship_state": "Utah",
+        "item_price": 129.9,
+        "item_quantity": 6
+      },
+      {
+        "ship_state": "Massachusetts",
+        "item_price": 119.98,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Michigan",
+        "item_price": 106.93,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "LOUISIANA",
+        "item_price": 104.97,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Tn",
+        "item_price": 103.9,
+        "item_quantity": 5
+      },
+      {
+        "ship_state": "MICHIGAN",
+        "item_price": 99.97,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "CALIFORNIA",
+        "item_price": 99.93,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "Ohio",
+        "item_price": 99.93,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "Minnesota",
+        "item_price": 93.95,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Qatar",
+        "item_price": 89.96,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Washington",
+        "item_price": 89.96,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Puerto Rico",
+        "item_price": 83.98,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "NEW YORK",
+        "item_price": 79.95,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "IDAHO",
+        "item_price": 79.93,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "Wisconsin",
+        "item_price": 79.92,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "Nevada",
+        "item_price": 74.98,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Montana",
+        "item_price": 74.97,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Arizona",
+        "item_price": 74.95,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Oregon",
+        "item_price": 74.95,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "MONTANA",
+        "item_price": 69.98,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Cundinamarca",
+        "item_price": 67.98,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Pa",
+        "item_price": 67.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Ma",
+        "item_price": 63.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Illinois",
+        "item_price": 59.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Nj",
+        "item_price": 59.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Ky",
+        "item_price": 54.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "MB",
+        "item_price": 54.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "MISSOURI",
+        "item_price": 54.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Mi",
+        "item_price": 54.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "NEW MEXICO",
+        "item_price": 54.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "UTAH",
+        "item_price": 54.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "pa",
+        "item_price": 54.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Co",
+        "item_price": 49.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Metro Manila",
+        "item_price": 49.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Vermont",
+        "item_price": 47.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Wa",
+        "item_price": 43.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "florida",
+        "item_price": 39.98,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "AP",
+        "item_price": 39.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "WASHINGTON",
+        "item_price": 39.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "ALABAMA",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Al",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "ILLINOIS",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Pennsylvania",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Tennessee",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "tn",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "wa",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "wi",
+        "item_price": 39.96,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "Alabama",
+        "item_price": 34.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "NEW JERSEY",
+        "item_price": 34.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Ne",
+        "item_price": 34.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "SP",
+        "item_price": 34.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "missouri",
+        "item_price": 33.6,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "nc",
+        "item_price": 33.6,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "ANTIOQUIA",
+        "item_price": 30,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Guayas",
+        "item_price": 30,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Or",
+        "item_price": 30,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "fl",
+        "item_price": 30,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "mi",
+        "item_price": 27.96,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "KENTUCKY",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "MASSACHUSETTS",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Missouri",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Ut",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "mo",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "texas",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "tx",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "HAWAII",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Ks",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "OKLAHOMA",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "iowa",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "ny",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "ALASKA",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "ARIZONA",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "District of Columbia",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Georgia",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Il",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Indiana",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Iowa",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Kansas",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Louisiana",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Mn",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "New Mexico",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Nm",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "North Carolina",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "North carolina",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Ny",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "PENNSYLVANIA",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Regi\u00f3n metropolitana",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Sc",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Va",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "WISCONSIN",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "ga",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "illinois",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "md",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "mn",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "risaralda",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "\u0627\u0644\u0631\u064a\u0627\u0636",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Az",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "Belgi&euml;",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "Cafrqueta",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "Colorado",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "MINNESOTA",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "Md",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "az",
+        "item_price": "",
+        "item_quantity": 0
+      },
+      {
+        "ship_state": "louisiana",
+        "item_price": "",
+        "item_quantity": 0
+      }
+    ],
+    "date": "2026-05-21"
+  },
+  "amazon_promo_yesterday": {
+    "data": [
+      {
+        "item_promotion_discount": 44.07
+      }
+    ],
+    "date": "2026-05-21"
+  },
+  "yoy_yesterday": {
+    "yoy_date": "2025-05-21",
+    "shopify": [
+      {
+        "net_sales": 3724.95,
+        "sm_order_count": 60
+      }
+    ],
+    "amazon_sales": [
+      {
+        "ordered_product_sales": 6023.9
+      }
+    ],
+    "amazon_promo": [
+      {
+        "item_promotion_discount": 92.95
+      }
+    ],
+    "date": "2026-05-21"
+  }
 }
