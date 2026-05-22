@@ -269,6 +269,59 @@ def ensure_customer_ltv():
     if rows:
         cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
 
+def ensure_amazon_promo_yesterday():
+    """Yesterday's Amazon item_promotion_discount (Subscribe & Save, coupons) for net revenue calc."""
+    rows = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
+                         "item_promotion_discount",
+                         DATE_STR, DATE_STR,
+                         extra_params={"report_type": "orders"},
+                         timeout=180, timezone=DEFAULT_TZ)
+    if rows:
+        cache['amazon_promo_yesterday'] = {"data": rows, "date": DATE_STR}
+    elif 'amazon_promo_yesterday' in cache:
+        cache_warnings.append(f"amazon_promo_yesterday (from {cache['amazon_promo_yesterday'].get('date','?')})")
+
+def ensure_amazon_states():
+    """Top ship-to-state breakdown for Amazon Seller orders, last 30 days."""
+    rows = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
+                         "ship_state,item_price,item_quantity",
+                         T30_START, T30_END,
+                         extra_params={"report_type": "orders"},
+                         timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+    if rows:
+        cache['amazon_states'] = {"data": rows, "date": DATE_STR}
+    elif 'amazon_states' in cache:
+        cache_warnings.append(f"amazon_states (from {cache['amazon_states'].get('date','?')})")
+
+def ensure_yoy_yesterday():
+    """Same calendar date last year — Shopify net + Amazon gross + Amazon promo — for YoY card."""
+    yoy_dt = YESTERDAY - timedelta(days=365)
+    yoy_date = yoy_dt.strftime("%Y-%m-%d")
+
+    shop = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "net_sales,sm_order_count",
+                         yoy_date, yoy_date,
+                         extra_params={"report_type": "Order"},
+                         timeout=180, timezone=DEFAULT_TZ)
+    amz_sales = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "ordered_product_sales",
+                              yoy_date, yoy_date,
+                              extra_params={"report_type": "sales_and_traffic_by_date"},
+                              timeout=180, timezone=DEFAULT_TZ)
+    amz_promo = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "item_promotion_discount",
+                              yoy_date, yoy_date,
+                              extra_params={"report_type": "orders"},
+                              timeout=180, timezone=DEFAULT_TZ)
+
+    if shop or amz_sales:
+        cache['yoy_yesterday'] = {
+            "yoy_date": yoy_date,
+            "shopify": shop or [],
+            "amazon_sales": amz_sales or [],
+            "amazon_promo": amz_promo or [],
+            "date": DATE_STR
+        }
+    elif 'yoy_yesterday' in cache:
+        cache_warnings.append(f"yoy_yesterday (from {cache['yoy_yesterday'].get('date','?')})")
+
 def ensure_cohort_data():
     """Pull 6 months of monthly order activity + 12 months of prior paying customers for cohort retention.
 
@@ -372,6 +425,9 @@ with ThreadPoolExecutor(max_workers=14) as ex:
     futs.append(ex.submit(ensure_new_returning_30d))
     futs.append(ex.submit(ensure_customer_ltv))
     futs.append(ex.submit(ensure_cohort_data))
+    futs.append(ex.submit(ensure_amazon_promo_yesterday))
+    futs.append(ex.submit(ensure_amazon_states))
+    futs.append(ex.submit(ensure_yoy_yesterday))
     futs.append(ex.submit(ensure_campaigns))
     for f in futs:
         f.result()
@@ -558,6 +614,26 @@ klaviyo_broadcast_value_30 = cache.get('campaigns', {}).get('broadcast_value_30d
 email_pct    = safe_div(klaviyo_broadcast_value_30, shop_net_30)
 new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
 
+# ── Total Sales (Yesterday) + YoY ──
+# Shopify net sales for yesterday from daily cache
+shopify_net_yest = to_float(shopify.get('net_sales'))
+# Amazon: gross ordered product sales minus item-level promo discount (S&S, coupons)
+amazon_gross_yest = to_float(amazon_seller.get('ordered_product_sales'))
+amazon_promo_yest = sum(to_float(r.get('item_promotion_discount'))
+                        for r in cache.get('amazon_promo_yesterday', {}).get('data', []))
+amazon_net_yest = amazon_gross_yest - amazon_promo_yest
+total_sales_yest = shopify_net_yest + amazon_net_yest
+
+# YoY: same calendar date one year ago
+yoy_raw = cache.get('yoy_yesterday', {})
+yoy_date_str = yoy_raw.get('yoy_date', '')
+yoy_shop_net = sum(to_float(r.get('net_sales')) for r in yoy_raw.get('shopify', []))
+yoy_amz_gross = sum(to_float(r.get('ordered_product_sales')) for r in yoy_raw.get('amazon_sales', []))
+yoy_amz_promo = sum(to_float(r.get('item_promotion_discount')) for r in yoy_raw.get('amazon_promo', []))
+yoy_amz_net = yoy_amz_gross - yoy_amz_promo
+yoy_total = yoy_shop_net + yoy_amz_net
+yoy_pct_change = safe_div(total_sales_yest - yoy_total, yoy_total) if yoy_total > 0 else None
+
 # Customer Health: 90-day LTV, repeat purchase rate, LTV:CAC
 ltv_data = cache.get('customer_ltv', {}).get('data', [])
 ltv_customers = {}
@@ -695,6 +771,20 @@ if cohort_orders_raw and cohort_window_start:
 states_data = cache.get('top_states', {}).get('data', [])
 top_states = [s for s in states_data if (s.get('order_shipping_province') or '').strip()]
 top_states = sorted(top_states, key=lambda r: to_float(r.get('net_sales')), reverse=True)[:5]
+
+# ── Amazon Top Ship-To States (orders report has line-item granularity) ──
+amz_states_raw = cache.get('amazon_states', {}).get('data', [])
+amz_state_agg = {}
+for row in amz_states_raw:
+    st = (row.get('ship_state') or '').strip()
+    if not st: continue
+    rev = to_float(row.get('item_price'))
+    qty = to_float(row.get('item_quantity'))
+    if st not in amz_state_agg:
+        amz_state_agg[st] = {'rev': 0, 'units': 0}
+    amz_state_agg[st]['rev'] += rev
+    amz_state_agg[st]['units'] += qty
+amz_top_states = sorted(amz_state_agg.items(), key=lambda kv: kv[1]['rev'], reverse=True)[:5]
 
 # ── Site CVR (GA4 sessions / Shopify orders) ──
 ga4_yesterday = day('ga4')
@@ -918,6 +1008,22 @@ def state_rows():
         </tr>"""
     return out
 
+def amazon_state_rows():
+    if not amz_top_states: return '<tr><td colspan="4" style="text-align:center;color:#6b7280">No state data available</td></tr>'
+    top_total = amz_top_states[0][1]['rev'] or 1
+    out = ""
+    for state, vals in amz_top_states:
+        rev = vals['rev']; units = vals['units']
+        share = (rev / top_total) * 100
+        out += f"""
+        <tr>
+          <td class="prod-name">{state}</td>
+          <td class="prod-num">${rev:,.0f}</td>
+          <td class="prod-num">{units:,.0f}</td>
+          <td class="prod-bar"><div class="bar-wrap"><div class="bar-fill" style="width:{share:.1f}%"></div></div></td>
+        </tr>"""
+    return out
+
 def benchmark_status(label, color):
     return f'<div class="sub" style="color:{color}">{label}</div>'
 
@@ -949,6 +1055,14 @@ def bm_new_rev(v):
     if pct >= 50: return benchmark_status('Growth-stage mix', '#22c55e')
     if pct >= 30: return benchmark_status('Balanced acquisition/retention', '#22c55e')
     return benchmark_status('Retention-dominated', '#9ca3af')
+
+def yoy_change_badge(pct, yoy_date_str, yoy_value):
+    """Render YoY change badge — green if growing, red if declining, gray if N/A."""
+    if pct is None:
+        return f'<div class="sub" style="color:#6b7280">vs {yoy_date_str or "prior year"}: no data</div>'
+    color = '#22c55e' if pct >= 0 else '#ef4444'
+    sign = '+' if pct >= 0 else ''
+    return f'<div class="sub"><span style="color:{color};font-weight:500">{sign}{pct*100:.1f}%</span> <span style="color:#6b7280">vs {yoy_date_str} (${yoy_value:,.0f})</span></div>'
 
 def bm_cvr(v):
     if v is None: return ''
@@ -1157,6 +1271,13 @@ html = f"""<!DOCTYPE html>
     </table>
   </div>
   <div class="section">
+    {section_title('amazon', 'Top Ship-To States', f'{T30_LABEL} · US Marketplace')}
+    <table class="products">
+      <thead><tr><th>State</th><th class="prod-num">Revenue</th><th class="prod-num">Units</th><th>Share of Top 5</th></tr></thead>
+      <tbody>{amazon_state_rows()}</tbody>
+    </table>
+  </div>
+  <div class="section">
     {section_title('amazon', 'Sponsored Products — 30-Day Overview', T30_LABEL)}
     <div class="cards-4">
       {card(fmt_money(amza_cost_30, big=True), 'Ad Spend', '<div class="sub">30-day total</div>')}
@@ -1172,9 +1293,9 @@ html = f"""<!DOCTYPE html>
     <div class="section">
       {section_title('activity', 'Performance Health', f'30-day blended · {T30_LABEL}')}
       <div class="cards-4">
+        {card(fmt_money(total_sales_yest, big=True) if total_sales_yest else '—', 'Total Sales (Yesterday)', f'<div class="sub">{fmt_money(shopify_net_yest)} Shopify · {fmt_money(amazon_net_yest)} Amazon (net of {fmt_money(amazon_promo_yest)} promo)</div>' + yoy_change_badge(yoy_pct_change, yoy_date_str, yoy_total))}
         {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
         {card(fmt_money(ncac_val) if ncac_val else '—', 'Shopify nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new Shopify orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
-        {card(fmt_pct(email_pct), 'Email % of revenue', '<div class="sub">Klaviyo broadcast campaigns ÷ Shopify</div>' + bm_email_pct(email_pct))}
         {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
       </div>
     </div>
