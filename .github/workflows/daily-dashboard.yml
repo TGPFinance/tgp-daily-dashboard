@@ -2,8 +2,10 @@ name: Daily Dashboard
 
 on:
   schedule:
-    - cron: '0 9 * * *'    # 4am ET — first attempt (post only if Amazon Ads ready)
-    - cron: '0 11 * * *'   # 6am ET — final attempt (post regardless)
+    - cron: '0 8 * * *'    # 3am ET — first attempt (post only if Amazon Ads ready)
+    - cron: '0 9 * * *'    # 4am ET — backup attempt #1 (Amazon Ads gated)
+    - cron: '0 10 * * *'   # 5am ET — backup attempt #2 (Amazon Ads gated)
+    - cron: '0 11 * * *'   # 6am ET — FINAL attempt (post regardless)
   workflow_dispatch:
 
 jobs:
