@@ -658,32 +658,37 @@ if cohort_orders_raw and cohort_window_start:
         return f"{y:04d}-{m:02d}"
 
     # Build the matrix: each row = (cohort_ym, size, [m0, m1, ..., m5])
+    # Cells are tuples (pct, is_partial) — partial=True means target month is current month
+    # (only some days observed). M0 is always (1.0, False) by definition.
     for cmonth in sorted_cohorts:
         size = cohort_sizes[cmonth]
         row_vals = []
         for offset in range(COHORT_M_OFFSETS):
             target_ym = add_months(cmonth, offset)
-            # Hide if target month is in the future, OR is the current (partial) month —
-            # except when target_ym IS the cohort's own month (M0), which is always 100%
-            if target_ym > current_ym or (target_ym == current_ym and target_ym != cmonth):
-                row_vals.append(None)
+            if target_ym > current_ym:
+                row_vals.append(None)  # future — hide
             elif offset == 0:
-                row_vals.append(1.0)  # M0 is 100% by definition (cohort = first paid month)
+                row_vals.append((1.0, False))  # M0 = 100% by definition
             else:
                 active = len(cohort_activity[cmonth].get(target_ym, set()))
-                row_vals.append(active / size if size > 0 else 0)
+                pct = active / size if size > 0 else 0
+                is_partial = (target_ym == current_ym)
+                row_vals.append((pct, is_partial))
         cohort_matrix.append((cmonth, size, row_vals))
 
-    # Weighted average per column (size-weighted across mature cohorts)
+    # Weighted average per column — EXCLUDES partial-month cells so the average represents
+    # mature observation only
     for offset in range(COHORT_M_OFFSETS):
         weighted_num = 0
         weighted_den = 0
         for cmonth, size, row_vals in cohort_matrix:
-            pct = row_vals[offset]
-            if pct is None: continue
+            v = row_vals[offset]
+            if v is None: continue
+            pct, partial = v
+            if partial: continue
             weighted_num += size * pct
             weighted_den += size
-        cohort_weighted_avg.append(weighted_num / weighted_den if weighted_den > 0 else None)
+        cohort_weighted_avg.append((weighted_num / weighted_den, False) if weighted_den > 0 else None)
 
 
 # ── Top States ──
@@ -792,14 +797,17 @@ def render_cohort_table():
         y, m = ym.split('-')
         return f"{calendar.month_abbr[int(m)]} {y}"
 
-    def cell_html(pct, is_m0=False):
-        if pct is None:
+    def cell_html(v, is_m0=False):
+        if v is None:
             return '<td class="ck null">—</td>'
+        pct, partial = v if isinstance(v, tuple) else (v, False)
         if is_m0 or pct >= 1.0:
             return f'<td class="ck full">{int(round(pct*100))}%</td>'
         # Scale intensity 0-100% → alpha 0.18-0.7
         alpha = min(0.70, max(0.18, pct * 2.2))
-        return f'<td class="ck" style="background:rgba(44,78,162,{alpha:.2f})">{int(round(pct*100))}%</td>'
+        cls = "ck ck-partial" if partial else "ck"
+        mark = '<span class="ck-pmark">*</span>' if partial else ''
+        return f'<td class="{cls}" style="background:rgba(44,78,162,{alpha:.2f})">{int(round(pct*100))}%{mark}</td>'
 
     body_rows = ""
     for cmonth, size, row_vals in cohort_matrix:
@@ -811,14 +819,17 @@ def render_cohort_table():
     avg_cells = "".join(cell_html(v, is_m0=(i==0)) for i, v in enumerate(cohort_weighted_avg))
     bench_cells = "".join(f'<td class="ck bench">{b}</td>' for b in benchmarks)
 
-    has_partial = any(c[0] == current_ym for c in cohort_matrix)
-    footnote = ("*Partial month — incomplete data. " if has_partial else "") + \
-               "Benchmarks based on Shopify/Klaviyo/Lifetimely wellness DTC reports (2024-25). " + \
-               "Range = average-to-strong performance."
+    has_partial_cohort = any(c[0] == current_ym for c in cohort_matrix)
+    has_partial_cell = any(isinstance(v, tuple) and v[1] for _, _, rv in cohort_matrix for v in rv)
+    note_parts = []
+    if has_partial_cohort: note_parts.append("*Partial cohort (month-to-date).")
+    if has_partial_cell:   note_parts.append("italic = partial-month observation; weighted avg excludes these.")
+    note_parts.append("Benchmarks based on Shopify/Klaviyo/Lifetimely wellness DTC reports (2024-25); range = average-to-strong.")
+    footnote = " ".join(note_parts)
 
     return f'''
 <div class="section">
-  {section_title('grid', 'Cohort Retention', '6 months · true first purchase')}
+  {section_title('grid', 'New Customer Cohort Retention', '6 months · first paid order, excluding 12-mo prior payers')}
   <div class="cohort-wrap">
     <table class="cohort-tbl">
       <thead>
@@ -1056,6 +1067,8 @@ html = f"""<!DOCTYPE html>
   .cohort-tbl td.ch-size {{ color: #9ca3af; padding: 3px 6px; text-align: right; }}
   .cohort-tbl td.ck {{ color: white; text-align: center; padding: 6px; border-radius: 4px; font-weight: 500; }}
   .cohort-tbl td.ck.full {{ background: {BRAND_COLOR}; }}
+  .cohort-tbl td.ck-partial {{ opacity: 0.65; font-style: italic; }}
+  .cohort-tbl .ck-pmark {{ font-size: 8px; vertical-align: super; margin-left: 1px; opacity: 0.7; }}
   .cohort-tbl td.ck.null {{ background: rgba(255,255,255,0.03); color: #4b5563; font-weight: 400; }}
   .cohort-tbl tr.ch-avg-row td {{ font-style: italic; font-size: 10px; color: #6b7280; }}
   .cohort-tbl tr.ch-avg-row td.ck {{ font-style: normal; font-size: 10px; color: white; }}
