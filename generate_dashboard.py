@@ -22,7 +22,21 @@ T30_LABEL    = f"{T30_START_DT.strftime('%b %d')} – {YESTERDAY.strftime('%b %d
 SM_BASE = "https://api.supermetrics.com/enterprise/v2/query/data/json"
 CACHE_FILE = "data_cache.json"
 DEFAULT_TZ = "America/New_York"
-REFRESH_RECENT_DAYS = 7  # Always re-fetch last N days (handles settling orders + API lag)
+REFRESH_RECENT_DAYS = 3  # Always re-fetch last N days (handles settling orders + API lag). Reduced from 7 for row-quota efficiency.
+
+def is_cached_recently(cache_key, max_age_days=1):
+    """Return True if cache entry exists and was written within max_age_days.
+    Used to skip refetch of slow-changing data (LTV, top states, cohort prior-paid, etc.)
+    that doesn't need to refresh on every workflow run — saves Supermetrics row quota."""
+    entry = cache.get(cache_key)
+    if not entry: return False
+    cached_date = entry.get('date')
+    if not cached_date: return False
+    try:
+        cached_dt = datetime.strptime(cached_date, "%Y-%m-%d").date()
+        return (YESTERDAY - cached_dt).days < max_age_days
+    except (ValueError, TypeError):
+        return False
 
 # Feature flags — flip to True when GA4 tag is fully migrated and tracking stable
 SHOW_GA4_SITE_CVR = False  # Hide Site CVR section while GA4 sessions are under-reporting post-migration
@@ -208,6 +222,7 @@ def ensure_py(source_key, py_date_str=None):
         cache[py_key] = {k: v for k, v in rows[0].items() if k != 'date'}
 
 def ensure_top_products():
+    if is_cached_recently('top_products', max_age_days=7): return
     rows = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
                          "title,ordered_product_sales,units_ordered",
                          T30_START, T30_END,
@@ -219,6 +234,7 @@ def ensure_top_products():
         cache_warnings.append(f"top_products (from {cache['top_products'].get('date','?')})")
 
 def ensure_top_shopify_variants():
+    if is_cached_recently('top_shopify_variants', max_age_days=7): return
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "title,variant_title,net_sales,net_quantity",
                          T30_START, T30_END,
@@ -230,6 +246,7 @@ def ensure_top_shopify_variants():
         cache_warnings.append(f"top_shopify_variants (from {cache['top_shopify_variants'].get('date','?')})")
 
 def ensure_top_states():
+    if is_cached_recently('top_states', max_age_days=7): return
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "order_shipping_province,net_sales,sm_order_count",
                          T30_START, T30_END,
@@ -260,6 +277,7 @@ def ensure_new_returning_30d():
 
 def ensure_customer_ltv():
     """Pull 90-day customer-level revenue/orders for LTV and repeat purchase rate."""
+    if is_cached_recently('customer_ltv', max_age_days=3): return
     ltv_start = (YESTERDAY - timedelta(days=89)).strftime("%Y-%m-%d")
     rows = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                          "customer_id,net_sales,sm_order_count",
@@ -306,6 +324,7 @@ def ensure_amazon_promo_yesterday():
 
 def ensure_amazon_states():
     """Top ship-to-state breakdown for Amazon Seller orders, last 30 days."""
+    if is_cached_recently('amazon_states', max_age_days=7): return
     rows = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"],
                          "ship_state,item_price,item_quantity",
                          T30_START, T30_END,
@@ -375,20 +394,26 @@ def ensure_cohort_data():
     chunk2_end = (cohort_start_dt - timedelta(days=1)).strftime("%Y-%m-%d")
 
     # Q1a + Q1b: customer_ids with paid orders in prior 12 months (chunked)
-    # Fetch net_sales as a field so we can filter in Python (query-level filter is unreliable on this endpoint)
-    prior_paid_1 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
-                                 "customer_id,net_sales",
-                                 chunk1_start, chunk1_end,
-                                 extra_params={"report_type": "Order"},
-                                 timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
-    prior_paid_2 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
-                                 "customer_id,net_sales",
-                                 chunk2_start, chunk2_end,
-                                 extra_params={"report_type": "Order"},
-                                 timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
-    prior_paid = (prior_paid_1 or []) + (prior_paid_2 or [])
+    # Skip if recently cached — this is the biggest row consumer (~20K rows), but the
+    # prior 12 months is historical and changes very slowly. Refresh every 14 days.
+    if is_cached_recently('cohort_data', max_age_days=14) and cache.get('cohort_data', {}).get('prior_paid'):
+        prior_paid = cache['cohort_data']['prior_paid']
+    else:
+        # Fetch net_sales as a field so we can filter in Python (query-level filter is unreliable on this endpoint)
+        prior_paid_1 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                     "customer_id,net_sales",
+                                     chunk1_start, chunk1_end,
+                                     extra_params={"report_type": "Order"},
+                                     timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+        prior_paid_2 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
+                                     "customer_id,net_sales",
+                                     chunk2_start, chunk2_end,
+                                     extra_params={"report_type": "Order"},
+                                     timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+        prior_paid = (prior_paid_1 or []) + (prior_paid_2 or [])
 
-    # Q2: per-customer per-month order activity (paid + comp — filtered in Python)
+    # Q2: per-customer per-month order activity in display window — refresh daily because
+    # the current month is still accruing
     orders = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                            "customer_id,yearMonth,sm_order_count,net_sales",
                            cohort_start, DATE_STR,
@@ -1289,8 +1314,7 @@ html = f"""<!DOCTYPE html>
   <div class="section">
     {section_title('amazon', 'Seller Central — 30-Day Overview', T30_LABEL)}
     <div class="cards">
-      {card(fmt_money(amzs_rev_30, big=True), 'Ordered Revenue', '<div class="sub">30-day total</div>')}
-      {card(fmt_money(amazon_promo_30d, big=True) if amazon_promo_30d else '—', 'Promo Discount', f'<div class="sub">{fmt_pct(promo_pct_of_gross_30d)} of gross · 30-day total</div>' if promo_pct_of_gross_30d else '<div class="sub">30-day total</div>')}
+      {card(fmt_money(amzs_rev_30, big=True), 'Ordered Revenue', f'<div class="sub">30-day total</div>' + (f'<div class="sub" style="padding-top:5px;border-top:0.5px solid #1f2937;margin-top:5px"><span style="color:#fbbf24">−{fmt_money(amazon_promo_30d)}</span> promo · <span style="color:#94a3b8">{fmt_pct(promo_pct_of_gross_30d)} of gross</span></div>' if amazon_promo_30d else ''))}
       {card(fmt_num(amzs_unit_30, big=True), 'Units Ordered', f'<div class="sub">~{fmt_num(amzs_unit_30/30)} / day avg</div>' if amzs_unit_30 else '')}
       {card(fmt_num(amzs_sess_30, big=True), 'Sessions', f'<div class="sub">~{fmt_num(amzs_sess_30/30)} / day avg</div>' if amzs_sess_30 else '')}
       {card(amazon_cvr_30_str, 'Conversion Rate', '<div class="sub">units ÷ sessions</div>')}
@@ -1506,5 +1530,4 @@ print(f"  Final attempt (6am): {is_final_attempt}")
 print(f"  Manual trigger: {is_manual}")
 print(f"  -> Posting to Slack: {should_post}")
 
-Path('should_post.flag').write_text('yes' if should_post else 'no')
 Path('should_post.flag').write_text('yes' if should_post else 'no')
