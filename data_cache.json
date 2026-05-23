@@ -941,10 +941,16 @@
         "cost": 227.627,
         "conversions_value": 0,
         "clicks": 240,
-        "impressions": 21489,
-        "roas": 0.0,
-        "cpc": 0.9484458333333333,
-        "ctr": 0.011168504816417702
+        "impressions": 21490
+      },
+      "2026-05-22": {
+        "cost": 231.5282,
+        "conversions_value": 901.6,
+        "clicks": 213,
+        "impressions": 17576,
+        "roas": 3.894126071899665,
+        "cpc": 1.0869868544600938,
+        "ctr": 0.012118798361401912
       }
     },
     "klaviyo_email": {
@@ -136844,7 +136850,7 @@
     "unit_session_percentage": 9.79,
     "page_views": 2088
   },
-  "last_posted_date": "2026-05-21",
+  "last_posted_date": "2026-05-22",
   "amazon_states": {
     "data": [
       {
@@ -137920,5 +137926,11 @@
       }
     ],
     "date": "2026-05-21"
+  },
+  "py_shopify_2025-05-22": {
+    "gross_sales": 1924.8,
+    "sm_order_count": 43,
+    "net_sales": 1236.75,
+    "net_quantity": 91
   }
 }
