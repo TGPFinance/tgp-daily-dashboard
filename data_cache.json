@@ -959,7 +959,10 @@
         "cost": 188.4433,
         "conversions_value": 335.6,
         "clicks": 163,
-        "impressions": 16486
+        "impressions": 16486,
+        "roas": 1.7809070420651731,
+        "cpc": 1.156093865030675,
+        "ctr": 0.009887176998665535
       }
     },
     "klaviyo_email": {
@@ -136877,7 +136880,7 @@
     "unit_session_percentage": 9.79,
     "page_views": 2088
   },
-  "last_posted_date": "2026-05-22",
+  "last_posted_date": "2026-05-23",
   "amazon_states": {
     "data": [
       {
