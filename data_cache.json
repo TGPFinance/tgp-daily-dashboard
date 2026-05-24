@@ -944,19 +944,22 @@
         "impressions": 13902
       },
       "2026-05-21": {
-        "cost": 227.627,
-        "conversions_value": 0,
+        "cost": 227.6186,
+        "conversions_value": 127.6,
         "clicks": 240,
-        "impressions": 21490
+        "impressions": 21489
       },
       "2026-05-22": {
         "cost": 231.5282,
         "conversions_value": 901.6,
         "clicks": 213,
-        "impressions": 17576,
-        "roas": 3.894126071899665,
-        "cpc": 1.0869868544600938,
-        "ctr": 0.012118798361401912
+        "impressions": 17577
+      },
+      "2026-05-23": {
+        "cost": 188.4433,
+        "conversions_value": 335.6,
+        "clicks": 163,
+        "impressions": 16486
       }
     },
     "klaviyo_email": {
@@ -1482,11 +1485,25 @@
         "purchaseRevenue": ""
       },
       "2026-05-21": {
-        "sessions": 803,
-        "addToCarts": 145,
-        "checkouts": 58,
+        "sessions": 852,
+        "addToCarts": 154,
+        "checkouts": 60,
         "ecommercePurchases": 15,
         "purchaseRevenue": 1086.9
+      },
+      "2026-05-22": {
+        "sessions": 1241,
+        "addToCarts": 346,
+        "checkouts": 129,
+        "ecommercePurchases": 29,
+        "purchaseRevenue": 1502.8
+      },
+      "2026-05-23": {
+        "sessions": 836,
+        "addToCarts": 264,
+        "checkouts": 110,
+        "ecommercePurchases": 25,
+        "purchaseRevenue": 1886.25
       }
     }
   },
@@ -1501,16 +1518,16 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 1730.35,
-        "sm_order_count": 33
+        "net_sales": 1772.2,
+        "sm_order_count": 30
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 618.95,
-        "sm_order_count": 17
+        "net_sales": 860.55,
+        "sm_order_count": 20
       }
     ],
-    "date": "2026-05-22"
+    "date": "2026-05-23"
   },
   "new_returning_30d": {
     "data": [
@@ -137764,11 +137781,6 @@
   "amazon_promo_yesterday": {
     "data": [
       {
-        "date": "2026-04-23",
-        "item_promotion_discount": 118.95,
-        "ship_promotion_discount": 86.59
-      },
-      {
         "date": "2026-04-24",
         "item_promotion_discount": 133.95,
         "ship_promotion_discount": 71.81
@@ -137845,43 +137857,43 @@
       },
       {
         "date": "2026-05-09",
-        "item_promotion_discount": 156.9,
+        "item_promotion_discount": 177.3,
         "ship_promotion_discount": 88.1
       },
       {
         "date": "2026-05-10",
-        "item_promotion_discount": 148.98,
+        "item_promotion_discount": 161.98,
         "ship_promotion_discount": 68.22
       },
       {
         "date": "2026-05-11",
-        "item_promotion_discount": 173.29,
+        "item_promotion_discount": 175.29,
         "ship_promotion_discount": 96.79
       },
       {
         "date": "2026-05-12",
-        "item_promotion_discount": 98.96,
+        "item_promotion_discount": 112.96,
         "ship_promotion_discount": 97.46
       },
       {
         "date": "2026-05-13",
-        "item_promotion_discount": 111.87,
+        "item_promotion_discount": 127.37,
         "ship_promotion_discount": 84.82
       },
       {
         "date": "2026-05-14",
-        "item_promotion_discount": 217.74,
+        "item_promotion_discount": 229.82,
         "ship_promotion_discount": 88.03
       },
       {
         "date": "2026-05-15",
-        "item_promotion_discount": 144.39,
+        "item_promotion_discount": 159.39,
         "ship_promotion_discount": 80.7
       },
       {
         "date": "2026-05-16",
         "item_promotion_discount": 125.82,
-        "ship_promotion_discount": 76.58
+        "ship_promotion_discount": 77.03
       },
       {
         "date": "2026-05-17",
@@ -137900,21 +137912,26 @@
       },
       {
         "date": "2026-05-20",
-        "item_promotion_discount": 92.08,
+        "item_promotion_discount": 102.58,
         "ship_promotion_discount": 58.33
       },
       {
         "date": "2026-05-21",
-        "item_promotion_discount": 44.07,
+        "item_promotion_discount": 49.07,
         "ship_promotion_discount": 89.19
       },
       {
         "date": "2026-05-22",
-        "item_promotion_discount": 148.06,
-        "ship_promotion_discount": 105.2
+        "item_promotion_discount": 163.06,
+        "ship_promotion_discount": 125.76
+      },
+      {
+        "date": "2026-05-23",
+        "item_promotion_discount": 134.17,
+        "ship_promotion_discount": 81.67
       }
     ],
-    "date": "2026-05-22"
+    "date": "2026-05-23"
   },
   "yoy_yesterday": {
     "yoy_date": "2025-05-21",
