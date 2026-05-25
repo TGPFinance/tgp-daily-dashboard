@@ -783,7 +783,10 @@
         "spend": 807.44,
         "purchase_value": 325.08,
         "clicks": 251,
-        "impressions": 23428
+        "impressions": 23428,
+        "roas": 0.40260576637273354,
+        "cpc": 3.2168924302788846,
+        "ctr": 0.01071367594331569
       }
     },
     "google_ads": {
@@ -983,7 +986,10 @@
         "cost": 186.397,
         "conversions_value": 0,
         "clicks": 176,
-        "impressions": 17705
+        "impressions": 17705,
+        "roas": 0.0,
+        "cpc": 1.0590738636363637,
+        "ctr": 0.009940694719005931
       }
     },
     "klaviyo_email": {
@@ -136934,7 +136940,7 @@
     "unit_session_percentage": 9.79,
     "page_views": 2088
   },
-  "last_posted_date": "2026-05-23",
+  "last_posted_date": "2026-05-24",
   "amazon_states": {
     "data": [
       {
