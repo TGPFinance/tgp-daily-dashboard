@@ -766,6 +766,24 @@
         "roas": 1.8213159968479118,
         "cpc": 3.2399999999999998,
         "ctr": 0.011925907130170008
+      },
+      "2026-05-22": {
+        "spend": 608.53,
+        "purchase_value": 487.95,
+        "clicks": 155,
+        "impressions": 16919
+      },
+      "2026-05-23": {
+        "spend": 636.05,
+        "purchase_value": 731.25,
+        "clicks": 155,
+        "impressions": 16584
+      },
+      "2026-05-24": {
+        "spend": 807.44,
+        "purchase_value": 325.08,
+        "clicks": 251,
+        "impressions": 23428
       }
     },
     "google_ads": {
@@ -957,12 +975,15 @@
       },
       "2026-05-23": {
         "cost": 188.4433,
-        "conversions_value": 335.6,
+        "conversions_value": 626.3,
         "clicks": 163,
-        "impressions": 16486,
-        "roas": 1.7809070420651731,
-        "cpc": 1.156093865030675,
-        "ctr": 0.009887176998665535
+        "impressions": 16486
+      },
+      "2026-05-24": {
+        "cost": 186.397,
+        "conversions_value": 0,
+        "clicks": 176,
+        "impressions": 17705
       }
     },
     "klaviyo_email": {
@@ -1147,10 +1168,28 @@
         "klaviyo_clicked_email_unique": 37
       },
       "2026-05-21": {
-        "klaviyo_total_recipients": 51003,
-        "klaviyo_received_email": 50497,
-        "klaviyo_opened_email_unique": 20082,
-        "klaviyo_clicked_email_unique": 294
+        "klaviyo_total_recipients": 238,
+        "klaviyo_received_email": 237,
+        "klaviyo_opened_email_unique": 11292,
+        "klaviyo_clicked_email_unique": 19
+      },
+      "2026-05-22": {
+        "klaviyo_total_recipients": 56334,
+        "klaviyo_received_email": 56099,
+        "klaviyo_opened_email_unique": 26477,
+        "klaviyo_clicked_email_unique": 305
+      },
+      "2026-05-23": {
+        "klaviyo_total_recipients": 1103,
+        "klaviyo_received_email": 704,
+        "klaviyo_opened_email_unique": 11061,
+        "klaviyo_clicked_email_unique": 45
+      },
+      "2026-05-24": {
+        "klaviyo_total_recipients": 39590,
+        "klaviyo_received_email": 39331,
+        "klaviyo_opened_email_unique": 13239,
+        "klaviyo_clicked_email_unique": 306
       }
     },
     "klaviyo_attr": {
@@ -1275,12 +1314,20 @@
         "shopify_placed_order_value": 2871.76
       },
       "2026-05-21": {
-        "shopify_placed_order": 53,
-        "shopify_placed_order_value": 3515.22
+        "shopify_placed_order": 14,
+        "shopify_placed_order_value": 963.9
       },
       "2026-05-22": {
-        "shopify_placed_order": 33,
-        "shopify_placed_order_value": 1488.93
+        "shopify_placed_order": 51,
+        "shopify_placed_order_value": 2411.2
+      },
+      "2026-05-23": {
+        "shopify_placed_order": 48,
+        "shopify_placed_order_value": 2670.65
+      },
+      "2026-05-24": {
+        "shopify_placed_order": 20,
+        "shopify_placed_order_value": 1172.1
       }
     },
     "ga4": {
@@ -1502,11 +1549,18 @@
         "purchaseRevenue": 1502.8
       },
       "2026-05-23": {
-        "sessions": 836,
-        "addToCarts": 264,
-        "checkouts": 110,
-        "ecommercePurchases": 25,
-        "purchaseRevenue": 1886.25
+        "sessions": 841,
+        "addToCarts": 278,
+        "checkouts": 116,
+        "ecommercePurchases": 26,
+        "purchaseRevenue": 1920.25
+      },
+      "2026-05-24": {
+        "sessions": 899,
+        "addToCarts": 241,
+        "checkouts": 88,
+        "ecommercePurchases": 17,
+        "purchaseRevenue": 1171.2
       }
     }
   },
@@ -1521,16 +1575,16 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 1772.2,
-        "sm_order_count": 30
+        "net_sales": 1109.65,
+        "sm_order_count": 18
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 860.55,
-        "sm_order_count": 20
+        "net_sales": 373.4,
+        "sm_order_count": 11
       }
     ],
-    "date": "2026-05-23"
+    "date": "2026-05-24"
   },
   "new_returning_30d": {
     "data": [
@@ -137962,5 +138016,12 @@
     "sm_order_count": 43,
     "net_sales": 1236.75,
     "net_quantity": 91
+  },
+  "py_amazon_seller_2025-05-24": {
+    "ordered_product_sales": 4741.62,
+    "units_ordered": 150,
+    "sessions": 1269,
+    "unit_session_percentage": 11.82,
+    "page_views": 1641
   }
 }
