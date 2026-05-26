@@ -1,5 +1,7 @@
 import os
 import json
+import time
+import random
 import requests
 from pathlib import Path
 from datetime import date, datetime, timedelta
@@ -140,7 +142,7 @@ def safe_div(numer, denom):
         return n / d if d > 0 else None
     except: return None
 
-def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=1, timezone=None, max_rows=None):
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=4, timezone=None, max_rows=None):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
@@ -149,13 +151,29 @@ def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=
     for attempt in range(retries + 1):
         try:
             r = requests.get(SM_BASE, params=params, timeout=timeout)
+            # Handle 429 (Too Many Requests) before raising. Honor Retry-After if present,
+            # else exponential backoff with jitter.
+            if r.status_code == 429:
+                if attempt < retries:
+                    retry_after_hdr = r.headers.get('Retry-After')
+                    try:
+                        wait = float(retry_after_hdr) if retry_after_hdr else (2 ** attempt + random.uniform(0, 1))
+                    except (ValueError, TypeError):
+                        wait = 2 ** attempt + random.uniform(0, 1)
+                    print(f"  {ds_id} rate-limited (attempt {attempt+1}/{retries+1}), waiting {wait:.1f}s...")
+                    time.sleep(wait)
+                    continue
+                print(f"  Warning: {ds_id} ({start_date}→{end_date}) still rate-limited after {retries+1} attempts")
+                return []
             r.raise_for_status()
             rows = r.json().get("data", [])
             fl = fields.split(",")
             return [dict(zip(fl, row)) for row in rows[1:]] if len(rows) >= 2 else []
         except (requests.Timeout, requests.ConnectionError):
             if attempt < retries:
-                print(f"  {ds_id} timed out (attempt {attempt+1}), retrying...")
+                wait = 2 ** attempt + random.uniform(0, 1)
+                print(f"  {ds_id} timed out (attempt {attempt+1}), retrying in {wait:.1f}s...")
+                time.sleep(wait)
                 continue
             print(f"  Warning: {ds_id} ({start_date}→{end_date}) timeout after retries")
             return []
@@ -509,7 +527,7 @@ def ensure_campaigns():
 
 print(f"Updating cache for {DISPLAY_DATE}...")
 
-with ThreadPoolExecutor(max_workers=14) as ex:
+with ThreadPoolExecutor(max_workers=4) as ex:
     futs = []
     for src in SOURCES:
         futs.append(ex.submit(ensure_30d_cache, src))
