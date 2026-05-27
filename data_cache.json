@@ -427,7 +427,31 @@
         "cost": 2659.18,
         "attributedSales14d": 2037.5,
         "clicks": 918,
-        "impressions": 190555
+        "impressions": 189836
+      },
+      "2026-05-22": {
+        "cost": 1933.92,
+        "attributedSales14d": 2699.86,
+        "clicks": 823,
+        "impressions": 127861
+      },
+      "2026-05-23": {
+        "cost": 2402.86,
+        "attributedSales14d": 2640.6,
+        "clicks": 887,
+        "impressions": 136542
+      },
+      "2026-05-24": {
+        "cost": 2562.16,
+        "attributedSales14d": 2418.29,
+        "clicks": 879,
+        "impressions": 132075
+      },
+      "2026-05-25": {
+        "cost": 2454.7,
+        "attributedSales14d": 2509.83,
+        "clicks": 905,
+        "impressions": 136958
       }
     },
     "shopify": {
@@ -1679,11 +1703,11 @@
         "purchaseRevenue": 3460.8
       },
       "2026-05-26": {
-        "sessions": 903,
-        "addToCarts": 149,
-        "checkouts": 53,
-        "ecommercePurchases": 22,
-        "purchaseRevenue": 1345.2
+        "sessions": 941,
+        "addToCarts": 172,
+        "checkouts": 60,
+        "ecommercePurchases": 23,
+        "purchaseRevenue": 1369.2
       }
     }
   },
@@ -137634,8 +137658,8 @@
       },
       {
         "date": "2026-05-26",
-        "item_promotion_discount": 95.16,
-        "ship_promotion_discount": 72.76
+        "item_promotion_discount": 100.16,
+        "ship_promotion_discount": 72.98
       }
     ],
     "date": "2026-05-26"
