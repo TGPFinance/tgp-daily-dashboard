@@ -148,18 +148,21 @@ def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=
     if extra_params: params.update(extra_params)
     if timezone: params['timezone'] = timezone
     if max_rows: params['max_rows'] = max_rows
+    # Small mandatory delay before each request to space them out — keeps us well
+    # under Supermetrics' per-second cap even with rapid sequential calls
+    time.sleep(0.6 + random.uniform(0, 0.3))
     for attempt in range(retries + 1):
         try:
             r = requests.get(SM_BASE, params=params, timeout=timeout)
             # Handle 429 (Too Many Requests) before raising. Honor Retry-After if present,
-            # else exponential backoff with jitter.
+            # else exponential backoff starting at 5s with jitter (was 1s, too aggressive for this account).
             if r.status_code == 429:
                 if attempt < retries:
                     retry_after_hdr = r.headers.get('Retry-After')
                     try:
-                        wait = float(retry_after_hdr) if retry_after_hdr else (2 ** attempt + random.uniform(0, 1))
+                        wait = float(retry_after_hdr) if retry_after_hdr else (5 * (2 ** attempt) + random.uniform(0, 2))
                     except (ValueError, TypeError):
-                        wait = 2 ** attempt + random.uniform(0, 1)
+                        wait = 5 * (2 ** attempt) + random.uniform(0, 2)
                     print(f"  {ds_id} rate-limited (attempt {attempt+1}/{retries+1}), waiting {wait:.1f}s...")
                     time.sleep(wait)
                     continue
@@ -527,7 +530,7 @@ def ensure_campaigns():
 
 print(f"Updating cache for {DISPLAY_DATE}...")
 
-with ThreadPoolExecutor(max_workers=4) as ex:
+with ThreadPoolExecutor(max_workers=1) as ex:
     futs = []
     for src in SOURCES:
         futs.append(ex.submit(ensure_30d_cache, src))
