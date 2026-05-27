@@ -203,6 +203,41 @@
         "sessions": 2016,
         "unit_session_percentage": 14.58,
         "page_views": 2540
+      },
+      "2026-05-21": {
+        "ordered_product_sales": 7979.73,
+        "units_ordered": 309,
+        "sessions": 3541,
+        "unit_session_percentage": 8.73,
+        "page_views": 4254
+      },
+      "2026-05-22": {
+        "ordered_product_sales": 8318.44,
+        "units_ordered": 314,
+        "sessions": 3164,
+        "unit_session_percentage": 9.92,
+        "page_views": 3875
+      },
+      "2026-05-23": {
+        "ordered_product_sales": 7065.49,
+        "units_ordered": 269,
+        "sessions": 1969,
+        "unit_session_percentage": 13.66,
+        "page_views": 2485
+      },
+      "2026-05-24": {
+        "ordered_product_sales": 6198.79,
+        "units_ordered": 224,
+        "sessions": 1960,
+        "unit_session_percentage": 11.43,
+        "page_views": 2450
+      },
+      "2026-05-25": {
+        "ordered_product_sales": 8178.95,
+        "units_ordered": 282,
+        "sessions": 2469,
+        "unit_session_percentage": 11.42,
+        "page_views": 3131
       }
     },
     "amazon_ads": {
@@ -581,6 +616,30 @@
         "sm_order_count": 15,
         "net_sales": 791.15,
         "net_quantity": 50
+      },
+      "2026-05-24": {
+        "gross_sales": 1392.05,
+        "sm_order_count": 21,
+        "net_sales": 1160.85,
+        "net_quantity": 57
+      },
+      "2026-05-25": {
+        "gross_sales": 2598.3,
+        "sm_order_count": 43,
+        "net_sales": 2243.1,
+        "net_quantity": 118
+      },
+      "2026-05-26": {
+        "gross_sales": 5953.2,
+        "sm_order_count": 80,
+        "net_sales": 4747.2,
+        "net_quantity": 285
+      },
+      "2026-05-27": {
+        "gross_sales": 645.8,
+        "sm_order_count": 11,
+        "net_sales": 495.8,
+        "net_quantity": 35
       }
     },
     "meta": {
@@ -780,13 +839,25 @@
         "impressions": 16584
       },
       "2026-05-24": {
-        "spend": 807.44,
+        "spend": 808.68,
         "purchase_value": 325.08,
         "clicks": 251,
-        "impressions": 23428,
-        "roas": 0.40260576637273354,
-        "cpc": 3.2168924302788846,
-        "ctr": 0.01071367594331569
+        "impressions": 23461
+      },
+      "2026-05-25": {
+        "spend": 706.55,
+        "purchase_value": 1296.04,
+        "clicks": 203,
+        "impressions": 20423
+      },
+      "2026-05-26": {
+        "spend": 320.61,
+        "purchase_value": 224.3,
+        "clicks": 146,
+        "impressions": 12109,
+        "roas": 0.6996038801035526,
+        "cpc": 2.195958904109589,
+        "ctr": 0.012057147576183005
       }
     },
     "google_ads": {
@@ -1186,16 +1257,28 @@
         "klaviyo_clicked_email_unique": 305
       },
       "2026-05-23": {
-        "klaviyo_total_recipients": 1103,
-        "klaviyo_received_email": 704,
-        "klaviyo_opened_email_unique": 11061,
-        "klaviyo_clicked_email_unique": 45
+        "klaviyo_total_recipients": 314,
+        "klaviyo_received_email": 311,
+        "klaviyo_opened_email_unique": 3073,
+        "klaviyo_clicked_email_unique": 8
       },
       "2026-05-24": {
-        "klaviyo_total_recipients": 39590,
-        "klaviyo_received_email": 39331,
-        "klaviyo_opened_email_unique": 13239,
-        "klaviyo_clicked_email_unique": 306
+        "klaviyo_total_recipients": 39846,
+        "klaviyo_received_email": 39584,
+        "klaviyo_opened_email_unique": 29110,
+        "klaviyo_clicked_email_unique": 328
+      },
+      "2026-05-25": {
+        "klaviyo_total_recipients": 56057,
+        "klaviyo_received_email": 55836,
+        "klaviyo_opened_email_unique": 29837,
+        "klaviyo_clicked_email_unique": 318
+      },
+      "2026-05-26": {
+        "klaviyo_total_recipients": 347,
+        "klaviyo_received_email": 335,
+        "klaviyo_opened_email_unique": 7161,
+        "klaviyo_clicked_email_unique": 18
       }
     },
     "klaviyo_attr": {
@@ -1328,12 +1411,20 @@
         "shopify_placed_order_value": 2411.2
       },
       "2026-05-23": {
-        "shopify_placed_order": 48,
-        "shopify_placed_order_value": 2670.65
+        "shopify_placed_order": 12,
+        "shopify_placed_order_value": 520.95
       },
       "2026-05-24": {
-        "shopify_placed_order": 20,
-        "shopify_placed_order_value": 1172.1
+        "shopify_placed_order": 31,
+        "shopify_placed_order_value": 1766.61
+      },
+      "2026-05-25": {
+        "shopify_placed_order": 78,
+        "shopify_placed_order_value": 4874.02
+      },
+      "2026-05-26": {
+        "shopify_placed_order": 34,
+        "shopify_placed_order_value": 1904.6
       }
     },
     "ga4": {
@@ -1562,11 +1653,25 @@
         "purchaseRevenue": 1920.25
       },
       "2026-05-24": {
-        "sessions": 899,
-        "addToCarts": 241,
-        "checkouts": 88,
-        "ecommercePurchases": 17,
-        "purchaseRevenue": 1171.2
+        "sessions": 910,
+        "addToCarts": 257,
+        "checkouts": 95,
+        "ecommercePurchases": 19,
+        "purchaseRevenue": 1353.2
+      },
+      "2026-05-25": {
+        "sessions": 1070,
+        "addToCarts": 486,
+        "checkouts": 156,
+        "ecommercePurchases": 53,
+        "purchaseRevenue": 3460.8
+      },
+      "2026-05-26": {
+        "sessions": 902,
+        "addToCarts": 148,
+        "checkouts": 52,
+        "ecommercePurchases": 22,
+        "purchaseRevenue": 1345.2
       }
     }
   },
@@ -136940,7 +137045,7 @@
     "unit_session_percentage": 9.79,
     "page_views": 2088
   },
-  "last_posted_date": "2026-05-25",
+  "last_posted_date": "2026-05-26",
   "amazon_states": {
     "data": [
       {
@@ -138029,5 +138134,18 @@
     "sessions": 1269,
     "unit_session_percentage": 11.82,
     "page_views": 1641
+  },
+  "py_shopify_2025-05-26": {
+    "gross_sales": 4235.75,
+    "sm_order_count": 56,
+    "net_sales": 3608.88,
+    "net_quantity": 187
+  },
+  "py_amazon_seller_2025-05-26": {
+    "ordered_product_sales": 6810.36,
+    "units_ordered": 209,
+    "sessions": 1513,
+    "unit_session_percentage": 13.81,
+    "page_views": 2015
   }
 }
