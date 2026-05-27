@@ -142,7 +142,7 @@ def safe_div(numer, denom):
         return n / d if d > 0 else None
     except: return None
 
-def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=4, timezone=None, max_rows=None):
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=2, timezone=None, max_rows=None):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
@@ -688,7 +688,11 @@ shopify_variants = sorted(cache.get('top_shopify_variants', {}).get('data', []),
                          key=lambda r: to_float(r.get('net_sales')), reverse=True)[:5]
 
 # ── Performance Health: New vs Returning customer split for yesterday ──
-nr_data = cache.get('new_returning_yesterday', {}).get('data', [])
+# IMPORTANT: only use if cache is fresh — when this query fails (rate-limited), the cache stays
+# at an older date and the numbers don't reflect actual yesterday, creating misleading display
+nr_raw = cache.get('new_returning_yesterday', {})
+nr_data = nr_raw.get('data', []) if nr_raw.get('date') == DATE_STR else []
+nr_stale = bool(nr_raw.get('data')) and nr_raw.get('date') != DATE_STR
 new_rev = 0; new_orders = 0; returning_rev = 0; returning_orders = 0
 for row in nr_data:
     flag = str(row.get('order_is_returning_customer', '')).strip().lower()
@@ -699,6 +703,8 @@ for row in nr_data:
         returning_rev += rev; returning_orders += orders
     else:
         new_rev += rev; new_orders += orders
+if nr_stale:
+    cache_warnings.append(f"new_returning_yesterday (from {nr_raw.get('date')})")
 
 total_ad_spend = to_float(meta.get('spend')) + to_float(google_ads.get('cost')) + to_float(amazon_ads.get('cost'))
 shopify_net = to_float(shopify.get('net_sales'))
@@ -1758,5 +1764,7 @@ print(f"  Already posted today: {already_posted}")
 print(f"  Final attempt (6am): {is_final_attempt}")
 print(f"  Manual trigger: {is_manual}")
 print(f"  -> Posting to Slack: {should_post}")
+
+Path('should_post.flag').write_text('yes' if should_post else 'no')
 
 Path('should_post.flag').write_text('yes' if should_post else 'no')
