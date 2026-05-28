@@ -142,7 +142,7 @@ def safe_div(numer, denom):
         return n / d if d > 0 else None
     except: return None
 
-def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=180, retries=2, timezone=None, max_rows=None):
+def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=None, timeout=60, retries=2, timezone=None, max_rows=None):
     params = {"api_key": SUPERMETRICS_API_KEY, "ds_id": ds_id, "ds_accounts": account_id,
               "date_range_type": "custom", "start_date": start_date, "end_date": end_date, "fields": fields}
     if extra_params: params.update(extra_params)
@@ -248,7 +248,7 @@ def ensure_top_products():
                          "title,ordered_product_sales,units_ordered",
                          T30_START, T30_END,
                          extra_params={"report_type": "sales_and_traffic_by_asin"},
-                         timeout=300, timezone=DEFAULT_TZ)
+                         timeout=90, timezone=DEFAULT_TZ)
     if rows:
         cache['top_products'] = {"data": rows, "date": DATE_STR}
     elif 'top_products' in cache:
@@ -260,7 +260,7 @@ def ensure_top_shopify_variants():
                          "title,variant_title,net_sales,net_quantity",
                          T30_START, T30_END,
                          extra_params={"report_type": "ProductSales"},
-                         timeout=300, timezone=DEFAULT_TZ)
+                         timeout=90, timezone=DEFAULT_TZ)
     if rows:
         cache['top_shopify_variants'] = {"data": rows, "date": DATE_STR}
     elif 'top_shopify_variants' in cache:
@@ -272,7 +272,7 @@ def ensure_top_states():
                          "order_shipping_province,net_sales,sm_order_count",
                          T30_START, T30_END,
                          extra_params={"report_type": "Order"},
-                         timeout=180, timezone=DEFAULT_TZ)
+                         timeout=60, timezone=DEFAULT_TZ)
     if rows:
         cache['top_states'] = {"data": rows, "date": DATE_STR}
     elif 'top_states' in cache:
@@ -283,7 +283,7 @@ def ensure_new_returning_split():
                          "order_is_returning_customer,net_sales,sm_order_count",
                          DATE_STR, DATE_STR,
                          extra_params={"report_type": "Order", "filters": "net_sales > 0"},
-                         timeout=180, timezone=DEFAULT_TZ)
+                         timeout=60, timezone=DEFAULT_TZ)
     if rows:
         cache['new_returning_yesterday'] = {"data": rows, "date": DATE_STR}
 
@@ -292,7 +292,7 @@ def ensure_new_returning_30d():
                          "order_is_returning_customer,net_sales,sm_order_count",
                          T30_START, T30_END,
                          extra_params={"report_type": "Order", "filters": "net_sales > 0"},
-                         timeout=180, timezone=DEFAULT_TZ)
+                         timeout=60, timezone=DEFAULT_TZ)
     if rows:
         cache['new_returning_30d'] = {"data": rows, "date": DATE_STR}
 
@@ -304,7 +304,7 @@ def ensure_customer_ltv():
                          "customer_id,net_sales,sm_order_count",
                          ltv_start, DATE_STR,
                          extra_params={"report_type": "Order"},
-                         timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                         timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
         cache['customer_ltv'] = {"data": rows, "date": DATE_STR}
 
@@ -337,7 +337,7 @@ def ensure_amazon_promo_yesterday():
                          "date,item_promotion_discount,ship_promotion_discount",
                          T30_START, T30_END,
                          extra_params={"report_type": "orders"},
-                         timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                         timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
         cache['amazon_promo_yesterday'] = {"data": rows, "date": DATE_STR}
     elif 'amazon_promo_yesterday' in cache:
@@ -350,7 +350,7 @@ def ensure_amazon_states():
                          "ship_state,item_price,item_quantity",
                          T30_START, T30_END,
                          extra_params={"report_type": "orders"},
-                         timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                         timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
     if rows:
         cache['amazon_states'] = {"data": rows, "date": DATE_STR}
     elif 'amazon_states' in cache:
@@ -364,15 +364,15 @@ def ensure_yoy_yesterday():
     shop = sm_fetch_rows("SHP", ACCOUNTS["shopify"], "net_sales,sm_order_count",
                          yoy_date, yoy_date,
                          extra_params={"report_type": "Order"},
-                         timeout=180, timezone=DEFAULT_TZ)
+                         timeout=60, timezone=DEFAULT_TZ)
     amz_sales = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "ordered_product_sales",
                               yoy_date, yoy_date,
                               extra_params={"report_type": "sales_and_traffic_by_date"},
-                              timeout=180, timezone=DEFAULT_TZ)
+                              timeout=60, timezone=DEFAULT_TZ)
     amz_promo = sm_fetch_rows("ASELL", ACCOUNTS["amazon_seller"], "item_promotion_discount,ship_promotion_discount",
                               yoy_date, yoy_date,
                               extra_params={"report_type": "orders"},
-                              timeout=180, timezone=DEFAULT_TZ)
+                              timeout=60, timezone=DEFAULT_TZ)
 
     if shop or amz_sales:
         cache['yoy_yesterday'] = {
@@ -402,7 +402,7 @@ def ensure_repeat_behavior():
                                   "customer_id,order_created_at_date,sm_order_count,net_sales",
                                   window_start, DATE_STR,
                                   extra_params={"report_type": "Order"},
-                                  timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                                  timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
 
     # Q2 + Q3: LineItem data, chunked into 2 × 3-month windows for SKU affinity
     # (LineItem has higher row count than Order — typically 15-25K over 6 months for TGP)
@@ -416,12 +416,12 @@ def ensure_repeat_behavior():
                                   "customer_id,order_created_at_date,title,net_sales",
                                   window_start, chunk1_end,
                                   extra_params={"report_type": "LineItem"},
-                                  timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                                  timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
     line_items_2 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                                   "customer_id,order_created_at_date,title,net_sales",
                                   chunk2_start, DATE_STR,
                                   extra_params={"report_type": "LineItem"},
-                                  timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                                  timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
     line_items = (line_items_1 or []) + (line_items_2 or [])
 
     if orders_dated:
@@ -474,12 +474,12 @@ def ensure_cohort_data():
                                      "customer_id,net_sales",
                                      chunk1_start, chunk1_end,
                                      extra_params={"report_type": "Order"},
-                                     timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                                     timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
         prior_paid_2 = sm_fetch_rows("SHP", ACCOUNTS["shopify"],
                                      "customer_id,net_sales",
                                      chunk2_start, chunk2_end,
                                      extra_params={"report_type": "Order"},
-                                     timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                                     timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
         prior_paid = (prior_paid_1 or []) + (prior_paid_2 or [])
 
     # Q2: per-customer per-month order activity in display window — refresh daily because
@@ -488,7 +488,7 @@ def ensure_cohort_data():
                            "customer_id,yearMonth,sm_order_count,net_sales",
                            cohort_start, DATE_STR,
                            extra_params={"report_type": "Order"},
-                           timeout=300, timezone=DEFAULT_TZ, max_rows=10000)
+                           timeout=90, timezone=DEFAULT_TZ, max_rows=10000)
 
     if orders:
         cache['cohort_data'] = {"prior_paid": prior_paid or [], "orders": orders, "window_start": cohort_start, "date": DATE_STR}
@@ -499,13 +499,13 @@ def ensure_campaigns():
     em = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
         "campaign_name,campaign_subject,campaign_send_date,klaviyo_total_recipients,klaviyo_open_rate,klaviyo_click_rate",
         T30_START, T30_END,
-        extra_params={"report_type": "MetricExportCampaign"}, timeout=300, timezone=DEFAULT_TZ)
+        extra_params={"report_type": "MetricExportCampaign"}, timeout=90, timezone=DEFAULT_TZ)
     # Include the flow dimension as a field so we can filter at Python level (query-level filter unreliable)
     attr = sm_fetch_rows("KLAV", ACCOUNTS["klaviyo"],
         "campaign_name,campaign_is_part_of_flow,shopify_placed_order,shopify_placed_order_value",
         T30_START, T30_END,
         extra_params={"report_type": "MetricExportAttributedCampaign"},
-        timeout=300, timezone=DEFAULT_TZ)
+        timeout=90, timezone=DEFAULT_TZ)
 
     # Aggregate broadcast-only totals for the Email % card (30-day)
     broadcast_orders = 0
@@ -530,7 +530,7 @@ def ensure_campaigns():
 
 print(f"Updating cache for {DISPLAY_DATE}...")
 
-with ThreadPoolExecutor(max_workers=1) as ex:
+with ThreadPoolExecutor(max_workers=3) as ex:
     futs = []
     for src in SOURCES:
         futs.append(ex.submit(ensure_30d_cache, src))
@@ -738,7 +738,10 @@ ncac_30 = safe_div(dtc_spend_30, new_orders_30)
 
 klaviyo_broadcast_value_30 = cache.get('campaigns', {}).get('broadcast_value_30d', 0)
 email_pct    = safe_div(klaviyo_broadcast_value_30, shop_net_30)
-new_rev_pct  = safe_div(new_rev, new_rev + returning_rev)
+# Use daily Shopify net_sales as denominator so the % reconciles with the Total Sales card
+# (the new_returning query filters net_sales > 0 which excluded $0 ShopMy comp orders)
+shopify_yest_total = to_float(shopify.get('net_sales'))
+new_rev_pct  = safe_div(new_rev, shopify_yest_total) if shopify_yest_total else None
 
 # ── Total Sales (Yesterday) + YoY ──
 # Summary card uses gross Amazon (ordered_product_sales) for consistency with Amazon tab
@@ -1606,7 +1609,7 @@ html = f"""<!DOCTYPE html>
         {card(fmt_money(total_sales_yest, big=True) if total_sales_yest else '—', 'Total Sales (Yesterday)', f'<div class="sub">{fmt_money(amazon_gross_yest)} Amazon · {fmt_money(shopify_net_yest)} Shopify</div>' + yoy_change_badge(yoy_pct_change, yoy_date_str, yoy_total))}
         {card(fmt_money(ncac_val) if ncac_val else '—', 'Shopify nCAC (yesterday)', (f'<div class="sub">spend ÷ {int(new_orders)} new Shopify orders</div>' if new_orders else '<div class="sub">no new orders</div>') + bm_ncac(ncac_val, shopify_aov_val))}
         {card(fmt_roas(mer_val), 'MER (Blended, 30d)', f'<div class="sub">{fmt_money(total_rev_30, big=True)} rev / {fmt_money(total_spend_30, big=True)} spend</div>' + bm_mer(mer_val))}
-        {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(new_rev + returning_rev)} total</div>' + bm_new_rev(new_rev_pct))}
+        {card(fmt_pct(new_rev_pct), 'New customer rev %', f'<div class="sub">{fmt_money(new_rev)} new / {fmt_money(shopify_yest_total)} Shopify</div>' + bm_new_rev(new_rev_pct))}
       </div>
     </div>
     <div class="section">
@@ -1764,7 +1767,5 @@ print(f"  Already posted today: {already_posted}")
 print(f"  Final attempt (6am): {is_final_attempt}")
 print(f"  Manual trigger: {is_manual}")
 print(f"  -> Posting to Slack: {should_post}")
-
-Path('should_post.flag').write_text('yes' if should_post else 'no')
 
 Path('should_post.flag').write_text('yes' if should_post else 'no')
