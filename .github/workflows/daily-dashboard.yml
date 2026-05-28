@@ -2,8 +2,9 @@ name: Daily Dashboard
 
 on:
   schedule:
-    - cron: '0 9 * * *'    # 4am ET — first attempt (post only if Amazon Ads ready)
-    - cron: '0 11 * * *'   # 6am ET — FINAL attempt (post regardless)
+    - cron: '0 5 * * *'    # 1am ET (EDT) — early start, post only if Amazon Ads ready
+    - cron: '0 8 * * *'    # 4am ET (EDT) — backup attempt, post only if Amazon Ads ready
+    - cron: '0 9 * * *'    # 5am ET (EDT) — FINAL attempt, posts regardless (gives 1hr buffer before 6am ET)
   workflow_dispatch:
 
 jobs:
@@ -26,7 +27,7 @@ jobs:
       - name: Generate dashboard
         env:
           SUPERMETRICS_API_KEY: ${{ secrets.SUPERMETRICS_API_KEY }}
-          IS_FINAL_ATTEMPT: ${{ (github.event.schedule == '0 11 * * *' || github.event_name == 'workflow_dispatch') && 'true' || 'false' }}
+          IS_FINAL_ATTEMPT: ${{ (github.event.schedule == '0 9 * * *' || github.event_name == 'workflow_dispatch') && 'true' || 'false' }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: python generate_dashboard.py
 
