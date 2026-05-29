@@ -240,11 +240,18 @@
         "page_views": 3131
       },
       "2026-05-26": {
-        "ordered_product_sales": 6659.99,
-        "units_ordered": 251,
+        "ordered_product_sales": 6588.2,
+        "units_ordered": 249,
         "sessions": 2051,
-        "unit_session_percentage": 12.24,
+        "unit_session_percentage": 12.14,
         "page_views": 2558
+      },
+      "2026-05-27": {
+        "ordered_product_sales": 8029.71,
+        "units_ordered": 312,
+        "sessions": 2108,
+        "unit_session_percentage": 14.8,
+        "page_views": 2625
       }
     },
     "amazon_ads": {
@@ -464,7 +471,9 @@
         "cost": 2662.15,
         "attributedSales14d": 3463.51,
         "clicks": 976,
-        "impressions": 176572
+        "impressions": 176572,
+        "roas": 1.30101985237496,
+        "acos": 0.7686277793336818
       }
     },
     "shopify": {
@@ -673,10 +682,10 @@
         "net_quantity": 84
       },
       "2026-05-26": {
-        "gross_sales": 5953.2,
-        "sm_order_count": 80,
-        "net_sales": 4747.2,
-        "net_quantity": 285
+        "gross_sales": 2958.85,
+        "sm_order_count": 42,
+        "net_sales": 2336.85,
+        "net_quantity": 129
       },
       "2026-05-27": {
         "gross_sales": 1919.85,
@@ -685,10 +694,16 @@
         "net_quantity": 89
       },
       "2026-05-28": {
-        "gross_sales": 425,
-        "sm_order_count": 8,
-        "net_sales": 373,
-        "net_quantity": 23
+        "gross_sales": 2897.2,
+        "sm_order_count": 48,
+        "net_sales": 2355.83,
+        "net_quantity": 171
+      },
+      "2026-05-29": {
+        "gross_sales": 1000.6,
+        "sm_order_count": 9,
+        "net_sales": 574.13,
+        "net_quantity": 15
       }
     },
     "meta": {
@@ -906,10 +921,19 @@
         "impressions": 12133
       },
       "2026-05-27": {
-        "spend": 272.51,
+        "spend": 272.83,
         "purchase_value": 31.84,
-        "clicks": 124,
-        "impressions": 8796
+        "clicks": 125,
+        "impressions": 8804
+      },
+      "2026-05-28": {
+        "spend": 396.35,
+        "purchase_value": 673.48,
+        "clicks": 145,
+        "impressions": 16077,
+        "roas": 1.6992052478869686,
+        "cpc": 2.7334482758620693,
+        "ctr": 0.009019095602413386
       }
     },
     "google_ads": {
@@ -1127,7 +1151,16 @@
         "cost": 169.8994,
         "conversions_value": 0,
         "clicks": 130,
-        "impressions": 15311
+        "impressions": 15312
+      },
+      "2026-05-28": {
+        "cost": 172.7699,
+        "conversions_value": 208.69,
+        "clicks": 112,
+        "impressions": 12210,
+        "roas": 1.207907164384537,
+        "cpc": 1.5425883928571429,
+        "ctr": 0.009172809172809172
       }
     },
     "klaviyo_email": {
@@ -1336,10 +1369,10 @@
         "klaviyo_clicked_email_unique": 22
       },
       "2026-05-25": {
-        "klaviyo_total_recipients": 56057,
-        "klaviyo_received_email": 55836,
-        "klaviyo_opened_email_unique": 29837,
-        "klaviyo_clicked_email_unique": 318
+        "klaviyo_total_recipients": 55757,
+        "klaviyo_received_email": 55593,
+        "klaviyo_opened_email_unique": 27610,
+        "klaviyo_clicked_email_unique": 299
       },
       "2026-05-26": {
         "klaviyo_total_recipients": 568,
@@ -1348,9 +1381,15 @@
         "klaviyo_clicked_email_unique": 24
       },
       "2026-05-27": {
-        "klaviyo_total_recipients": 289,
-        "klaviyo_received_email": 275,
-        "klaviyo_opened_email_unique": 2174,
+        "klaviyo_total_recipients": 437,
+        "klaviyo_received_email": 419,
+        "klaviyo_opened_email_unique": 3417,
+        "klaviyo_clicked_email_unique": 8
+      },
+      "2026-05-28": {
+        "klaviyo_total_recipients": 200,
+        "klaviyo_received_email": 193,
+        "klaviyo_opened_email_unique": 1319,
         "klaviyo_clicked_email_unique": 4
       }
     },
@@ -1492,16 +1531,20 @@
         "shopify_placed_order_value": 594.51
       },
       "2026-05-25": {
-        "shopify_placed_order": 78,
-        "shopify_placed_order_value": 4874.02
+        "shopify_placed_order": 46,
+        "shopify_placed_order_value": 3086.74
       },
       "2026-05-26": {
         "shopify_placed_order": 46,
         "shopify_placed_order_value": 2417.54
       },
       "2026-05-27": {
-        "shopify_placed_order": 25,
-        "shopify_placed_order_value": 1089.66
+        "shopify_placed_order": 35,
+        "shopify_placed_order_value": 1512.28
+      },
+      "2026-05-28": {
+        "shopify_placed_order": 38,
+        "shopify_placed_order_value": 2057.33
       }
     },
     "ga4": {
@@ -1751,11 +1794,18 @@
         "purchaseRevenue": 1369.2
       },
       "2026-05-27": {
-        "sessions": 760,
-        "addToCarts": 112,
-        "checkouts": 51,
-        "ecommercePurchases": 12,
-        "purchaseRevenue": 597.55
+        "sessions": 796,
+        "addToCarts": 133,
+        "checkouts": 56,
+        "ecommercePurchases": 13,
+        "purchaseRevenue": 669.55
+      },
+      "2026-05-28": {
+        "sessions": 940,
+        "addToCarts": 55,
+        "checkouts": 37,
+        "ecommercePurchases": 11,
+        "purchaseRevenue": 580.06
       }
     }
   },
@@ -1770,321 +1820,345 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 900.95,
-        "sm_order_count": 21
+        "net_sales": 1475.63,
+        "sm_order_count": 30
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 474.35,
-        "sm_order_count": 13
+        "net_sales": 1081.33,
+        "sm_order_count": 19
       }
     ],
-    "date": "2026-05-27"
+    "date": "2026-05-28"
   },
   "new_returning_30d": {
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 38215.27,
-        "sm_order_count": 698
+        "net_sales": 38218.92,
+        "sm_order_count": 694
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 18962.62,
-        "sm_order_count": 777
+        "net_sales": 19119.14,
+        "sm_order_count": 775
       }
     ],
-    "date": "2026-05-27"
+    "date": "2026-05-28"
   },
   "top_shopify_variants": {
     "data": [
       {
         "title": "B12 Awake",
         "variant_title": "20 Patches ($2.50 Per Patch)",
-        "net_sales": 6943.69,
-        "net_quantity": 204
+        "net_sales": 6919.19,
+        "net_quantity": 202
+      },
+      {
+        "title": "Be Calm",
+        "variant_title": "4 Patches ($4.00/patch)",
+        "net_sales": 2257.4,
+        "net_quantity": 211
+      },
+      {
+        "title": "Nite Nite",
+        "variant_title": "4 Patches ($4.00/patch)",
+        "net_sales": 2187,
+        "net_quantity": 168
       },
       {
         "title": "B12 Awake",
         "variant_title": "4 Patches ($3.00 Per Patch)",
-        "net_sales": 2140.12,
-        "net_quantity": 585
+        "net_sales": 2172.66,
+        "net_quantity": 605
       },
       {
         "title": "Hemp Queen",
         "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 1938.19,
-        "net_quantity": 158
-      },
-      {
-        "title": "Nite Nite",
-        "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 1918.61,
-        "net_quantity": 156
-      },
-      {
-        "title": "Be Calm",
-        "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 1621.2,
-        "net_quantity": 165
+        "net_sales": 1974.99,
+        "net_quantity": 148
       },
       {
         "title": "Dream",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 1607.4,
-        "net_quantity": 501
+        "variant_title": "40 Patches ($2.25/patch)",
+        "net_sales": 1716.89,
+        "net_quantity": 23
       },
       {
         "title": "Nite Nite",
         "variant_title": "40 Patches ($3.00/patch)",
-        "net_sales": 1434,
-        "net_quantity": 16
+        "net_sales": 1668,
+        "net_quantity": 18
       },
       {
         "title": "Dream",
-        "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 1433.41,
-        "net_quantity": 20
-      },
-      {
-        "title": "Nite Nite",
-        "variant_title": "16 Patches ($3.50/patch)",
-        "net_sales": 953.97,
-        "net_quantity": 21
-      },
-      {
-        "title": "Slumber",
         "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 932.8,
-        "net_quantity": 113
-      },
-      {
-        "title": "Think",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 910.61,
-        "net_quantity": 122
-      },
-      {
-        "title": "The Starter Set",
-        "variant_title": "",
-        "net_sales": 910.4,
-        "net_quantity": 23
+        "net_sales": 1611.15,
+        "net_quantity": 518
       },
       {
         "title": "Dream",
         "variant_title": "28 Patches ($2.50/patch)",
-        "net_sales": 909.38,
-        "net_quantity": 16
-      },
-      {
-        "title": "Nite Nite",
-        "variant_title": "28 Patches ($3.25/patch)",
-        "net_sales": 832.65,
-        "net_quantity": 11
-      },
-      {
-        "title": "Think",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 793.65,
-        "net_quantity": 24
+        "net_sales": 1287.38,
+        "net_quantity": 22
       },
       {
         "title": "Rescue",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 742.5,
-        "net_quantity": 20
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 1222.16,
+        "net_quantity": 460
       },
       {
-        "title": "Un-Frown",
-        "variant_title": "1 PACK = 2 FOREHEAD PATCHES",
-        "net_sales": 714,
-        "net_quantity": 42
+        "title": "Slumber",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 1158.55,
+        "net_quantity": 139
       },
       {
-        "title": "Be Calm",
+        "title": "Nite Nite",
         "variant_title": "16 Patches ($3.50/patch)",
-        "net_sales": 695.32,
-        "net_quantity": 15
+        "net_sales": 1103.07,
+        "net_quantity": 25
       },
       {
         "title": "Rescue",
         "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 685.13,
-        "net_quantity": 11
+        "net_sales": 1066.5,
+        "net_quantity": 17
+      },
+      {
+        "title": "Think",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 996.11,
+        "net_quantity": 129
+      },
+      {
+        "title": "The Starter Set",
+        "variant_title": "",
+        "net_sales": 946.4,
+        "net_quantity": 24
+      },
+      {
+        "title": "Slumber",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 929.5,
+        "net_quantity": 27
+      },
+      {
+        "title": "Rescue",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 902.25,
+        "net_quantity": 24
       },
       {
         "title": "Dream",
         "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 683.32,
-        "net_quantity": 21
-      },
-      {
-        "title": "Hemp Queen",
-        "variant_title": "16 Patches ($3.50/patch)",
-        "net_sales": 682.78,
-        "net_quantity": 15
-      },
-      {
-        "title": "Adult Zzz",
-        "variant_title": "",
-        "net_sales": 680.4,
-        "net_quantity": 27
-      },
-      {
-        "title": "Relief",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 654.72,
-        "net_quantity": 68
-      },
-      {
-        "title": "Slumber",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 643.5,
-        "net_quantity": 20
-      },
-      {
-        "title": "Cycle",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 589.6,
-        "net_quantity": 78
-      },
-      {
-        "title": "Relax",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 583.5,
-        "net_quantity": 81
-      },
-      {
-        "title": "Rescue",
-        "variant_title": "8 Patches ($2.75/patch)",
-        "net_sales": 580.46,
-        "net_quantity": 32
-      },
-      {
-        "title": "Be Calm",
-        "variant_title": "28 Patches ($3.25/patch)",
-        "net_sales": 551.7,
-        "net_quantity": 8
-      },
-      {
-        "title": "Slumber",
-        "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 527.64,
-        "net_quantity": 8
-      },
-      {
-        "title": "Active",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 495.4,
-        "net_quantity": 50
-      },
-      {
-        "title": "Hot Flash Relief",
-        "variant_title": "4 Patches ($4.00/patch)",
-        "net_sales": 495.2,
-        "net_quantity": 38
-      },
-      {
-        "title": "Brighten Up",
-        "variant_title": "3 Pairs",
-        "net_sales": 491.43,
-        "net_quantity": 102
+        "net_sales": 862.07,
+        "net_quantity": 25
       },
       {
         "title": "Starter Set",
         "variant_title": "Premium (20 Patches)",
-        "net_sales": 490,
-        "net_quantity": 13
+        "net_sales": 838,
+        "net_quantity": 22
+      },
+      {
+        "title": "Un-Frown",
+        "variant_title": "1 PACK = 2 FOREHEAD PATCHES",
+        "net_sales": 832,
+        "net_quantity": 48
+      },
+      {
+        "title": "Adult Zzz",
+        "variant_title": "",
+        "net_sales": 829.2,
+        "net_quantity": 35
+      },
+      {
+        "title": "Relief",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 809.07,
+        "net_quantity": 91
+      },
+      {
+        "title": "Think",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 787.05,
+        "net_quantity": 23
+      },
+      {
+        "title": "Hemp Queen",
+        "variant_title": "16 Patches ($3.50/patch)",
+        "net_sales": 781.48,
+        "net_quantity": 18
+      },
+      {
+        "title": "Rescue",
+        "variant_title": "8 Patches ($2.75/patch)",
+        "net_sales": 695.14,
+        "net_quantity": 37
+      },
+      {
+        "title": "Nite Nite",
+        "variant_title": "28 Patches ($3.25/patch)",
+        "net_sales": 687.05,
+        "net_quantity": 9
+      },
+      {
+        "title": "Relax",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 676.65,
+        "net_quantity": 93
       },
       {
         "title": "Think",
         "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 479.25,
+        "net_sales": 651.38,
+        "net_quantity": 9
+      },
+      {
+        "title": "Cycle",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 648.2,
+        "net_quantity": 78
+      },
+      {
+        "title": "Be Calm",
+        "variant_title": "16 Patches ($3.50/patch)",
+        "net_sales": 636.52,
+        "net_quantity": 14
+      },
+      {
+        "title": "Active",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 607.2,
+        "net_quantity": 16
+      },
+      {
+        "title": "Hot Flash Relief",
+        "variant_title": "4 Patches ($4.00/patch)",
+        "net_sales": 586.4,
+        "net_quantity": 44
+      },
+      {
+        "title": "Be Calm",
+        "variant_title": "28 Patches ($3.25/patch)",
+        "net_sales": 526.66,
+        "net_quantity": 7
+      },
+      {
+        "title": "Slumber",
+        "variant_title": "40 Patches ($2.25/patch)",
+        "net_sales": 525.17,
+        "net_quantity": 8
+      },
+      {
+        "title": "Brighten Up",
+        "variant_title": "3 Pairs",
+        "net_sales": 524.81,
+        "net_quantity": 121
+      },
+      {
+        "title": "Un-Wrinkle",
+        "variant_title": "4 Patches (1 Pack)",
+        "net_sales": 489.75,
+        "net_quantity": 37
+      },
+      {
+        "title": "Hemp Queen",
+        "variant_title": "28 Patches ($3.25/patch)",
+        "net_sales": 486.85,
         "net_quantity": 7
       },
       {
         "title": "Ultimate Zen Duo",
         "variant_title": "",
-        "net_sales": 478.4,
+        "net_sales": 484.9,
         "net_quantity": 22
       },
       {
-        "title": "Un-Wrinkle",
-        "variant_title": "4 Patches (1 Pack)",
-        "net_sales": 475.5,
-        "net_quantity": 36
-      },
-      {
-        "title": "De-Puff",
-        "variant_title": "12 Pairs",
-        "net_sales": 471.84,
-        "net_quantity": 10
-      },
-      {
-        "title": "Rescue",
-        "variant_title": "28 Patches ($2.50/patch)",
-        "net_sales": 460.25,
-        "net_quantity": 9
+        "title": "Active",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 480.55,
+        "net_quantity": 50
       },
       {
         "title": "De-Puff",
         "variant_title": "3 Pairs",
-        "net_sales": 456.73,
+        "net_sales": 466.11,
         "net_quantity": 36
-      },
-      {
-        "title": "Un-Wrinkle",
-        "variant_title": "16 Patches (4 Packs)",
-        "net_sales": 450.9,
-        "net_quantity": 10
-      },
-      {
-        "title": "Active",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 412.5,
-        "net_quantity": 11
-      },
-      {
-        "title": "Rescue",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 401.21,
-        "net_quantity": 353
-      },
-      {
-        "title": "Desire",
-        "variant_title": "4 Patches ($3.00/patch)",
-        "net_sales": 398.26,
-        "net_quantity": 42
-      },
-      {
-        "title": "Cycle",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 396.44,
-        "net_quantity": 11
-      },
-      {
-        "title": "Un-Wrinkle",
-        "variant_title": "24 Patches (6 Packs)",
-        "net_sales": 392.4,
-        "net_quantity": 7
-      },
-      {
-        "title": "Family Zzz",
-        "variant_title": "18 Patches",
-        "net_sales": 384.3,
-        "net_quantity": 10
-      },
-      {
-        "title": "Relax",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 374.55,
-        "net_quantity": 11
       },
       {
         "title": "Hot Flash Relief",
         "variant_title": "16 Patches ($3.50/patch)",
-        "net_sales": 364,
+        "net_sales": 464.8,
+        "net_quantity": 10
+      },
+      {
+        "title": "Un-Wrinkle",
+        "variant_title": "24 Patches (6 Packs)",
+        "net_sales": 464.4,
         "net_quantity": 8
+      },
+      {
+        "title": "Cycle",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 432.99,
+        "net_quantity": 12
+      },
+      {
+        "title": "Relax",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 418.55,
+        "net_quantity": 12
+      },
+      {
+        "title": "Rescue",
+        "variant_title": "28 Patches ($2.50/patch)",
+        "net_sales": 415.63,
+        "net_quantity": 8
+      },
+      {
+        "title": "Desire",
+        "variant_title": "4 Patches ($3.00/patch)",
+        "net_sales": 408.61,
+        "net_quantity": 44
+      },
+      {
+        "title": "Un-Wrinkle",
+        "variant_title": "16 Patches (4 Packs)",
+        "net_sales": 405,
+        "net_quantity": 9
+      },
+      {
+        "title": "The Skincare Trio",
+        "variant_title": "",
+        "net_sales": 404.25,
+        "net_quantity": 15
+      },
+      {
+        "title": "De-Puff",
+        "variant_title": "12 Pairs",
+        "net_sales": 396.9,
+        "net_quantity": 8
+      },
+      {
+        "title": "De-Puff",
+        "variant_title": "18 Pairs",
+        "net_sales": 366.3,
+        "net_quantity": 6
+      },
+      {
+        "title": "Weekly Grind Set",
+        "variant_title": "20 Patches",
+        "net_sales": 361.75,
+        "net_quantity": 10
+      },
+      {
+        "title": "Nite Owl",
+        "variant_title": "42 Patches ($1.66/patch)",
+        "net_sales": 357,
+        "net_quantity": 6
       },
       {
         "title": "Relief",
@@ -2093,28 +2167,16 @@
         "net_quantity": 6
       },
       {
-        "title": "Hemp Queen",
-        "variant_title": "28 Patches ($3.25/patch)",
-        "net_sales": 349.22,
-        "net_quantity": 5
-      },
-      {
-        "title": "Nite Owl",
-        "variant_title": "42 Patches ($1.66/patch)",
-        "net_sales": 342.13,
-        "net_quantity": 6
-      },
-      {
-        "title": "Glow Up Set",
+        "title": "Weekday Hustle Duo",
         "variant_title": "",
-        "net_sales": 335.8,
-        "net_quantity": 8
+        "net_sales": 352,
+        "net_quantity": 21
       },
       {
-        "title": "Nite Owl",
-        "variant_title": "24 Patches ($1.83/patch)",
-        "net_sales": 335.13,
-        "net_quantity": 10
+        "title": "B12 Awake",
+        "variant_title": "Trial Run Bundle (40% OFF Saving!)",
+        "net_sales": 349.75,
+        "net_quantity": 14
       },
       {
         "title": "Slumber",
@@ -2123,22 +2185,22 @@
         "net_quantity": 6
       },
       {
-        "title": "Weekly Grind Set",
-        "variant_title": "20 Patches",
-        "net_sales": 321.75,
+        "title": "Relief",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 314.6,
         "net_quantity": 9
       },
       {
-        "title": "B12 Awake",
-        "variant_title": "Trial Run Bundle (40% OFF Saving!)",
-        "net_sales": 317.75,
-        "net_quantity": 13
+        "title": "Family Zzz",
+        "variant_title": "18 Patches",
+        "net_sales": 300.3,
+        "net_quantity": 8
       },
       {
-        "title": "Relax",
-        "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 300.38,
-        "net_quantity": 4
+        "title": "Nite Owl",
+        "variant_title": "24 Patches ($1.83/patch)",
+        "net_sales": 298.98,
+        "net_quantity": 9
       },
       {
         "title": "Active",
@@ -2147,46 +2209,46 @@
         "net_quantity": 4
       },
       {
-        "title": "De-Puff",
-        "variant_title": "18 Pairs",
-        "net_sales": 294.3,
-        "net_quantity": 5
+        "title": "Be Calm",
+        "variant_title": "40 Patches ($3.00/patch)",
+        "net_sales": 294,
+        "net_quantity": 3
+      },
+      {
+        "title": "Glow Up Set",
+        "variant_title": "",
+        "net_sales": 283.8,
+        "net_quantity": 7
+      },
+      {
+        "title": "Relax",
+        "variant_title": "40 Patches ($2.25/patch)",
+        "net_sales": 243,
+        "net_quantity": 3
+      },
+      {
+        "title": "Hemp Queen",
+        "variant_title": "40 Patches ($3.00/patch)",
+        "net_sales": 240,
+        "net_quantity": 3
       },
       {
         "title": "Nite Owl",
         "variant_title": "60 Patches ($1.50/patch)",
-        "net_sales": 272.24,
-        "net_quantity": 4
-      },
-      {
-        "title": "Be Calm",
-        "variant_title": "40 Patches ($3.00/patch)",
-        "net_sales": 268.5,
+        "net_sales": 223.87,
         "net_quantity": 3
-      },
-      {
-        "title": "Weekday Hustle Duo",
-        "variant_title": "",
-        "net_sales": 267,
-        "net_quantity": 16
-      },
-      {
-        "title": "The Skincare Trio",
-        "variant_title": "",
-        "net_sales": 262.5,
-        "net_quantity": 9
       },
       {
         "title": "Relax",
         "variant_title": "28 Patches ($2.50/patch)",
-        "net_sales": 233.63,
+        "net_sales": 223.13,
         "net_quantity": 4
       },
       {
-        "title": "Relief",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 226.6,
-        "net_quantity": 6
+        "title": "Cycle",
+        "variant_title": "28 Patches ($2.50/patch)",
+        "net_sales": 217.35,
+        "net_quantity": 3
       },
       {
         "title": "Winter Chill Set",
@@ -2201,75 +2263,93 @@
         "net_quantity": 11
       },
       {
-        "title": "Desire",
-        "variant_title": "16 Patches ($2.75/patch)",
-        "net_sales": 184.8,
-        "net_quantity": 5
-      },
-      {
-        "title": "Rise And Shine Set",
-        "variant_title": "8 Patches",
-        "net_sales": 172,
-        "net_quantity": 10
-      },
-      {
-        "title": "Think",
-        "variant_title": "28 Patches ($2.50/patch)",
-        "net_sales": 164.13,
-        "net_quantity": 3
+        "title": "Starter Set",
+        "variant_title": "Core 4 (16 Patches)",
+        "net_sales": 187.2,
+        "net_quantity": 6
       },
       {
         "title": "The Trial Run",
         "variant_title": "",
-        "net_sales": 153.35,
-        "net_quantity": 6
-      },
-      {
-        "title": "Cycle",
-        "variant_title": "28 Patches ($2.50/patch)",
-        "net_sales": 147.35,
-        "net_quantity": 2
-      },
-      {
-        "title": "Nite Owl",
-        "variant_title": "6 Patches ($2.00/patch)",
-        "net_sales": 142.75,
-        "net_quantity": 17
-      },
-      {
-        "title": "The Essentials Set",
-        "variant_title": "12 Patches",
-        "net_sales": 130.5,
+        "net_sales": 185.35,
         "net_quantity": 7
       },
       {
-        "title": "Travel Essentials, everyday edition",
-        "variant_title": "",
-        "net_sales": 130.01,
-        "net_quantity": 6
+        "title": "Brighten Up",
+        "variant_title": "18 Pairs",
+        "net_sales": 179.1,
+        "net_quantity": 3
       },
       {
-        "title": "Poker Face Duo",
-        "variant_title": "",
-        "net_sales": 129,
-        "net_quantity": 5
+        "title": "Hot Flash Relief",
+        "variant_title": "28 Patches ($3.25/patch)",
+        "net_sales": 168.35,
+        "net_quantity": 2
       },
       {
-        "title": "Hemp Queen",
-        "variant_title": "40 Patches ($3.00/patch)",
-        "net_sales": 120,
+        "title": "Rise And Shine Set",
+        "variant_title": "8 Patches",
+        "net_sales": 162,
+        "net_quantity": 11
+      },
+      {
+        "title": "All the Plant",
+        "variant_title": "38 Patches",
+        "net_sales": 157.5,
         "net_quantity": 2
       },
       {
         "title": "Starter Set",
         "variant_title": "Daily (20 Patches)",
-        "net_sales": 108,
+        "net_sales": 148,
+        "net_quantity": 4
+      },
+      {
+        "title": "Desire",
+        "variant_title": "16 Patches ($2.75/patch)",
+        "net_sales": 147.4,
+        "net_quantity": 4
+      },
+      {
+        "title": "Nite Owl",
+        "variant_title": "6 Patches ($2.00/patch)",
+        "net_sales": 138.9,
+        "net_quantity": 13
+      },
+      {
+        "title": "Travel Essentials, everyday edition",
+        "variant_title": "",
+        "net_sales": 136.25,
+        "net_quantity": 6
+      },
+      {
+        "title": "Brighten Up",
+        "variant_title": "12 Pairs",
+        "net_sales": 132.3,
         "net_quantity": 3
+      },
+      {
+        "title": "Poker Face Duo",
+        "variant_title": "",
+        "net_sales": 112.5,
+        "net_quantity": 4
+      },
+      {
+        "title": "The Essentials Set",
+        "variant_title": "12 Patches",
+        "net_sales": 108.75,
+        "net_quantity": 6
       },
       {
         "title": "B12 Awake | 20 Patches",
         "variant_title": "20 Patches",
         "net_sales": 105,
+        "net_quantity": 2
+      },
+      {
+        "title": "Think",
+        "variant_title": "28 Patches ($2.50/patch)",
+        "net_sales": 104.63,
         "net_quantity": 2
       },
       {
@@ -2285,52 +2365,28 @@
         "net_quantity": 4
       },
       {
-        "title": "Daily Ritual Set",
-        "variant_title": "12 Patches",
-        "net_sales": 77.5,
+        "title": "B12 Awake",
+        "variant_title": "Travel Essentials (36% OFF Savings!)",
+        "net_sales": 75,
         "net_quantity": 3
-      },
-      {
-        "title": "Hot Flash Relief",
-        "variant_title": "28 Patches ($3.25/patch)",
-        "net_sales": 77.35,
-        "net_quantity": 1
-      },
-      {
-        "title": "All the Plant",
-        "variant_title": "38 Patches",
-        "net_sales": 67.5,
-        "net_quantity": 1
-      },
-      {
-        "title": "Cycle",
-        "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": 67.5,
-        "net_quantity": 1
       },
       {
         "title": "Starter Set",
         "variant_title": "Sleep (12 Patches)",
-        "net_sales": 48,
-        "net_quantity": 2
+        "net_sales": 72,
+        "net_quantity": 3
       },
       {
-        "title": "Brighten Up: Sample",
-        "variant_title": "",
+        "title": "Active",
+        "variant_title": "28 Patches ($2.50/patch)",
+        "net_sales": 59.5,
+        "net_quantity": 1
+      },
+      {
+        "title": "Daily Ritual Set",
+        "variant_title": "12 Patches",
         "net_sales": 46.5,
-        "net_quantity": 113
-      },
-      {
-        "title": "Brighten Up",
-        "variant_title": "18 Pairs",
-        "net_sales": 45.9,
-        "net_quantity": 1
-      },
-      {
-        "title": "Brighten Up",
-        "variant_title": "12 Pairs",
-        "net_sales": 40.5,
-        "net_quantity": 1
+        "net_quantity": 2
       },
       {
         "title": "At Ease Duo",
@@ -2339,10 +2395,10 @@
         "net_quantity": 2
       },
       {
-        "title": "Workout Warrior Duo",
+        "title": "Brighten Up: Sample",
         "variant_title": "",
-        "net_sales": 35,
-        "net_quantity": 3
+        "net_sales": 38.5,
+        "net_quantity": 112
       },
       {
         "title": "Rest & Recover Duo",
@@ -2351,27 +2407,15 @@
         "net_quantity": 2
       },
       {
-        "title": "Starter Set",
-        "variant_title": "Core 4 (16 Patches)",
-        "net_sales": 27.2,
-        "net_quantity": 1
-      },
-      {
-        "title": "B12 Awake",
-        "variant_title": "Travel Essentials (36% OFF Savings!)",
-        "net_sales": 25,
-        "net_quantity": 1
-      },
-      {
         "title": "Rescue 15.00% Off Auto renew",
         "variant_title": "4 Patches ($3.00/patch)",
         "net_sales": 24,
         "net_quantity": 2
       },
       {
-        "title": "De-Puff: Sample",
+        "title": "Workout Warrior Duo",
         "variant_title": "",
-        "net_sales": 5,
+        "net_sales": 15,
         "net_quantity": 1
       },
       {
@@ -2402,7 +2446,7 @@
         "title": "Limited Edition Rescue",
         "variant_title": "4ct",
         "net_sales": 0,
-        "net_quantity": 1
+        "net_quantity": 5
       },
       {
         "title": "Nite Nite [ShopMy]",
@@ -2415,12 +2459,6 @@
         "variant_title": "",
         "net_sales": 0,
         "net_quantity": 0
-      },
-      {
-        "title": "Revive",
-        "variant_title": "4 Patches",
-        "net_sales": 0,
-        "net_quantity": 75
       },
       {
         "title": "Shipped by Seller: Standard Shipping",
@@ -2479,11 +2517,11 @@
       {
         "title": "Relief",
         "variant_title": "40 Patches ($2.25/patch)",
-        "net_sales": -9,
-        "net_quantity": 0
+        "net_sales": -76.5,
+        "net_quantity": -1
       }
     ],
-    "date": "2026-05-21"
+    "date": "2026-05-28"
   },
   "customer_ltv": {
     "data": [
@@ -21949,253 +21987,248 @@
     "data": [
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (8 Total Patches)",
-        "ordered_product_sales": 21738.24,
-        "units_ordered": 1090
+        "ordered_product_sales": 21338.64,
+        "units_ordered": 1070
       },
       {
         "title": "The Good Patch B12 Awake Patch, Caffeine, B12 and Green Tea Extract, Natural Plant Powered Wearable Wellness, Helps to Promote Energy (8 Total Patches)",
-        "ordered_product_sales": 16273.2,
-        "units_ordered": 821
+        "ordered_product_sales": 15213.6,
+        "units_ordered": 792
       },
       {
         "title": "The Good Patch Relax Patches, Supports Relaxation, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12947.04,
-        "units_ordered": 649
+        "ordered_product_sales": 12967.02,
+        "units_ordered": 650
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 12847.14,
-        "units_ordered": 643
+        "ordered_product_sales": 12447.54,
+        "units_ordered": 623
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 10194.9,
-        "units_ordered": 510
-      },
-      {
-        "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 8608.82,
-        "units_ordered": 359
+        "ordered_product_sales": 9415.29,
+        "units_ordered": 471
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (16 Total Patches)",
-        "ordered_product_sales": 7844.63,
-        "units_ordered": 225
+        "ordered_product_sales": 9132.39,
+        "units_ordered": 261
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Supports Relaxation, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 7433.8,
+        "units_ordered": 310
       },
       {
         "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 7598.48,
-        "units_ordered": 152
+        "ordered_product_sales": 7048.59,
+        "units_ordered": 141
       },
       {
         "title": "The Good Patch B12 Awake Patch, Natural Patch with Caffeine, B12, and Green Tea Extract, Plant Powered Wearable Wellness, Helps to Promote Energy (24 Total Patches)",
-        "ordered_product_sales": 7558.23,
-        "units_ordered": 152
+        "ordered_product_sales": 6848.63,
+        "units_ordered": 137
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 7241.96,
-        "units_ordered": 302
-      },
-      {
-        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 6606.08,
-        "units_ordered": 190
-      },
-      {
-        "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
-        "ordered_product_sales": 5874.12,
-        "units_ordered": 294
+        "ordered_product_sales": 6426.64,
+        "units_ordered": 268
       },
       {
         "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 5848.83,
-        "units_ordered": 117
+        "ordered_product_sales": 6398.72,
+        "units_ordered": 128
+      },
+      {
+        "title": "The Good Patch Dream Patch - Sleep Patches with Melatonin, Hops, Valerian Root - Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 6228.22,
+        "units_ordered": 179
       },
       {
         "title": "The Good Patch Weekday Hustle Duo - Awake B12 with Caffeine and Vitamins to Help Promote Energy - Think with Caffeine, Yerba Mate to Support Focus (8 Total Patches)",
-        "ordered_product_sales": 5797.1,
-        "units_ordered": 290
+        "ordered_product_sales": 5877.06,
+        "units_ordered": 294
+      },
+      {
+        "title": "The Good Patch Cycle Period Pain Patch for Cramps, Natural Patch with Menthol, Black Cohosh, Plant Powered Wearable Wellness, Large Sized (8 Total Patches)",
+        "ordered_product_sales": 5334.66,
+        "units_ordered": 267
       },
       {
         "title": "The Good Patch Most Loved Patches \u2013 Awake B12 for Energy, Dream for Sleep, Rescue for Recovery, Relax for Calm \u2013 Plant-Powered (16 Patches)",
-        "ordered_product_sales": 4128,
-        "units_ordered": 107
-      },
-      {
-        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
-        "ordered_product_sales": 3820.78,
-        "units_ordered": 110
+        "ordered_product_sales": 4502.4,
+        "units_ordered": 122
       },
       {
         "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 3599.1,
-        "units_ordered": 90
+        "ordered_product_sales": 3879.03,
+        "units_ordered": 97
       },
       {
-        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3574.35,
-        "units_ordered": 65
-      },
-      {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3396.6,
-        "units_ordered": 170
+        "title": "The Good Patch Rescue Recovery Patch, Natural Patch with DHM, Vitamin B1, and Green Tea, Plant-Powered Wearable Wellness, Support After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 3813.91,
+        "units_ordered": 109
       },
       {
         "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 3349.33,
-        "units_ordered": 67
-      },
-      {
-        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
-        "ordered_product_sales": 3278.36,
-        "units_ordered": 167
+        "ordered_product_sales": 3649.27,
+        "units_ordered": 73
       },
       {
         "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 3249.35,
-        "units_ordered": 65
+        "ordered_product_sales": 3549.29,
+        "units_ordered": 71
       },
       {
-        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
-        "ordered_product_sales": 3180,
-        "units_ordered": 106
-      },
-      {
-        "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2953.06,
-        "units_ordered": 85
-      },
-      {
-        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
-        "ordered_product_sales": 2638.68,
-        "units_ordered": 132
-      },
-      {
-        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 2599.35,
-        "units_ordered": 65
-      },
-      {
-        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
-        "ordered_product_sales": 2565.86,
-        "units_ordered": 107
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 2490,
-        "units_ordered": 84
-      },
-      {
-        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 2474.55,
-        "units_ordered": 45
+        "title": "The Good Patch Nite Nite Sleep Patch Support with Hemp and Melatonin, Sustained Release, Natural Patch, Plant Powered Wearable Wellness (24 Total Patches)",
+        "ordered_product_sales": 3464.37,
+        "units_ordered": 63
       },
       {
         "title": "The Good Patch Complete Plant-Powered Patches \u2013 B12 for Energy, Dream for Sleep, Rescue for Recovery, Cycle for Balance, Relief for Comfort (20 Patches)",
-        "ordered_product_sales": 2454,
-        "units_ordered": 52
-      },
-      {
-        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 2449.3,
+        "ordered_product_sales": 3138,
         "units_ordered": 70
       },
       {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 3096.9,
+        "units_ordered": 155
+      },
+      {
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (8 Total Microdart Patches)",
+        "ordered_product_sales": 3000,
+        "units_ordered": 100
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2959.26,
+        "units_ordered": 74
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (8 Total Patches)",
+        "ordered_product_sales": 2898.55,
+        "units_ordered": 148
+      },
+      {
+        "title": "The Good Patch Relax Patches, to Unwind and Decompress, Natural Patch with Ashwagandha, Ginger Root, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
+        "ordered_product_sales": 2589.26,
+        "units_ordered": 74
+      },
+      {
+        "title": "The Good Patch Slumber Sleep Patch Support, Melatonin Free, Sustained Release, Natural Patch with L-Theanine, Magnesium, Tart Cherry Extract, Plant Powered Wearable Wellness (16 Total Patches)",
+        "ordered_product_sales": 2589.26,
+        "units_ordered": 74
+      },
+      {
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 2550,
+        "units_ordered": 86
+      },
+      {
+        "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, for Back, Neck, Arms, Legs (8 Total Patches)",
+        "ordered_product_sales": 2458.77,
+        "units_ordered": 123
+      },
+      {
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (8 Total Patches)",
+        "ordered_product_sales": 2350.04,
+        "units_ordered": 98
+      },
+      {
+        "title": "The Good Patch Be Calm Patch with Hemp, Unwind + Decompress, Natural Patch with Hemp Extract, Ashwagandha Root, Passionflower, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 2309.58,
+        "units_ordered": 42
+      },
+      {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (12 Total Patches)",
-        "ordered_product_sales": 2257.74,
-        "units_ordered": 113
+        "ordered_product_sales": 2117.88,
+        "units_ordered": 106
       },
       {
         "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 1994.43,
-        "units_ordered": 57
+        "ordered_product_sales": 1959.44,
+        "units_ordered": 56
       },
       {
         "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (36 Total Patches)",
-        "ordered_product_sales": 1899.62,
-        "units_ordered": 39
-      },
-      {
-        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
-        "ordered_product_sales": 1650,
-        "units_ordered": 55
+        "ordered_product_sales": 1799.64,
+        "units_ordered": 36
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (8 Total Patches)",
-        "ordered_product_sales": 1642.38,
-        "units_ordered": 82
-      },
-      {
-        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
-        "ordered_product_sales": 1436.4,
-        "units_ordered": 51
+        "ordered_product_sales": 1718.28,
+        "units_ordered": 86
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (24 Total Patches)",
-        "ordered_product_sales": 1399.72,
-        "units_ordered": 28
+        "ordered_product_sales": 1599.68,
+        "units_ordered": 32
       },
       {
-        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 1399.72,
-        "units_ordered": 28
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (6 Total Patch Sets)",
+        "ordered_product_sales": 1470,
+        "units_ordered": 49
       },
       {
-        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 1329.62,
-        "units_ordered": 38
+        "title": "The Good Patch Daily Balance Patches - Awake B12 for Energy, Rescue for Recovery, and Dream for Sleep - Plant-Powered (12 Patches)",
+        "ordered_product_sales": 1389.6,
+        "units_ordered": 53
       },
       {
         "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (24 Total Patches)",
-        "ordered_product_sales": 1154.71,
+        "ordered_product_sales": 1341.66,
+        "units_ordered": 34
+      },
+      {
+        "title": "The Good Patch Think Patch, Natural Patch with Caffeine, Yerba Mate, Bacop, Lion's Mane, Plant Powered Wearable Wellness, Focus Patches, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 1299.74,
+        "units_ordered": 26
+      },
+      {
+        "title": "The Good Patch Nite Owl Patch, Natural Sleep Patch Support for Kid Bedtime with Tart Cherry, Chamomile, and Skullcap, Plant Powered, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 1014.71,
         "units_ordered": 29
       },
       {
         "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (16 Total Patches)",
-        "ordered_product_sales": 960,
-        "units_ordered": 20
-      },
-      {
-        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
-        "ordered_product_sales": 840,
-        "units_ordered": 14
-      },
-      {
-        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
-        "ordered_product_sales": 799.8,
-        "units_ordered": 20
+        "ordered_product_sales": 864,
+        "units_ordered": 18
       },
       {
         "title": "The Good Patch Muscle Pain Relief Patches, Natural Patch with Menthol, Lavender, Arnica and Aloe Vera, Sustained Release, Plant Powered Wearable Wellness, For Back, Neck, Arms, Legs (16 Total Patches)",
-        "ordered_product_sales": 720,
-        "units_ordered": 15
+        "ordered_product_sales": 864,
+        "units_ordered": 18
       },
       {
-        "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
+        "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (16 Total Patches)",
         "ordered_product_sales": 719.82,
         "units_ordered": 18
       },
       {
-        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (16 Total Patches)",
-        "ordered_product_sales": 576,
-        "units_ordered": 12
-      },
-      {
         "title": "The Good Patch Hot Flash Hemp Menopause Patches Support for Women, Sustained Release, Natural Patch with Hemp Extract, Black Cohosh, Black Pepper, Plant Powered Wearable Wellness (24 Total Patches)",
-        "ordered_product_sales": 549.9,
-        "units_ordered": 10
+        "ordered_product_sales": 714.87,
+        "units_ordered": 13
       },
       {
-        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
+        "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (12 Total Patch Sets)",
         "ordered_product_sales": 540,
-        "units_ordered": 10
+        "units_ordered": 9
       },
       {
-        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
-        "ordered_product_sales": 450,
-        "units_ordered": 5
+        "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (16 Total Patches)",
+        "ordered_product_sales": 528,
+        "units_ordered": 11
+      },
+      {
+        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
+        "ordered_product_sales": 504,
+        "units_ordered": 7
+      },
+      {
+        "title": "The Good Patch Revive Recovery Patch with Hemp, Natural Patch with Hemp Extract and DHM, Plant-Powered Wearable Wellness, Sustained Release, Bounce Back After a Night Out (16 Total Patches)",
+        "ordered_product_sales": 479.88,
+        "units_ordered": 12
       },
       {
         "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (24 Total Microdart Patches)",
@@ -22203,23 +22236,28 @@
         "units_ordered": 5
       },
       {
-        "title": "The Good Patch Active Patch, Energy Support, Natural Patch with Caffeine, Beta Alanine, Rhodiola, Plant Powered Wearable Wellness, Sustained Release (24 Total Patches)",
-        "ordered_product_sales": 432,
-        "units_ordered": 6
-      },
-      {
         "title": "The Good Patch De-Puff Cooling Hydrogel Under Eye Patches for Puffy Eyes and Under Eye Bags, Made with Caffeine, Aloe Vera, Gotu Kola, Clinically Proven (18 Total Patch Sets)",
         "ordered_product_sales": 360,
         "units_ordered": 4
       },
       {
-        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (12 Total Patch Sets)",
-        "ordered_product_sales": 300,
-        "units_ordered": 5
+        "title": "The Good Patch Un-Wrinkle Microdart Anti Wrinkle Patches for Crow\u2019s Feet and Between Eyes, Made with Sodium Hyaluronate, Aloe Vera, Peptides, Clinically Proven (16 Total Microdart Patches)",
+        "ordered_product_sales": 360,
+        "units_ordered": 7
       },
       {
         "title": "The Good Patch Desire Sexual Wellness Patches, Get in the Mood, Natural with Vitamin B6, Reishi, Black Maca, Plant Powered Wearable Wellness, Botanical and Vitamin (24 Total Patches)",
         "ordered_product_sales": 288,
+        "units_ordered": 4
+      },
+      {
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (18 Total Patch Sets)",
+        "ordered_product_sales": 270,
+        "units_ordered": 3
+      },
+      {
+        "title": "The Good Patch Brighten Up Hydrogel Under Eye Patches for Dark Circles and Puffy Eyes, Made with Niacinamide, Vitamin K, Pine Leaf Extract, Clinically Proven (12 Total Patch Sets)",
+        "ordered_product_sales": 240,
         "units_ordered": 4
       },
       {
@@ -22228,7 +22266,7 @@
         "units_ordered": 1
       }
     ],
-    "date": "2026-05-21"
+    "date": "2026-05-28"
   },
   "py_shopify_2025-05-21": {
     "gross_sales": 1925.5,
@@ -22240,213 +22278,213 @@
     "data": [
       {
         "order_shipping_province": "California",
-        "net_sales": 7987.78,
-        "sm_order_count": 209
+        "net_sales": 8146.16,
+        "sm_order_count": 205
       },
       {
         "order_shipping_province": "New York",
-        "net_sales": 4705.52,
-        "sm_order_count": 130
+        "net_sales": 5105.8,
+        "sm_order_count": 141
       },
       {
         "order_shipping_province": "Texas",
-        "net_sales": 4690.48,
-        "sm_order_count": 115
+        "net_sales": 4932.65,
+        "sm_order_count": 114
       },
       {
         "order_shipping_province": "Florida",
-        "net_sales": 2960.21,
-        "sm_order_count": 105
-      },
-      {
-        "order_shipping_province": "Michigan",
-        "net_sales": 1514.4,
-        "sm_order_count": 30
-      },
-      {
-        "order_shipping_province": "New Jersey",
-        "net_sales": 1467.55,
-        "sm_order_count": 52
-      },
-      {
-        "order_shipping_province": "Georgia",
-        "net_sales": 1429.8,
-        "sm_order_count": 48
-      },
-      {
-        "order_shipping_province": "Pennsylvania",
-        "net_sales": 1428.28,
-        "sm_order_count": 38
-      },
-      {
-        "order_shipping_province": "Illinois",
-        "net_sales": 1423.78,
-        "sm_order_count": 40
-      },
-      {
-        "order_shipping_province": "Ohio",
-        "net_sales": 1309.6,
-        "sm_order_count": 38
-      },
-      {
-        "order_shipping_province": "Virginia",
-        "net_sales": 1306.79,
-        "sm_order_count": 34
-      },
-      {
-        "order_shipping_province": "Minnesota",
-        "net_sales": 1297.42,
-        "sm_order_count": 30
-      },
-      {
-        "order_shipping_province": "Tennessee",
-        "net_sales": 1135.55,
-        "sm_order_count": 45
-      },
-      {
-        "order_shipping_province": "Kentucky",
-        "net_sales": 1120.31,
-        "sm_order_count": 21
+        "net_sales": 3520.13,
+        "sm_order_count": 107
       },
       {
         "order_shipping_province": "Washington",
-        "net_sales": 1114.4,
-        "sm_order_count": 34
+        "net_sales": 2017.65,
+        "sm_order_count": 38
       },
       {
-        "order_shipping_province": "Utah",
-        "net_sales": 1103.15,
-        "sm_order_count": 26
+        "order_shipping_province": "Pennsylvania",
+        "net_sales": 1909.58,
+        "sm_order_count": 45
       },
       {
-        "order_shipping_province": "Arizona",
-        "net_sales": 978.58,
-        "sm_order_count": 28
-      },
-      {
-        "order_shipping_province": "Colorado",
-        "net_sales": 977.1,
-        "sm_order_count": 25
-      },
-      {
-        "order_shipping_province": "Oregon",
-        "net_sales": 939.82,
-        "sm_order_count": 25
+        "order_shipping_province": "Georgia",
+        "net_sales": 1884.05,
+        "sm_order_count": 57
       },
       {
         "order_shipping_province": "North Carolina",
-        "net_sales": 935.2,
-        "sm_order_count": 24
+        "net_sales": 1728.96,
+        "sm_order_count": 34
       },
       {
-        "order_shipping_province": "Missouri",
-        "net_sales": 912.3,
-        "sm_order_count": 24
+        "order_shipping_province": "Ohio",
+        "net_sales": 1630.3,
+        "sm_order_count": 42
       },
       {
-        "order_shipping_province": "Indiana",
-        "net_sales": 897,
-        "sm_order_count": 24
+        "order_shipping_province": "Minnesota",
+        "net_sales": 1620.84,
+        "sm_order_count": 33
       },
       {
-        "order_shipping_province": "Massachusetts",
-        "net_sales": 885.65,
-        "sm_order_count": 30
+        "order_shipping_province": "Michigan",
+        "net_sales": 1605.4,
+        "sm_order_count": 29
       },
       {
-        "order_shipping_province": "Louisiana",
-        "net_sales": 744.43,
-        "sm_order_count": 20
+        "order_shipping_province": "Illinois",
+        "net_sales": 1575.98,
+        "sm_order_count": 48
+      },
+      {
+        "order_shipping_province": "Utah",
+        "net_sales": 1538.7,
+        "sm_order_count": 29
+      },
+      {
+        "order_shipping_province": "New Jersey",
+        "net_sales": 1397.85,
+        "sm_order_count": 50
+      },
+      {
+        "order_shipping_province": "Arizona",
+        "net_sales": 1263.28,
+        "sm_order_count": 32
+      },
+      {
+        "order_shipping_province": "Virginia",
+        "net_sales": 1255.5,
+        "sm_order_count": 37
       },
       {
         "order_shipping_province": "South Carolina",
-        "net_sales": 692.3,
-        "sm_order_count": 22
+        "net_sales": 1215.35,
+        "sm_order_count": 28
       },
       {
-        "order_shipping_province": "Maryland",
-        "net_sales": 649.87,
-        "sm_order_count": 26
+        "order_shipping_province": "Massachusetts",
+        "net_sales": 1124.85,
+        "sm_order_count": 33
       },
       {
-        "order_shipping_province": "Alabama",
-        "net_sales": 612.8,
-        "sm_order_count": 19
-      },
-      {
-        "order_shipping_province": "Wisconsin",
-        "net_sales": 549.35,
-        "sm_order_count": 16
+        "order_shipping_province": "Tennessee",
+        "net_sales": 1120.35,
+        "sm_order_count": 44
       },
       {
         "order_shipping_province": "Connecticut",
-        "net_sales": 497.4,
+        "net_sales": 1048.1,
+        "sm_order_count": 20
+      },
+      {
+        "order_shipping_province": "Maryland",
+        "net_sales": 963.37,
+        "sm_order_count": 29
+      },
+      {
+        "order_shipping_province": "Missouri",
+        "net_sales": 888,
+        "sm_order_count": 23
+      },
+      {
+        "order_shipping_province": "Louisiana",
+        "net_sales": 811.65,
+        "sm_order_count": 21
+      },
+      {
+        "order_shipping_province": "Indiana",
+        "net_sales": 795.95,
+        "sm_order_count": 21
+      },
+      {
+        "order_shipping_province": "Kentucky",
+        "net_sales": 776.78,
+        "sm_order_count": 17
+      },
+      {
+        "order_shipping_province": "Alabama",
+        "net_sales": 706.6,
+        "sm_order_count": 21
+      },
+      {
+        "order_shipping_province": "Oregon",
+        "net_sales": 695.39,
+        "sm_order_count": 24
+      },
+      {
+        "order_shipping_province": "Wisconsin",
+        "net_sales": 640.25,
+        "sm_order_count": 19
+      },
+      {
+        "order_shipping_province": "Idaho",
+        "net_sales": 630.85,
+        "sm_order_count": 14
+      },
+      {
+        "order_shipping_province": "Colorado",
+        "net_sales": 628.5,
         "sm_order_count": 16
       },
       {
         "order_shipping_province": "Kansas",
-        "net_sales": 461.13,
+        "net_sales": 558.75,
         "sm_order_count": 9
-      },
-      {
-        "order_shipping_province": "Idaho",
-        "net_sales": 457.35,
-        "sm_order_count": 13
       },
       {
         "order_shipping_province": "Arkansas",
         "net_sales": 338.1,
-        "sm_order_count": 14
+        "sm_order_count": 13
       },
       {
         "order_shipping_province": "Nevada",
-        "net_sales": 296.93,
-        "sm_order_count": 10
-      },
-      {
-        "order_shipping_province": "New Hampshire",
-        "net_sales": 277.15,
-        "sm_order_count": 4
-      },
-      {
-        "order_shipping_province": "Montana",
-        "net_sales": 276.1,
-        "sm_order_count": 6
+        "net_sales": 314.43,
+        "sm_order_count": 11
       },
       {
         "order_shipping_province": "New Mexico",
-        "net_sales": 249.33,
+        "net_sales": 289.33,
+        "sm_order_count": 9
+      },
+      {
+        "order_shipping_province": "New Hampshire",
+        "net_sales": 287.55,
+        "sm_order_count": 5
+      },
+      {
+        "order_shipping_province": "Oklahoma",
+        "net_sales": 279.75,
         "sm_order_count": 8
       },
       {
-        "order_shipping_province": "Wyoming",
-        "net_sales": 244.5,
-        "sm_order_count": 5
-      },
-      {
-        "order_shipping_province": "Hawaii",
-        "net_sales": 227.93,
+        "order_shipping_province": "North Dakota",
+        "net_sales": 266.1,
         "sm_order_count": 4
       },
       {
-        "order_shipping_province": "North Dakota",
-        "net_sales": 199.4,
-        "sm_order_count": 5
+        "order_shipping_province": "Nebraska",
+        "net_sales": 226.95,
+        "sm_order_count": 3
       },
       {
-        "order_shipping_province": "Nebraska",
-        "net_sales": 199,
+        "order_shipping_province": "Rhode Island",
+        "net_sales": 217.35,
+        "sm_order_count": 3
+      },
+      {
+        "order_shipping_province": "Hawaii",
+        "net_sales": 203.93,
+        "sm_order_count": 3
+      },
+      {
+        "order_shipping_province": "South Dakota",
+        "net_sales": 166.6,
         "sm_order_count": 4
       },
       {
         "order_shipping_province": "Mississippi",
-        "net_sales": 185.5,
+        "net_sales": 160.6,
         "sm_order_count": 3
-      },
-      {
-        "order_shipping_province": "Oklahoma",
-        "net_sales": 151.25,
-        "sm_order_count": 6
       },
       {
         "order_shipping_province": "Vermont",
@@ -22459,34 +22497,29 @@
         "sm_order_count": 3
       },
       {
-        "order_shipping_province": "Iowa",
-        "net_sales": 127.6,
-        "sm_order_count": 4
-      },
-      {
         "order_shipping_province": "Delaware",
         "net_sales": 112.3,
         "sm_order_count": 3
       },
       {
-        "order_shipping_province": "Rhode Island",
-        "net_sales": 82.2,
-        "sm_order_count": 2
-      },
-      {
-        "order_shipping_province": "South Dakota",
-        "net_sales": 81.6,
+        "order_shipping_province": "Wyoming",
+        "net_sales": 111.5,
         "sm_order_count": 3
       },
       {
-        "order_shipping_province": "Puerto Rico",
-        "net_sales": 60.75,
-        "sm_order_count": 2
+        "order_shipping_province": "Iowa",
+        "net_sales": 108.4,
+        "sm_order_count": 3
       },
       {
         "order_shipping_province": "Maine",
-        "net_sales": 60,
+        "net_sales": 90,
         "sm_order_count": 2
+      },
+      {
+        "order_shipping_province": "Montana",
+        "net_sales": 85.1,
+        "sm_order_count": 3
       },
       {
         "order_shipping_province": "West Virginia",
@@ -22504,7 +22537,7 @@
         "sm_order_count": 1
       }
     ],
-    "date": "2026-05-21"
+    "date": "2026-05-28"
   },
   "campaigns": {
     "email": [
@@ -22513,8 +22546,8 @@
         "campaign_subject": "SALE IS HERE | Buy 3, Get 1 FREE",
         "campaign_send_date": "2026-05-21",
         "klaviyo_total_recipients": 57347,
-        "klaviyo_open_rate": 0.613149,
-        "klaviyo_click_rate": 0.005866,
+        "klaviyo_open_rate": 0.614921,
+        "klaviyo_click_rate": 0.005883,
         "shopify_placed_order": 19,
         "shopify_placed_order_value": 2072.81
       },
@@ -22523,8 +22556,8 @@
         "campaign_subject": "You've Been Tagging US... | Buy 3, Get 1 FREE",
         "campaign_send_date": "2026-05-23",
         "klaviyo_total_recipients": 56592,
-        "klaviyo_open_rate": 0.62016,
-        "klaviyo_click_rate": 0.005868,
+        "klaviyo_open_rate": 0.622942,
+        "klaviyo_click_rate": 0.005885,
         "shopify_placed_order": 9,
         "shopify_placed_order_value": 658.15
       },
@@ -22532,18 +22565,18 @@
         "campaign_name": "05/25: Memorial Day Sale - last chance",
         "campaign_subject": "Last Chance to SAVE (!)",
         "campaign_send_date": "2026-05-26",
-        "klaviyo_total_recipients": 55726,
-        "klaviyo_open_rate": 0.594454,
-        "klaviyo_click_rate": 0.00546,
-        "shopify_placed_order": 14,
-        "shopify_placed_order_value": 1187.57
+        "klaviyo_total_recipients": 55791,
+        "klaviyo_open_rate": 0.605271,
+        "klaviyo_click_rate": 0.005508,
+        "shopify_placed_order": 16,
+        "shopify_placed_order_value": 1253.87
       },
       {
         "campaign_name": "05/10: Mother's Day | 15% Off",
         "campaign_subject": "Cheers to the Moms...",
         "campaign_send_date": "2026-05-11",
         "klaviyo_total_recipients": 51145,
-        "klaviyo_open_rate": 0.698049,
+        "klaviyo_open_rate": 0.698461,
         "klaviyo_click_rate": 0.006177,
         "shopify_placed_order": 6,
         "shopify_placed_order_value": 599.46
@@ -22553,7 +22586,7 @@
         "campaign_subject": "The 15-minute Under-Eye Reset",
         "campaign_send_date": "2026-05-13",
         "klaviyo_total_recipients": 50907,
-        "klaviyo_open_rate": 0.653814,
+        "klaviyo_open_rate": 0.654444,
         "klaviyo_click_rate": 0.004879,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 35
@@ -22563,7 +22596,7 @@
         "campaign_subject": "Gifts For The Moms In Your Life (yourself included)",
         "campaign_send_date": "2026-05-03",
         "klaviyo_total_recipients": 49506,
-        "klaviyo_open_rate": 0.63464,
+        "klaviyo_open_rate": 0.634943,
         "klaviyo_click_rate": 0.004371,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 135.97
@@ -22573,7 +22606,7 @@
         "campaign_subject": "10,000+ Five-Star Reviews",
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 46662,
-        "klaviyo_open_rate": 0.704503,
+        "klaviyo_open_rate": 0.70534,
         "klaviyo_click_rate": 0.004509,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 92.09
@@ -22583,7 +22616,7 @@
         "campaign_subject": "\ud83d\udce3 Something BIG is Coming",
         "campaign_send_date": "2026-05-19",
         "klaviyo_total_recipients": 43901,
-        "klaviyo_open_rate": 0.78298,
+        "klaviyo_open_rate": 0.784029,
         "klaviyo_click_rate": 0.006976,
         "shopify_placed_order": 5,
         "shopify_placed_order_value": 375.39
@@ -22593,7 +22626,7 @@
         "campaign_subject": "Feel Like Yourself Again",
         "campaign_send_date": "2026-05-09",
         "klaviyo_total_recipients": 40682,
-        "klaviyo_open_rate": 0.816372,
+        "klaviyo_open_rate": 0.816889,
         "klaviyo_click_rate": 0.005513,
         "shopify_placed_order": 9,
         "shopify_placed_order_value": 519.72
@@ -22603,7 +22636,7 @@
         "campaign_subject": "Reminder: the good stuff's on sale",
         "campaign_send_date": "2026-05-24",
         "klaviyo_total_recipients": 39200,
-        "klaviyo_open_rate": 0.880709,
+        "klaviyo_open_rate": 0.886744,
         "klaviyo_click_rate": 0.008285,
         "shopify_placed_order": 9,
         "shopify_placed_order_value": 724.08
@@ -22613,7 +22646,7 @@
         "campaign_subject": "Target run?",
         "campaign_send_date": "2026-05-07",
         "klaviyo_total_recipients": 5261,
-        "klaviyo_open_rate": 0.768923,
+        "klaviyo_open_rate": 0.769113,
         "klaviyo_click_rate": 0.002288,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22632,9 +22665,9 @@
         "campaign_name": "T1 - Restart your wellness routine",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, running low on your faves?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 1047,
-        "klaviyo_open_rate": 0.327202,
-        "klaviyo_click_rate": 0.009681,
+        "klaviyo_total_recipients": 1027,
+        "klaviyo_open_rate": 0.336301,
+        "klaviyo_click_rate": 0.009891,
         "shopify_placed_order": 3,
         "shopify_placed_order_value": 196.45
       },
@@ -22642,9 +22675,9 @@
         "campaign_name": "PM | Post Purchase Email #1",
         "campaign_subject": "Good things on the way!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 744,
-        "klaviyo_open_rate": 0.322108,
-        "klaviyo_click_rate": 0.029283,
+        "klaviyo_total_recipients": 734,
+        "klaviyo_open_rate": 0.323964,
+        "klaviyo_click_rate": 0.026627,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22652,9 +22685,9 @@
         "campaign_name": "PM | Post Purchase Email #3",
         "campaign_subject": "Let\u2019s stick together?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 705,
-        "klaviyo_open_rate": 0.259259,
-        "klaviyo_click_rate": 0.002849,
+        "klaviyo_total_recipients": 703,
+        "klaviyo_open_rate": 0.265714,
+        "klaviyo_click_rate": 0.002857,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22662,9 +22695,9 @@
         "campaign_name": "PM | Abandoned Cart Email #1",
         "campaign_subject": "Your cart is waiting!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 702,
-        "klaviyo_open_rate": 0.513591,
-        "klaviyo_click_rate": 0.021459,
+        "klaviyo_total_recipients": 700,
+        "klaviyo_open_rate": 0.51363,
+        "klaviyo_click_rate": 0.021521,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 169.25
       },
@@ -22672,9 +22705,9 @@
         "campaign_name": "PM | Post Purchase Email #2",
         "campaign_subject": "We're always looking to improve",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 693,
-        "klaviyo_open_rate": 0.28,
-        "klaviyo_click_rate": 0.004444,
+        "klaviyo_total_recipients": 700,
+        "klaviyo_open_rate": 0.276219,
+        "klaviyo_click_rate": 0.004431,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22682,9 +22715,9 @@
         "campaign_name": "PM | Abandoned Cart Email #2",
         "campaign_subject": "15% Off Your Cart [Limited Time]",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 676,
-        "klaviyo_open_rate": 0.51632,
-        "klaviyo_click_rate": 0.029674,
+        "klaviyo_total_recipients": 677,
+        "klaviyo_open_rate": 0.514074,
+        "klaviyo_click_rate": 0.02963,
         "shopify_placed_order": 6,
         "shopify_placed_order_value": 367.78
       },
@@ -22692,39 +22725,49 @@
         "campaign_name": "Welcome Email #1",
         "campaign_subject": "Welcome to The Good Patch",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 663,
-        "klaviyo_open_rate": 0.46851,
-        "klaviyo_click_rate": 0.053763,
-        "shopify_placed_order": 10,
-        "shopify_placed_order_value": 326.56
-      },
-      {
-        "campaign_name": "Welcome Email #2",
-        "campaign_subject": "3 friends. 1 shared belief. \u2728",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 572,
-        "klaviyo_open_rate": 0.412587,
-        "klaviyo_click_rate": 0.019231,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_total_recipients": 662,
+        "klaviyo_open_rate": 0.463902,
+        "klaviyo_click_rate": 0.052227,
+        "shopify_placed_order": 11,
+        "shopify_placed_order_value": 841.36
       },
       {
         "campaign_name": "Welcome Email #4",
         "campaign_subject": "Last chance to save 15%",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 562,
-        "klaviyo_open_rate": 0.426523,
-        "klaviyo_click_rate": 0.021505,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 289.33
+        "klaviyo_total_recipients": 568,
+        "klaviyo_open_rate": 0.428319,
+        "klaviyo_click_rate": 0.021239,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 103
+      },
+      {
+        "campaign_name": "Welcome Email #2",
+        "campaign_subject": "3 friends. 1 shared belief. \u2728",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 566,
+        "klaviyo_open_rate": 0.411661,
+        "klaviyo_click_rate": 0.019435,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #3",
         "campaign_subject": "9000+ rave reviews and counting",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 555,
-        "klaviyo_open_rate": 0.403604,
-        "klaviyo_click_rate": 0.021622,
+        "klaviyo_total_recipients": 559,
+        "klaviyo_open_rate": 0.398927,
+        "klaviyo_click_rate": 0.019678,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
+      },
+      {
+        "campaign_name": "T3B - FOMO - occasions focus",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 503,
+        "klaviyo_open_rate": 0.30123,
+        "klaviyo_click_rate": 0.006148,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22732,9 +22775,9 @@
         "campaign_name": "T2B - no code - treat yourself",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, its called self-care",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 521,
-        "klaviyo_open_rate": 0.30315,
-        "klaviyo_click_rate": 0.001969,
+        "klaviyo_total_recipients": 496,
+        "klaviyo_open_rate": 0.310559,
+        "klaviyo_click_rate": 0.00207,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22742,29 +22785,19 @@
         "campaign_name": "T2A - 20% off your restock",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, here\u2019s 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 513,
-        "klaviyo_open_rate": 0.318898,
-        "klaviyo_click_rate": 0.007874,
+        "klaviyo_total_recipients": 493,
+        "klaviyo_open_rate": 0.328542,
+        "klaviyo_click_rate": 0.00616,
         "shopify_placed_order": 1,
         "shopify_placed_order_value": 120.66
-      },
-      {
-        "campaign_name": "T3B - FOMO - occasions focus",
-        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 502,
-        "klaviyo_open_rate": 0.29918,
-        "klaviyo_click_rate": 0.006148,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, last chance for 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 498,
-        "klaviyo_open_rate": 0.293634,
-        "klaviyo_click_rate": 0.004107,
+        "klaviyo_total_recipients": 484,
+        "klaviyo_open_rate": 0.298097,
+        "klaviyo_click_rate": 0.004228,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 69
       },
@@ -22772,8 +22805,8 @@
         "campaign_name": "PM | Sunset Flow Email #1",
         "campaign_subject": "Keep the good vibes coming",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 489,
-        "klaviyo_open_rate": 0.03112,
+        "klaviyo_total_recipients": 473,
+        "klaviyo_open_rate": 0.032189,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22782,8 +22815,8 @@
         "campaign_name": "PM | Sunset Flow Email #2",
         "campaign_subject": "still want email-exclusive perks?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 474,
-        "klaviyo_open_rate": 0.012931,
+        "klaviyo_total_recipients": 462,
+        "klaviyo_open_rate": 0.011038,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22793,7 +22826,7 @@
         "campaign_subject": "Make every day feel a little lighter",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 406,
-        "klaviyo_open_rate": 0.41791,
+        "klaviyo_open_rate": 0.412935,
         "klaviyo_click_rate": 0.002488,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22802,9 +22835,9 @@
         "campaign_name": "PM | Abandoned Checkout Email #1",
         "campaign_subject": "Ready to feel your best?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 221,
-        "klaviyo_open_rate": 0.56682,
-        "klaviyo_click_rate": 0.036866,
+        "klaviyo_total_recipients": 217,
+        "klaviyo_open_rate": 0.577465,
+        "klaviyo_click_rate": 0.037559,
         "shopify_placed_order": 4,
         "shopify_placed_order_value": 324.57
       },
@@ -22814,7 +22847,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 199,
         "klaviyo_open_rate": 0.550505,
-        "klaviyo_click_rate": 0.035354,
+        "klaviyo_click_rate": 0.040404,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 156.82
       },
@@ -22822,31 +22855,11 @@
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #1",
         "campaign_subject": "We appreciate you",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 101,
-        "klaviyo_open_rate": 0.544554,
-        "klaviyo_click_rate": 0.009901,
+        "klaviyo_total_recipients": 104,
+        "klaviyo_open_rate": 0.548077,
+        "klaviyo_click_rate": 0.009615,
         "shopify_placed_order": 2,
         "shopify_placed_order_value": 119.78
-      },
-      {
-        "campaign_name": "Welcome Email #1 [meta ads]",
-        "campaign_subject": "Welcome to The Good Patch",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 59,
-        "klaviyo_open_rate": 0.338983,
-        "klaviyo_click_rate": 0.016949,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
-      },
-      {
-        "campaign_name": "Welcome Email #2 [meta ads]",
-        "campaign_subject": "3 friends. 1 shared belief. \u2728",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 56,
-        "klaviyo_open_rate": 0.428571,
-        "klaviyo_click_rate": 0.017857,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
       },
       {
         "campaign_name": "Welcome Email #3 [meta ads]",
@@ -22869,12 +22882,32 @@
         "shopify_placed_order_value": null
       },
       {
+        "campaign_name": "Welcome Email #2 [meta ads]",
+        "campaign_subject": "3 friends. 1 shared belief. \u2728",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 55,
+        "klaviyo_open_rate": 0.436364,
+        "klaviyo_click_rate": 0.018182,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
+      },
+      {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
         "campaign_subject": "Ready to make your wellness effortless?",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 47,
-        "klaviyo_open_rate": 0.608696,
+        "klaviyo_open_rate": 0.543478,
         "klaviyo_click_rate": 0,
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
+      },
+      {
+        "campaign_name": "Welcome Email #1 [meta ads]",
+        "campaign_subject": "Welcome to The Good Patch",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 47,
+        "klaviyo_open_rate": 0.361702,
+        "klaviyo_click_rate": 0.021277,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
       },
@@ -22922,8 +22955,8 @@
         "campaign_name": "T3A - Non-purchaser - 4 days post trigger",
         "campaign_subject": "Find your faves with 15% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 9,
-        "klaviyo_open_rate": 0.777778,
+        "klaviyo_total_recipients": 8,
+        "klaviyo_open_rate": 0.75,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22942,8 +22975,8 @@
         "campaign_name": "T3B - Non-purchaser - 4 days post trigger",
         "campaign_subject": "Find your faves with 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 4,
-        "klaviyo_open_rate": 0.25,
+        "klaviyo_total_recipients": 3,
+        "klaviyo_open_rate": 0.333333,
         "klaviyo_click_rate": 0,
         "shopify_placed_order": null,
         "shopify_placed_order_value": null
@@ -22959,10 +22992,10 @@
         "shopify_placed_order_value": null
       },
       {
-        "campaign_name": "04/22: Earth Day",
-        "campaign_subject": "Happy Earth Day from The Good Patch",
-        "campaign_send_date": "2026-04-23",
-        "klaviyo_total_recipients": 1,
+        "campaign_name": "01/01 - Happy New Year",
+        "campaign_subject": "Here\u2019s to a Really Good Year Ahead",
+        "campaign_send_date": "2026-01-01",
+        "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
         "klaviyo_click_rate": "",
         "shopify_placed_order": null,
@@ -23559,6 +23592,16 @@
         "shopify_placed_order_value": null
       },
       {
+        "campaign_name": "04/22: Earth Day",
+        "campaign_subject": "Happy Earth Day from The Good Patch",
+        "campaign_send_date": "2026-04-23",
+        "klaviyo_total_recipients": "",
+        "klaviyo_open_rate": "",
+        "klaviyo_click_rate": "",
+        "shopify_placed_order": null,
+        "shopify_placed_order_value": null
+      },
+      {
         "campaign_name": "10/04: UGC Feature",
         "campaign_subject": "You + The Good Patch = \ud83d\ude0d",
         "campaign_send_date": "2025-10-04",
@@ -23879,14 +23922,14 @@
       {
         "campaign_name": "05/25: Memorial Day Sale - last chance",
         "campaign_is_part_of_flow": false,
-        "shopify_placed_order": 14,
-        "shopify_placed_order_value": 1187.57
+        "shopify_placed_order": 16,
+        "shopify_placed_order_value": 1253.87
       },
       {
         "campaign_name": "Welcome Email #1",
         "campaign_is_part_of_flow": true,
-        "shopify_placed_order": 10,
-        "shopify_placed_order_value": 326.56
+        "shopify_placed_order": 11,
+        "shopify_placed_order_value": 841.36
       },
       {
         "campaign_name": "05/08: Energy | 15% off",
@@ -23937,12 +23980,6 @@
         "shopify_placed_order_value": 196.45
       },
       {
-        "campaign_name": "Welcome Email #4",
-        "campaign_is_part_of_flow": true,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 289.33
-      },
-      {
         "campaign_name": "05/03: Mother's Day Gift Guide",
         "campaign_is_part_of_flow": false,
         "shopify_placed_order": 2,
@@ -23985,15 +24022,21 @@
         "shopify_placed_order_value": 69
       },
       {
+        "campaign_name": "Welcome Email #4",
+        "campaign_is_part_of_flow": true,
+        "shopify_placed_order": 2,
+        "shopify_placed_order_value": 103
+      },
+      {
         "campaign_name": "T2A - 20% off your restock",
         "campaign_is_part_of_flow": true,
         "shopify_placed_order": 1,
         "shopify_placed_order_value": 120.66
       }
     ],
-    "date": "2026-05-27",
-    "broadcast_orders_30d": 77,
-    "broadcast_value_30d": 6400.240000000001
+    "date": "2026-05-28",
+    "broadcast_orders_30d": 79,
+    "broadcast_value_30d": 6466.54
   },
   "cohort_data": {
     "prior_paid": [
@@ -77100,6 +77143,12 @@
         "net_sales": 59.5
       },
       {
+        "customer_id": 2187445928054,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 59.5
+      },
+      {
         "customer_id": 2191300427894,
         "yearMonth": "2026|05",
         "sm_order_count": 1,
@@ -78512,8 +78561,8 @@
       {
         "customer_id": 3636251361398,
         "yearMonth": "2026|05",
-        "sm_order_count": 2,
-        "net_sales": 112.2
+        "sm_order_count": 3,
+        "net_sales": 132.6
       },
       {
         "customer_id": 3636383481974,
@@ -78584,8 +78633,8 @@
       {
         "customer_id": 3639470456950,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 122.4
+        "sm_order_count": 2,
+        "net_sales": 198.9
       },
       {
         "customer_id": 3641497845878,
@@ -79388,6 +79437,12 @@
       {
         "customer_id": 5139353239670,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 27.2
+      },
+      {
+        "customer_id": 5139353239670,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 27.2
       },
@@ -80442,6 +80497,12 @@
         "net_sales": 50
       },
       {
+        "customer_id": 5422779433078,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 58
+      },
+      {
         "customer_id": 5424574267510,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -80672,6 +80733,12 @@
       {
         "customer_id": 5495716675702,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 30.6
+      },
+      {
+        "customer_id": 5495716675702,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 30.6
       },
@@ -81258,6 +81325,12 @@
         "net_sales": 21.25
       },
       {
+        "customer_id": 5588511391862,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
         "customer_id": 5591282286710,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -81284,8 +81357,8 @@
       {
         "customer_id": 5591282286710,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 24
+        "sm_order_count": 2,
+        "net_sales": 66.5
       },
       {
         "customer_id": 5591991320694,
@@ -81368,6 +81441,12 @@
       {
         "customer_id": 5619234865270,
         "yearMonth": "2026|02",
+        "sm_order_count": 1,
+        "net_sales": 12
+      },
+      {
+        "customer_id": 5619234865270,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 12
       },
@@ -83658,6 +83737,12 @@
         "net_sales": 27.2
       },
       {
+        "customer_id": 5999218622582,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 27.2
+      },
+      {
         "customer_id": 5999710601334,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -85188,6 +85273,12 @@
         "net_sales": 204
       },
       {
+        "customer_id": 6204329492598,
+        "yearMonth": "2026|05",
+        "sm_order_count": 2,
+        "net_sales": 273
+      },
+      {
         "customer_id": 6207144329334,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -86502,6 +86593,12 @@
         "net_sales": 68
       },
       {
+        "customer_id": 6481812783222,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 68
+      },
+      {
         "customer_id": 6482660065398,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -87366,6 +87463,12 @@
         "net_sales": 23.8
       },
       {
+        "customer_id": 6697628729462,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 23.8
+      },
+      {
         "customer_id": 6698279895158,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -87560,6 +87663,12 @@
       {
         "customer_id": 6720959447158,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 40.8
+      },
+      {
+        "customer_id": 6720959447158,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 40.8
       },
@@ -88454,8 +88563,8 @@
       {
         "customer_id": 6810774438006,
         "yearMonth": "2026|05",
-        "sm_order_count": 2,
-        "net_sales": 124.1
+        "sm_order_count": 3,
+        "net_sales": 145.35
       },
       {
         "customer_id": 6816687063158,
@@ -90482,8 +90591,8 @@
       {
         "customer_id": 7112104312950,
         "yearMonth": "2026|05",
-        "sm_order_count": 2,
-        "net_sales": 62.9
+        "sm_order_count": 3,
+        "net_sales": 125.8
       },
       {
         "customer_id": 7113281831030,
@@ -91290,6 +91399,12 @@
         "net_sales": 70.38
       },
       {
+        "customer_id": 7204384407670,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 20.4
+      },
+      {
         "customer_id": 7206822346870,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -91666,6 +91781,12 @@
         "yearMonth": "2026|01",
         "sm_order_count": 1,
         "net_sales": 30.6
+      },
+      {
+        "customer_id": 7231845466230,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 90
       },
       {
         "customer_id": 7231976505462,
@@ -93522,6 +93643,12 @@
         "net_sales": 118.15
       },
       {
+        "customer_id": 7503639314550,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 13.6
+      },
+      {
         "customer_id": 7503804661878,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -93568,6 +93695,12 @@
         "yearMonth": "2026|01",
         "sm_order_count": 1,
         "net_sales": 51.85
+      },
+      {
+        "customer_id": 7507563479158,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 30.6
       },
       {
         "customer_id": 7509010972790,
@@ -96912,6 +97045,12 @@
         "net_sales": 20.4
       },
       {
+        "customer_id": 7748394057846,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 20.4
+      },
+      {
         "customer_id": 7748462182518,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -98834,6 +98973,12 @@
       {
         "customer_id": 7866066272374,
         "yearMonth": "2026|02",
+        "sm_order_count": 1,
+        "net_sales": 76.5
+      },
+      {
+        "customer_id": 7866066272374,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 76.5
       },
@@ -113166,6 +113311,12 @@
         "net_sales": 13.6
       },
       {
+        "customer_id": 7983670624374,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 13.6
+      },
+      {
         "customer_id": 7984397779062,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -119838,6 +119989,12 @@
         "net_sales": 52.7
       },
       {
+        "customer_id": 8071168589942,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 52.7
+      },
+      {
         "customer_id": 8071176061046,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -121376,8 +121533,8 @@
       {
         "customer_id": 8072671461494,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 20.4
+        "sm_order_count": 2,
+        "net_sales": 93.5
       },
       {
         "customer_id": 8072677130358,
@@ -122216,8 +122373,8 @@
       {
         "customer_id": 8080727605366,
         "yearMonth": "2026|05",
-        "sm_order_count": 3,
-        "net_sales": 151.3
+        "sm_order_count": 4,
+        "net_sales": 192.1
       },
       {
         "customer_id": 8080862773366,
@@ -124896,6 +125053,12 @@
         "net_sales": 67.9
       },
       {
+        "customer_id": 8112607592566,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 76.5
+      },
+      {
         "customer_id": 8112632627318,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -124940,8 +125103,8 @@
       {
         "customer_id": 8112712384630,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 88
+        "sm_order_count": 2,
+        "net_sales": 125.4
       },
       {
         "customer_id": 8112736567414,
@@ -134856,6 +135019,12 @@
         "net_sales": 42.5
       },
       {
+        "customer_id": 8321421115510,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 36.13
+      },
+      {
         "customer_id": 8321564901494,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -136768,136 +136937,10 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 0
-      },
-      {
-        "customer_id": 8346304839798,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 12
-      },
-      {
-        "customer_id": 8346306740342,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8346340524150,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 44
-      },
-      {
-        "customer_id": 8346353041526,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8346373652598,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8346459668598,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8346480771190,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8346803077238,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 16
-      },
-      {
-        "customer_id": 8346907279478,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 50
-      },
-      {
-        "customer_id": 8346991722614,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347073904758,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347085209718,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347122303094,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347141931126,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347217952886,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347326775414,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 36.75
-      },
-      {
-        "customer_id": 8347357184118,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347394998390,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 128
-      },
-      {
-        "customer_id": 8347404009590,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8347468464246,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 76.5
-      },
-      {
-        "customer_id": 8347468464246,
-        "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 65.33
       }
     ],
     "window_start": "2025-12-01",
-    "date": "2026-05-27"
+    "date": "2026-05-28"
   },
   "py_amazon_seller_2025-05-20": {
     "ordered_product_sales": 5328.4,
@@ -136906,393 +136949,408 @@
     "unit_session_percentage": 9.79,
     "page_views": 2088
   },
-  "last_posted_date": "2026-05-27",
+  "last_posted_date": "2026-05-28",
   "amazon_states": {
     "data": [
       {
         "ship_state": "CA",
-        "item_price": 29887.08,
-        "item_quantity": 1121
+        "item_price": 30593.25,
+        "item_quantity": 1132
       },
       {
         "ship_state": "FL",
-        "item_price": 19693.39,
-        "item_quantity": 706
+        "item_price": 20620.39,
+        "item_quantity": 769
       },
       {
         "ship_state": "TX",
-        "item_price": 19558.67,
-        "item_quantity": 740
+        "item_price": 19250.02,
+        "item_quantity": 726
       },
       {
         "ship_state": "NY",
-        "item_price": 10538.83,
-        "item_quantity": 409
+        "item_price": 10918.03,
+        "item_quantity": 420
       },
       {
         "ship_state": "PA",
-        "item_price": 7085.37,
-        "item_quantity": 259
+        "item_price": 7275.86,
+        "item_quantity": 268
       },
       {
         "ship_state": "WA",
-        "item_price": 6759.45,
-        "item_quantity": 259
-      },
-      {
-        "ship_state": "NC",
-        "item_price": 6350.31,
-        "item_quantity": 235
+        "item_price": 6091.05,
+        "item_quantity": 233
       },
       {
         "ship_state": "IL",
-        "item_price": 6077.53,
-        "item_quantity": 242
+        "item_price": 5988.97,
+        "item_quantity": 240
       },
       {
         "ship_state": "GA",
-        "item_price": 5935.82,
-        "item_quantity": 230
+        "item_price": 5980.68,
+        "item_quantity": 229
       },
       {
         "ship_state": "NJ",
-        "item_price": 5818.57,
-        "item_quantity": 227
+        "item_price": 5898.67,
+        "item_quantity": 225
+      },
+      {
+        "ship_state": "NC",
+        "item_price": 5874.42,
+        "item_quantity": 219
       },
       {
         "ship_state": "VA",
-        "item_price": 5761.18,
-        "item_quantity": 205
-      },
-      {
-        "ship_state": "AZ",
-        "item_price": 5135.01,
-        "item_quantity": 191
-      },
-      {
-        "ship_state": "OH",
-        "item_price": 5010.97,
-        "item_quantity": 197
+        "item_price": 5583.27,
+        "item_quantity": 203
       },
       {
         "ship_state": "MI",
-        "item_price": 4958.39,
-        "item_quantity": 182
+        "item_price": 5280.86,
+        "item_quantity": 190
       },
       {
-        "ship_state": "MA",
-        "item_price": 4861.21,
-        "item_quantity": 173
+        "ship_state": "AZ",
+        "item_price": 5075.42,
+        "item_quantity": 189
+      },
+      {
+        "ship_state": "OH",
+        "item_price": 5049.09,
+        "item_quantity": 196
       },
       {
         "ship_state": "TN",
-        "item_price": 4811.95,
-        "item_quantity": 176
-      },
-      {
-        "ship_state": "MD",
-        "item_price": 4463.25,
-        "item_quantity": 178
+        "item_price": 4896.28,
+        "item_quantity": 183
       },
       {
         "ship_state": "CO",
-        "item_price": 4374.29,
-        "item_quantity": 169
+        "item_price": 4769.5,
+        "item_quantity": 184
+      },
+      {
+        "ship_state": "MD",
+        "item_price": 4681.69,
+        "item_quantity": 187
+      },
+      {
+        "ship_state": "MA",
+        "item_price": 4439.78,
+        "item_quantity": 157
       },
       {
         "ship_state": "MN",
-        "item_price": 3281.47,
-        "item_quantity": 125
-      },
-      {
-        "ship_state": "OR",
-        "item_price": 2958.87,
-        "item_quantity": 105
+        "item_price": 2910.33,
+        "item_quantity": 110
       },
       {
         "ship_state": "IN",
-        "item_price": 2896.09,
-        "item_quantity": 120
-      },
-      {
-        "ship_state": "KY",
-        "item_price": 2641.85,
-        "item_quantity": 105
-      },
-      {
-        "ship_state": "SC",
-        "item_price": 2585.2,
-        "item_quantity": 100
-      },
-      {
-        "ship_state": "WI",
-        "item_price": 2243.52,
-        "item_quantity": 95
+        "item_price": 2852.34,
+        "item_quantity": 115
       },
       {
         "ship_state": "CT",
-        "item_price": 2192.78,
-        "item_quantity": 89
+        "item_price": 2789.23,
+        "item_quantity": 106
       },
       {
-        "ship_state": "MO",
-        "item_price": 2186.02,
+        "ship_state": "OR",
+        "item_price": 2648.32,
         "item_quantity": 94
       },
       {
+        "ship_state": "WI",
+        "item_price": 2436.74,
+        "item_quantity": 98
+      },
+      {
+        "ship_state": "MO",
+        "item_price": 2369.32,
+        "item_quantity": 96
+      },
+      {
+        "ship_state": "KY",
+        "item_price": 2339.66,
+        "item_quantity": 89
+      },
+      {
+        "ship_state": "SC",
+        "item_price": 2329,
+        "item_quantity": 92
+      },
+      {
         "ship_state": "LA",
-        "item_price": 2095.12,
-        "item_quantity": 76
+        "item_price": 2010.63,
+        "item_quantity": 73
       },
       {
         "ship_state": "AL",
-        "item_price": 1791.73,
-        "item_quantity": 67
-      },
-      {
-        "ship_state": "UT",
-        "item_price": 1688.57,
-        "item_quantity": 66
-      },
-      {
-        "ship_state": "OK",
-        "item_price": 1679.29,
+        "item_price": 1830.64,
         "item_quantity": 64
       },
       {
-        "ship_state": "NH",
-        "item_price": 1558.32,
-        "item_quantity": 51
+        "ship_state": "OK",
+        "item_price": 1662.12,
+        "item_quantity": 63
       },
       {
         "ship_state": "NV",
-        "item_price": 1518.84,
+        "item_price": 1584.69,
         "item_quantity": 60
       },
       {
-        "ship_state": "KS",
-        "item_price": 1283.82,
-        "item_quantity": 50
+        "ship_state": "UT",
+        "item_price": 1459.97,
+        "item_quantity": 58
       },
       {
         "ship_state": "DE",
-        "item_price": 1233.19,
-        "item_quantity": 51
+        "item_price": 1420.44,
+        "item_quantity": 55
       },
       {
-        "ship_state": "NM",
-        "item_price": 1226.13,
+        "ship_state": "KS",
+        "item_price": 1400.42,
         "item_quantity": 52
       },
       {
-        "ship_state": "ID",
-        "item_price": 1164,
-        "item_quantity": 42
+        "ship_state": "IA",
+        "item_price": 1301.5,
+        "item_quantity": 49
       },
       {
-        "ship_state": "IA",
-        "item_price": 1046.14,
+        "ship_state": "NH",
+        "item_price": 1280.35,
+        "item_quantity": 46
+      },
+      {
+        "ship_state": "ID",
+        "item_price": 1154.32,
         "item_quantity": 41
       },
       {
-        "ship_state": "HI",
-        "item_price": 1039.58,
-        "item_quantity": 31
-      },
-      {
         "ship_state": "NE",
-        "item_price": 984.1,
-        "item_quantity": 36
+        "item_price": 1063.69,
+        "item_quantity": 39
       },
       {
-        "ship_state": "RI",
-        "item_price": 940.62,
-        "item_quantity": 28
+        "ship_state": "HI",
+        "item_price": 1013.74,
+        "item_quantity": 33
       },
       {
-        "ship_state": "MS",
-        "item_price": 915.4,
-        "item_quantity": 38
+        "ship_state": "NM",
+        "item_price": 1001.35,
+        "item_quantity": 40
       },
       {
         "ship_state": "AR",
-        "item_price": 863.49,
-        "item_quantity": 34
+        "item_price": 955.07,
+        "item_quantity": 37
       },
       {
-        "ship_state": "WV",
-        "item_price": 647.68,
-        "item_quantity": 20
+        "ship_state": "RI",
+        "item_price": 885.64,
+        "item_quantity": 26
+      },
+      {
+        "ship_state": "MS",
+        "item_price": 861.46,
+        "item_quantity": 36
       },
       {
         "ship_state": "DC",
-        "item_price": 588.73,
-        "item_quantity": 20
+        "item_price": 708.69,
+        "item_quantity": 23
+      },
+      {
+        "ship_state": "WV",
+        "item_price": 658.49,
+        "item_quantity": 21
       },
       {
         "ship_state": "Texas",
-        "item_price": 579.5,
-        "item_quantity": 22
-      },
-      {
-        "ship_state": "AK",
-        "item_price": 526.95,
-        "item_quantity": 19
+        "item_price": 649.91,
+        "item_quantity": 24
       },
       {
         "ship_state": "ME",
-        "item_price": 496.73,
-        "item_quantity": 18
+        "item_price": 497.58,
+        "item_quantity": 17
       },
       {
         "ship_state": "MT",
-        "item_price": 468.36,
+        "item_price": 496.17,
         "item_quantity": 18
       },
       {
+        "ship_state": "AK",
+        "item_price": 420.97,
+        "item_quantity": 16
+      },
+      {
         "ship_state": "PR",
-        "item_price": 407.03,
+        "item_price": 380.58,
         "item_quantity": 16
       },
       {
         "ship_state": "FLORIDA",
-        "item_price": 388.82,
-        "item_quantity": 12
-      },
-      {
-        "ship_state": "WY",
-        "item_price": 381.81,
+        "item_price": 373.58,
         "item_quantity": 14
       },
       {
         "ship_state": "OHIO",
-        "item_price": 342.87,
+        "item_price": 329.88,
         "item_quantity": 10
-      },
-      {
-        "ship_state": "Ca",
-        "item_price": 318.84,
-        "item_quantity": 11
-      },
-      {
-        "ship_state": "California",
-        "item_price": 297.85,
-        "item_quantity": 11
-      },
-      {
-        "ship_state": "TEXAS",
-        "item_price": 283.81,
-        "item_quantity": 11
-      },
-      {
-        "ship_state": "",
-        "item_price": 274.93,
-        "item_quantity": 52
       },
       {
         "ship_state": "Florida",
-        "item_price": 273.81,
-        "item_quantity": 12
-      },
-      {
-        "ship_state": "nj",
-        "item_price": 270.46,
+        "item_price": 285.87,
         "item_quantity": 10
       },
       {
-        "ship_state": "Kentucky",
-        "item_price": 223.89,
-        "item_quantity": 8
+        "ship_state": "Fl",
+        "item_price": 273.86,
+        "item_quantity": 9
+      },
+      {
+        "ship_state": "California",
+        "item_price": 272.87,
+        "item_quantity": 10
       },
       {
         "ship_state": "SD",
-        "item_price": 219.88,
-        "item_quantity": 9
+        "item_price": 269.86,
+        "item_quantity": 10
       },
       {
-        "ship_state": "ND",
-        "item_price": 216.86,
-        "item_quantity": 8
-      },
-      {
-        "ship_state": "Virginia",
-        "item_price": 207.48,
-        "item_quantity": 8
+        "ship_state": "nj",
+        "item_price": 262.49,
+        "item_quantity": 10
       },
       {
         "ship_state": "New Jersey",
-        "item_price": 204.92,
-        "item_quantity": 7
-      },
-      {
-        "ship_state": "MISSISSIPPI",
-        "item_price": 199.96,
-        "item_quantity": 4
-      },
-      {
-        "ship_state": "ca",
-        "item_price": 198.9,
-        "item_quantity": 8
-      },
-      {
-        "ship_state": "New York",
-        "item_price": 187.84,
+        "item_price": 259.89,
         "item_quantity": 9
       },
       {
-        "ship_state": "Fl",
-        "item_price": 183.88,
+        "ship_state": "",
+        "item_price": 244.93,
+        "item_quantity": 47
+      },
+      {
+        "ship_state": "MISSISSIPPI",
+        "item_price": 239.94,
+        "item_quantity": 6
+      },
+      {
+        "ship_state": "VT",
+        "item_price": 211.71,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "AE",
+        "item_price": 208.87,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "Tx",
+        "item_price": 208.86,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "ND",
+        "item_price": 208.69,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "Kentucky",
+        "item_price": 199.91,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "Ca",
+        "item_price": 193.86,
+        "item_quantity": 8
+      },
+      {
+        "ship_state": "TEXAS",
+        "item_price": 188.88,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "WY",
+        "item_price": 171.94,
+        "item_quantity": 6
+      },
+      {
+        "ship_state": "New York",
+        "item_price": 163.89,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "Ohio",
+        "item_price": 163.52,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "CALIFORNIA",
+        "item_price": 159.88,
+        "item_quantity": 7
+      },
+      {
+        "ship_state": "Maryland",
+        "item_price": 154.89,
         "item_quantity": 7
       },
       {
         "ship_state": "Ga",
-        "item_price": 169.93,
-        "item_quantity": 5
-      },
-      {
-        "ship_state": "AE",
-        "item_price": 158.88,
-        "item_quantity": 7
-      },
-      {
-        "ship_state": "VT",
-        "item_price": 154.95,
-        "item_quantity": 4
-      },
-      {
-        "ship_state": "Tx",
-        "item_price": 154.87,
-        "item_quantity": 7
-      },
-      {
-        "ship_state": "INDIANA",
-        "item_price": 143.95,
+        "item_price": 149.95,
         "item_quantity": 4
       },
       {
         "ship_state": "Oh",
-        "item_price": 134.92,
+        "item_price": 149.92,
         "item_quantity": 6
       },
       {
-        "ship_state": "Maryland",
-        "item_price": 134.91,
-        "item_quantity": 6
-      },
-      {
-        "ship_state": "new york",
-        "item_price": 129.91,
+        "ship_state": "MICHIGAN",
+        "item_price": 139.93,
         "item_quantity": 5
       },
       {
-        "ship_state": "Utah",
-        "item_price": 129.9,
+        "ship_state": "Virginia",
+        "item_price": 138.9,
         "item_quantity": 6
+      },
+      {
+        "ship_state": "Puerto Rico",
+        "item_price": 131.98,
+        "item_quantity": 5
+      },
+      {
+        "ship_state": "ca",
+        "item_price": 123.95,
+        "item_quantity": 5
       },
       {
         "ship_state": "Massachusetts",
         "item_price": 119.98,
         "item_quantity": 3
+      },
+      {
+        "ship_state": "Washington",
+        "item_price": 109.94,
+        "item_quantity": 4
+      },
+      {
+        "ship_state": "new york",
+        "item_price": 109.93,
+        "item_quantity": 4
       },
       {
         "ship_state": "Michigan",
@@ -137305,28 +137363,13 @@
         "item_quantity": 3
       },
       {
-        "ship_state": "Tn",
-        "item_price": 103.9,
-        "item_quantity": 5
-      },
-      {
-        "ship_state": "MICHIGAN",
-        "item_price": 99.97,
+        "ship_state": "INDIANA",
+        "item_price": 103.96,
         "item_quantity": 3
       },
       {
-        "ship_state": "CALIFORNIA",
-        "item_price": 99.93,
-        "item_quantity": 4
-      },
-      {
-        "ship_state": "Ohio",
-        "item_price": 99.93,
-        "item_quantity": 4
-      },
-      {
-        "ship_state": "Minnesota",
-        "item_price": 93.95,
+        "ship_state": "Illinois",
+        "item_price": 99.96,
         "item_quantity": 3
       },
       {
@@ -137335,22 +137378,17 @@
         "item_quantity": 3
       },
       {
-        "ship_state": "Washington",
-        "item_price": 89.96,
+        "ship_state": "Mi",
+        "item_price": 84.97,
         "item_quantity": 3
       },
       {
-        "ship_state": "Puerto Rico",
-        "item_price": 83.98,
+        "ship_state": "Tn",
+        "item_price": 80.74,
         "item_quantity": 4
       },
       {
-        "ship_state": "NEW YORK",
-        "item_price": 79.95,
-        "item_quantity": 4
-      },
-      {
-        "ship_state": "IDAHO",
+        "ship_state": "ALABAMA",
         "item_price": 79.93,
         "item_quantity": 4
       },
@@ -137365,19 +137403,19 @@
         "item_quantity": 2
       },
       {
-        "ship_state": "Montana",
-        "item_price": 74.97,
-        "item_quantity": 3
-      },
-      {
-        "ship_state": "Arizona",
-        "item_price": 74.95,
-        "item_quantity": 3
-      },
-      {
         "ship_state": "Oregon",
         "item_price": 74.95,
         "item_quantity": 3
+      },
+      {
+        "ship_state": "Minnesota",
+        "item_price": 73.97,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "PENNSYLVANIA",
+        "item_price": 73.57,
+        "item_quantity": 4
       },
       {
         "ship_state": "MONTANA",
@@ -137385,28 +137423,38 @@
         "item_quantity": 2
       },
       {
-        "ship_state": "Cundinamarca",
-        "item_price": 67.98,
-        "item_quantity": 2
-      },
-      {
-        "ship_state": "Pa",
-        "item_price": 67.94,
-        "item_quantity": 3
-      },
-      {
         "ship_state": "Ma",
         "item_price": 63.94,
         "item_quantity": 3
       },
       {
-        "ship_state": "Illinois",
-        "item_price": 59.97,
-        "item_quantity": 2
+        "ship_state": "Arizona",
+        "item_price": 59.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "IDAHO",
+        "item_price": 59.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Indiana",
+        "item_price": 59.94,
+        "item_quantity": 3
       },
       {
         "ship_state": "Nj",
         "item_price": 59.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "Utah",
+        "item_price": 59.94,
+        "item_quantity": 3
+      },
+      {
+        "ship_state": "MISSOURI",
+        "item_price": 56.76,
         "item_quantity": 3
       },
       {
@@ -137420,12 +137468,7 @@
         "item_quantity": 1
       },
       {
-        "ship_state": "MISSOURI",
-        "item_price": 54.97,
-        "item_quantity": 2
-      },
-      {
-        "ship_state": "Mi",
+        "ship_state": "District of Columbia",
         "item_price": 54.97,
         "item_quantity": 2
       },
@@ -137435,27 +137478,22 @@
         "item_quantity": 2
       },
       {
-        "ship_state": "UTAH",
-        "item_price": 54.97,
-        "item_quantity": 2
-      },
-      {
-        "ship_state": "pa",
-        "item_price": 54.97,
-        "item_quantity": 2
-      },
-      {
         "ship_state": "Co",
         "item_price": 49.99,
         "item_quantity": 1
       },
       {
-        "ship_state": "Metro Manila",
+        "ship_state": "New Hampshire",
         "item_price": 49.99,
         "item_quantity": 1
       },
       {
-        "ship_state": "Vermont",
+        "ship_state": "fl",
+        "item_price": 49.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "MASSACHUSETTS",
         "item_price": 47.96,
         "item_quantity": 2
       },
@@ -137465,12 +137503,27 @@
         "item_quantity": 2
       },
       {
-        "ship_state": "florida",
+        "ship_state": "Israel",
+        "item_price": 42,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Tr\u00f8ndelag",
+        "item_price": 42,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "metro manila",
+        "item_price": 42,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Pa",
         "item_price": 39.98,
         "item_quantity": 2
       },
       {
-        "ship_state": "AP",
+        "ship_state": "NEW YORK",
         "item_price": 39.97,
         "item_quantity": 2
       },
@@ -137480,13 +137533,8 @@
         "item_quantity": 2
       },
       {
-        "ship_state": "ALABAMA",
-        "item_price": 39.96,
-        "item_quantity": 2
-      },
-      {
-        "ship_state": "Al",
-        "item_price": 39.96,
+        "ship_state": "WISCONSIN",
+        "item_price": 39.97,
         "item_quantity": 2
       },
       {
@@ -137520,6 +137568,16 @@
         "item_quantity": 2
       },
       {
+        "ship_state": "Iowa",
+        "item_price": 36.78,
+        "item_quantity": 2
+      },
+      {
+        "ship_state": "ma",
+        "item_price": 36.78,
+        "item_quantity": 2
+      },
+      {
         "ship_state": "Alabama",
         "item_price": 34.99,
         "item_quantity": 1
@@ -137530,13 +137588,8 @@
         "item_quantity": 1
       },
       {
-        "ship_state": "Ne",
-        "item_price": 34.99,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "SP",
-        "item_price": 34.99,
+        "ship_state": "Delaware",
+        "item_price": 33.6,
         "item_quantity": 1
       },
       {
@@ -137565,13 +137618,8 @@
         "item_quantity": 1
       },
       {
-        "ship_state": "fl",
-        "item_price": 30,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "mi",
-        "item_price": 27.96,
+        "ship_state": "CA.",
+        "item_price": 23.98,
         "item_quantity": 1
       },
       {
@@ -137580,17 +137628,12 @@
         "item_quantity": 1
       },
       {
-        "ship_state": "MASSACHUSETTS",
-        "item_price": 23.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "Missouri",
-        "item_price": 23.98,
-        "item_quantity": 1
-      },
-      {
         "ship_state": "Ut",
+        "item_price": 23.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Vermont",
         "item_price": 23.98,
         "item_quantity": 1
       },
@@ -137610,6 +137653,11 @@
         "item_quantity": 1
       },
       {
+        "ship_state": "GU",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
         "ship_state": "HAWAII",
         "item_price": 19.99,
         "item_quantity": 1
@@ -137620,7 +137668,27 @@
         "item_quantity": 1
       },
       {
+        "ship_state": "Montana",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Ms",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "New Mexico",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
         "ship_state": "OKLAHOMA",
+        "item_price": 19.99,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "florida",
         "item_price": 19.99,
         "item_quantity": 1
       },
@@ -137640,12 +137708,22 @@
         "item_quantity": 1
       },
       {
+        "ship_state": "AP",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
         "ship_state": "ARIZONA",
         "item_price": 19.98,
         "item_quantity": 1
       },
       {
-        "ship_state": "District of Columbia",
+        "ship_state": "Al",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "Cundinamarca",
         "item_price": 19.98,
         "item_quantity": 1
       },
@@ -137656,16 +137734,6 @@
       },
       {
         "ship_state": "Il",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "Indiana",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "Iowa",
         "item_price": 19.98,
         "item_quantity": 1
       },
@@ -137685,32 +137753,12 @@
         "item_quantity": 1
       },
       {
-        "ship_state": "New Mexico",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "Nm",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
         "ship_state": "North Carolina",
         "item_price": 19.98,
         "item_quantity": 1
       },
       {
         "ship_state": "North carolina",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "Ny",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "PENNSYLVANIA",
         "item_price": 19.98,
         "item_quantity": 1
       },
@@ -137725,12 +137773,7 @@
         "item_quantity": 1
       },
       {
-        "ship_state": "Va",
-        "item_price": 19.98,
-        "item_quantity": 1
-      },
-      {
-        "ship_state": "WISCONSIN",
+        "ship_state": "UTAH",
         "item_price": 19.98,
         "item_quantity": 1
       },
@@ -137755,6 +137798,11 @@
         "item_quantity": 1
       },
       {
+        "ship_state": "pa",
+        "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
         "ship_state": "risaralda",
         "item_price": 19.98,
         "item_quantity": 1
@@ -137762,6 +137810,11 @@
       {
         "ship_state": "\u0627\u0644\u0631\u064a\u0627\u0636",
         "item_price": 19.98,
+        "item_quantity": 1
+      },
+      {
+        "ship_state": "South Dakota",
+        "item_price": 16.8,
         "item_quantity": 1
       },
       {
@@ -137785,11 +137838,6 @@
         "item_quantity": 0
       },
       {
-        "ship_state": "MINNESOTA",
-        "item_price": "",
-        "item_quantity": 0
-      },
-      {
         "ship_state": "Md",
         "item_price": "",
         "item_quantity": 0
@@ -137805,15 +137853,10 @@
         "item_quantity": 0
       }
     ],
-    "date": "2026-05-21"
+    "date": "2026-05-28"
   },
   "amazon_promo_yesterday": {
     "data": [
-      {
-        "date": "2026-04-28",
-        "item_promotion_discount": 122.09,
-        "ship_promotion_discount": 103.06
-      },
       {
         "date": "2026-04-29",
         "item_promotion_discount": 140.7,
@@ -137846,7 +137889,7 @@
       },
       {
         "date": "2026-05-05",
-        "item_promotion_discount": 147.7,
+        "item_promotion_discount": 164.2,
         "ship_promotion_discount": 93.8
       },
       {
@@ -137871,7 +137914,7 @@
       },
       {
         "date": "2026-05-10",
-        "item_promotion_discount": 192.28,
+        "item_promotion_discount": 204.78,
         "ship_promotion_discount": 68.22
       },
       {
@@ -137886,32 +137929,32 @@
       },
       {
         "date": "2026-05-13",
-        "item_promotion_discount": 179.07,
+        "item_promotion_discount": 182.57,
         "ship_promotion_discount": 84.82
       },
       {
         "date": "2026-05-14",
-        "item_promotion_discount": 280.22,
+        "item_promotion_discount": 285.22,
         "ship_promotion_discount": 88.03
       },
       {
         "date": "2026-05-15",
-        "item_promotion_discount": 164.57,
+        "item_promotion_discount": 189.65,
         "ship_promotion_discount": 80.7
       },
       {
         "date": "2026-05-16",
-        "item_promotion_discount": 130.82,
+        "item_promotion_discount": 133.82,
         "ship_promotion_discount": 77.27
       },
       {
         "date": "2026-05-17",
-        "item_promotion_discount": 174.4,
+        "item_promotion_discount": 192.4,
         "ship_promotion_discount": 117.99
       },
       {
         "date": "2026-05-18",
-        "item_promotion_discount": 116.1,
+        "item_promotion_discount": 125.6,
         "ship_promotion_discount": 90.62
       },
       {
@@ -137941,13 +137984,13 @@
       },
       {
         "date": "2026-05-24",
-        "item_promotion_discount": 42.66,
-        "ship_promotion_discount": 65.81
+        "item_promotion_discount": 44.66,
+        "ship_promotion_discount": 65.97
       },
       {
         "date": "2026-05-25",
         "item_promotion_discount": 101.86,
-        "ship_promotion_discount": 69.45
+        "ship_promotion_discount": 70.73
       },
       {
         "date": "2026-05-26",
@@ -137957,31 +138000,36 @@
       {
         "date": "2026-05-27",
         "item_promotion_discount": 54.5,
-        "ship_promotion_discount": 59.05
+        "ship_promotion_discount": 59.11
+      },
+      {
+        "date": "2026-05-28",
+        "item_promotion_discount": 128.49,
+        "ship_promotion_discount": 61.05
       }
     ],
-    "date": "2026-05-27"
+    "date": "2026-05-28"
   },
   "yoy_yesterday": {
-    "yoy_date": "2025-05-27",
+    "yoy_date": "2025-05-28",
     "shopify": [
       {
-        "net_sales": 2785.6,
-        "sm_order_count": 90
+        "net_sales": 2427.1,
+        "sm_order_count": 77
       }
     ],
     "amazon_sales": [
       {
-        "ordered_product_sales": 7346.46
+        "ordered_product_sales": 6549.78
       }
     ],
     "amazon_promo": [
       {
-        "item_promotion_discount": 407.35,
-        "ship_promotion_discount": 75.92
+        "item_promotion_discount": 473.88,
+        "ship_promotion_discount": 79.15
       }
     ],
-    "date": "2026-05-27"
+    "date": "2026-05-28"
   },
   "py_shopify_2025-05-22": {
     "gross_sales": 1924.8,
@@ -138028,5 +138076,18 @@
     "sm_order_count": 58,
     "net_sales": 648.7,
     "net_quantity": 145
+  },
+  "py_shopify_2025-05-28": {
+    "gross_sales": 3691.7,
+    "sm_order_count": 67,
+    "net_sales": 2187.35,
+    "net_quantity": 133
+  },
+  "py_amazon_seller_2025-05-28": {
+    "ordered_product_sales": 6549.78,
+    "units_ordered": 201,
+    "sessions": 1444,
+    "unit_session_percentage": 13.92,
+    "page_views": 1935
   }
 }
