@@ -247,10 +247,10 @@
         "page_views": 2558
       },
       "2026-05-27": {
-        "ordered_product_sales": 8029.71,
-        "units_ordered": 312,
+        "ordered_product_sales": 7949.78,
+        "units_ordered": 308,
         "sessions": 2108,
-        "unit_session_percentage": 14.8,
+        "unit_session_percentage": 14.61,
         "page_views": 2625
       }
     },
@@ -439,7 +439,7 @@
       },
       "2026-05-26": {
         "cost": 2657.18,
-        "attributedSales14d": 2087.48,
+        "attributedSales14d": 2239.25,
         "clicks": 917,
         "impressions": 181029
       },
@@ -468,12 +468,16 @@
         "impressions": 136956
       },
       "2026-05-27": {
-        "cost": 2662.15,
-        "attributedSales14d": 3463.51,
-        "clicks": 976,
-        "impressions": 176572,
-        "roas": 1.30101985237496,
-        "acos": 0.7686277793336818
+        "cost": 2669.72,
+        "attributedSales14d": 3625.22,
+        "clicks": 978,
+        "impressions": 171684
+      },
+      "2026-05-28": {
+        "cost": 2318.13,
+        "attributedSales14d": 2184.1,
+        "clicks": 992,
+        "impressions": 203171
       }
     },
     "shopify": {
@@ -927,13 +931,10 @@
         "impressions": 8804
       },
       "2026-05-28": {
-        "spend": 396.35,
+        "spend": 397,
         "purchase_value": 673.48,
         "clicks": 145,
-        "impressions": 16077,
-        "roas": 1.6992052478869686,
-        "cpc": 2.7334482758620693,
-        "ctr": 0.009019095602413386
+        "impressions": 16094
       }
     },
     "google_ads": {
@@ -1151,16 +1152,13 @@
         "cost": 169.8994,
         "conversions_value": 0,
         "clicks": 130,
-        "impressions": 15312
+        "impressions": 15313
       },
       "2026-05-28": {
         "cost": 172.7699,
         "conversions_value": 208.69,
         "clicks": 112,
-        "impressions": 12210,
-        "roas": 1.207907164384537,
-        "cpc": 1.5425883928571429,
-        "ctr": 0.009172809172809172
+        "impressions": 12210
       }
     },
     "klaviyo_email": {
@@ -137959,7 +137957,7 @@
       },
       {
         "date": "2026-05-19",
-        "item_promotion_discount": 98,
+        "item_promotion_discount": 117,
         "ship_promotion_discount": 66.89
       },
       {
@@ -138004,7 +138002,7 @@
       },
       {
         "date": "2026-05-28",
-        "item_promotion_discount": 128.49,
+        "item_promotion_discount": 131.99,
         "ship_promotion_discount": 61.05
       }
     ],
