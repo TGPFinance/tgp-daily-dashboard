@@ -477,7 +477,7 @@
         "cost": 2318.13,
         "attributedSales14d": 2184.1,
         "clicks": 992,
-        "impressions": 203171
+        "impressions": 202929
       }
     },
     "shopify": {
@@ -1152,7 +1152,7 @@
         "cost": 169.8994,
         "conversions_value": 0,
         "clicks": 130,
-        "impressions": 15313
+        "impressions": 15312
       },
       "2026-05-28": {
         "cost": 172.7699,
@@ -137643,7 +137643,7 @@
       },
       {
         "date": "2026-05-11",
-        "item_promotion_discount": 195.29,
+        "item_promotion_discount": 197.81,
         "ship_promotion_discount": 96.79
       },
       {
@@ -137683,7 +137683,7 @@
       },
       {
         "date": "2026-05-19",
-        "item_promotion_discount": 117,
+        "item_promotion_discount": 125.5,
         "ship_promotion_discount": 66.89
       },
       {
@@ -137729,7 +137729,7 @@
       {
         "date": "2026-05-28",
         "item_promotion_discount": 131.99,
-        "ship_promotion_discount": 61.05
+        "ship_promotion_discount": 62.55
       }
     ],
     "date": "2026-05-28"
