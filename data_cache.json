@@ -259,6 +259,13 @@
         "sessions": 2144,
         "unit_session_percentage": 13.06,
         "page_views": 2733
+      },
+      "2026-05-29": {
+        "ordered_product_sales": 7163.04,
+        "units_ordered": 283,
+        "sessions": 2100,
+        "unit_session_percentage": 13.48,
+        "page_views": 2653
       }
     },
     "amazon_ads": {
@@ -711,10 +718,10 @@
         "net_quantity": 54
       },
       "2026-05-28": {
-        "gross_sales": 2897.2,
-        "sm_order_count": 48,
-        "net_sales": 2355.83,
-        "net_quantity": 171
+        "gross_sales": 2472.2,
+        "sm_order_count": 40,
+        "net_sales": 1982.83,
+        "net_quantity": 148
       },
       "2026-05-29": {
         "gross_sales": 2574.35,
@@ -723,10 +730,16 @@
         "net_quantity": 86
       },
       "2026-05-30": {
-        "gross_sales": 486,
+        "gross_sales": 1464.36,
+        "sm_order_count": 27,
+        "net_sales": 1292.51,
+        "net_quantity": 63
+      },
+      "2026-05-31": {
+        "gross_sales": 477.8,
         "sm_order_count": 9,
-        "net_sales": 403.35,
-        "net_quantity": 18
+        "net_sales": 453.8,
+        "net_quantity": 21
       }
     },
     "meta": {
@@ -956,10 +969,16 @@
         "impressions": 16099
       },
       "2026-05-29": {
-        "spend": 482.05,
+        "spend": 483.33,
         "purchase_value": 291.1,
-        "clicks": 131,
-        "impressions": 14332
+        "clicks": 132,
+        "impressions": 14366
+      },
+      "2026-05-30": {
+        "spend": 470.91,
+        "purchase_value": 117.17,
+        "clicks": 174,
+        "impressions": 12512
       }
     },
     "google_ads": {
@@ -1189,7 +1208,13 @@
         "cost": 167.7644,
         "conversions_value": 392.9,
         "clicks": 144,
-        "impressions": 15067
+        "impressions": 15070
+      },
+      "2026-05-30": {
+        "cost": 206.6659,
+        "conversions_value": 511.6,
+        "clicks": 150,
+        "impressions": 15843
       }
     },
     "klaviyo_email": {
@@ -1410,10 +1435,10 @@
         "klaviyo_clicked_email_unique": 6
       },
       "2026-05-27": {
-        "klaviyo_total_recipients": 437,
-        "klaviyo_received_email": 419,
-        "klaviyo_opened_email_unique": 3417,
-        "klaviyo_clicked_email_unique": 8
+        "klaviyo_total_recipients": 148,
+        "klaviyo_received_email": 144,
+        "klaviyo_opened_email_unique": 1560,
+        "klaviyo_clicked_email_unique": 4
       },
       "2026-05-28": {
         "klaviyo_total_recipients": 426,
@@ -1422,9 +1447,15 @@
         "klaviyo_clicked_email_unique": 5
       },
       "2026-05-29": {
-        "klaviyo_total_recipients": 161,
-        "klaviyo_received_email": 137,
-        "klaviyo_opened_email_unique": 949,
+        "klaviyo_total_recipients": 271,
+        "klaviyo_received_email": 239,
+        "klaviyo_opened_email_unique": 1567,
+        "klaviyo_clicked_email_unique": 7
+      },
+      "2026-05-30": {
+        "klaviyo_total_recipients": 128,
+        "klaviyo_received_email": 124,
+        "klaviyo_opened_email_unique": 755,
         "klaviyo_clicked_email_unique": 3
       }
     },
@@ -1574,16 +1605,20 @@
         "shopify_placed_order_value": 512.94
       },
       "2026-05-27": {
-        "shopify_placed_order": 35,
-        "shopify_placed_order_value": 1512.28
+        "shopify_placed_order": 10,
+        "shopify_placed_order_value": 422.62
       },
       "2026-05-28": {
         "shopify_placed_order": 48,
         "shopify_placed_order_value": 3020.23
       },
       "2026-05-29": {
-        "shopify_placed_order": 17,
-        "shopify_placed_order_value": 2031.94
+        "shopify_placed_order": 28,
+        "shopify_placed_order_value": 2515.11
+      },
+      "2026-05-30": {
+        "shopify_placed_order": 16,
+        "shopify_placed_order_value": 862.15
       }
     },
     "ga4": {
@@ -1847,11 +1882,18 @@
         "purchaseRevenue": 1135.66
       },
       "2026-05-29": {
-        "sessions": 1147,
-        "addToCarts": 111,
-        "checkouts": 29,
-        "ecommercePurchases": 15,
-        "purchaseRevenue": 1319
+        "sessions": 1165,
+        "addToCarts": 117,
+        "checkouts": 32,
+        "ecommercePurchases": 17,
+        "purchaseRevenue": 1425
+      },
+      "2026-05-30": {
+        "sessions": 848,
+        "addToCarts": 85,
+        "checkouts": 31,
+        "ecommercePurchases": 11,
+        "purchaseRevenue": 653.3
       }
     }
   },
@@ -1866,31 +1908,31 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 1075.8,
+        "net_sales": 876.6,
         "sm_order_count": 16
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 783.3,
-        "sm_order_count": 10
+        "net_sales": 466.36,
+        "sm_order_count": 11
       }
     ],
-    "date": "2026-05-29"
+    "date": "2026-05-30"
   },
   "new_returning_30d": {
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 38085.99,
-        "sm_order_count": 698
+        "net_sales": 38057.12,
+        "sm_order_count": 697
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 19271.16,
-        "sm_order_count": 769
+        "net_sales": 19167.47,
+        "sm_order_count": 762
       }
     ],
-    "date": "2026-05-29"
+    "date": "2026-05-30"
   },
   "top_shopify_variants": {
     "data": [
@@ -77566,6 +77608,12 @@
         "net_sales": 119.2
       },
       {
+        "customer_id": 3574789603446,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 120
+      },
+      {
         "customer_id": 3575643799670,
         "yearMonth": "2026|05",
         "sm_order_count": 1,
@@ -80272,6 +80320,12 @@
         "net_sales": 77.35
       },
       {
+        "customer_id": 5524030161014,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 77.35
+      },
+      {
         "customer_id": 5524483440758,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -80508,6 +80562,12 @@
       {
         "customer_id": 5567415287926,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 102
+      },
+      {
+        "customer_id": 5567415287926,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 102
       },
@@ -80874,6 +80934,12 @@
       {
         "customer_id": 5631596101750,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 10.2
+      },
+      {
+        "customer_id": 5631596101750,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 10.2
       },
@@ -82028,6 +82094,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 30.6
+      },
+      {
+        "customer_id": 5923985784950,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 36
       },
       {
         "customer_id": 5927532167286,
@@ -83414,6 +83486,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 1,
         "net_sales": 9.35
+      },
+      {
+        "customer_id": 6040617877622,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 12
       },
       {
         "customer_id": 6042527826038,
@@ -86218,6 +86296,12 @@
         "net_sales": 77.35
       },
       {
+        "customer_id": 6529401127030,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 77.35
+      },
+      {
         "customer_id": 6532359684214,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -87034,6 +87118,12 @@
         "net_sales": 89.4
       },
       {
+        "customer_id": 6719335923830,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 84
+      },
+      {
         "customer_id": 6720959447158,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -87110,6 +87200,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 2,
         "net_sales": 42.5
+      },
+      {
+        "customer_id": 6724167499894,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 21.25
       },
       {
         "customer_id": 6728532557942,
@@ -88262,6 +88358,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 12.75
+      },
+      {
+        "customer_id": 6891925340278,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 50
       },
       {
         "customer_id": 6892199673974,
@@ -93922,6 +94024,12 @@
         "net_sales": 88.4
       },
       {
+        "customer_id": 7641911951478,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 47.6
+      },
+      {
         "customer_id": 7642215121014,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -97552,6 +97660,12 @@
         "net_sales": 45.05
       },
       {
+        "customer_id": 7820253528182,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
         "customer_id": 7821395787894,
         "yearMonth": "2025|12",
         "sm_order_count": 1,
@@ -99126,6 +99240,12 @@
       {
         "customer_id": 7879099023478,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 73.1
+      },
+      {
+        "customer_id": 7879099023478,
+        "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 73.1
       },
@@ -113196,8 +113316,8 @@
       {
         "customer_id": 7990002548854,
         "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 75
+        "sm_order_count": 2,
+        "net_sales": 122.6
       },
       {
         "customer_id": 7990068904054,
@@ -134512,6 +134632,12 @@
         "net_sales": 102
       },
       {
+        "customer_id": 8322153119862,
+        "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 51
+      },
+      {
         "customer_id": 8322155905142,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -136226,94 +136352,10 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 0
-      },
-      {
-        "customer_id": 8345558253686,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345560711286,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345569230966,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345571131510,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345641681014,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345648627830,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345669763190,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345699745910,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345703514230,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345709314166,
-        "yearMonth": "2026|04",
-        "sm_order_count": 2,
-        "net_sales": 490.13
-      },
-      {
-        "customer_id": 8345709314166,
-        "yearMonth": "2026|05",
-        "sm_order_count": 1,
-        "net_sales": 195.5
-      },
-      {
-        "customer_id": 8345735987318,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
-      },
-      {
-        "customer_id": 8345783500918,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 90
-      },
-      {
-        "customer_id": 8345790087286,
-        "yearMonth": "2026|04",
-        "sm_order_count": 1,
-        "net_sales": 0
       }
     ],
     "window_start": "2025-12-01",
-    "date": "2026-05-29"
+    "date": "2026-05-30"
   },
   "py_amazon_seller_2025-05-20": {
     "ordered_product_sales": 5328.4,
@@ -137231,11 +137273,6 @@
   "amazon_promo_yesterday": {
     "data": [
       {
-        "date": "2026-04-30",
-        "item_promotion_discount": 142.4,
-        "ship_promotion_discount": 53.94
-      },
-      {
         "date": "2026-05-01",
         "item_promotion_discount": 86.15,
         "ship_promotion_discount": 63.72
@@ -137292,7 +137329,7 @@
       },
       {
         "date": "2026-05-12",
-        "item_promotion_discount": 168.26,
+        "item_promotion_discount": 198.26,
         "ship_promotion_discount": 97.46
       },
       {
@@ -137302,32 +137339,32 @@
       },
       {
         "date": "2026-05-14",
-        "item_promotion_discount": 285.22,
+        "item_promotion_discount": 288.72,
         "ship_promotion_discount": 88.03
       },
       {
         "date": "2026-05-15",
-        "item_promotion_discount": 212.05,
+        "item_promotion_discount": 216.05,
         "ship_promotion_discount": 80.7
       },
       {
         "date": "2026-05-16",
-        "item_promotion_discount": 135.82,
+        "item_promotion_discount": 144.82,
         "ship_promotion_discount": 77.27
       },
       {
         "date": "2026-05-17",
-        "item_promotion_discount": 198.4,
+        "item_promotion_discount": 221.4,
         "ship_promotion_discount": 117.99
       },
       {
         "date": "2026-05-18",
-        "item_promotion_discount": 136.6,
+        "item_promotion_discount": 140.1,
         "ship_promotion_discount": 90.62
       },
       {
         "date": "2026-05-19",
-        "item_promotion_discount": 133.4,
+        "item_promotion_discount": 138.4,
         "ship_promotion_discount": 66.89
       },
       {
@@ -137337,7 +137374,7 @@
       },
       {
         "date": "2026-05-21",
-        "item_promotion_discount": 53.07,
+        "item_promotion_discount": 57.07,
         "ship_promotion_discount": 96.18
       },
       {
@@ -137373,36 +137410,37 @@
       {
         "date": "2026-05-28",
         "item_promotion_discount": 135.49,
-        "ship_promotion_discount": 62.55
+        "ship_promotion_discount": 62.68
       },
       {
         "date": "2026-05-29",
-        "item_promotion_discount": 103.41,
-        "ship_promotion_discount": 79.12
+        "item_promotion_discount": 126.09,
+        "ship_promotion_discount": 82.72
+      },
+      {
+        "date": "2026-05-30",
+        "item_promotion_discount": 87.95,
+        "ship_promotion_discount": 70.05
       }
     ],
-    "date": "2026-05-29"
+    "date": "2026-05-30"
   },
   "yoy_yesterday": {
-    "yoy_date": "2025-05-29",
+    "yoy_date": "2025-05-30",
     "shopify": [
       {
-        "net_sales": 1094.05,
-        "sm_order_count": 27
+        "net_sales": 1527.05,
+        "sm_order_count": 43
       }
     ],
-    "amazon_sales": [
-      {
-        "ordered_product_sales": 6471.74
-      }
-    ],
+    "amazon_sales": [],
     "amazon_promo": [
       {
-        "item_promotion_discount": 587.96,
-        "ship_promotion_discount": 72.58
+        "item_promotion_discount": 590.94,
+        "ship_promotion_discount": 59.26
       }
     ],
-    "date": "2026-05-29"
+    "date": "2026-05-30"
   },
   "py_shopify_2025-05-22": {
     "gross_sales": 1924.8,
@@ -137475,5 +137513,18 @@
     "sessions": 1308,
     "unit_session_percentage": 14.76,
     "page_views": 1753
+  },
+  "py_shopify_2025-05-30": {
+    "gross_sales": 2053.38,
+    "sm_order_count": 35,
+    "net_sales": 1224.85,
+    "net_quantity": 92
+  },
+  "py_amazon_seller_2025-05-30": {
+    "ordered_product_sales": 5793.18,
+    "units_ordered": 184,
+    "sessions": 1279,
+    "unit_session_percentage": 14.39,
+    "page_views": 1664
   }
 }
