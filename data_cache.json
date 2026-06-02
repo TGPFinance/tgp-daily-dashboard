@@ -268,10 +268,10 @@
         "page_views": 2653
       },
       "2026-05-30": {
-        "ordered_product_sales": 7434.39,
-        "units_ordered": 295,
+        "ordered_product_sales": 7417.61,
+        "units_ordered": 294,
         "sessions": 2214,
-        "unit_session_percentage": 13.32,
+        "unit_session_percentage": 13.28,
         "page_views": 2817
       },
       "2026-05-31": {
@@ -529,7 +529,7 @@
         "cost": 2072.35,
         "attributedSales14d": 2410.44,
         "clicks": 928,
-        "impressions": 186141
+        "impressions": 186083
       }
     },
     "shopify": {
@@ -1031,10 +1031,10 @@
         "impressions": 10259
       },
       "2026-06-01": {
-        "spend": 391.69,
+        "spend": 391.92,
         "purchase_value": 1088.4,
-        "clicks": 115,
-        "impressions": 15967
+        "clicks": 116,
+        "impressions": 15970
       }
     },
     "google_ads": {
@@ -128134,7 +128134,7 @@
       },
       {
         "date": "2026-05-30",
-        "item_promotion_discount": 111.38,
+        "item_promotion_discount": 121.88,
         "ship_promotion_discount": 71.98
       },
       {
