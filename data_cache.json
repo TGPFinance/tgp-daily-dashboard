@@ -534,7 +534,7 @@
       },
       "2026-06-01": {
         "cost": 2076.74,
-        "attributedSales14d": 2497.54,
+        "attributedSales14d": 2541.5,
         "clicks": 929,
         "impressions": 179991
       },
@@ -542,7 +542,7 @@
         "cost": 2373.58,
         "attributedSales14d": 2129.16,
         "clicks": 995,
-        "impressions": 205178
+        "impressions": 204737
       }
     },
     "shopify": {
@@ -1056,10 +1056,10 @@
         "impressions": 15982
       },
       "2026-06-02": {
-        "spend": 648.21,
+        "spend": 648.27,
         "purchase_value": 240.38,
         "clicks": 199,
-        "impressions": 20086
+        "impressions": 20093
       }
     },
     "google_ads": {
@@ -1311,9 +1311,9 @@
       },
       "2026-06-02": {
         "cost": 292.642,
-        "conversions_value": 269.28,
+        "conversions_value": 616.08,
         "clicks": 249,
-        "impressions": 28117
+        "impressions": 28118
       }
     },
     "klaviyo_email": {
@@ -2039,11 +2039,11 @@
         "purchaseRevenue": 2207.6
       },
       "2026-06-02": {
-        "sessions": 859,
-        "addToCarts": 66,
-        "checkouts": 40,
-        "ecommercePurchases": 12,
-        "purchaseRevenue": 669.44
+        "sessions": 892,
+        "addToCarts": 83,
+        "checkouts": 48,
+        "ecommercePurchases": 14,
+        "purchaseRevenue": 739.14
       }
     }
   },
@@ -128108,12 +128108,12 @@
       },
       {
         "date": "2026-05-21",
-        "item_promotion_discount": 102.13,
+        "item_promotion_discount": 104.13,
         "ship_promotion_discount": 96.18
       },
       {
         "date": "2026-05-22",
-        "item_promotion_discount": 247.74,
+        "item_promotion_discount": 249.74,
         "ship_promotion_discount": 127.5
       },
       {
@@ -128123,7 +128123,7 @@
       },
       {
         "date": "2026-05-24",
-        "item_promotion_discount": 56.66,
+        "item_promotion_discount": 58.66,
         "ship_promotion_discount": 65.97
       },
       {
@@ -128168,8 +128168,8 @@
       },
       {
         "date": "2026-06-02",
-        "item_promotion_discount": 88.06,
-        "ship_promotion_discount": 83.82
+        "item_promotion_discount": 96.45,
+        "ship_promotion_discount": 83.84
       }
     ],
     "date": "2026-06-02"
