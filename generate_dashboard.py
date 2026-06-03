@@ -168,6 +168,16 @@ def sm_fetch_rows(ds_id, account_id, fields, start_date, end_date, extra_params=
                     continue
                 print(f"  Warning: {ds_id} ({start_date}→{end_date}) still rate-limited after {retries+1} attempts")
                 return []
+            # Handle 5xx server errors (500 Internal Server Error, 502 Bad Gateway, 503, 504)
+            # These are transient Supermetrics-side issues — retry typically succeeds
+            if 500 <= r.status_code < 600:
+                if attempt < retries:
+                    wait = 3 * (2 ** attempt) + random.uniform(0, 1)
+                    print(f"  {ds_id} server error {r.status_code} (attempt {attempt+1}/{retries+1}), retrying in {wait:.1f}s...")
+                    time.sleep(wait)
+                    continue
+                print(f"  Warning: {ds_id} ({start_date}→{end_date}) {r.status_code} after {retries+1} attempts")
+                return []
             r.raise_for_status()
             rows = r.json().get("data", [])
             fl = fields.split(",")
