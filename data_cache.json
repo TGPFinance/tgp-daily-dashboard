@@ -541,17 +541,21 @@
       },
       "2026-06-01": {
         "cost": 2076.74,
-        "attributedSales14d": 2541.5,
+        "attributedSales14d": 2558.28,
         "clicks": 929,
-        "impressions": 179991
+        "impressions": 179996
       },
       "2026-06-02": {
-        "cost": 2373.58,
-        "attributedSales14d": 2129.16,
-        "clicks": 995,
-        "impressions": 204737,
-        "roas": 0.8970247474279358,
-        "acos": 1.1147964455466006
+        "cost": 2375.14,
+        "attributedSales14d": 2239.1,
+        "clicks": 996,
+        "impressions": 198480
+      },
+      "2026-06-03": {
+        "cost": 2243.85,
+        "attributedSales14d": 1925.89,
+        "clicks": 922,
+        "impressions": 226844
       }
     },
     "shopify": {
@@ -1077,10 +1081,10 @@
         "impressions": 20105
       },
       "2026-06-03": {
-        "spend": 528.93,
+        "spend": 529.15,
         "purchase_value": 324.45,
         "clicks": 122,
-        "impressions": 19998
+        "impressions": 20008
       }
     },
     "google_ads": {
@@ -1337,10 +1341,10 @@
         "impressions": 28125
       },
       "2026-06-03": {
-        "cost": 229.3415,
+        "cost": 229.3616,
         "conversions_value": 37.52,
-        "clicks": 157,
-        "impressions": 16289
+        "clicks": 158,
+        "impressions": 16290
       }
     },
     "klaviyo_email": {
@@ -128398,12 +128402,12 @@
       },
       {
         "date": "2026-05-16",
-        "item_promotion_discount": 144.82,
+        "item_promotion_discount": 150.82,
         "ship_promotion_discount": 77.27
       },
       {
         "date": "2026-05-17",
-        "item_promotion_discount": 289.48,
+        "item_promotion_discount": 298.48,
         "ship_promotion_discount": 117.99
       },
       {
@@ -128438,7 +128442,7 @@
       },
       {
         "date": "2026-05-24",
-        "item_promotion_discount": 73.66,
+        "item_promotion_discount": 78.66,
         "ship_promotion_discount": 65.97
       },
       {
@@ -128489,7 +128493,7 @@
       {
         "date": "2026-06-03",
         "item_promotion_discount": 97.12,
-        "ship_promotion_discount": 90.59
+        "ship_promotion_discount": 90.66
       }
     ],
     "date": "2026-06-03"
