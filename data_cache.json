@@ -572,16 +572,16 @@
         "impressions": 217868
       },
       "2026-06-04": {
-        "cost": 2236.57,
-        "attributedSales14d": 2746.73,
-        "clicks": 923,
-        "impressions": 196219
+        "cost": 2238.27,
+        "attributedSales14d": 2783.52,
+        "clicks": 924,
+        "impressions": 196195
       },
       "2026-06-05": {
         "cost": 1663.59,
-        "attributedSales14d": 1861.85,
+        "attributedSales14d": 1915.41,
         "clicks": 781,
-        "impressions": 166073
+        "impressions": 165297
       }
     },
     "shopify": {
@@ -1131,10 +1131,10 @@
         "impressions": 15601
       },
       "2026-06-05": {
-        "spend": 255.74,
+        "spend": 256,
         "purchase_value": 269.63,
         "clicks": 80,
-        "impressions": 8173
+        "impressions": 8191
       }
     },
     "google_ads": {
@@ -1403,10 +1403,10 @@
         "impressions": 15340
       },
       "2026-06-05": {
-        "cost": 208.4996,
+        "cost": 208.5144,
         "conversions_value": 159.6,
         "clicks": 112,
-        "impressions": 12566
+        "impressions": 12577
       }
     },
     "klaviyo_email": {
@@ -2183,8 +2183,8 @@
         "purchaseRevenue": 863.35
       },
       "2026-06-05": {
-        "sessions": 922,
-        "addToCarts": 125,
+        "sessions": 925,
+        "addToCarts": 129,
         "checkouts": 32,
         "ecommercePurchases": 11,
         "purchaseRevenue": 667.95
@@ -128690,7 +128690,7 @@
       },
       {
         "date": "2026-05-24",
-        "item_promotion_discount": 107.16,
+        "item_promotion_discount": 109.16,
         "ship_promotion_discount": 65.97
       },
       {
