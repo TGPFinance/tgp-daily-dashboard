@@ -308,6 +308,13 @@
         "sessions": 2099,
         "unit_session_percentage": 15.91,
         "page_views": 2709
+      },
+      "2026-06-05": {
+        "ordered_product_sales": 6432.52,
+        "units_ordered": 261,
+        "sessions": 1797,
+        "unit_session_percentage": 14.52,
+        "page_views": 2286
       }
     },
     "amazon_ads": {
@@ -844,10 +851,10 @@
         "net_quantity": 68
       },
       "2026-06-04": {
-        "gross_sales": 2113.25,
-        "sm_order_count": 38,
-        "net_sales": 1633.1,
-        "net_quantity": 104
+        "gross_sales": 1415.25,
+        "sm_order_count": 25,
+        "net_sales": 1318.7,
+        "net_quantity": 58
       },
       "2026-06-05": {
         "gross_sales": 2457,
@@ -856,10 +863,16 @@
         "net_quantity": 92
       },
       "2026-06-06": {
-        "gross_sales": 631.6,
-        "sm_order_count": 11,
-        "net_sales": 503.6,
-        "net_quantity": 25
+        "gross_sales": 1631.8,
+        "sm_order_count": 33,
+        "net_sales": 1405.8,
+        "net_quantity": 64
+      },
+      "2026-06-07": {
+        "gross_sales": 335.8,
+        "sm_order_count": 6,
+        "net_sales": 283.8,
+        "net_quantity": 16
       }
     },
     "meta": {
@@ -1131,10 +1144,16 @@
         "impressions": 15601
       },
       "2026-06-05": {
-        "spend": 256,
+        "spend": 256.34,
         "purchase_value": 269.63,
         "clicks": 80,
-        "impressions": 8191
+        "impressions": 8228
+      },
+      "2026-06-06": {
+        "spend": 288.77,
+        "purchase_value": 36,
+        "clicks": 111,
+        "impressions": 9467
       }
     },
     "google_ads": {
@@ -1403,10 +1422,16 @@
         "impressions": 15340
       },
       "2026-06-05": {
-        "cost": 208.5144,
+        "cost": 208.6974,
         "conversions_value": 159.6,
         "clicks": 112,
-        "impressions": 12577
+        "impressions": 12590
+      },
+      "2026-06-06": {
+        "cost": 201.6078,
+        "conversions_value": 147.88,
+        "clicks": 138,
+        "impressions": 15764
       }
     },
     "klaviyo_email": {
@@ -1669,10 +1694,10 @@
         "klaviyo_clicked_email_unique": 2
       },
       "2026-06-03": {
-        "klaviyo_total_recipients": 62463,
-        "klaviyo_received_email": 62313,
-        "klaviyo_opened_email_unique": 34904,
-        "klaviyo_clicked_email_unique": 245
+        "klaviyo_total_recipients": 164,
+        "klaviyo_received_email": 162,
+        "klaviyo_opened_email_unique": 15700,
+        "klaviyo_clicked_email_unique": 9
       },
       "2026-06-04": {
         "klaviyo_total_recipients": 379,
@@ -1681,10 +1706,16 @@
         "klaviyo_clicked_email_unique": 14
       },
       "2026-06-05": {
-        "klaviyo_total_recipients": 183,
-        "klaviyo_received_email": 181,
-        "klaviyo_opened_email_unique": 1347,
-        "klaviyo_clicked_email_unique": 4
+        "klaviyo_total_recipients": 289,
+        "klaviyo_received_email": 283,
+        "klaviyo_opened_email_unique": 2137,
+        "klaviyo_clicked_email_unique": 5
+      },
+      "2026-06-06": {
+        "klaviyo_total_recipients": 152,
+        "klaviyo_received_email": 152,
+        "klaviyo_opened_email_unique": 864,
+        "klaviyo_clicked_email_unique": 3
       }
     },
     "klaviyo_attr": {
@@ -1861,16 +1892,20 @@
         "shopify_placed_order_value": 237.52
       },
       "2026-06-03": {
-        "shopify_placed_order": 45,
-        "shopify_placed_order_value": 1916.8
+        "shopify_placed_order": 13,
+        "shopify_placed_order_value": 324.18
       },
       "2026-06-04": {
         "shopify_placed_order": 33,
         "shopify_placed_order_value": 1775.63
       },
       "2026-06-05": {
-        "shopify_placed_order": 17,
-        "shopify_placed_order_value": 1708.16
+        "shopify_placed_order": 29,
+        "shopify_placed_order_value": 2270.89
+      },
+      "2026-06-06": {
+        "shopify_placed_order": 21,
+        "shopify_placed_order_value": 899.37
       }
     },
     "ga4": {
@@ -2183,11 +2218,18 @@
         "purchaseRevenue": 863.35
       },
       "2026-06-05": {
-        "sessions": 925,
-        "addToCarts": 129,
-        "checkouts": 32,
-        "ecommercePurchases": 11,
-        "purchaseRevenue": 667.95
+        "sessions": 933,
+        "addToCarts": 136,
+        "checkouts": 36,
+        "ecommercePurchases": 12,
+        "purchaseRevenue": 793.95
+      },
+      "2026-06-06": {
+        "sessions": 707,
+        "addToCarts": 45,
+        "checkouts": 22,
+        "ecommercePurchases": 8,
+        "purchaseRevenue": 483.3
       }
     }
   },
@@ -2202,31 +2244,31 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 1340.2,
-        "sm_order_count": 19
+        "net_sales": 963.85,
+        "sm_order_count": 21
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 876.2,
-        "sm_order_count": 11
+        "net_sales": 222.15,
+        "sm_order_count": 7
       }
     ],
-    "date": "2026-06-05"
+    "date": "2026-06-06"
   },
   "new_returning_30d": {
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 38655.4,
-        "sm_order_count": 694
+        "net_sales": 38817.45,
+        "sm_order_count": 698
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 19355.63,
-        "sm_order_count": 740
+        "net_sales": 18606.75,
+        "sm_order_count": 726
       }
     ],
-    "date": "2026-06-05"
+    "date": "2026-06-06"
   },
   "top_shopify_variants": {
     "data": [
@@ -21803,7 +21845,7 @@
         "campaign_subject": "You're not tired. You're just not sleeping right.",
         "campaign_send_date": "2026-06-03",
         "klaviyo_total_recipients": 62337,
-        "klaviyo_open_rate": 0.616598,
+        "klaviyo_open_rate": 0.624703,
         "klaviyo_click_rate": 0.004052
       },
       {
@@ -21811,7 +21853,7 @@
         "campaign_subject": "SALE IS HERE | Buy 3, Get 1 FREE",
         "campaign_send_date": "2026-05-21",
         "klaviyo_total_recipients": 57347,
-        "klaviyo_open_rate": 0.638455,
+        "klaviyo_open_rate": 0.640953,
         "klaviyo_click_rate": 0.005883
       },
       {
@@ -21819,7 +21861,7 @@
         "campaign_subject": "You've Been Tagging US... | Buy 3, Get 1 FREE",
         "campaign_send_date": "2026-05-23",
         "klaviyo_total_recipients": 56592,
-        "klaviyo_open_rate": 0.650693,
+        "klaviyo_open_rate": 0.653475,
         "klaviyo_click_rate": 0.005939
       },
       {
@@ -21827,7 +21869,7 @@
         "campaign_subject": "Last Chance to SAVE (!)",
         "campaign_send_date": "2026-05-26",
         "klaviyo_total_recipients": 55874,
-        "klaviyo_open_rate": 0.642125,
+        "klaviyo_open_rate": 0.645068,
         "klaviyo_click_rate": 0.005651
       },
       {
@@ -21835,7 +21877,7 @@
         "campaign_subject": "Cheers to the Moms...",
         "campaign_send_date": "2026-05-11",
         "klaviyo_total_recipients": 51145,
-        "klaviyo_open_rate": 0.715403,
+        "klaviyo_open_rate": 0.717639,
         "klaviyo_click_rate": 0.006177
       },
       {
@@ -21843,7 +21885,7 @@
         "campaign_subject": "The 15-minute Under-Eye Reset",
         "campaign_send_date": "2026-05-13",
         "klaviyo_total_recipients": 50907,
-        "klaviyo_open_rate": 0.67209,
+        "klaviyo_open_rate": 0.674608,
         "klaviyo_click_rate": 0.004898
       },
       {
@@ -21851,7 +21893,7 @@
         "campaign_subject": "10,000+ Five-Star Reviews",
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 46662,
-        "klaviyo_open_rate": 0.726835,
+        "klaviyo_open_rate": 0.729477,
         "klaviyo_click_rate": 0.004509
       },
       {
@@ -21859,7 +21901,7 @@
         "campaign_subject": "\ud83d\udce3 Something BIG is Coming",
         "campaign_send_date": "2026-05-19",
         "klaviyo_total_recipients": 43901,
-        "klaviyo_open_rate": 0.80972,
+        "klaviyo_open_rate": 0.812935,
         "klaviyo_click_rate": 0.006998
       },
       {
@@ -21867,7 +21909,7 @@
         "campaign_subject": "Feel Like Yourself Again",
         "campaign_send_date": "2026-05-09",
         "klaviyo_total_recipients": 40682,
-        "klaviyo_open_rate": 0.836406,
+        "klaviyo_open_rate": 0.837932,
         "klaviyo_click_rate": 0.005513
       },
       {
@@ -21875,16 +21917,8 @@
         "campaign_subject": "Reminder: the good stuff's on sale",
         "campaign_send_date": "2026-05-24",
         "klaviyo_total_recipients": 39200,
-        "klaviyo_open_rate": 0.926354,
-        "klaviyo_click_rate": 0.008311
-      },
-      {
-        "campaign_name": "05/07: Target run?",
-        "campaign_subject": "Target run?",
-        "campaign_send_date": "2026-05-07",
-        "klaviyo_total_recipients": 5261,
-        "klaviyo_open_rate": 0.782841,
-        "klaviyo_click_rate": 0.002288
+        "klaviyo_open_rate": 0.930139,
+        "klaviyo_click_rate": 0.008336
       },
       {
         "campaign_name": "05/17: 5-Star Reviews (non-purchasers 15% off)",
@@ -21898,168 +21932,168 @@
         "campaign_name": "T1 - Restart your wellness routine",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, running low on your faves?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 1029,
-        "klaviyo_open_rate": 0.321037,
-        "klaviyo_click_rate": 0.00997
+        "klaviyo_total_recipients": 1057,
+        "klaviyo_open_rate": 0.307468,
+        "klaviyo_click_rate": 0.009699
       },
       {
         "campaign_name": "PM | Post Purchase Email #1",
         "campaign_subject": "Good things on the way!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 699,
-        "klaviyo_open_rate": 0.290824,
-        "klaviyo_click_rate": 0.021773
-      },
-      {
-        "campaign_name": "PM | Abandoned Cart Email #1",
-        "campaign_subject": "Your cart is waiting!",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 681,
-        "klaviyo_open_rate": 0.510324,
-        "klaviyo_click_rate": 0.020649
+        "klaviyo_total_recipients": 697,
+        "klaviyo_open_rate": 0.281931,
+        "klaviyo_click_rate": 0.020249
       },
       {
         "campaign_name": "PM | Post Purchase Email #2",
         "campaign_subject": "We're always looking to improve",
         "campaign_send_date": "",
+        "klaviyo_total_recipients": 687,
+        "klaviyo_open_rate": 0.257749,
+        "klaviyo_click_rate": 0.004894
+      },
+      {
+        "campaign_name": "PM | Abandoned Cart Email #1",
+        "campaign_subject": "Your cart is waiting!",
+        "campaign_send_date": "",
         "klaviyo_total_recipients": 679,
-        "klaviyo_open_rate": 0.259504,
-        "klaviyo_click_rate": 0.006612
+        "klaviyo_open_rate": 0.498521,
+        "klaviyo_click_rate": 0.022189
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #2",
         "campaign_subject": "15% Off Your Cart [Limited Time]",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 658,
-        "klaviyo_open_rate": 0.506098,
-        "klaviyo_click_rate": 0.033537
+        "klaviyo_total_recipients": 656,
+        "klaviyo_open_rate": 0.509954,
+        "klaviyo_click_rate": 0.036753
       },
       {
         "campaign_name": "Welcome Email #1",
         "campaign_subject": "Welcome to The Good Patch",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 618,
-        "klaviyo_open_rate": 0.452736,
-        "klaviyo_click_rate": 0.048093
+        "klaviyo_total_recipients": 605,
+        "klaviyo_open_rate": 0.455161,
+        "klaviyo_click_rate": 0.049069
       },
       {
         "campaign_name": "PM | Post Purchase Email #3",
         "campaign_subject": "Let\u2019s stick together?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 537,
-        "klaviyo_open_rate": 0.328302,
-        "klaviyo_click_rate": 0.003774
+        "klaviyo_total_recipients": 531,
+        "klaviyo_open_rate": 0.330153,
+        "klaviyo_click_rate": 0.003817
       },
       {
         "campaign_name": "Welcome Email #2",
         "campaign_subject": "3 friends. 1 shared belief. \u2728",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 515,
-        "klaviyo_open_rate": 0.403883,
-        "klaviyo_click_rate": 0.013592
+        "klaviyo_total_recipients": 509,
+        "klaviyo_open_rate": 0.399606,
+        "klaviyo_click_rate": 0.01378
       },
       {
         "campaign_name": "Welcome Email #4",
         "campaign_subject": "Last chance to save 15%",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 514,
-        "klaviyo_open_rate": 0.421053,
-        "klaviyo_click_rate": 0.025341
+        "klaviyo_total_recipients": 506,
+        "klaviyo_open_rate": 0.421782,
+        "klaviyo_click_rate": 0.023762
       },
       {
         "campaign_name": "Welcome Email #3",
         "campaign_subject": "9000+ rave reviews and counting",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 507,
-        "klaviyo_open_rate": 0.404339,
-        "klaviyo_click_rate": 0.019724
+        "klaviyo_total_recipients": 504,
+        "klaviyo_open_rate": 0.392857,
+        "klaviyo_click_rate": 0.019841
       },
       {
         "campaign_name": "T3B - FOMO - occasions focus",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, bring home more of your faves!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 498,
-        "klaviyo_open_rate": 0.322105,
-        "klaviyo_click_rate": 0.004211
-      },
-      {
-        "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
-        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, last chance for 20% off!",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 496,
-        "klaviyo_open_rate": 0.314465,
-        "klaviyo_click_rate": 0.004193
+        "klaviyo_total_recipients": 501,
+        "klaviyo_open_rate": 0.330544,
+        "klaviyo_click_rate": 0.004184
       },
       {
         "campaign_name": "T2A - 20% off your restock",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, here\u2019s 20% off!",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 491,
-        "klaviyo_open_rate": 0.318087,
-        "klaviyo_click_rate": 0.006237
+        "klaviyo_total_recipients": 496,
+        "klaviyo_open_rate": 0.302469,
+        "klaviyo_click_rate": 0.006173
+      },
+      {
+        "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
+        "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, last chance for 20% off!",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 495,
+        "klaviyo_open_rate": 0.324948,
+        "klaviyo_click_rate": 0.004193
       },
       {
         "campaign_name": "T2B - no code - treat yourself",
         "campaign_subject": "{{ first_name|default:'Hey friend,'|title }}, its called self-care",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 483,
-        "klaviyo_open_rate": 0.334755,
+        "klaviyo_open_rate": 0.328358,
         "klaviyo_click_rate": 0.002132
       },
       {
         "campaign_name": "PM | 60D Non Buyer Email #1",
         "campaign_subject": "Make every day feel a little lighter",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 434,
-        "klaviyo_open_rate": 0.409302,
-        "klaviyo_click_rate": 0.006977
-      },
-      {
-        "campaign_name": "PM | Sunset Flow Email #1",
-        "campaign_subject": "Keep the good vibes coming",
-        "campaign_send_date": "",
-        "klaviyo_total_recipients": 233,
-        "klaviyo_open_rate": 0.03913,
-        "klaviyo_click_rate": 0
+        "klaviyo_total_recipients": 421,
+        "klaviyo_open_rate": 0.40048,
+        "klaviyo_click_rate": 0.007194
       },
       {
         "campaign_name": "PM | Sunset Flow Email #2",
         "campaign_subject": "still want email-exclusive perks?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 228,
-        "klaviyo_open_rate": 0.022222,
+        "klaviyo_total_recipients": 209,
+        "klaviyo_open_rate": 0.019417,
+        "klaviyo_click_rate": 0
+      },
+      {
+        "campaign_name": "PM | Sunset Flow Email #1",
+        "campaign_subject": "Keep the good vibes coming",
+        "campaign_send_date": "",
+        "klaviyo_total_recipients": 198,
+        "klaviyo_open_rate": 0.035897,
         "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #1",
         "campaign_subject": "Ready to feel your best?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 181,
-        "klaviyo_open_rate": 0.567416,
-        "klaviyo_click_rate": 0.039326
+        "klaviyo_total_recipients": 179,
+        "klaviyo_open_rate": 0.5625,
+        "klaviyo_click_rate": 0.039773
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #2",
         "campaign_subject": "Looking for a sign?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 167,
-        "klaviyo_open_rate": 0.598802,
-        "klaviyo_click_rate": 0.047904
+        "klaviyo_total_recipients": 161,
+        "klaviyo_open_rate": 0.602484,
+        "klaviyo_click_rate": 0.043478
       },
       {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #1",
         "campaign_subject": "We appreciate you",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 146,
-        "klaviyo_open_rate": 0.475862,
-        "klaviyo_click_rate": 0.02069
+        "klaviyo_total_recipients": 149,
+        "klaviyo_open_rate": 0.486486,
+        "klaviyo_click_rate": 0.02027
       },
       {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
         "campaign_subject": "Ready to make your wellness effortless?",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 45,
-        "klaviyo_open_rate": 0.487805,
+        "klaviyo_total_recipients": 47,
+        "klaviyo_open_rate": 0.511628,
         "klaviyo_click_rate": 0
       },
       {
@@ -22075,23 +22109,23 @@
         "campaign_subject": "Last chance to save 30%",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 34,
-        "klaviyo_open_rate": 0.5,
+        "klaviyo_open_rate": 0.470588,
         "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "Welcome Email #2 [meta ads]",
         "campaign_subject": "3 friends. 1 shared belief. \u2728",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 29,
-        "klaviyo_open_rate": 0.482759,
+        "klaviyo_total_recipients": 27,
+        "klaviyo_open_rate": 0.518519,
         "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "Welcome Email #1 [meta ads]",
         "campaign_subject": "Welcome to The Good Patch",
         "campaign_send_date": "",
-        "klaviyo_total_recipients": 27,
-        "klaviyo_open_rate": 0.407407,
+        "klaviyo_total_recipients": 26,
+        "klaviyo_open_rate": 0.384615,
         "klaviyo_click_rate": 0
       },
       {
@@ -22139,7 +22173,7 @@
         "campaign_subject": "{{ first_name|default:'Hey there' }}, take 10% off for the next 72 hours",
         "campaign_send_date": "",
         "klaviyo_total_recipients": 4,
-        "klaviyo_open_rate": 1,
+        "klaviyo_open_rate": 0.75,
         "klaviyo_click_rate": 0.25
       },
       {
@@ -22250,14 +22284,6 @@
         "campaign_name": "02/04 - Focus",
         "campaign_subject": "What's your focus today?",
         "campaign_send_date": "2026-02-04",
-        "klaviyo_total_recipients": "",
-        "klaviyo_open_rate": "",
-        "klaviyo_click_rate": ""
-      },
-      {
-        "campaign_name": "02/06 - Olympics Edition",
-        "campaign_subject": "The Patch Guide: Olympics Edition",
-        "campaign_send_date": "2026-02-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
         "klaviyo_click_rate": ""
@@ -22623,17 +22649,17 @@
         "klaviyo_click_rate": ""
       },
       {
-        "campaign_name": "10/13: B12 Feature",
-        "campaign_subject": "20 Ways to B12 \ud83d\ude80",
-        "campaign_send_date": "2025-10-13",
+        "campaign_name": "05/07: Target run?",
+        "campaign_subject": "Target run?",
+        "campaign_send_date": "2026-05-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
         "klaviyo_click_rate": ""
       },
       {
-        "campaign_name": "10/18: end of Summer",
-        "campaign_subject": "What happened to summer?",
-        "campaign_send_date": "2025-10-18",
+        "campaign_name": "10/13: B12 Feature",
+        "campaign_subject": "20 Ways to B12 \ud83d\ude80",
+        "campaign_send_date": "2025-10-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
         "klaviyo_click_rate": ""
@@ -22831,8 +22857,8 @@
       {
         "campaign_name": "PM | Abandoned Cart Email #2",
         "campaign_is_part_of_flow": true,
-        "shopify_placed_order": 7,
-        "shopify_placed_order_value": 378.64
+        "shopify_placed_order": 8,
+        "shopify_placed_order_value": 528.64
       },
       {
         "campaign_name": "05/10: Mother's Day | 15% Off",
@@ -22913,7 +22939,7 @@
         "shopify_placed_order_value": 34
       }
     ],
-    "date": "2026-06-05",
+    "date": "2026-06-06",
     "broadcast_orders_30d": 83,
     "broadcast_value_30d": 6754.17
   },
@@ -76208,6 +76234,12 @@
         "net_sales": 13.6
       },
       {
+        "customer_id": 3013719523446,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 12
+      },
+      {
         "customer_id": 3054635319414,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -76484,6 +76516,12 @@
         "net_sales": 25.5
       },
       {
+        "customer_id": 3365303910518,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 59.5
+      },
+      {
         "customer_id": 3371881037942,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -76732,6 +76770,12 @@
       {
         "customer_id": 3536138829942,
         "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 40.5
+      },
+      {
+        "customer_id": 3536138829942,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 40.5
       },
@@ -78470,6 +78514,12 @@
         "net_sales": 76.5
       },
       {
+        "customer_id": 5316401692790,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 76.5
+      },
+      {
         "customer_id": 5343564824694,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -78520,6 +78570,12 @@
       {
         "customer_id": 5355927994486,
         "yearMonth": "2026|03",
+        "sm_order_count": 1,
+        "net_sales": 54.4
+      },
+      {
+        "customer_id": 5355927994486,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 54.4
       },
@@ -79494,6 +79550,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 21.25
+      },
+      {
+        "customer_id": 5588934787190,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 48
       },
       {
         "customer_id": 5591282286710,
@@ -81812,6 +81874,12 @@
         "net_sales": 10.2
       },
       {
+        "customer_id": 6050414395510,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 13.6
+      },
+      {
         "customer_id": 6050468331638,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -82526,6 +82594,12 @@
         "net_sales": 86.6
       },
       {
+        "customer_id": 6140399747190,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44.4
+      },
+      {
         "customer_id": 6140558671990,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -83210,6 +83284,12 @@
         "net_sales": 61.2
       },
       {
+        "customer_id": 6326998794358,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 61.2
+      },
+      {
         "customer_id": 6331811954806,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -83244,6 +83324,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 102
+      },
+      {
+        "customer_id": 6350563639414,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 76.5
       },
       {
         "customer_id": 6354783240310,
@@ -83434,6 +83520,12 @@
       {
         "customer_id": 6392183324790,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 18.7
+      },
+      {
+        "customer_id": 6392183324790,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 18.7
       },
@@ -84120,6 +84212,12 @@
         "yearMonth": "2026|02",
         "sm_order_count": 1,
         "net_sales": 21.25
+      },
+      {
+        "customer_id": 6564568858742,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 76.5
       },
       {
         "customer_id": 6565320163446,
@@ -86360,6 +86458,12 @@
         "net_sales": 10.2
       },
       {
+        "customer_id": 6984748695670,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 10.2
+      },
+      {
         "customer_id": 6988093063286,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -87594,6 +87698,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 75
+      },
+      {
+        "customer_id": 7191013326966,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 150
       },
       {
         "customer_id": 7191571923062,
@@ -90128,6 +90238,12 @@
         "net_sales": 118.85
       },
       {
+        "customer_id": 7627084136566,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
         "customer_id": 7629226082422,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -90504,6 +90620,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 55
+      },
+      {
+        "customer_id": 7672666882166,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 10.2
       },
       {
         "customer_id": 7673267191926,
@@ -91830,6 +91952,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 10.2
+      },
+      {
+        "customer_id": 7704628592758,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 23.8
       },
       {
         "customer_id": 7704970199158,
@@ -105692,6 +105820,12 @@
         "net_sales": 10.2
       },
       {
+        "customer_id": 8096921092214,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 10.2
+      },
+      {
         "customer_id": 8096942948470,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -108108,6 +108242,12 @@
         "yearMonth": "2026|02",
         "sm_order_count": 1,
         "net_sales": 50
+      },
+      {
+        "customer_id": 8134814400630,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 36
       },
       {
         "customer_id": 8134869778550,
@@ -121724,6 +121864,12 @@
         "net_sales": 48
       },
       {
+        "customer_id": 8405649621110,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 42
+      },
+      {
         "customer_id": 8406070296694,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -123308,6 +123454,12 @@
         "net_sales": 20.4
       },
       {
+        "customer_id": 8556029182070,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 20.4
+      },
+      {
         "customer_id": 8556064407670,
         "yearMonth": "2026|05",
         "sm_order_count": 1,
@@ -123334,6 +123486,12 @@
       {
         "customer_id": 8556600066166,
         "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 59.5
+      },
+      {
+        "customer_id": 8556600066166,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 59.5
       },
@@ -123492,6 +123650,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 79.2
+      },
+      {
+        "customer_id": 8559826206838,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 76.5
       },
       {
         "customer_id": 8559914319990,
@@ -127638,10 +127802,40 @@
         "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 0
+      },
+      {
+        "customer_id": 8663951900790,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 38.75
+      },
+      {
+        "customer_id": 8664298094710,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 37.4
+      },
+      {
+        "customer_id": 8664332140662,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 36
+      },
+      {
+        "customer_id": 8665474924662,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8665867223158,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 32
       }
     ],
     "window_start": "2026-01-01",
-    "date": "2026-06-05"
+    "date": "2026-06-06"
   },
   "py_amazon_seller_2025-05-20": {
     "ordered_product_sales": 5328.4,
@@ -128604,11 +128798,6 @@
   "amazon_promo_yesterday": {
     "data": [
       {
-        "date": "2026-05-07",
-        "item_promotion_discount": 266.56,
-        "ship_promotion_discount": 70.9
-      },
-      {
         "date": "2026-05-08",
         "item_promotion_discount": 218.55,
         "ship_promotion_discount": 76.27
@@ -128665,7 +128854,7 @@
       },
       {
         "date": "2026-05-19",
-        "item_promotion_discount": 205.46,
+        "item_promotion_discount": 207.46,
         "ship_promotion_discount": 66.89
       },
       {
@@ -128685,7 +128874,7 @@
       },
       {
         "date": "2026-05-23",
-        "item_promotion_discount": 211.13,
+        "item_promotion_discount": 234.13,
         "ship_promotion_discount": 84.61
       },
       {
@@ -128695,17 +128884,17 @@
       },
       {
         "date": "2026-05-25",
-        "item_promotion_discount": 112.26,
+        "item_promotion_discount": 113.94,
         "ship_promotion_discount": 70.73
       },
       {
         "date": "2026-05-26",
-        "item_promotion_discount": 118.11,
+        "item_promotion_discount": 125.11,
         "ship_promotion_discount": 75.19
       },
       {
         "date": "2026-05-27",
-        "item_promotion_discount": 58.5,
+        "item_promotion_discount": 62.5,
         "ship_promotion_discount": 60.99
       },
       {
@@ -128730,52 +128919,57 @@
       },
       {
         "date": "2026-06-01",
-        "item_promotion_discount": 49.71,
+        "item_promotion_discount": 51.39,
         "ship_promotion_discount": 59.13
       },
       {
         "date": "2026-06-02",
         "item_promotion_discount": 96.45,
-        "ship_promotion_discount": 89.45
+        "ship_promotion_discount": 89.88
       },
       {
         "date": "2026-06-03",
-        "item_promotion_discount": 97.12,
+        "item_promotion_discount": 115.16,
         "ship_promotion_discount": 93.65
       },
       {
         "date": "2026-06-04",
         "item_promotion_discount": 106.71,
-        "ship_promotion_discount": 81.94
+        "ship_promotion_discount": 82.87
       },
       {
         "date": "2026-06-05",
-        "item_promotion_discount": 75.12,
-        "ship_promotion_discount": 71.87
+        "item_promotion_discount": 80.12,
+        "ship_promotion_discount": 73.4
+      },
+      {
+        "date": "2026-06-06",
+        "item_promotion_discount": 41.04,
+        "ship_promotion_discount": 69.77
       }
     ],
-    "date": "2026-06-05"
+    "date": "2026-06-06"
   },
   "yoy_yesterday": {
-    "yoy_date": "2025-06-05",
+    "yoy_date": "2025-06-06",
     "shopify": [
       {
-        "net_sales": 1867,
-        "sm_order_count": 40
+        "net_sales": 2258.35,
+        "sm_order_count": 51
       }
     ],
     "amazon_sales": [
       {
-        "ordered_product_sales": 7535.06
+        "ordered_product_sales": 7136.5
       }
     ],
     "amazon_promo": [
       {
-        "item_promotion_discount": 86.09,
-        "ship_promotion_discount": 89.67
+        "item_promotion_discount": 133.12,
+        "ship_promotion_discount": 92.65
       }
     ],
-    "date": "2026-06-05"
+    "date": "2026-06-06"
   },
   "py_shopify_2025-05-22": {
     "gross_sales": 1924.8,
@@ -128939,5 +129133,18 @@
     "sm_order_count": 35,
     "net_sales": 1636.75,
     "net_quantity": 103
+  },
+  "py_shopify_2025-06-06": {
+    "gross_sales": 1817.9,
+    "sm_order_count": 38,
+    "net_sales": 1521.55,
+    "net_quantity": 93
+  },
+  "py_amazon_seller_2025-06-06": {
+    "ordered_product_sales": 7136.5,
+    "units_ordered": 212,
+    "sessions": 1396,
+    "unit_session_percentage": 15.19,
+    "page_views": 1814
   }
 }
