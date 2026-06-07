@@ -1147,13 +1147,13 @@
         "spend": 256.34,
         "purchase_value": 269.63,
         "clicks": 80,
-        "impressions": 8228
+        "impressions": 8229
       },
       "2026-06-06": {
-        "spend": 288.77,
+        "spend": 288.89,
         "purchase_value": 36,
         "clicks": 111,
-        "impressions": 9467
+        "impressions": 9470
       }
     },
     "google_ads": {
@@ -1428,10 +1428,10 @@
         "impressions": 12590
       },
       "2026-06-06": {
-        "cost": 201.6078,
+        "cost": 201.6924,
         "conversions_value": 147.88,
         "clicks": 138,
-        "impressions": 15764
+        "impressions": 15778
       }
     },
     "klaviyo_email": {
@@ -2225,7 +2225,7 @@
         "purchaseRevenue": 793.95
       },
       "2026-06-06": {
-        "sessions": 707,
+        "sessions": 711,
         "addToCarts": 45,
         "checkouts": 22,
         "ecommercePurchases": 8,
@@ -128945,7 +128945,7 @@
       {
         "date": "2026-06-06",
         "item_promotion_discount": 41.04,
-        "ship_promotion_discount": 69.77
+        "ship_promotion_discount": 71.27
       }
     ],
     "date": "2026-06-06"
