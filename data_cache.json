@@ -317,10 +317,10 @@
         "page_views": 2286
       },
       "2026-06-06": {
-        "ordered_product_sales": 7614.28,
-        "units_ordered": 298,
+        "ordered_product_sales": 7544.3,
+        "units_ordered": 296,
         "sessions": 1876,
-        "unit_session_percentage": 15.88,
+        "unit_session_percentage": 15.78,
         "page_views": 2398
       },
       "2026-06-07": {
@@ -1202,13 +1202,10 @@
         "impressions": 10324
       },
       "2026-06-08": {
-        "spend": 242.39,
+        "spend": 242.46,
         "purchase_value": 181.9,
         "clicks": 85,
-        "impressions": 10256,
-        "roas": 0.7504435001443954,
-        "cpc": 2.8516470588235294,
-        "ctr": 0.00828783151326053
+        "impressions": 10262
       }
     },
     "google_ads": {
@@ -1495,13 +1492,10 @@
         "impressions": 15753
       },
       "2026-06-08": {
-        "cost": 204.4917,
+        "cost": 205.1823,
         "conversions_value": 1171.8,
         "clicks": 142,
-        "impressions": 16608,
-        "roas": 5.730305924396931,
-        "cpc": 1.4400823943661973,
-        "ctr": 0.00855009633911368
+        "impressions": 16616
       }
     },
     "klaviyo_email": {
@@ -2363,16 +2357,16 @@
     "data": [
       {
         "order_is_returning_customer": true,
-        "net_sales": 38725.8,
-        "sm_order_count": 703
+        "net_sales": 38545.75,
+        "sm_order_count": 696
       },
       {
         "order_is_returning_customer": false,
-        "net_sales": 18603.38,
-        "sm_order_count": 725
+        "net_sales": 17920.3,
+        "sm_order_count": 739
       }
     ],
-    "date": "2026-06-07"
+    "date": "2026-06-08"
   },
   "top_shopify_variants": {
     "data": [
@@ -21455,9 +21449,7 @@
         "campaign_send_date": "2026-06-03",
         "klaviyo_total_recipients": 62337,
         "klaviyo_open_rate": 0.632325,
-        "klaviyo_click_rate": 0.0041,
-        "shopify_placed_order": 6,
-        "shopify_placed_order_value": 423.6
+        "klaviyo_click_rate": 0.0041
       },
       {
         "campaign_name": "06/07: Summer Set",
@@ -21465,9 +21457,7 @@
         "campaign_send_date": "2026-06-08",
         "klaviyo_total_recipients": 61860,
         "klaviyo_open_rate": 0.589007,
-        "klaviyo_click_rate": 0.004726,
-        "shopify_placed_order": 4,
-        "shopify_placed_order_value": 195.59
+        "klaviyo_click_rate": 0.004726
       },
       {
         "campaign_name": "06/08: Community Program",
@@ -21475,9 +21465,7 @@
         "campaign_send_date": "2026-06-08",
         "klaviyo_total_recipients": 61534,
         "klaviyo_open_rate": 0.358802,
-        "klaviyo_click_rate": 0.007883,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.007883
       },
       {
         "campaign_name": "05/21: Memorial Day Sale Launch",
@@ -21485,9 +21473,7 @@
         "campaign_send_date": "2026-05-21",
         "klaviyo_total_recipients": 57347,
         "klaviyo_open_rate": 0.646713,
-        "klaviyo_click_rate": 0.005883,
-        "shopify_placed_order": 19,
-        "shopify_placed_order_value": 2072.81
+        "klaviyo_click_rate": 0.005883
       },
       {
         "campaign_name": "05/22: Memorial Day Sale",
@@ -21495,9 +21481,7 @@
         "campaign_send_date": "2026-05-23",
         "klaviyo_total_recipients": 56592,
         "klaviyo_open_rate": 0.659111,
-        "klaviyo_click_rate": 0.005939,
-        "shopify_placed_order": 9,
-        "shopify_placed_order_value": 658.15
+        "klaviyo_click_rate": 0.005939
       },
       {
         "campaign_name": "05/25: Memorial Day Sale - last chance",
@@ -21505,9 +21489,7 @@
         "campaign_send_date": "2026-05-26",
         "klaviyo_total_recipients": 55874,
         "klaviyo_open_rate": 0.651328,
-        "klaviyo_click_rate": 0.005651,
-        "shopify_placed_order": 16,
-        "shopify_placed_order_value": 1253.87
+        "klaviyo_click_rate": 0.005651
       },
       {
         "campaign_name": "05/10: Mother's Day | 15% Off",
@@ -21515,9 +21497,7 @@
         "campaign_send_date": "2026-05-11",
         "klaviyo_total_recipients": 51145,
         "klaviyo_open_rate": 0.720992,
-        "klaviyo_click_rate": 0.006177,
-        "shopify_placed_order": 6,
-        "shopify_placed_order_value": 599.46
+        "klaviyo_click_rate": 0.006177
       },
       {
         "campaign_name": "05/13: Eye Patch Feature",
@@ -21525,9 +21505,7 @@
         "campaign_send_date": "2026-05-13",
         "klaviyo_total_recipients": 50907,
         "klaviyo_open_rate": 0.679112,
-        "klaviyo_click_rate": 0.004898,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 35
+        "klaviyo_click_rate": 0.004898
       },
       {
         "campaign_name": "05/17: 5-Star Reviews",
@@ -21535,9 +21513,7 @@
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 46662,
         "klaviyo_open_rate": 0.734824,
-        "klaviyo_click_rate": 0.004509,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 92.09
+        "klaviyo_click_rate": 0.004509
       },
       {
         "campaign_name": "05/19: Sale Teaser",
@@ -21545,9 +21521,7 @@
         "campaign_send_date": "2026-05-19",
         "klaviyo_total_recipients": 43901,
         "klaviyo_open_rate": 0.819204,
-        "klaviyo_click_rate": 0.006998,
-        "shopify_placed_order": 5,
-        "shopify_placed_order_value": 375.39
+        "klaviyo_click_rate": 0.006998
       },
       {
         "campaign_name": "05/24: Memorial Day Sale",
@@ -21555,9 +21529,7 @@
         "campaign_send_date": "2026-05-24",
         "klaviyo_total_recipients": 39200,
         "klaviyo_open_rate": 0.938347,
-        "klaviyo_click_rate": 0.008336,
-        "shopify_placed_order": 9,
-        "shopify_placed_order_value": 724.08
+        "klaviyo_click_rate": 0.008336
       },
       {
         "campaign_name": "05/17: 5-Star Reviews (non-purchasers 15% off)",
@@ -21565,9 +21537,7 @@
         "campaign_send_date": "2026-05-17",
         "klaviyo_total_recipients": 1485,
         "klaviyo_open_rate": 0.023601,
-        "klaviyo_click_rate": 0.002023,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.002023
       },
       {
         "campaign_name": "T1 - Restart your wellness routine",
@@ -21575,9 +21545,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 1034,
         "klaviyo_open_rate": 0.30754,
-        "klaviyo_click_rate": 0.009921,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 196.45
+        "klaviyo_click_rate": 0.009921
       },
       {
         "campaign_name": "PM | Post Purchase Email #1",
@@ -21585,9 +21553,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 695,
         "klaviyo_open_rate": 0.285714,
-        "klaviyo_click_rate": 0.021978,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.021978
       },
       {
         "campaign_name": "PM | Post Purchase Email #2",
@@ -21595,9 +21561,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 695,
         "klaviyo_open_rate": 0.255663,
-        "klaviyo_click_rate": 0.006472,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.006472
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #1",
@@ -21605,9 +21569,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 659,
         "klaviyo_open_rate": 0.510671,
-        "klaviyo_click_rate": 0.025915,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 112.42
+        "klaviyo_click_rate": 0.025915
       },
       {
         "campaign_name": "PM | Abandoned Cart Email #2",
@@ -21615,9 +21577,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 646,
         "klaviyo_open_rate": 0.510109,
-        "klaviyo_click_rate": 0.03888,
-        "shopify_placed_order": 8,
-        "shopify_placed_order_value": 528.64
+        "klaviyo_click_rate": 0.03888
       },
       {
         "campaign_name": "Welcome Email #1",
@@ -21625,9 +21585,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 589,
         "klaviyo_open_rate": 0.448696,
-        "klaviyo_click_rate": 0.050435,
-        "shopify_placed_order": 11,
-        "shopify_placed_order_value": 865.48
+        "klaviyo_click_rate": 0.050435
       },
       {
         "campaign_name": "PM | Post Purchase Email #3",
@@ -21635,9 +21593,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 526,
         "klaviyo_open_rate": 0.337209,
-        "klaviyo_click_rate": 0.003876,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.003876
       },
       {
         "campaign_name": "T3A - 20% off last call - stock up and save on your faves",
@@ -21645,9 +21601,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 499,
         "klaviyo_open_rate": 0.313278,
-        "klaviyo_click_rate": 0.004149,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 69
+        "klaviyo_click_rate": 0.004149
       },
       {
         "campaign_name": "T3B - FOMO - occasions focus",
@@ -21655,9 +21609,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 495,
         "klaviyo_open_rate": 0.34322,
-        "klaviyo_click_rate": 0.004237,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.004237
       },
       {
         "campaign_name": "Welcome Email #3",
@@ -21665,9 +21617,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 493,
         "klaviyo_open_rate": 0.373984,
-        "klaviyo_click_rate": 0.018293,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.018293
       },
       {
         "campaign_name": "Welcome Email #4",
@@ -21675,9 +21625,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 492,
         "klaviyo_open_rate": 0.431772,
-        "klaviyo_click_rate": 0.02444,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 34
+        "klaviyo_click_rate": 0.02444
       },
       {
         "campaign_name": "Welcome Email #2",
@@ -21685,9 +21633,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 490,
         "klaviyo_open_rate": 0.388548,
-        "klaviyo_click_rate": 0.014315,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.014315
       },
       {
         "campaign_name": "T2A - 20% off your restock",
@@ -21695,9 +21641,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 487,
         "klaviyo_open_rate": 0.312369,
-        "klaviyo_click_rate": 0.006289,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 69.95
+        "klaviyo_click_rate": 0.006289
       },
       {
         "campaign_name": "T2B - no code - treat yourself",
@@ -21705,9 +21649,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 480,
         "klaviyo_open_rate": 0.339056,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "PM | 60D Non Buyer Email #1",
@@ -21715,9 +21657,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 419,
         "klaviyo_open_rate": 0.411058,
-        "klaviyo_click_rate": 0.009615,
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 28.47
+        "klaviyo_click_rate": 0.009615
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #1",
@@ -21725,9 +21665,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 170,
         "klaviyo_open_rate": 0.589286,
-        "klaviyo_click_rate": 0.041667,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 248.36
+        "klaviyo_click_rate": 0.041667
       },
       {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #1",
@@ -21735,9 +21673,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 169,
         "klaviyo_open_rate": 0.470238,
-        "klaviyo_click_rate": 0.017857,
-        "shopify_placed_order": 3,
-        "shopify_placed_order_value": 141.78
+        "klaviyo_click_rate": 0.017857
       },
       {
         "campaign_name": "PM | Abandoned Checkout Email #2",
@@ -21745,9 +21681,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 153,
         "klaviyo_open_rate": 0.633987,
-        "klaviyo_click_rate": 0.045752,
-        "shopify_placed_order": 2,
-        "shopify_placed_order_value": 156.82
+        "klaviyo_click_rate": 0.045752
       },
       {
         "campaign_name": "PM | Sunset Flow Email #1",
@@ -21755,9 +21689,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 147,
         "klaviyo_open_rate": 0.027778,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "PM | Sunset Flow Email #2",
@@ -21765,9 +21697,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 135,
         "klaviyo_open_rate": 0.022727,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "PM | Repeat Customer - Post Purchase Email #2",
@@ -21775,9 +21705,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 53,
         "klaviyo_open_rate": 0.510204,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "Welcome Email #4 [meta ads]",
@@ -21785,9 +21713,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 29,
         "klaviyo_open_rate": 0.482759,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "Welcome Email #3 [meta ads]",
@@ -21795,9 +21721,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 27,
         "klaviyo_open_rate": 0.481481,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "Welcome Email #1 [meta ads]",
@@ -21805,9 +21729,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 22,
         "klaviyo_open_rate": 0.363636,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "Welcome Email #2 [meta ads]",
@@ -21815,9 +21737,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 22,
         "klaviyo_open_rate": 0.590909,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "T2 - Non-purchaser - 1 day post trigger",
@@ -21825,9 +21745,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 11,
         "klaviyo_open_rate": 0.818182,
-        "klaviyo_click_rate": 0.090909,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.090909
       },
       {
         "campaign_name": "T1 - Non-purchaser - 2 hrs post trigger",
@@ -21835,9 +21753,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 9,
         "klaviyo_open_rate": 0.777778,
-        "klaviyo_click_rate": 0.111111,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.111111
       },
       {
         "campaign_name": "T3A - Non-purchaser - 4 days post trigger",
@@ -21845,9 +21761,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 6,
         "klaviyo_open_rate": 1,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "T2 - Previous purchaser - 1 day post trigger",
@@ -21855,9 +21769,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 5,
         "klaviyo_open_rate": 0.8,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "T1 - Previous purchaser - 2 hrs post trigger",
@@ -21865,9 +21777,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 3,
         "klaviyo_open_rate": 0.666667,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "T3A - Previous purchaser - 4 days post trigger",
@@ -21875,9 +21785,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 2,
         "klaviyo_open_rate": 1,
-        "klaviyo_click_rate": 0.5,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0.5
       },
       {
         "campaign_name": "T3B - Non-purchaser - 4 days post trigger",
@@ -21885,9 +21793,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 2,
         "klaviyo_open_rate": 0.5,
-        "klaviyo_click_rate": 0,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 0
       },
       {
         "campaign_name": "05/03: Mother's Day Gift Guide",
@@ -21895,9 +21801,7 @@
         "campaign_send_date": "2026-05-03",
         "klaviyo_total_recipients": 1,
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "05/08: Energy | 15% off",
@@ -21905,9 +21809,7 @@
         "campaign_send_date": "2026-05-09",
         "klaviyo_total_recipients": 1,
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": 1,
-        "shopify_placed_order_value": 137.25
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "T3B - Previous purchaser - 4 days post trigger",
@@ -21915,9 +21817,7 @@
         "campaign_send_date": "",
         "klaviyo_total_recipients": 1,
         "klaviyo_open_rate": 1,
-        "klaviyo_click_rate": 1,
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": 1
       },
       {
         "campaign_name": "01/01 - Happy New Year",
@@ -21925,9 +21825,7 @@
         "campaign_send_date": "2026-01-01",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "01/04: Skincare",
@@ -21935,9 +21833,7 @@
         "campaign_send_date": "2026-01-04",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "01/10: Jan Goals",
@@ -21945,9 +21841,7 @@
         "campaign_send_date": "2026-01-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "01/15: Subscribe Feature",
@@ -21955,9 +21849,7 @@
         "campaign_send_date": "2026-01-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "01/19: UGC Feature",
@@ -21965,9 +21857,7 @@
         "campaign_send_date": "2026-01-19",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "01/22: Desire Spotlight",
@@ -21975,9 +21865,7 @@
         "campaign_send_date": "2026-01-22",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "01/30 - Relax",
@@ -21985,9 +21873,7 @@
         "campaign_send_date": "2026-01-31",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/02 - Game Day",
@@ -21995,9 +21881,7 @@
         "campaign_send_date": "2026-02-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/03 - Un-Wrinkle Feature",
@@ -22005,9 +21889,7 @@
         "campaign_send_date": "2026-02-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/04 - Focus",
@@ -22015,9 +21897,7 @@
         "campaign_send_date": "2026-02-04",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/06: Thistle",
@@ -22025,9 +21905,7 @@
         "campaign_send_date": "2026-02-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/07 - Galentine's Day",
@@ -22035,9 +21913,7 @@
         "campaign_send_date": "2026-02-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/08 - Target Retail",
@@ -22045,9 +21921,7 @@
         "campaign_send_date": "2026-02-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/09 - Self Gifting",
@@ -22055,9 +21929,7 @@
         "campaign_send_date": "2026-02-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/13 - President's Day",
@@ -22065,9 +21937,7 @@
         "campaign_send_date": "2026-02-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/14 - Valentine\u2019s Day text only",
@@ -22075,9 +21945,7 @@
         "campaign_send_date": "2026-02-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/15 - February Essentials",
@@ -22085,9 +21953,7 @@
         "campaign_send_date": "2026-02-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/20 - Still Wintering",
@@ -22095,9 +21961,7 @@
         "campaign_send_date": "2026-02-20",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/22 - National Margarita Day",
@@ -22105,9 +21969,7 @@
         "campaign_send_date": "2026-02-22",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/24 - winter energy",
@@ -22115,9 +21977,7 @@
         "campaign_send_date": "2026-02-24",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/27 - survey (non-purchasers)",
@@ -22125,9 +21985,7 @@
         "campaign_send_date": "2026-02-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/27 - survey (purchasers)",
@@ -22135,9 +21993,7 @@
         "campaign_send_date": "2026-02-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "02/28 - Brighten Up",
@@ -22145,9 +22001,7 @@
         "campaign_send_date": "2026-02-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/03: Skincare",
@@ -22155,9 +22009,7 @@
         "campaign_send_date": "2026-03-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/06: Spring Break Packing",
@@ -22165,9 +22017,7 @@
         "campaign_send_date": "2026-03-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/07: Pre DLS",
@@ -22175,9 +22025,7 @@
         "campaign_send_date": "2026-03-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/08 - intl. womens day",
@@ -22185,9 +22033,7 @@
         "campaign_send_date": "2026-03-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/09: Sleept Week #1",
@@ -22195,9 +22041,7 @@
         "campaign_send_date": "2026-03-09",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/10: Target",
@@ -22205,9 +22049,7 @@
         "campaign_send_date": "2026-03-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/11 - Sleep Week #3",
@@ -22215,9 +22057,7 @@
         "campaign_send_date": "2026-03-11",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/12: Sleep Week #4",
@@ -22225,9 +22065,7 @@
         "campaign_send_date": "2026-03-12",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/13: Sleep Week #5",
@@ -22235,9 +22073,7 @@
         "campaign_send_date": "2026-03-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/14: Sleep Week #6",
@@ -22245,9 +22081,7 @@
         "campaign_send_date": "2026-03-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/15: Oscar's",
@@ -22255,9 +22089,7 @@
         "campaign_send_date": "2026-03-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/16: Find Rescue IRL",
@@ -22265,9 +22097,7 @@
         "campaign_send_date": "2026-03-16",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/18: March Madness",
@@ -22275,9 +22105,7 @@
         "campaign_send_date": "2026-03-18",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/19: De-Puff",
@@ -22285,9 +22113,7 @@
         "campaign_send_date": "2026-03-19",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/21: Find Your Perfect Patch",
@@ -22295,9 +22121,7 @@
         "campaign_send_date": "2026-03-21",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/23: Hemp Queen",
@@ -22305,9 +22129,7 @@
         "campaign_send_date": "2026-03-23",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/25: Active",
@@ -22315,9 +22137,7 @@
         "campaign_send_date": "2026-03-25",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/28: Duos",
@@ -22325,9 +22145,7 @@
         "campaign_send_date": "2026-03-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "03/31: Bachelorette Survival Guide",
@@ -22335,9 +22153,7 @@
         "campaign_send_date": "2026-03-31",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/01: April Fools",
@@ -22345,9 +22161,7 @@
         "campaign_send_date": "2026-04-01",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/02: Spring Reset",
@@ -22355,9 +22169,7 @@
         "campaign_send_date": "2026-04-02",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/03: Festival Season",
@@ -22365,9 +22177,7 @@
         "campaign_send_date": "2026-04-03",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/05: Spring Break",
@@ -22375,9 +22185,7 @@
         "campaign_send_date": "2026-04-05",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/07: Rescue Feature",
@@ -22385,9 +22193,7 @@
         "campaign_send_date": "2026-04-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/08: Ulta Sale",
@@ -22395,9 +22201,7 @@
         "campaign_send_date": "2026-04-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/10: Ulta Sale II",
@@ -22405,9 +22209,7 @@
         "campaign_send_date": "2026-04-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/11: Desire Feature",
@@ -22415,9 +22217,7 @@
         "campaign_send_date": "2026-04-11",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/12: Sleep Collection",
@@ -22425,9 +22225,7 @@
         "campaign_send_date": "2026-04-12",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/13: Be Calm Promo",
@@ -22435,9 +22233,7 @@
         "campaign_send_date": "2026-04-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/14: Under eye Patches",
@@ -22445,9 +22241,7 @@
         "campaign_send_date": "2026-04-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/15: GWP Last Day + Tax Day | Promo",
@@ -22455,9 +22249,7 @@
         "campaign_send_date": "2026-04-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "04/22: Earth Day",
@@ -22465,9 +22257,7 @@
         "campaign_send_date": "2026-04-23",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "05/07: Target run?",
@@ -22475,9 +22265,7 @@
         "campaign_send_date": "2026-05-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "10/13: B12 Feature",
@@ -22485,9 +22273,7 @@
         "campaign_send_date": "2025-10-13",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "10/24: Subscribe feature",
@@ -22495,9 +22281,7 @@
         "campaign_send_date": "2025-10-24",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "10/31: Fall Skincare",
@@ -22505,9 +22289,7 @@
         "campaign_send_date": "2025-10-31",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "11/09: Mom feature",
@@ -22515,9 +22297,7 @@
         "campaign_send_date": "2025-11-09",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "11/14: Survival Guide",
@@ -22525,9 +22305,7 @@
         "campaign_send_date": "2025-11-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "11/16 - Holiday Sale, text only",
@@ -22535,9 +22313,7 @@
         "campaign_send_date": "2025-11-16",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "11/27 - Thanksgiving, text only",
@@ -22545,9 +22321,7 @@
         "campaign_send_date": "2025-11-27",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "11/28: BFCM AM",
@@ -22555,9 +22329,7 @@
         "campaign_send_date": "2025-11-28",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "11/29: help you with your Stocking Stuffer Game",
@@ -22565,9 +22337,7 @@
         "campaign_send_date": "2025-11-29",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/10: Bake Off Feature",
@@ -22575,9 +22345,7 @@
         "campaign_send_date": "2025-12-10",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/10: Gift Giving - Office Edition",
@@ -22585,9 +22353,7 @@
         "campaign_send_date": "2025-12-07",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/14: FSA Feature",
@@ -22595,9 +22361,7 @@
         "campaign_send_date": "2025-12-14",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/15: Shipping",
@@ -22605,9 +22369,7 @@
         "campaign_send_date": "2025-12-15",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/21: Winter Solstice - B12 Awake",
@@ -22615,9 +22377,7 @@
         "campaign_send_date": "2025-12-21",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/25 - Merry Everything",
@@ -22625,9 +22385,7 @@
         "campaign_send_date": "2025-12-25",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "12/8: Dream Feature",
@@ -22635,9 +22393,7 @@
         "campaign_send_date": "2025-12-08",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "8/22: End of Summer Sale",
@@ -22645,9 +22401,7 @@
         "campaign_send_date": "2025-08-22",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "8/29: End of Summer Sale",
@@ -22655,9 +22409,7 @@
         "campaign_send_date": "2025-08-29",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       },
       {
         "campaign_name": "Clone 12/6: Holiday Movies - Patch edition",
@@ -22665,9 +22417,7 @@
         "campaign_send_date": "2025-12-06",
         "klaviyo_total_recipients": "",
         "klaviyo_open_rate": "",
-        "klaviyo_click_rate": "",
-        "shopify_placed_order": null,
-        "shopify_placed_order_value": null
+        "klaviyo_click_rate": ""
       }
     ],
     "attr": [
@@ -75757,6 +75507,12 @@
         "net_sales": 68
       },
       {
+        "customer_id": 1335045849206,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 37.4
+      },
+      {
         "customer_id": 1392751476854,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -75897,6 +75653,12 @@
       {
         "customer_id": 2676179173494,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 106.25
+      },
+      {
+        "customer_id": 2676179173494,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 106.25
       },
@@ -76297,6 +76059,12 @@
         "net_sales": 60
       },
       {
+        "customer_id": 3283780206710,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 47.6
+      },
+      {
         "customer_id": 3292324429942,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -76367,6 +76135,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 72
+      },
+      {
+        "customer_id": 3365250334838,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 56
       },
       {
         "customer_id": 3365303910518,
@@ -76655,6 +76429,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 1,
         "net_sales": 40
+      },
+      {
+        "customer_id": 3539289636982,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 42
       },
       {
         "customer_id": 3539301564534,
@@ -77049,6 +76829,12 @@
       {
         "customer_id": 3635252592758,
         "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
+        "customer_id": 3635252592758,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 21.25
       },
@@ -77527,6 +77313,12 @@
         "net_sales": 56
       },
       {
+        "customer_id": 5080163156086,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 67.5
+      },
+      {
         "customer_id": 5087731581046,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -77789,6 +77581,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 1,
         "net_sales": 44
+      },
+      {
+        "customer_id": 5137984651382,
+        "yearMonth": "2026|06",
+        "sm_order_count": 2,
+        "net_sales": 24
       },
       {
         "customer_id": 5138463228022,
@@ -78083,6 +77881,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 76.5
+      },
+      {
+        "customer_id": 5205414510710,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 102
       },
       {
         "customer_id": 5220378116214,
@@ -79015,6 +78819,12 @@
         "net_sales": 10.2
       },
       {
+        "customer_id": 5521142939766,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 10.2
+      },
+      {
         "customer_id": 5524030161014,
         "yearMonth": "2026|01",
         "sm_order_count": 2,
@@ -79327,6 +79137,12 @@
         "net_sales": 24
       },
       {
+        "customer_id": 5583760130166,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
+      },
+      {
         "customer_id": 5586724094070,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -79625,6 +79441,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 180
+      },
+      {
+        "customer_id": 5678477934710,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 76.5
       },
       {
         "customer_id": 5680050503798,
@@ -79997,6 +79819,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 63.75
+      },
+      {
+        "customer_id": 5802052026486,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 32
       },
       {
         "customer_id": 5802899767414,
@@ -80665,6 +80493,12 @@
         "net_sales": 47.6
       },
       {
+        "customer_id": 5944957927542,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 45
+      },
+      {
         "customer_id": 5944982700150,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -80763,6 +80597,12 @@
       {
         "customer_id": 5947590082678,
         "yearMonth": "2026|04",
+        "sm_order_count": 1,
+        "net_sales": 10.2
+      },
+      {
+        "customer_id": 5947590082678,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 10.2
       },
@@ -81229,6 +81069,12 @@
         "net_sales": 59.5
       },
       {
+        "customer_id": 5978406420598,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 52.4
+      },
+      {
         "customer_id": 5979735195766,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -81273,6 +81119,12 @@
       {
         "customer_id": 5985805434998,
         "yearMonth": "2026|03",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
+        "customer_id": 5985805434998,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 21.25
       },
@@ -81709,6 +81561,12 @@
         "net_sales": 68
       },
       {
+        "customer_id": 6049679278198,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 68
+      },
+      {
         "customer_id": 6050414395510,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -81937,6 +81795,12 @@
         "net_sales": 42.5
       },
       {
+        "customer_id": 6063779086454,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 51.3
+      },
+      {
         "customer_id": 6065936826486,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -82049,6 +81913,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 31.45
+      },
+      {
+        "customer_id": 6077138141302,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 10.2
       },
       {
         "customer_id": 6082013888630,
@@ -83191,6 +83061,12 @@
         "net_sales": 102
       },
       {
+        "customer_id": 6341029363830,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 40
+      },
+      {
         "customer_id": 6350563639414,
         "yearMonth": "2026|06",
         "sm_order_count": 1,
@@ -83537,6 +83413,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 37.4
+      },
+      {
+        "customer_id": 6452141031542,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
       },
       {
         "customer_id": 6454966255734,
@@ -84082,7 +83964,7 @@
         "customer_id": 6564568858742,
         "yearMonth": "2026|06",
         "sm_order_count": 1,
-        "net_sales": 76.5
+        "net_sales": 0
       },
       {
         "customer_id": 6565320163446,
@@ -84245,6 +84127,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 100
+      },
+      {
+        "customer_id": 6590572331126,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 72
       },
       {
         "customer_id": 6592063570038,
@@ -84719,6 +84607,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 40.8
+      },
+      {
+        "customer_id": 6723169878134,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
       },
       {
         "customer_id": 6723809706102,
@@ -85595,6 +85489,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 1,
         "net_sales": 40
+      },
+      {
+        "customer_id": 6876913631350,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 37.5
       },
       {
         "customer_id": 6881405534326,
@@ -86899,6 +86799,12 @@
         "net_sales": 13.6
       },
       {
+        "customer_id": 7088803807350,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 172
+      },
+      {
         "customer_id": 7088818323574,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -87229,6 +87135,12 @@
         "net_sales": 12.75
       },
       {
+        "customer_id": 7131420000374,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 181
+      },
+      {
         "customer_id": 7131955560566,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -87443,6 +87355,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 1,
         "net_sales": 13.6
+      },
+      {
+        "customer_id": 7171090055286,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 12
       },
       {
         "customer_id": 7172916740214,
@@ -87939,6 +87857,12 @@
       {
         "customer_id": 7225480183926,
         "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
+        "customer_id": 7225480183926,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 21.25
       },
@@ -88525,6 +88449,12 @@
         "net_sales": 37.5
       },
       {
+        "customer_id": 7299650879606,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 42.5
+      },
+      {
         "customer_id": 7300653809782,
         "yearMonth": "2026|03",
         "sm_order_count": 1,
@@ -89001,6 +88931,12 @@
       {
         "customer_id": 7371800641654,
         "yearMonth": "2026|05",
+        "sm_order_count": 1,
+        "net_sales": 27.2
+      },
+      {
+        "customer_id": 7371800641654,
+        "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 27.2
       },
@@ -89633,6 +89569,12 @@
         "yearMonth": "2026|03",
         "sm_order_count": 1,
         "net_sales": 27.2
+      },
+      {
+        "customer_id": 7524174299254,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
       },
       {
         "customer_id": 7525825151094,
@@ -92485,6 +92427,12 @@
         "net_sales": 21.25
       },
       {
+        "customer_id": 7744157614198,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 21.25
+      },
+      {
         "customer_id": 7744185499766,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -93291,8 +93239,8 @@
       {
         "customer_id": 7816535277686,
         "yearMonth": "2026|06",
-        "sm_order_count": 2,
-        "net_sales": 224
+        "sm_order_count": 3,
+        "net_sales": 315
       },
       {
         "customer_id": 7816985804918,
@@ -93785,6 +93733,12 @@
         "yearMonth": "2026|01",
         "sm_order_count": 0,
         "net_sales": -68
+      },
+      {
+        "customer_id": 7846677938294,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
       },
       {
         "customer_id": 7849084158070,
@@ -103345,6 +103299,12 @@
         "net_sales": 93.5
       },
       {
+        "customer_id": 8072671461494,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 20.4
+      },
+      {
         "customer_id": 8072677130358,
         "yearMonth": "2026|01",
         "sm_order_count": 1,
@@ -106129,6 +106089,12 @@
         "net_sales": 44
       },
       {
+        "customer_id": 8104158593142,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44.4
+      },
+      {
         "customer_id": 8104254046326,
         "yearMonth": "2026|02",
         "sm_order_count": 1,
@@ -106721,6 +106687,12 @@
         "yearMonth": "2026|02",
         "sm_order_count": 1,
         "net_sales": 0
+      },
+      {
+        "customer_id": 8111752052854,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 54
       },
       {
         "customer_id": 8111808839798,
@@ -112473,8 +112445,8 @@
       {
         "customer_id": 8201921069174,
         "yearMonth": "2026|06",
-        "sm_order_count": 1,
-        "net_sales": 51
+        "sm_order_count": 2,
+        "net_sales": 91.8
       },
       {
         "customer_id": 8201960652918,
@@ -118897,6 +118869,12 @@
         "net_sales": 0
       },
       {
+        "customer_id": 8346378567798,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 26
+      },
+      {
         "customer_id": 8346459668598,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -119669,6 +119647,12 @@
         "yearMonth": "2026|04",
         "sm_order_count": 2,
         "net_sales": 132
+      },
+      {
+        "customer_id": 8365471498358,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 105
       },
       {
         "customer_id": 8365505249398,
@@ -122737,6 +122721,12 @@
         "net_sales": 33.6
       },
       {
+        "customer_id": 8528248406134,
+        "yearMonth": "2026|06",
+        "sm_order_count": 2,
+        "net_sales": 65.6
+      },
+      {
         "customer_id": 8528521166966,
         "yearMonth": "2026|04",
         "sm_order_count": 1,
@@ -123569,6 +123559,12 @@
         "yearMonth": "2026|05",
         "sm_order_count": 1,
         "net_sales": 22.2
+      },
+      {
+        "customer_id": 8562030903414,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 10.2
       },
       {
         "customer_id": 8562341838966,
@@ -127291,6 +127287,12 @@
         "net_sales": 15
       },
       {
+        "customer_id": 8648556707958,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 42.5
+      },
+      {
         "customer_id": 8648648196214,
         "yearMonth": "2026|06",
         "sm_order_count": 1,
@@ -127697,10 +127699,250 @@
         "yearMonth": "2026|06",
         "sm_order_count": 1,
         "net_sales": 32
+      },
+      {
+        "customer_id": 8666394624118,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 20
+      },
+      {
+        "customer_id": 8666696220790,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 16
+      },
+      {
+        "customer_id": 8666766835830,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
+      },
+      {
+        "customer_id": 8668743893110,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 89
+      },
+      {
+        "customer_id": 8669812260982,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 16
+      },
+      {
+        "customer_id": 8670467227766,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 83.13
+      },
+      {
+        "customer_id": 8670783471734,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 36
+      },
+      {
+        "customer_id": 8670964875382,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
+      },
+      {
+        "customer_id": 8671170953334,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 28
+      },
+      {
+        "customer_id": 8671261294710,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8671527207030,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 15
+      },
+      {
+        "customer_id": 8671862915190,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 45.9
+      },
+      {
+        "customer_id": 8672096780406,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 42.5
+      },
+      {
+        "customer_id": 8672097566838,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 95.2
+      },
+      {
+        "customer_id": 8672489767030,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 49
+      },
+      {
+        "customer_id": 8673766703222,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 37.4
+      },
+      {
+        "customer_id": 8674176303222,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674207465590,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674221424758,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674224636022,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674302460022,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674327527542,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674404204662,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674440282230,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674452439158,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674457616502,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674515910774,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674527379574,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674542387318,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674569486454,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674646032502,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674744991862,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8674810265718,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8675307159670,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8675374202998,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8675444097142,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8675482534006,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 0
+      },
+      {
+        "customer_id": 8675774857334,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 44
+      },
+      {
+        "customer_id": 8676437000310,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 81.4
+      },
+      {
+        "customer_id": 8676871438454,
+        "yearMonth": "2026|06",
+        "sm_order_count": 1,
+        "net_sales": 37.4
       }
     ],
     "window_start": "2026-01-01",
-    "date": "2026-06-06"
+    "date": "2026-06-08"
   },
   "py_amazon_seller_2025-05-20": {
     "ordered_product_sales": 5328.4,
@@ -128749,7 +128991,7 @@
       },
       {
         "date": "2026-05-27",
-        "item_promotion_discount": 70.86,
+        "item_promotion_discount": 72.86,
         "ship_promotion_discount": 60.99
       },
       {
@@ -128810,7 +129052,7 @@
       {
         "date": "2026-06-08",
         "item_promotion_discount": 101.11,
-        "ship_promotion_discount": 83.57
+        "ship_promotion_discount": 86.06
       }
     ],
     "date": "2026-06-08"
