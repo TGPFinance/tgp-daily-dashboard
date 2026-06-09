@@ -317,18 +317,25 @@
         "page_views": 2286
       },
       "2026-06-06": {
-        "ordered_product_sales": 7544.3,
-        "units_ordered": 296,
+        "ordered_product_sales": 7459.32,
+        "units_ordered": 294,
         "sessions": 1876,
-        "unit_session_percentage": 15.78,
+        "unit_session_percentage": 15.67,
         "page_views": 2398
       },
       "2026-06-07": {
-        "ordered_product_sales": 8043.1,
-        "units_ordered": 312,
+        "ordered_product_sales": 8023.12,
+        "units_ordered": 311,
         "sessions": 2183,
-        "unit_session_percentage": 14.29,
+        "unit_session_percentage": 14.25,
         "page_views": 2828
+      },
+      "2026-06-08": {
+        "ordered_product_sales": 6866.01,
+        "units_ordered": 247,
+        "sessions": 0,
+        "unit_session_percentage": 0,
+        "page_views": 0
       }
     },
     "amazon_ads": {
@@ -605,18 +612,22 @@
         "impressions": 155605
       },
       "2026-06-06": {
-        "cost": 1719.49,
-        "attributedSales14d": 2430.46,
-        "clicks": 806,
-        "impressions": 132643
+        "cost": 1720.75,
+        "attributedSales14d": 2525.4,
+        "clicks": 807,
+        "impressions": 132649
       },
       "2026-06-07": {
         "cost": 2045.24,
-        "attributedSales14d": 2449.27,
+        "attributedSales14d": 2571.03,
         "clicks": 949,
-        "impressions": 152721,
-        "roas": 1.1975464982104789,
-        "acos": 0.8350406447635418
+        "impressions": 146015
+      },
+      "2026-06-08": {
+        "cost": 1712.34,
+        "attributedSales14d": 2116.31,
+        "clicks": 803,
+        "impressions": 133710
       }
     },
     "shopify": {
@@ -1202,10 +1213,10 @@
         "impressions": 10324
       },
       "2026-06-08": {
-        "spend": 242.46,
+        "spend": 242.63,
         "purchase_value": 181.9,
         "clicks": 85,
-        "impressions": 10262
+        "impressions": 10271
       }
     },
     "google_ads": {
@@ -1495,7 +1506,7 @@
         "cost": 205.1823,
         "conversions_value": 1171.8,
         "clicks": 142,
-        "impressions": 16616
+        "impressions": 16632
       }
     },
     "klaviyo_email": {
@@ -129032,7 +129043,7 @@
       {
         "date": "2026-06-04",
         "item_promotion_discount": 117.21,
-        "ship_promotion_discount": 85.61
+        "ship_promotion_discount": 86.61
       },
       {
         "date": "2026-06-05",
