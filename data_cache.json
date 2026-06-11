@@ -343,6 +343,13 @@
         "sessions": 1889,
         "unit_session_percentage": 14.93,
         "page_views": 2377
+      },
+      "2026-06-10": {
+        "ordered_product_sales": 7890.59,
+        "units_ordered": 302,
+        "sessions": 0,
+        "unit_session_percentage": 0,
+        "page_views": 0
       }
     },
     "amazon_ads": {
@@ -631,18 +638,22 @@
         "impressions": 146050
       },
       "2026-06-08": {
-        "cost": 1712.79,
-        "attributedSales14d": 2298.01,
-        "clicks": 804,
-        "impressions": 128391
+        "cost": 1710.5,
+        "attributedSales14d": 2372.96,
+        "clicks": 803,
+        "impressions": 128370
       },
       "2026-06-09": {
-        "cost": 1885.75,
-        "attributedSales14d": 1858.34,
-        "clicks": 881,
-        "impressions": 153864,
-        "roas": 0.9854646692297494,
-        "acos": 1.0147497228709494
+        "cost": 1884.58,
+        "attributedSales14d": 1875.14,
+        "clicks": 880,
+        "impressions": 145119
+      },
+      "2026-06-10": {
+        "cost": 1981.12,
+        "attributedSales14d": 2043.01,
+        "clicks": 905,
+        "impressions": 156757
       }
     },
     "shopify": {
@@ -1252,13 +1263,10 @@
         "impressions": 11836
       },
       "2026-06-10": {
-        "spend": 284.25,
+        "spend": 284.54,
         "purchase_value": "",
         "clicks": 83,
-        "impressions": 10349,
-        "roas": null,
-        "cpc": 3.424698795180723,
-        "ctr": 0.008020098560247367
+        "impressions": 10372
       }
     },
     "google_ads": {
@@ -1557,13 +1565,10 @@
         "impressions": 17065
       },
       "2026-06-10": {
-        "cost": 243.053,
+        "cost": 243.0782,
         "conversions_value": 600,
         "clicks": 140,
-        "impressions": 14289,
-        "roas": 2.4685973841096387,
-        "cpc": 1.736092857142857,
-        "ctr": 0.00979774651830079
+        "impressions": 14298
       }
     },
     "klaviyo_email": {
@@ -2425,9 +2430,9 @@
         "purchaseRevenue": 718.5
       },
       "2026-06-10": {
-        "sessions": 739,
+        "sessions": 740,
         "addToCarts": 110,
-        "checkouts": 35,
+        "checkouts": 36,
         "ecommercePurchases": 16,
         "purchaseRevenue": 858.4
       }
@@ -129479,7 +129484,7 @@
       },
       {
         "date": "2026-05-27",
-        "item_promotion_discount": 131.34,
+        "item_promotion_discount": 133.34,
         "ship_promotion_discount": 60.99
       },
       {
@@ -129504,7 +129509,7 @@
       },
       {
         "date": "2026-06-01",
-        "item_promotion_discount": 59.78,
+        "item_promotion_discount": 66.5,
         "ship_promotion_discount": 59.14
       },
       {
@@ -129540,7 +129545,7 @@
       {
         "date": "2026-06-08",
         "item_promotion_discount": 104.61,
-        "ship_promotion_discount": 86.74
+        "ship_promotion_discount": 86.93
       },
       {
         "date": "2026-06-09",
@@ -129549,8 +129554,8 @@
       },
       {
         "date": "2026-06-10",
-        "item_promotion_discount": 37.12,
-        "ship_promotion_discount": 52.99
+        "item_promotion_discount": 38.8,
+        "ship_promotion_discount": 58.97
       }
     ],
     "date": "2026-06-10"
@@ -129563,7 +129568,11 @@
         "sm_order_count": 40
       }
     ],
-    "amazon_sales": [],
+    "amazon_sales": [
+      {
+        "ordered_product_sales": 5964.58
+      }
+    ],
     "amazon_promo": [
       {
         "item_promotion_discount": 118.19,
