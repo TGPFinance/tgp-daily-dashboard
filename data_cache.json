@@ -653,13 +653,13 @@
         "cost": 1981.12,
         "attributedSales14d": 2141.2,
         "clicks": 905,
-        "impressions": 149612
+        "impressions": 149613
       },
       "2026-06-11": {
         "cost": 1720.94,
         "attributedSales14d": 1665.8,
         "clicks": 810,
-        "impressions": 154399
+        "impressions": 154328
       }
     },
     "shopify": {
@@ -1284,7 +1284,7 @@
         "spend": 157.5,
         "purchase_value": 98.08,
         "clicks": 54,
-        "impressions": 4445
+        "impressions": 4446
       }
     },
     "google_ads": {
@@ -129272,8 +129272,8 @@
       },
       {
         "date": "2026-06-11",
-        "item_promotion_discount": 140.92,
-        "ship_promotion_discount": 95.84
+        "item_promotion_discount": 155.92,
+        "ship_promotion_discount": 95.87
       }
     ],
     "date": "2026-06-11"
