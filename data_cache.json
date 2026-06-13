@@ -345,17 +345,17 @@
         "page_views": 2377
       },
       "2026-06-10": {
-        "ordered_product_sales": 7850.63,
-        "units_ordered": 300,
+        "ordered_product_sales": 7833.83,
+        "units_ordered": 299,
         "sessions": 1929,
-        "unit_session_percentage": 15.55,
+        "unit_session_percentage": 15.5,
         "page_views": 2509
       },
       "2026-06-11": {
-        "ordered_product_sales": 7312.72,
-        "units_ordered": 289,
+        "ordered_product_sales": 7295.92,
+        "units_ordered": 288,
         "sessions": 1817,
-        "unit_session_percentage": 15.91,
+        "unit_session_percentage": 15.85,
         "page_views": 2331
       }
     },
@@ -1625,7 +1625,7 @@
         "cost": 128.1811,
         "conversions_value": 255.6,
         "clicks": 116,
-        "impressions": 11261
+        "impressions": 11262
       }
     },
     "klaviyo_email": {
@@ -129663,7 +129663,7 @@
       {
         "date": "2026-06-10",
         "item_promotion_discount": 38.8,
-        "ship_promotion_discount": 64.69
+        "ship_promotion_discount": 64.85
       },
       {
         "date": "2026-06-11",
